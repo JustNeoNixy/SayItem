@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "sayitem",
+  "version": "${version}",
+  "name": "SayItem",
+  "description": "Say an item's name in another language to unlock it. Local speech recognition and extensible language packs. Inspired by custom mods seen on YouTube; see README credits.",
+  "authors": ["SayItem contributors"],
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["dev.sayitem.SayItem"],
+    "client": ["dev.sayitem.client.SayItemClient"]
+  },
+  "depends": {
+    "fabricloader": ">=0.20.1",
+    "minecraft": "${minecraft_version}",
+    "java": ">=25",
+    "fabric-api": "*"
+  }
+}

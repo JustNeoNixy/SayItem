@@ -1,0 +1,4 @@
+faster-whisper==1.2.1
+# PyAV 19 removed the metadata_errors argument used by this Whisper release.
+av==16.0.1
+PySide6-Essentials==6.10.2

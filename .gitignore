@@ -1,0 +1,15 @@
+.gradle/
+build/
+run/
+.idea/
+*.iml
+.venv/
+__pycache__/
+*.pyc
+speech/models/
+speech/.token
+.tools/
+dist/
+logs/
+.impeccable/
+*.spec.bak

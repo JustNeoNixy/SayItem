@@ -1,0 +1,70 @@
+plugins {
+    id 'net.fabricmc.fabric-loom' version "${loom_version}"
+}
+
+version = "${mod_version}+mc${minecraft_version}"
+group = project.maven_group
+
+def knownFabricApis = [
+    '26.1.2': '0.155.3+26.1.2',
+    '26.2': '0.161.0+26.2',
+    '26.3': '0.165.0+26.3'
+]
+def fabricApiVersion = providers.gradleProperty('fabric_api_version')
+        .orElse(knownFabricApis.get(project.minecraft_version) ?: '').get()
+if (fabricApiVersion.isBlank()) {
+    throw new GradleException('Set -Pfabric_api_version=<matching version> for this Minecraft target.')
+}
+
+repositories { mavenCentral() }
+
+loom {
+    splitEnvironmentSourceSets()
+    mods {
+        sayitem {
+            sourceSet sourceSets.main
+            sourceSet sourceSets.client
+        }
+    }
+}
+
+// 26.2 moved screen state and overlay messages from Minecraft to Gui/Hud.
+def clientApi = project.minecraft_version.startsWith('26.1') ? '26.1' : '26.2'
+sourceSets.client.java.srcDir("src/compat/${clientApi}/java")
+
+dependencies {
+    minecraft "com.mojang:minecraft:${minecraft_version}"
+    implementation "net.fabricmc:fabric-loader:${loader_version}"
+    implementation "net.fabricmc.fabric-api:fabric-api:${fabricApiVersion}"
+    testImplementation platform('org.junit:junit-bom:5.12.2')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+processResources {
+    def resourceVersion = project.version.toString()
+    def minecraftVersion = project.minecraft_version.toString()
+    inputs.property 'version', resourceVersion
+    inputs.property 'minecraft_version', minecraftVersion
+    filesMatching('fabric.mod.json') {
+        expand version: resourceVersion, minecraft_version: minecraftVersion
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.release = 25
+    options.encoding = 'UTF-8'
+}
+java {
+    sourceCompatibility = JavaVersion.VERSION_25
+    targetCompatibility = JavaVersion.VERSION_25
+    withSourcesJar()
+}
+test { useJUnitPlatform() }
+tasks.register('exportItemCatalog', JavaExec) {
+    dependsOn testClasses
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'dev.sayitem.core.ItemCatalogExport'
+    args layout.buildDirectory.file("catalog-${project.minecraft_version}.json").get().asFile.absolutePath
+}
+jar { from('LICENSE') { rename { "${it}_sayitem" } } }
