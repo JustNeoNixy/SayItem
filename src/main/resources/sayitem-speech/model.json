@@ -1,0 +1,8 @@
+{
+  "name": "Whisper base multilingual Q5_1",
+  "resource": "/sayitem-speech/ggml-base-q5_1.bin",
+  "sha256": "422f1ae452ade6f30a004d7e5c6a43195e4433bc370bf23fac9cc591f01a8898",
+  "bytes": 59707625,
+  "source": "https://huggingface.co/ggerganov/whisper.cpp/tree/5359861c739e955e79d9a303bcbc70fb988958b1",
+  "license": "MIT"
+}

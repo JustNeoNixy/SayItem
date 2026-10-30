@@ -16,6 +16,11 @@ public final class Packets {
         public static final StreamCodec<FriendlyByteBuf, Request> CODEC = StreamCodec.unit(new Request());
         @Override public Type<Request> type() { return TYPE; }
     }
+    public record SpeechReady() implements CustomPacketPayload {
+        public static final Type<SpeechReady> TYPE = Packets.type("speech_ready");
+        public static final StreamCodec<FriendlyByteBuf, SpeechReady> CODEC = StreamCodec.unit(new SpeechReady());
+        @Override public Type<SpeechReady> type() { return TYPE; }
+    }
     public record Challenge(String nonce, String item, String language, String languageName,
                             String whisperLanguage, String text, String reading, long remainingMillis, int pendingCount) implements CustomPacketPayload {
         public static final Type<Challenge> TYPE = Packets.type("challenge");

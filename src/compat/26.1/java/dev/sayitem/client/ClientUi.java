@@ -7,5 +7,6 @@ import net.minecraft.client.gui.screens.Screen;
 final class ClientUi {
     private ClientUi() {}
     static Screen screen(Minecraft client) { return client.screen; }
+    static void open(Minecraft client, Screen screen) { client.setScreen(screen); }
     static boolean hudHidden(Minecraft client) { return client.options.hideGui; }
 }

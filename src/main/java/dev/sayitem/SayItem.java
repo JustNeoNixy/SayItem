@@ -25,6 +25,7 @@ public final class SayItem implements ModInitializer {
     private static RunState run = new RunState();
     private static final Map<UUID, String> lastSent = new HashMap<>();
     private static final Map<UUID, Long> requests = new HashMap<>();
+    private static final Set<UUID> speechReady = new HashSet<>();
     private static long now() { return System.nanoTime() / 1_000_000; }
 
     @Override public void onInitialize() {
@@ -33,6 +34,8 @@ public final class SayItem implements ModInitializer {
         PayloadTypeRegistry.serverboundPlay().register(Packets.Request.TYPE, Packets.Request.CODEC);
         PayloadTypeRegistry.serverboundPlay().register(Packets.Attempt.TYPE, Packets.Attempt.CODEC);
         PayloadTypeRegistry.serverboundPlay().register(Packets.SelectLanguage.TYPE, Packets.SelectLanguage.CODEC);
+        PayloadTypeRegistry.serverboundPlay().register(Packets.SpeechReady.TYPE, Packets.SpeechReady.CODEC);
+        ServerPlayNetworking.registerGlobalReceiver(Packets.SpeechReady.TYPE, (packet, context) -> speechReady.add(context.player().getUUID()));
         PayloadTypeRegistry.clientboundPlay().register(Packets.Challenge.TYPE, Packets.Challenge.CODEC);
         PayloadTypeRegistry.clientboundPlay().register(Packets.Result.TYPE, Packets.Result.CODEC);
         PayloadTypeRegistry.clientboundPlay().register(Packets.PackInfo.TYPE, Packets.PackInfo.CODEC);
@@ -47,11 +50,12 @@ public final class SayItem implements ModInitializer {
         ServerLifecycleEvents.SERVER_STARTING.register(server -> {
             try { packs = new PackRepository(FabricLoader.getInstance().getConfigDir().resolve("sayitem/languages")); }
             catch (IOException e) { throw new IllegalStateException("Cannot reload SayItem packs", e); }
-            run = new RunState(); lastSent.clear(); requests.clear();
+            run = new RunState(); lastSent.clear(); requests.clear(); speechReady.clear();
         });
-        ServerLifecycleEvents.SERVER_STOPPED.register(server -> { run = new RunState(); lastSent.clear(); requests.clear(); });
+        ServerLifecycleEvents.SERVER_STOPPED.register(server -> { run = new RunState(); lastSent.clear(); requests.clear(); speechReady.clear(); });
         ServerPlayConnectionEvents.DISCONNECT.register((handler, server) -> {
             lastSent.remove(handler.player.getUUID()); requests.remove(handler.player.getUUID());
+            speechReady.remove(handler.player.getUUID());
         });
         ServerTickEvents.END_SERVER_TICK.register(server -> {
             long time = now();
@@ -89,7 +93,7 @@ public final class SayItem implements ModInitializer {
     private static String id(ItemStack stack) { return BuiltInRegistries.ITEM.getKey(stack.getItem()).toString(); }
     private static boolean bypass(ServerPlayer p) { return p.isCreative() || p.isSpectator(); }
     private static void scan(ServerPlayer p, long time) {
-        if (bypass(p)) return;
+        if (bypass(p) || !speechReady.contains(p.getUUID())) return;
         var state = run.player(p.getUUID());
         for (var round : List.copyOf(state.rounds.values())) {
             if (round.expired(time)) {
@@ -116,6 +120,7 @@ public final class SayItem implements ModInitializer {
     }
     public static boolean allow(ServerPlayer p, ItemStack stack) {
         if (stack.isEmpty() || bypass(p) || run.player(p.getUUID()).unlocked.contains(id(stack))) return true;
+        if (!speechReady.contains(p.getUUID())) return false;
         run.player(p.getUUID()).collect(id(stack), now()); sendCurrent(p, now(), true); return false;
     }
     private static PackRepository.Phrase phrase(ServerPlayer p, String item) {

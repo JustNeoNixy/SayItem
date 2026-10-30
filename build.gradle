@@ -36,10 +36,45 @@ dependencies {
     minecraft "com.mojang:minecraft:${minecraft_version}"
     implementation "net.fabricmc:fabric-loader:${loader_version}"
     implementation "net.fabricmc.fabric-api:fabric-api:${fabricApiVersion}"
+    include "net.fabricmc.fabric-api:fabric-api:${fabricApiVersion}"
     testImplementation platform('org.junit:junit-bom:5.12.2')
     testImplementation 'org.junit.jupiter:junit-jupiter'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
+
+def modelRevision = '5359861c739e955e79d9a303bcbc70fb988958b1'
+def modelSha256 = '422f1ae452ade6f30a004d7e5c6a43195e4433bc370bf23fac9cc591f01a8898'
+def modelResources = layout.buildDirectory.dir('generated/speech-resources')
+def modelFile = modelResources.get().file('sayitem-speech/ggml-base-q5_1.bin').asFile
+def modelUrl = "https://huggingface.co/ggerganov/whisper.cpp/resolve/${modelRevision}/ggml-base-q5_1.bin"
+def downloadSpeechModel = tasks.register('prepareSpeechModel') {
+    inputs.property 'sha256', modelSha256
+    outputs.file modelFile
+    doLast {
+        modelFile.parentFile.mkdirs()
+        def temp = java.nio.file.Files.createTempFile(modelFile.parentFile.toPath(), 'whisper-', '.part')
+        try {
+            def client = java.net.http.HttpClient.newBuilder()
+                    .followRedirects(java.net.http.HttpClient.Redirect.NORMAL)
+                    .connectTimeout(java.time.Duration.ofSeconds(30)).build()
+            def request = java.net.http.HttpRequest.newBuilder(java.net.URI.create(modelUrl))
+                    .timeout(java.time.Duration.ofMinutes(5)).GET().build()
+            def response = client.send(request, java.net.http.HttpResponse.BodyHandlers.ofFile(temp))
+            if (response.statusCode() != 200) throw new GradleException("Model download returned HTTP ${response.statusCode()}")
+            def digest = java.security.MessageDigest.getInstance('SHA-256')
+            temp.withInputStream { stream ->
+                byte[] buffer = new byte[65536]
+                int count
+                while ((count = stream.read(buffer)) != -1) digest.update(buffer, 0, count)
+            }
+            if (java.util.HexFormat.of().formatHex(digest.digest()) != modelSha256)
+                throw new GradleException('Bundled speech model checksum mismatch')
+            java.nio.file.Files.move(temp, modelFile.toPath(), java.nio.file.StandardCopyOption.REPLACE_EXISTING)
+        } finally { java.nio.file.Files.deleteIfExists(temp) }
+    }
+}
+sourceSets.main.resources.srcDir(modelResources)
+processResources.dependsOn(downloadSpeechModel)
 
 processResources {
     def resourceVersion = project.version.toString()
@@ -60,11 +95,27 @@ java {
     targetCompatibility = JavaVersion.VERSION_25
     withSourcesJar()
 }
-test { useJUnitPlatform() }
+test {
+    useJUnitPlatform()
+    jvmArgs '--enable-native-access=ALL-UNNAMED'
+}
+tasks.named('sourcesJar') {
+    dependsOn downloadSpeechModel
+    exclude 'sayitem-speech/*.bin'
+}
 tasks.register('exportItemCatalog', JavaExec) {
     dependsOn testClasses
     classpath = sourceSets.test.runtimeClasspath
     mainClass = 'dev.sayitem.core.ItemCatalogExport'
     args layout.buildDirectory.file("catalog-${project.minecraft_version}.json").get().asFile.absolutePath
+}
+def builtModJar = tasks.named('jar', Jar).flatMap { it.archiveFile }
+def speechSmokeDirectory = layout.buildDirectory.dir('packaged-speech-check')
+tasks.register('verifySingleJar', JavaExec) {
+    dependsOn tasks.named('jar'), tasks.named('testClasses')
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'dev.sayitem.speech.PackagedSpeechSmoke'
+    jvmArgs '--enable-native-access=ALL-UNNAMED'
+    args builtModJar.get().asFile.absolutePath, speechSmokeDirectory.get().asFile.absolutePath
 }
 jar { from('LICENSE') { rename { "${it}_sayitem" } } }

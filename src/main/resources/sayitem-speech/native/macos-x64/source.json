@@ -1,0 +1,7 @@
+{
+  "jniRevision":"1b537f459d299d5c3ce4e12306aceac75009c253",
+  "whisperRevision":"ebca09a3d1033417b0c630bbbe607b0f185b1488",
+  "sha256":"a3d2eff252c8ff0c812c6459961d8fbcfcb68581c9601ec8c8b87724d07a7bd1",
+  "cpu":"baseline CPU; no AVX2 requirement",
+  "patch":"CPU scheduler receives per-request abort callback"
+}

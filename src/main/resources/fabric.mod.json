@@ -3,7 +3,7 @@
   "id": "sayitem",
   "version": "${version}",
   "name": "SayItem",
-  "description": "Say an item's name in another language to unlock it. Local speech recognition and extensible language packs. Inspired by custom mods seen on YouTube; see README credits.",
+  "description": "Say item names in other languages to unlock them. Whisper, its multilingual model, and all gameplay run inside Minecraft. Inspired by custom mods seen on YouTube; see README credits.",
   "authors": ["SayItem contributors"],
   "license": "MIT",
   "environment": "*",

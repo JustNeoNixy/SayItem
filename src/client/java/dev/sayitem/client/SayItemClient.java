@@ -2,8 +2,10 @@ package dev.sayitem.client;
 
 import dev.sayitem.core.JsonFiles;
 import dev.sayitem.net.Packets;
+import dev.sayitem.speech.LocalWhisper;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
+import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientLifecycleEvents;
 import net.fabricmc.fabric.api.client.keymapping.v1.KeyMappingHelper;
 import net.fabricmc.fabric.api.client.networking.v1.*;
 import net.fabricmc.fabric.api.client.rendering.v1.hud.HudElementRegistry;
@@ -12,6 +14,8 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.resources.Identifier;
 import com.mojang.blaze3d.platform.InputConstants;
 import com.google.gson.JsonObject;
+import net.fabricmc.loader.api.FabricLoader;
+import java.io.IOException;
 
 public final class SayItemClient implements ClientModInitializer {
     static Packets.Challenge challenge;
@@ -24,8 +28,11 @@ public final class SayItemClient implements ClientModInitializer {
     static long resultUntil;
     static SpeechCapture speech;
     static KeyMapping key;
-    private DesktopBridge bridge;
-    private long lastHeartbeat;
+    static KeyMapping settingsKey;
+    static ClientSettings settings;
+    static LocalWhisper engine;
+    private boolean readinessSent;
+    private boolean preferenceSent;
     private String recordingNonce = "";
     private boolean wasDown;
     private boolean awaitingAnswer;
@@ -34,20 +41,34 @@ public final class SayItemClient implements ClientModInitializer {
     static long remaining() { return Math.max(0, (deadline - System.nanoTime()) / 1_000_000); }
 
     @Override public void onInitializeClient() {
-        var settings = new ClientSettings();
-        bridge = new DesktopBridge(settings);
-        speech = new SpeechCapture(settings);
+        try { settings = ClientSettings.load(); }
+        catch (IOException | RuntimeException e) { settings = new ClientSettings(); }
+        engine = new LocalWhisper(FabricLoader.getInstance().getGameDir().resolve(".sayitem/speech"));
+        engine.initialize();
+        speech = new SpeechCapture(settings, engine);
         key = KeyMappingHelper.registerKeyMapping(new KeyMapping("key.sayitem.speak", InputConstants.KEY_V, KeyMapping.Category.GAMEPLAY));
+        settingsKey = KeyMappingHelper.registerKeyMapping(new KeyMapping("key.sayitem.settings", InputConstants.KEY_K, KeyMapping.Category.GAMEPLAY));
+        ClientLifecycleEvents.CLIENT_STOPPING.register(client -> { speech.cancel(); engine.close(); });
         HudElementRegistry.addLast(Identifier.fromNamespaceAndPath("sayitem", "challenge"), (graphics, delta) -> ChallengeHud.draw(graphics));
         ClientPlayNetworking.registerGlobalReceiver(Packets.PackInfo.TYPE, (packet, context) -> {
             languages = JsonFiles.GSON.fromJson(packet.languagesJson(), JsonObject.class);
             selectedLanguage = packet.selected();
+            if (!preferenceSent) {
+                preferenceSent = true;
+                if (languages.has(settings.language) && !settings.language.equals(selectedLanguage))
+                {
+                    ClientPlayNetworking.send(new Packets.SelectLanguage(settings.language));
+                    return;
+                }
+            }
+            settings.language = selectedLanguage;
+            try { settings.save(); } catch (IOException ignored) { status = "Could not save SayItem language preference."; }
         });
         ClientPlayNetworking.registerGlobalReceiver(Packets.Challenge.TYPE, (packet, context) -> {
             if (challenge == null || !challenge.nonce().equals(packet.nonce())) {
                 speech.cancel(); awaitingAnswer = false;
                 status = "Hold " + key.getTranslatedKeyMessage().getString() + " and say the words.";
-                transcript = ""; accuracy = -1;
+                accuracy = -1;
             }
             challenge = packet; deadline = System.nanoTime() + packet.remainingMillis() * 1_000_000;
         });
@@ -64,14 +85,15 @@ public final class SayItemClient implements ClientModInitializer {
         });
         ClientPlayConnectionEvents.DISCONNECT.register((handler, client) -> {
             speech.cancel(); challenge = null; awaitingAnswer = false; languages = new JsonObject(); selectedLanguage = "ja";
+            readinessSent = false; preferenceSent = false;
             status = "Collect an item to begin."; transcript = ""; accuracy = -1;
         });
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             long clock = System.nanoTime();
-            if (clock - lastHeartbeat >= 1_000_000_000L) {
-                lastHeartbeat = clock;
-                bridge.update(client, challenge, remaining(), transcript, accuracy, status);
+            if (!readinessSent && engine.isReady() && client.player != null && ClientPlayNetworking.canSend(Packets.SpeechReady.TYPE)) {
+                ClientPlayNetworking.send(new Packets.SpeechReady()); readinessSent = true;
             }
+            while (settingsKey.consumeClick()) if (ClientUi.screen(client) == null) ClientUi.open(client, new SayItemSettingsScreen());
             boolean down = key.isDown() && client.player != null && ClientUi.screen(client) == null;
             if (down && !wasDown && challenge != null && remaining() > 0 && !speech.isBusy() && !awaitingAnswer) {
                 recordingNonce = challenge.nonce();
@@ -92,5 +114,11 @@ public final class SayItemClient implements ClientModInitializer {
             if (awaitingAnswer && clock - submittedAt > 3_000_000_000L) { awaitingAnswer = false; status = "No server response. Release the key and try again."; }
             while (key.consumeClick()) { /* Hold state drives recording; consume clicks to avoid a queue. */ }
         });
+    }
+    static void chooseLanguage(String language) {
+        if (!languages.has(language)) return;
+        settings.language = language;
+        try { settings.save(); } catch (IOException ignored) { status = "Could not save SayItem settings."; }
+        if (ClientPlayNetworking.canSend(Packets.SelectLanguage.TYPE)) ClientPlayNetworking.send(new Packets.SelectLanguage(language));
     }
 }

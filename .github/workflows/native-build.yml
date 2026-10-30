@@ -1,7 +1,7 @@
 name: Build bundled native speech
 on:
   push:
-    branches: ['codex/native-cancellation']
+    branches: [main]
     paths: ['native/**', '.github/workflows/native-build.yml']
   workflow_dispatch:
 jobs:

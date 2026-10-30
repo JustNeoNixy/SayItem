@@ -11,13 +11,14 @@ final class ChallengeHud {
         var client = Minecraft.getInstance();
         if (client.player == null || ClientUi.hudHidden(client)) return;
         var challenge = SayItemClient.challenge;
-        if (challenge == null && System.nanoTime() > SayItemClient.resultUntil) return;
+        if (challenge == null && System.nanoTime() > SayItemClient.resultUntil && SayItemClient.engine.isReady()) return;
         var font = client.font;
         int screenWidth = client.getWindow().getGuiScaledWidth();
         int width = Math.min(330, screenWidth - 24);
         int x = (screenWidth - width) / 2, y = 12;
         if (challenge == null) {
-            var lines = font.split(Component.literal(SayItemClient.status), width - 20);
+            String message = SayItemClient.engine.isReady() ? SayItemClient.status : SayItemClient.engine.status() + " · K: settings";
+            var lines = font.split(Component.literal(message), width - 20);
             graphics.fill(x, y, x + width, y + 16 + lines.size() * font.lineHeight, 0xE318232B);
             int row = y + 8;
             for (var line : lines) { graphics.text(font, line, x + 10, row, 0xFFFFFFFF); row += font.lineHeight; }
