@@ -1,0 +1,7 @@
+{
+  "windows-x64": {"url":"https://files.pythonhosted.org/packages/af/25/cca7f6807d37cbfd9eebed8bbf136f5214c31d7d66de267ad05b676e9deb/ctranslate2-4.8.4-cp312-cp312-win_amd64.whl","sha256":"056db4b4c2a31b7811d453155a3d6ab316ddb1dc104f413beee7bce26bcbf92d"},
+  "linux-x64": {"url":"https://files.pythonhosted.org/packages/39/42/ab136f76cf379ed97d3f95563ad227fdd5cdbbeb20eaa797b0962be62b1a/ctranslate2-4.8.4-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl","sha256":"0d1830d12c84b2240bf51893ee6bfe24a671dccfd232b05a74ef197d27fb164a"},
+  "linux-arm64": {"url":"https://files.pythonhosted.org/packages/5e/0f/f7aad2355dbb4a0115d9265f0ab04feddfd506388d19bfe7e0387fd7c5e1/ctranslate2-4.8.4-cp312-cp312-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl","sha256":"a102683e7dc5d0cd0c31de5771ce4c27fffa837721470e7aae64ebffa64f3206"},
+  "macos-x64": {"url":"https://files.pythonhosted.org/packages/8b/2f/7495643e0d5f530f927bbaf9daecb180606fe484d6afc056fcb773974344/ctranslate2-4.8.4-cp312-cp312-macosx_11_0_x86_64.whl","sha256":"1094d0128657903677b3be3aab9186bf28ac8d89a4676fb590bcabf3c7605971"},
+  "macos-arm64": {"url":"https://files.pythonhosted.org/packages/45/18/68692f8cf2684690cc6f2b407fa6d5909895cac37aa9d1df1bc5849017f9/ctranslate2-4.8.4-cp312-cp312-macosx_11_0_arm64.whl","sha256":"36ebf8d2f5b7af176cef7869cd98a1c722ee01c177168fda5c9a045fc930be67"}
+}

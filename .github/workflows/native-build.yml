@@ -2,7 +2,7 @@ name: Build bundled native speech
 on:
   push:
     branches: [main]
-    paths: ['native/**', '.github/workflows/native-build.yml']
+    paths: ['native/ct2/**', '.github/workflows/native-build.yml']
   workflow_dispatch:
 jobs:
   native:
@@ -12,39 +12,30 @@ jobs:
         include:
           - os: windows-2022
             platform: windows-x64
-            extension: dll
           - os: ubuntu-22.04
             platform: linux-x64
-            extension: so
           - os: ubuntu-22.04-arm
             platform: linux-arm64
-            extension: so
           - os: macos-15-intel
             platform: macos-x64
-            extension: dylib
           - os: macos-latest
             platform: macos-arm64
-            extension: dylib
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/checkout@v4
         with:
-          repository: GiviMAD/whisper-jni
-          ref: 1b537f459d299d5c3ce4e12306aceac75009c253
-          submodules: recursive
-          path: build/native-source/whisper-jni
-      - uses: actions/setup-java@v4
+          repository: OpenNMT/CTranslate2
+          ref: 5de572ef60b67a0276c5989ee73d0072808ff4c3
+          path: build/native-source/ctranslate2
+      - uses: actions/setup-python@v5
         with:
-          distribution: temurin
-          java-version: '25'
+          python-version: '3.12'
+      - run: python native/ct2/prepare.py ${{ matrix.platform }} build/ct2-deps
       - shell: bash
-        run: cmake -S native -B build/native-compiled -DCMAKE_BUILD_TYPE=Release "-DWHISPER_JNI_SOURCE=$GITHUB_WORKSPACE/build/native-source/whisper-jni" "-DSAYITEM_JDK=$JAVA_HOME"
-      - run: cmake --build build/native-compiled --config Release --parallel 4 --target sayitem-whisper native-probe
-      - shell: bash
-        run: build/native-compiled/output/native-probe "$(pwd)/build/native-compiled/output/sayitem-whisper.${{ matrix.extension }}"
-      - shell: bash
-        run: cmake "-DINPUT_FILE=$GITHUB_WORKSPACE/build/native-compiled/output/sayitem-whisper.${{ matrix.extension }}" "-DOUTPUT_DIR=$GITHUB_WORKSPACE/build/native-artifact" "-DPLATFORM=${{ matrix.platform }}" -P native/package.cmake
+        run: cmake -S native/ct2 -B build/ct2-deps/compiled -DCMAKE_BUILD_TYPE=Release "-DCT2_DEPS=$GITHUB_WORKSPACE/build/ct2-deps" "-DCT2_SOURCE=$GITHUB_WORKSPACE/build/native-source/ctranslate2" -DCMAKE_OSX_DEPLOYMENT_TARGET=11.0
+      - run: cmake --build build/ct2-deps/compiled --config Release --parallel 4
+      - run: python native/ct2/prepare.py ${{ matrix.platform }} build/ct2-deps --package build/native-artifact
       - uses: actions/upload-artifact@v4
         with:
           name: native-${{ matrix.platform }}
