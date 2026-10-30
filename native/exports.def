@@ -1,0 +1,14 @@
+LIBRARY sayitem-whisper
+EXPORTS
+    whisper_context_default_params_by_ref
+    whisper_init_from_file_with_params
+    whisper_free_context_params
+    whisper_full_default_params_by_ref
+    whisper_free_params
+    whisper_full
+    whisper_full_n_segments
+    whisper_full_get_segment_text
+    whisper_is_multilingual
+    whisper_lang_id
+    whisper_free
+    whisper_log_set
