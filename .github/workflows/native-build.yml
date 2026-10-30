@@ -40,7 +40,9 @@ jobs:
           java-version: '25'
       - shell: bash
         run: cmake -S native -B build/native-compiled -DCMAKE_BUILD_TYPE=Release "-DWHISPER_JNI_SOURCE=$GITHUB_WORKSPACE/build/native-source/whisper-jni" "-DSAYITEM_JDK=$JAVA_HOME"
-      - run: cmake --build build/native-compiled --config Release --parallel 4 --target sayitem-whisper
+      - run: cmake --build build/native-compiled --config Release --parallel 4 --target sayitem-whisper native-probe
+      - shell: bash
+        run: build/native-compiled/output/native-probe "$(pwd)/build/native-compiled/output/sayitem-whisper.${{ matrix.extension }}"
       - shell: bash
         run: cmake "-DINPUT_FILE=$GITHUB_WORKSPACE/build/native-compiled/output/sayitem-whisper.${{ matrix.extension }}" "-DOUTPUT_DIR=$GITHUB_WORKSPACE/build/native-artifact" "-DPLATFORM=${{ matrix.platform }}" -P native/package.cmake
       - uses: actions/upload-artifact@v4
