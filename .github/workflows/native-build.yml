@@ -40,3 +40,4 @@ jobs:
         with:
           name: native-${{ matrix.platform }}
           path: build/native-artifact/
+          include-hidden-files: true
