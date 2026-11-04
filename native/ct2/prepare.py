@@ -1,5 +1,5 @@
 """Build tooling only: extract pinned native CTranslate2 libraries, never Python runtime files."""
-import argparse, ctypes, hashlib, json, os, shutil, urllib.request, zipfile
+import argparse, ctypes, hashlib, json, os, shutil, subprocess, sys, urllib.request, zipfile
 from pathlib import Path
 
 parser = argparse.ArgumentParser()
@@ -44,6 +44,18 @@ if args.package:
     extension = 'dll' if args.platform.startswith('windows') else 'dylib' if args.platform.startswith('macos') else 'so'
     wrapper = f'sayitem-ct2.{extension}'
     shutil.copy2(dest / 'compiled' / 'output' / wrapper, output / wrapper)
+    if sys.platform == 'darwin':
+        # The official wheels use a /DLC install name. Make every bundled reference relocatable.
+        bundled = {Path(name).name: output / name for name in files + [wrapper]}
+        for native_file in bundled.values():
+            dependencies = subprocess.check_output(['otool', '-L', str(native_file)], text=True).splitlines()[1:]
+            for line in dependencies:
+                dependency = line.strip().split(' (')[0]
+                target = bundled.get(Path(dependency).name)
+                if target is not None and target != native_file:
+                    relative = os.path.relpath(target, native_file.parent).replace(os.sep, '/')
+                    subprocess.run(['install_name_tool', '-change', dependency, '@loader_path/' + relative, str(native_file)], check=True)
+            subprocess.run(['codesign', '--force', '--sign', '-', str(native_file)], check=True)
     metadata['files'] = {name: sha(output / name) for name in files + [wrapper]}
     metadata['wrapper'] = wrapper
     (output / 'source.json').write_text(json.dumps(metadata, indent=2), encoding='utf-8')
