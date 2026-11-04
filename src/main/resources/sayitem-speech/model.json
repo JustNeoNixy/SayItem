@@ -1,8 +1,12 @@
 {
-  "name": "Whisper base multilingual Q5_1",
-  "resource": "/sayitem-speech/ggml-base-q5_1.bin",
-  "sha256": "422f1ae452ade6f30a004d7e5c6a43195e4433bc370bf23fac9cc591f01a8898",
-  "bytes": 59707625,
-  "source": "https://huggingface.co/ggerganov/whisper.cpp/tree/5359861c739e955e79d9a303bcbc70fb988958b1",
-  "license": "MIT"
+  "name": "Whisper base multilingual · CTranslate2 INT8",
+  "revision": "ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66",
+  "license": "MIT",
+  "files": {
+    "base/model.bin": {"bytes":145217532,"sha256":"d01c3014881c9c6f3133c182f3d2887eb6ca1c789a7538c5c007196857a0a6a9","url":"https://huggingface.co/Systran/faster-whisper-base/resolve/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66/model.bin"},
+    "base/config.json": {"bytes":2309,"sha256":"56a6d8110d311f19c8f0471e562832c7527f146b567275bfca59fcf7c184da9a","url":"https://huggingface.co/Systran/faster-whisper-base/resolve/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66/config.json"},
+    "base/tokenizer.json": {"bytes":2203239,"sha256":"fb7b63191e9bb045082c79fd742a3106a12c99513ab30df4a0d47fa6cb6fd0ab","url":"https://huggingface.co/Systran/faster-whisper-base/resolve/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66/tokenizer.json"},
+    "base/vocabulary.txt": {"bytes":459861,"sha256":"34ce3fe1c5041027b3f8d42912270993f986dbc4bb34cf27f951e34a1e453913","url":"https://huggingface.co/Systran/faster-whisper-base/resolve/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66/vocabulary.txt"},
+    "silero_vad_v6.onnx": {"bytes":1245151,"sha256":"4cbf549b8326f60f80f2536d9eefeb450a9abe83365a098031c89719f1be17d2","url":"https://raw.githubusercontent.com/SYSTRAN/faster-whisper/65882eee9f5cdbeeb2d877f1131d48cf241b327d/faster_whisper/assets/silero_vad_v6.onnx"}
+  }
 }

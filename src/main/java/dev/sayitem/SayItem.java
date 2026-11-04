@@ -23,6 +23,8 @@ import java.util.*;
 public final class SayItem implements ModInitializer {
     private static PackRepository packs;
     private static RunState run = new RunState();
+    private static ServerRules rules = new ServerRules();
+    private static java.nio.file.Path rulesFile() { return FabricLoader.getInstance().getConfigDir().resolve("sayitem/rules.json"); }
     private static final Map<UUID, String> lastSent = new HashMap<>();
     private static final Map<UUID, Long> requests = new HashMap<>();
     private static final Set<UUID> speechReady = new HashSet<>();
@@ -35,6 +37,16 @@ public final class SayItem implements ModInitializer {
         PayloadTypeRegistry.serverboundPlay().register(Packets.Attempt.TYPE, Packets.Attempt.CODEC);
         PayloadTypeRegistry.serverboundPlay().register(Packets.SelectLanguage.TYPE, Packets.SelectLanguage.CODEC);
         PayloadTypeRegistry.serverboundPlay().register(Packets.SpeechReady.TYPE, Packets.SpeechReady.CODEC);
+        PayloadTypeRegistry.serverboundPlay().register(Packets.SetAccuracy.TYPE, Packets.SetAccuracy.CODEC);
+        ServerPlayNetworking.registerGlobalReceiver(Packets.SetAccuracy.TYPE, (packet, context) -> {
+            var player = context.player();
+            if (!canConfigure(player) || !AccuracyRequirement.valid(packet.percent())) { sendPacks(player); return; }
+            var updated = new ServerRules(); updated.requiredAccuracy = packet.percent();
+            try { updated.save(rulesFile()); }
+            catch (IOException e) { result(player, "", false, false, -1, "Could not save SayItem difficulty."); return; }
+            rules = updated;
+            for (var member : player.level().getServer().getPlayerList().getPlayers()) sendPacks(member);
+        });
         ServerPlayNetworking.registerGlobalReceiver(Packets.SpeechReady.TYPE, (packet, context) -> speechReady.add(context.player().getUUID()));
         PayloadTypeRegistry.clientboundPlay().register(Packets.Challenge.TYPE, Packets.Challenge.CODEC);
         PayloadTypeRegistry.clientboundPlay().register(Packets.Result.TYPE, Packets.Result.CODEC);
@@ -43,11 +55,13 @@ public final class SayItem implements ModInitializer {
         ServerPlayNetworking.registerGlobalReceiver(Packets.Request.TYPE, (packet, context) -> {
             var p = context.player(); long time = now();
             if (requests.containsKey(p.getUUID()) && time - requests.get(p.getUUID()) < 250) return;
-            requests.put(p.getUUID(), time); scan(p, time); sendCurrent(p, time, true);
+            requests.put(p.getUUID(), time); sendPacks(p); scan(p, time); sendCurrent(p, time, true);
         });
         ServerPlayNetworking.registerGlobalReceiver(Packets.Attempt.TYPE, (packet, context) -> attempt(context.player(), packet));
         ServerPlayNetworking.registerGlobalReceiver(Packets.SelectLanguage.TYPE, (packet, context) -> selectLanguage(context.player(), packet.language()));
         ServerLifecycleEvents.SERVER_STARTING.register(server -> {
+            try { rules = ServerRules.load(rulesFile()); }
+            catch (IOException | RuntimeException e) { throw new IllegalStateException("Cannot load SayItem rules", e); }
             try { packs = new PackRepository(FabricLoader.getInstance().getConfigDir().resolve("sayitem/languages")); }
             catch (IOException e) { throw new IllegalStateException("Cannot reload SayItem packs", e); }
             run = new RunState(); lastSent.clear(); requests.clear(); speechReady.clear();
@@ -71,7 +85,7 @@ public final class SayItem implements ModInitializer {
             .executes(ctx -> {
                 var state = run.player(ctx.getSource().getPlayerOrException().getUUID());
                 ctx.getSource().sendSuccess(() -> Component.literal("SayItem · " + state.language + " · " + state.unlocked.size()
-                    + " unlocked this run · 15 seconds · 90% required"), false); return 1;
+                    + " unlocked this run · 15 seconds · " + rules.requiredAccuracy + "% required"), false); return 1;
             })
             .then(Commands.literal("challenge").executes(ctx -> { sendCurrent(ctx.getSource().getPlayerOrException(), now(), true); return 1; }))
             .then(Commands.literal("language").then(Commands.argument("id", StringArgumentType.word())
@@ -82,13 +96,18 @@ public final class SayItem implements ModInitializer {
         if (packs.get(language) == null) {
             result(p, "", false, false, -1, "This server has no “" + language + "” pack. Import it and restart the world/server."); return false;
         }
-        run.player(p.getUUID()).language = language; sendPacks(p); sendCurrent(p, now(), true); return true;
+        run.player(p.getUUID()).selectLanguage(language); sendPacks(p); sendCurrent(p, now(), true); return true;
     }
     private static void sendPacks(ServerPlayer p) {
         var names = new java.util.TreeMap<String, String>();
         for (String id : packs.ids()) names.put(id, packs.get(id).name());
         if (ServerPlayNetworking.canSend(p, Packets.PackInfo.TYPE))
-            ServerPlayNetworking.send(p, new Packets.PackInfo(JsonFiles.GSON.toJson(names), run.player(p.getUUID()).language));
+            ServerPlayNetworking.send(p, new Packets.PackInfo(JsonFiles.GSON.toJson(names), run.player(p.getUUID()).language, rules.requiredAccuracy, canConfigure(p)));
+    }
+    private static boolean canConfigure(ServerPlayer p) {
+        var server = p.level().getServer();
+        var identity = new net.minecraft.server.players.NameAndId(p.getGameProfile());
+        return server.isSingleplayerOwner(identity) || server.getPlayerList().isOp(identity);
     }
     private static String id(ItemStack stack) { return BuiltInRegistries.ITEM.getKey(stack.getItem()).toString(); }
     private static boolean bypass(ServerPlayer p) { return p.isCreative() || p.isSpectator(); }
@@ -145,13 +164,13 @@ public final class SayItem implements ModInitializer {
         var entry = phrase(p, round.item()).entry();
         double score = AnswerMatcher.score(attempt.transcript(), entry.text(), entry.aliases());
         int percent = (int) Math.floor(score * 100 + 1e-8);
-        if (score >= 0.9) {
+        if (AccuracyRequirement.accepts(score, rules.requiredAccuracy)) {
             state.unlock(round.item());
             result(p, round.nonce(), true, true, percent, "Unlocked for this run! " + percent + "% match."); sendCurrent(p, time, true);
         } else {
             result(p, round.nonce(), false, false, percent, attempt.transcript().isBlank()
                 ? "No speech heard. Try again before time runs out."
-                : "Heard: “" + attempt.transcript() + "” · " + percent + "% (need 90%).");
+                : "Heard: “" + attempt.transcript() + "” · " + percent + "% (need " + rules.requiredAccuracy + "%).");
         }
     }
     private static void result(ServerPlayer p, String nonce, boolean success, boolean finished, int accuracy, String text) {

@@ -1,0 +1,96 @@
+{
+  "windows-x64": {
+    "url": "https://github.com/JustNeoNixy/SayItem/releases/download/speech-runtime-0.4.0/speech-runtime-windows-x64.zip",
+    "bytes": 25452628,
+    "sha256": "4172071809e8be859cf817d9b5b36b72358f4e80a42020b3c560475ccb61d5c7",
+    "files": {
+      "licenses/ctranslate2-MIT.txt": "9c508db56103485f3f4985cd7793acd19e40692008e30af5d5b3426a11ad55ef",
+      "licenses/faster-whisper-MIT.txt": "af6798135e729f8aa6c853936d037dfdea449734d26b8ea6a89805fca758c0d5",
+      "licenses/intel-runtime.txt": "989c89561adee6a1e6e5a1ba35804067fc2ed077e2595f11c9b3e9504e2d0fc3",
+      "licenses/native-third-party-Apache-2.0.txt": "d546638ca3be712015502a589972526039a3e708e7c7bc47a699613287664bc0",
+      "licenses/onnxruntime-MIT.txt": "2f07c72751aed99790b8a4869cf2311df85a860b22ded05fa22803587a48922c",
+      "licenses/silero-vad-MIT.txt": "2e63e9a38b6e8fc0c7bc37ce174caca1862870856c6daf5697cfb785e925520b",
+      "licenses/whisper-model-MIT.txt": "328df171594796be1ffa76628981c82bdbe2e391edb0204ac37acac6a63cc852",
+      "native/ctranslate2/ctranslate2.dll": "30e16517244907c60f97a09931e7bce282e86eb93011b55a343a652cb360eb06",
+      "native/ctranslate2/libiomp5md.dll": "982233366b0afcda1e0f55a0b134097e35b779613f54ddb69e685e6cd06b755f",
+      "native/sayitem-ct2.dll": "d3c5e73ea551a40c7d3381a541054718f44fbd3e3553606049606688ad199888",
+      "native/source.json": "c1f9b49a7eba9589bcedf07dface773b66ad5bf4a4a10d6166fef1533f6d9202",
+      "onnxruntime.jar": "d041c019fb23fd46942f8e0eae3a25469745ae629733495fbabe0ceeb8bb9d77"
+    }
+  },
+  "linux-x64": {
+    "url": "https://github.com/JustNeoNixy/SayItem/releases/download/speech-runtime-0.4.0/speech-runtime-linux-x64.zip",
+    "bytes": 33158053,
+    "sha256": "3bcfef733b85484b009ec0fe6fc1786261a805a2f21b5540fb30e50d87314bf9",
+    "files": {
+      "licenses/ctranslate2-MIT.txt": "9c508db56103485f3f4985cd7793acd19e40692008e30af5d5b3426a11ad55ef",
+      "licenses/faster-whisper-MIT.txt": "af6798135e729f8aa6c853936d037dfdea449734d26b8ea6a89805fca758c0d5",
+      "licenses/intel-runtime.txt": "989c89561adee6a1e6e5a1ba35804067fc2ed077e2595f11c9b3e9504e2d0fc3",
+      "licenses/native-third-party-Apache-2.0.txt": "d546638ca3be712015502a589972526039a3e708e7c7bc47a699613287664bc0",
+      "licenses/onnxruntime-MIT.txt": "2f07c72751aed99790b8a4869cf2311df85a860b22ded05fa22803587a48922c",
+      "licenses/silero-vad-MIT.txt": "2e63e9a38b6e8fc0c7bc37ce174caca1862870856c6daf5697cfb785e925520b",
+      "licenses/whisper-model-MIT.txt": "328df171594796be1ffa76628981c82bdbe2e391edb0204ac37acac6a63cc852",
+      "native/ctranslate2.libs/libctranslate2-42c542ff.so.4.8.4": "9ba1807fbf135191263eb14aaae88f1d235be9e2ecae5c80feb0c72467c84182",
+      "native/ctranslate2.libs/libgomp-e985bcbb.so.1.0.0": "25b19bcd491ab3a317c65c9b6a44b3075f8ab25a57b901cfa1ee6c0d6ea206ac",
+      "native/sayitem-ct2.so": "1a22bc17abbf8887d3df72fff718d22ab3f10f5d54bfbc69e60174cc6a8fa274",
+      "native/source.json": "046dd0560a8bce2cb51b0f6967985c8d449ef2dc5a10787b286799dd4696d681",
+      "onnxruntime.jar": "7dfe271353e335bc33997dce60acf09e21c8917e14588d8130570b73a7fa095e"
+    }
+  },
+  "linux-arm64": {
+    "url": "https://github.com/JustNeoNixy/SayItem/releases/download/speech-runtime-0.4.0/speech-runtime-linux-arm64.zip",
+    "bytes": 8697838,
+    "sha256": "142a49d577d7e07d388952bc5cdc7f72339231fd8bc8fb1425bcaefcd6ece5a1",
+    "files": {
+      "licenses/ctranslate2-MIT.txt": "9c508db56103485f3f4985cd7793acd19e40692008e30af5d5b3426a11ad55ef",
+      "licenses/faster-whisper-MIT.txt": "af6798135e729f8aa6c853936d037dfdea449734d26b8ea6a89805fca758c0d5",
+      "licenses/intel-runtime.txt": "989c89561adee6a1e6e5a1ba35804067fc2ed077e2595f11c9b3e9504e2d0fc3",
+      "licenses/native-third-party-Apache-2.0.txt": "d546638ca3be712015502a589972526039a3e708e7c7bc47a699613287664bc0",
+      "licenses/onnxruntime-MIT.txt": "2f07c72751aed99790b8a4869cf2311df85a860b22ded05fa22803587a48922c",
+      "licenses/silero-vad-MIT.txt": "2e63e9a38b6e8fc0c7bc37ce174caca1862870856c6daf5697cfb785e925520b",
+      "licenses/whisper-model-MIT.txt": "328df171594796be1ffa76628981c82bdbe2e391edb0204ac37acac6a63cc852",
+      "native/ctranslate2.libs/libctranslate2-319ff821.so.4.8.4": "58d46afa16b4755ec9295ac540f1744e06ce10ce0f9d7378204d1d818fe62bed",
+      "native/ctranslate2.libs/libgomp-a49a47f9.so.1.0.0": "4f32d07a6d86c817497f2531a045819b0a80769d8e526b6d7c10bfd8b456048b",
+      "native/sayitem-ct2.so": "9f24a360c42a2d1830732a0b9a1e0623e8969ad5cd7381193d8909320ec2bf4e",
+      "native/source.json": "541d7a289696a18038d1fd692a851a4f98d29a64519191d491413bd975c14ff9",
+      "onnxruntime.jar": "8724d6bdb009a9d081170c6224ecd12228425d27ae34c95e377107b3f94122d5"
+    }
+  },
+  "macos-x64": {
+    "url": "https://github.com/JustNeoNixy/SayItem/releases/download/speech-runtime-0.4.0/speech-runtime-macos-x64.zip",
+    "bytes": 22966773,
+    "sha256": "28296ba89995e765119bf5565bbb0b0aa8df7405ae500ca86274d9a599f07e72",
+    "files": {
+      "licenses/ctranslate2-MIT.txt": "9c508db56103485f3f4985cd7793acd19e40692008e30af5d5b3426a11ad55ef",
+      "licenses/faster-whisper-MIT.txt": "af6798135e729f8aa6c853936d037dfdea449734d26b8ea6a89805fca758c0d5",
+      "licenses/intel-runtime.txt": "989c89561adee6a1e6e5a1ba35804067fc2ed077e2595f11c9b3e9504e2d0fc3",
+      "licenses/native-third-party-Apache-2.0.txt": "d546638ca3be712015502a589972526039a3e708e7c7bc47a699613287664bc0",
+      "licenses/onnxruntime-MIT.txt": "2f07c72751aed99790b8a4869cf2311df85a860b22ded05fa22803587a48922c",
+      "licenses/silero-vad-MIT.txt": "2e63e9a38b6e8fc0c7bc37ce174caca1862870856c6daf5697cfb785e925520b",
+      "licenses/whisper-model-MIT.txt": "328df171594796be1ffa76628981c82bdbe2e391edb0204ac37acac6a63cc852",
+      "native/ctranslate2/.dylibs/libctranslate2.4.8.4.dylib": "e954f240fa96a051f9e67506b11e2c21e272efe3003677149117407e5cbaf895",
+      "native/ctranslate2/.dylibs/libiomp5.dylib": "aaea4f4a98d61676455748e6d533272233ba45074a4c7010b1850496e2c97988",
+      "native/sayitem-ct2.dylib": "8af66b0f72d3cc96665133986dffef4840ec2f0894eeac3331c73e8bf9659f34",
+      "native/source.json": "8ca0835f4fda4513b32e911b079880c4223ea7955c3bb511c96058b779035470",
+      "onnxruntime.jar": "1b1ca6feacc014417b4dc861b86d6581204ee49da6d4287715169bd688bf9391"
+    }
+  },
+  "macos-arm64": {
+    "url": "https://github.com/JustNeoNixy/SayItem/releases/download/speech-runtime-0.4.0/speech-runtime-macos-arm64.zip",
+    "bytes": 10948034,
+    "sha256": "17fa0f6cb1c1dda79cf64c5a7a6a9fe9dd9a74f8db4ff601b46678b8319f2c5b",
+    "files": {
+      "licenses/ctranslate2-MIT.txt": "9c508db56103485f3f4985cd7793acd19e40692008e30af5d5b3426a11ad55ef",
+      "licenses/faster-whisper-MIT.txt": "af6798135e729f8aa6c853936d037dfdea449734d26b8ea6a89805fca758c0d5",
+      "licenses/intel-runtime.txt": "989c89561adee6a1e6e5a1ba35804067fc2ed077e2595f11c9b3e9504e2d0fc3",
+      "licenses/native-third-party-Apache-2.0.txt": "d546638ca3be712015502a589972526039a3e708e7c7bc47a699613287664bc0",
+      "licenses/onnxruntime-MIT.txt": "2f07c72751aed99790b8a4869cf2311df85a860b22ded05fa22803587a48922c",
+      "licenses/silero-vad-MIT.txt": "2e63e9a38b6e8fc0c7bc37ce174caca1862870856c6daf5697cfb785e925520b",
+      "licenses/whisper-model-MIT.txt": "328df171594796be1ffa76628981c82bdbe2e391edb0204ac37acac6a63cc852",
+      "native/ctranslate2/.dylibs/libctranslate2.4.8.4.dylib": "ec3e1761db7bb0243d1e09bba3545ef5ce88190fb149a96c120ef408f4e459fc",
+      "native/sayitem-ct2.dylib": "1b68a063e7efa00e61797409fba5dce80489e5f2fc0bdff4c78ae79ffffa879c",
+      "native/source.json": "9f5c3cccd82c740d53b779d201c5ade70fc467c3f04a3c54e9872fce454cd43c",
+      "onnxruntime.jar": "e22f2d63e64d093514ed2d3fe72f5669039543f5b0f03f01437eff9f6c80d233"
+    }
+  }
+}

@@ -45,11 +45,17 @@ public final class Packets {
                 (b, p) -> b.writeUtf(p.language, 32), b -> new SelectLanguage(b.readUtf(32)));
         @Override public Type<SelectLanguage> type() { return TYPE; }
     }
-    public record PackInfo(String languagesJson, String selected) implements CustomPacketPayload {
+    public record SetAccuracy(int percent) implements CustomPacketPayload {
+        public static final Type<SetAccuracy> TYPE = Packets.type("accuracy");
+        public static final StreamCodec<FriendlyByteBuf, SetAccuracy> CODEC = StreamCodec.of(
+            (b, p) -> b.writeInt(p.percent), b -> new SetAccuracy(b.readInt()));
+        @Override public Type<SetAccuracy> type() { return TYPE; }
+    }
+    public record PackInfo(String languagesJson, String selected, int requiredAccuracy, boolean canConfigure) implements CustomPacketPayload {
         public static final Type<PackInfo> TYPE = Packets.type("packs");
         public static final StreamCodec<FriendlyByteBuf, PackInfo> CODEC = StreamCodec.of((b, p) -> {
-            b.writeUtf(p.languagesJson, 32767); b.writeUtf(p.selected, 32);
-        }, b -> new PackInfo(b.readUtf(32767), b.readUtf(32)));
+            b.writeUtf(p.languagesJson, 32767); b.writeUtf(p.selected, 32); b.writeInt(p.requiredAccuracy); b.writeBoolean(p.canConfigure);
+        }, b -> new PackInfo(b.readUtf(32767), b.readUtf(32), b.readInt(), b.readBoolean()));
         @Override public Type<PackInfo> type() { return TYPE; }
     }
     public record Result(String nonce, boolean unlocked, boolean finished, int accuracy, String message) implements CustomPacketPayload {

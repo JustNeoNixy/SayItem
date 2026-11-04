@@ -6,40 +6,42 @@ Say an item's name in another language to unlock it. Inspired by custom mods in
 
 ## Play
 
-1. Install **Fabric Loader** for Minecraft **26.1.2, 26.2, or 26.3**.
-2. Put the matching **SayItem jar** in `mods/`. That's the only mod you need to add:
-   Fabric API, Whisper, and the multilingual speech model are bundled.
-3. Launch Minecraft. Speech initializes automatically, entirely offline.
-4. Play Survival. Collect an item, **hold V**, say the words on the HUD, then release.
-   Press **K** for language, microphone, and speech status settings.
+1. Install **Fabric Loader** and **Fabric API** for Minecraft **26.1.2, 26.2, or 26.3**.
+2. Add the matching **SayItem jar** to `mods/`.
+3. First launch downloads and checks the local speech runtime and multilingual model
+   into `.sayitem/speech/`. Later launches work offline. No Python or companion app.
+4. Collect an item, **hold V**, say the HUD text, then release. **K** opens settings.
 
-You have **15 seconds** to get a **90% text match**. Allow time for local recognition
-after releasing V. Success unlocks that item type for the run. On timeout, all copies
-of that locked type disappear from your inventory; collect it again to retry.
-Each new type has its own timer. Unlocks reset when the world/server restarts;
-reconnecting to the same running server keeps them. Creative and Spectator bypass locks.
+Each locked item type gets **15 seconds** from entering your inventory. A correct
+answer unlocks it for the run; timeout removes all copies of that type from your
+inventory. Collect it again to retry. Unlocks survive reconnects and reset when the
+world/server restarts. Creative and Spectator bypass locks.
+
+The required text match defaults to **90%**. The world owner or server operators
+can choose **60–100%** in K settings; everyone on the server uses that requirement.
+It measures recognized text, not accent. Short words can be harder for speech models.
 
 All **1,657 item types** across the supported versions are covered. Japanese includes
-romaji; English, Spanish, French, German, and Polish are also included.
-The score compares recognized words, not your accent. Audio stays in memory inside
-Minecraft: **no Python, companion app, server process, account, or API key**.
-The model is extracted to Minecraft's `.sayitem` cache automatically on first launch.
+romaji; English, Spanish, French, German, and Polish are included. Audio is processed
+inside Minecraft and is never uploaded. Recognition uses the original faster-whisper
+**CTranslate2 INT8** engine, with speech filtering and CPU feature detection.
+The small mod jar contains no other mods, model weights, or native engines.
 
-## Custom languages
+## Packs and servers
 
-Add UTF-8 JSON packs to `config/sayitem/languages/`, then restart the world/server.
-Missing translations use a marked English fallback. Minimal `it.json`:
+Add UTF-8 JSON to `config/sayitem/languages/` and restart the world/server. Example:
 
 ```json
 {"schemaVersion":1,"id":"it","name":"Italiano","whisperLanguage":"it","items":{"minecraft:apple":{"text":"mela","reading":"","aliases":["una mela"]}}}
 ```
 
-On multiplayer, install SayItem and the packs on the server too. Only clients run speech.
-This is a cooperative challenge, not cheat protection.
+Missing names use a marked English fallback. Install SayItem, Fabric API, and the
+packs on multiplayer servers too. Only clients load speech. This is a cooperative
+challenge, not cheat protection.
 
-Build with Java 25: `./gradlew build verifySingleJar`; add `-Pminecraft_version=26.2`
-or `26.3` for other targets. The build fetches a checksum-pinned model; players need no
-downloads after installing the jar. Bundled native engines cover Windows x64, Linux
-x64/ARM64, and macOS x64/ARM64. Native engine rebuild recipes and pinned
-sources are in `native/`; licenses ship inside the jar. Minecraft translation source
-hashes are in `tools/translation-sources.json`. SayItem is independent of Mojang and the video creators.
+Build with Java 25: `./gradlew build verifySingleJar`; use
+`-Pminecraft_version=26.2` or `26.3` for another target. Speech data is downloaded
+once; only your operating system's runtime is cached. Runtime sources/checksums are
+in `native/ct2/` and the jar's manifests. Licenses ship in `licenses/` inside the jar;
+recorded test-audio attribution is in `src/test/resources/audio/pl-fixtures.json`.
+SayItem is independent of Mojang and the video creators.

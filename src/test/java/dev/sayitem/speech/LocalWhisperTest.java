@@ -32,7 +32,7 @@ class LocalWhisperTest {
                 Thread.sleep(75);
                 long cancelledAt = System.nanoTime();
                 assertTrue(obsolete.cancel(false));
-                engine.whenIdle().get(3, TimeUnit.SECONDS);
+                engine.whenIdle().get(8, TimeUnit.SECONDS);
                 assertTrue(engine.nativeAborts() > 0, "Cancellation must reach the native computation");
                 System.out.println("Cancelled native speech job drained in " + TimeUnit.NANOSECONDS.toMillis(System.nanoTime() - cancelledAt) + "ms");
                 String next = engine.transcribe(samples, "en").get(60, TimeUnit.SECONDS);

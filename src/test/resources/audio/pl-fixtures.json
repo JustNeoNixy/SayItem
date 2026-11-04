@@ -1,0 +1,11 @@
+{
+  "description":"Polish regression speech, PCM16 mono 16 kHz. Human clips and synthetic phrases; no user microphone recordings.",
+  "humanRecordings": {
+    "pl-stone.wav":{"text":"Kamień","author":"Derbeth","source":"https://commons.wikimedia.org/wiki/File:Pl-kamie%C5%84.ogg","license":"CC BY 2.5","licenseUrl":"https://creativecommons.org/licenses/by/2.5/","changes":"Resampled to 16 kHz PCM16"},
+    "pl-cobblestone.wav":{"text":"Bruk","author":"Equadus","source":"https://commons.wikimedia.org/wiki/File:Pl-bruk.ogg","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0/","changes":"Resampled to 16 kHz PCM16; derivative remains CC BY-SA 3.0"},
+    "pl-apple.wav":{"text":"Jabłko","author":"Equadus","source":"https://commons.wikimedia.org/wiki/File:Pl-jab%C5%82ko.ogg","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0/","changes":"Resampled to 16 kHz PCM16; derivative remains CC BY-SA 3.0"},
+    "pl-iron-pickaxe.wav":{"text":"Żelazny kilof","author":"Equadus","sources":["https://commons.wikimedia.org/wiki/File:Pl-%C5%BCelazny.ogg","https://commons.wikimedia.org/wiki/File:Pl-kilof.ogg"],"license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0/","changes":"Resampled and concatenated with a 100 ms pause; derivative remains CC BY-SA 3.0"}
+  },
+  "syntheticRecordings":{"generator":"Piper 1.8.0, Gosia medium Polish voice; resampled from 22050 Hz","voice":"https://huggingface.co/rhasspy/piper-voices/tree/main/pl/pl_PL/gosia/medium","datasetLicense":"CC0 (voice MODEL_CARD)","phrases":{"pl-diamond-sword.wav":"Diamentowy miecz","pl-oak-planks.wav":"Dębowe deski","pl-unrelated.wav":"Dzisiaj jest ładna pogoda."}},
+  "referenceData":"mel-reference.json and tokenizer-reference.json were generated with faster-whisper 1.2.1 and the pinned base tokenizer."
+}

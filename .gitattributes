@@ -11,3 +11,4 @@ gradlew text eol=lf
 *.so binary
 *.dylib binary
 *.wav binary
+src/main/resources/licenses/*.txt -whitespace

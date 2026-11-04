@@ -15,3 +15,5 @@ logs/
 *.spec.bak
 .sayitem/
 config/
+/private/
+/src.7z

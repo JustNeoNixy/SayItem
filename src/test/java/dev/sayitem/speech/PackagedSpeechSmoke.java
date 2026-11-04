@@ -18,28 +18,17 @@ public final class PackagedSpeechSmoke {
             try (var reader = new java.io.InputStreamReader(jar.getInputStream(jar.getEntry("fabric.mod.json")), java.nio.charset.StandardCharsets.UTF_8)) {
                 metadata = new Gson().fromJson(reader, JsonObject.class);
             }
-            boolean fabricBundled = false;
-            for (var nested : metadata.getAsJsonArray("jars")) {
-                String name = nested.getAsJsonObject().get("file").getAsString();
-                if (name.contains("fabric-api")) {
-                    fabricBundled = true;
-                    try (var zip = new java.util.zip.ZipInputStream(jar.getInputStream(jar.getEntry(name)))) {
-                        boolean foundMetadata = false;
-                        for (var entry = zip.getNextEntry(); entry != null; entry = zip.getNextEntry())
-                            if (entry.getName().equals("fabric.mod.json")) foundMetadata = true;
-                        if (!foundMetadata) throw new AssertionError("Invalid bundled Fabric API");
-                    }
-                }
-            }
-            if (!fabricBundled) throw new AssertionError("Distribution is missing bundled Fabric API");
-            for (String platform : java.util.List.of("windows-x64", "linux-x64", "linux-arm64", "macos-x64", "macos-arm64")) {
-                String extension = platform.startsWith("windows") ? "dll" : platform.startsWith("linux") ? "so" : "dylib";
-                if (jar.getEntry("sayitem-speech/native/" + platform + "/sayitem-whisper." + extension) == null ||
-                    jar.getEntry("sayitem-speech/native/" + platform + "/source.json") == null)
-                    throw new AssertionError("Missing native platform: " + platform);
-            }
-            var model = jar.getEntry("sayitem-speech/ggml-base-q5_1.bin");
-            if (model == null || model.getSize() != 59707625) throw new AssertionError("Distribution is missing the model");
+            if (metadata.has("jars") && !metadata.getAsJsonArray("jars").isEmpty())
+                throw new AssertionError("SayItem must not bundle other mods");
+            if (!metadata.getAsJsonObject("depends").has("fabric-api"))
+                throw new AssertionError("Fabric API must remain a required external dependency");
+            if (jar.stream().anyMatch(entry -> entry.getName().endsWith(".jar")))
+                throw new AssertionError("Unexpected nested jar");
+            if (Files.size(mod) > 2 * 1024 * 1024) throw new AssertionError("Unexpected mod jar size");
+            if (jar.stream().anyMatch(entry -> entry.getName().matches(".*\\.(dll|dylib|so|bin|onnx|part)$") || entry.getName().startsWith("ai/onnxruntime/")))
+                throw new AssertionError("Heavy runtime files must remain outside the mod jar");
+            if (jar.getEntry("sayitem-speech/runtime-index.json") == null || jar.getEntry("sayitem-speech/model.json") == null)
+                throw new AssertionError("Missing speech download manifests");
         }
         URL gson = Gson.class.getProtectionDomain().getCodeSource().getLocation();
         URL jna = com.sun.jna.Native.class.getProtectionDomain().getCodeSource().getLocation();
@@ -58,6 +47,6 @@ public final class PackagedSpeechSmoke {
                 }
             } finally { ((AutoCloseable) engine).close(); }
         }
-        System.out.println("Single-jar smoke test passed: bundled engine + model, real speech, bundled Fabric API.");
+        System.out.println("Mod smoke test passed: small jar, real speech through isolated runtime, no nested mods, external Fabric API.");
     }
 }

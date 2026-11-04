@@ -19,6 +19,12 @@ public final class RunState {
         }
         public Round current() { return rounds.values().stream().findFirst().orElse(null); }
         public void unlock(String item) { unlocked.add(item); rounds.remove(item); }
+        public void selectLanguage(String selected) {
+            if (language.equals(selected)) return;
+            language = selected;
+            // A result for the previous language cannot answer the new wording. Deadlines stay fixed.
+            rounds.replaceAll((item, round) -> new Round(UUID.randomUUID().toString(), item, round.deadline()));
+        }
     }
     private final Map<UUID, PlayerRun> players = new HashMap<>();
     public PlayerRun player(UUID id) { return players.computeIfAbsent(id, key -> new PlayerRun()); }

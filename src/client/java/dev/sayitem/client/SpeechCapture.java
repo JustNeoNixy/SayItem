@@ -1,7 +1,7 @@
 package dev.sayitem.client;
 
 import dev.sayitem.speech.AudioSamples;
-import dev.sayitem.speech.LocalWhisper;
+import dev.sayitem.speech.SpeechEngine;
 import javax.sound.sampled.*;
 import java.io.*;
 import java.util.*;
@@ -13,14 +13,14 @@ import java.util.function.Consumer;
 public final class SpeechCapture {
     private static final AudioFormat FORMAT = new AudioFormat(16_000, 16, 1, true, false);
     private final ClientSettings settings;
-    private final LocalWhisper engine;
+    private final SpeechEngine engine;
     private volatile boolean recording;
     private volatile boolean cancelled;
     private volatile TargetDataLine line;
     private volatile CompletableFuture<String> request;
     private final AtomicBoolean busy = new AtomicBoolean();
 
-    public SpeechCapture(ClientSettings settings, LocalWhisper engine) { this.settings = settings; this.engine = engine; }
+    public SpeechCapture(ClientSettings settings, SpeechEngine engine) { this.settings = settings; this.engine = engine; }
     public boolean isRecording() { return recording; }
     public boolean isBusy() { return busy.get(); }
     public static List<String> microphones() {

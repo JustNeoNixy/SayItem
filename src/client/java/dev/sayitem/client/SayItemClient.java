@@ -3,6 +3,7 @@ package dev.sayitem.client;
 import dev.sayitem.core.JsonFiles;
 import dev.sayitem.net.Packets;
 import dev.sayitem.speech.LocalWhisper;
+import dev.sayitem.speech.SpeechEngine;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientLifecycleEvents;
@@ -24,13 +25,15 @@ public final class SayItemClient implements ClientModInitializer {
     static String selectedLanguage = "ja";
     static JsonObject languages = new JsonObject();
     static int accuracy = -1;
+    static int requiredAccuracy = 90;
+    static boolean canConfigure;
     static long deadline;
     static long resultUntil;
     static SpeechCapture speech;
     static KeyMapping key;
     static KeyMapping settingsKey;
     static ClientSettings settings;
-    static LocalWhisper engine;
+    static SpeechEngine engine;
     private boolean readinessSent;
     private boolean preferenceSent;
     private String recordingNonce = "";
@@ -51,6 +54,8 @@ public final class SayItemClient implements ClientModInitializer {
         ClientLifecycleEvents.CLIENT_STOPPING.register(client -> { speech.cancel(); engine.close(); });
         HudElementRegistry.addLast(Identifier.fromNamespaceAndPath("sayitem", "challenge"), (graphics, delta) -> ChallengeHud.draw(graphics));
         ClientPlayNetworking.registerGlobalReceiver(Packets.PackInfo.TYPE, (packet, context) -> {
+            requiredAccuracy = dev.sayitem.core.AccuracyRequirement.clamp(packet.requiredAccuracy());
+            canConfigure = packet.canConfigure();
             languages = JsonFiles.GSON.fromJson(packet.languagesJson(), JsonObject.class);
             selectedLanguage = packet.selected();
             if (!preferenceSent) {
@@ -87,6 +92,7 @@ public final class SayItemClient implements ClientModInitializer {
             speech.cancel(); challenge = null; awaitingAnswer = false; languages = new JsonObject(); selectedLanguage = "ja";
             readinessSent = false; preferenceSent = false;
             status = "Collect an item to begin."; transcript = ""; accuracy = -1;
+            requiredAccuracy = 90; canConfigure = false;
         });
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             long clock = System.nanoTime();

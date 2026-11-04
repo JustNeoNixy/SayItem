@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 jobs:
   mod:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     strategy:
       matrix:
         minecraft: ['26.1.2', '26.2', '26.3']
@@ -16,12 +16,20 @@ jobs:
         with:
           distribution: temurin
           java-version: '25'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
       - uses: gradle/actions/setup-gradle@v4
       - uses: actions/cache@v4
         with:
-          path: build/generated/speech-resources
-          key: whisper-base-q5-422f1ae452ade6f3
-      - run: bash gradlew build verifySingleJar '-Pminecraft_version=${{ matrix.minecraft }}' --console=plain
+          path: build/model-source
+          key: ct2-base-d01c3014881c-vad-4cbf549b
+      - uses: actions/cache@v4
+        with:
+          path: build/test-runtime-cache
+          key: speech-runtime-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('src/main/resources/sayitem-speech/runtime-index.json') }}
+      - run: python tools/fetch_speech_models.py
+      - run: bash gradlew build verifySingleJar '-Pminecraft_version=${{ matrix.minecraft }}' '-Pspeech_model_dir=${{ github.workspace }}/build/model-source' --console=plain
       - uses: actions/upload-artifact@v4
         with:
           name: sayitem-mc${{ matrix.minecraft }}
@@ -37,9 +45,17 @@ jobs:
         with:
           distribution: temurin
           java-version: '25'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
       - uses: gradle/actions/setup-gradle@v4
       - uses: actions/cache@v4
         with:
-          path: build/generated/speech-resources
-          key: whisper-base-q5-422f1ae452ade6f3
-      - run: bash gradlew test --tests 'dev.sayitem.speech.*' --console=plain
+          path: build/model-source
+          key: ct2-base-d01c3014881c-vad-4cbf549b
+      - uses: actions/cache@v4
+        with:
+          path: build/test-runtime-cache
+          key: speech-runtime-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('src/main/resources/sayitem-speech/runtime-index.json') }}
+      - run: python tools/fetch_speech_models.py
+      - run: bash gradlew test --tests 'dev.sayitem.speech.*' '-Pspeech_model_dir=${{ github.workspace }}/build/model-source' --console=plain

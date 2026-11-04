@@ -38,7 +38,7 @@ final class ChallengeHud {
         graphics.pose().scale(Math.max(0.4f, scale));
         int left = -width / 2;
         graphics.fill(left, 0, left + width, height, 0xE318232B);
-        String timer = (SayItemClient.remaining() + 999) / 1000 + "s · 90% required"
+        String timer = (SayItemClient.remaining() + 999) / 1000 + "s · " + SayItemClient.requiredAccuracy + "% required"
             + (challenge.pendingCount() > 0 ? " · +" + challenge.pendingCount() + " timers" : "");
         graphics.text(font, timer, left + 12, 9, 0xFF8EE4CE);
         int row = 26;

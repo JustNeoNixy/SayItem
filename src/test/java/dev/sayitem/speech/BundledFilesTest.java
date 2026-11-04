@@ -8,12 +8,15 @@ import static org.junit.jupiter.api.Assertions.*;
 class BundledFilesTest {
     @TempDir Path cache;
     @Test void extractsAndRepairsCachedModelWithoutNetwork() throws Exception {
-        Path file = cache.resolve("models/base.bin");
-        assertEquals(file, BundledFiles.extract(LocalWhisper.class, "/sayitem-speech/ggml-base-q5_1.bin", file, LocalWhisper.MODEL_SHA));
-        assertEquals(59707625, Files.size(file));
+        Path file = cache.resolve("model.json");
+        String expected;
+        try (var stream = LocalWhisper.class.getResourceAsStream("/sayitem-speech/model.json")) {
+            expected = java.util.HexFormat.of().formatHex(java.security.MessageDigest.getInstance("SHA-256").digest(stream.readAllBytes()));
+        }
+        assertEquals(file, BundledFiles.extract(LocalWhisper.class, "/sayitem-speech/model.json", file, expected));
         Files.writeString(file, "damaged cache");
-        BundledFiles.extract(LocalWhisper.class, "/sayitem-speech/ggml-base-q5_1.bin", file, LocalWhisper.MODEL_SHA);
-        assertEquals(LocalWhisper.MODEL_SHA, BundledFiles.sha256(file));
+        BundledFiles.extract(LocalWhisper.class, "/sayitem-speech/model.json", file, expected);
+        assertEquals(expected, BundledFiles.sha256(file));
         try (var files = Files.list(file.getParent())) {
             assertEquals(1, files.count());
         }
