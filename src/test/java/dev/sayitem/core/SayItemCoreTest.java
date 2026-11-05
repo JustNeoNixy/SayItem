@@ -28,7 +28,7 @@ class SayItemCoreTest {
     }
     @Test void builtInPacksHaveMatchingCoverageAndJapaneseReadings() throws Exception {
         PackRepository repository = new PackRepository(temp.resolve("packs"));
-        assertEquals(Set.of("en", "ja", "es", "fr", "de", "pl", "bg", "ru"), repository.ids());
+        assertEquals(Set.of("en", "ja", "es", "fr", "de", "pl", "bg", "ru", "it"), repository.ids());
         LanguagePack japanese = repository.get("ja");
         assertEquals(1657, japanese.items().size());
         for (String id : repository.ids()) {
@@ -40,6 +40,7 @@ class SayItemCoreTest {
         assertTrue(repository.get("bg").items().get("minecraft:stone").accepts("Камък"));
         assertTrue(repository.get("ru").items().get("minecraft:diamond_sword").accepts("Алмазный меч"));
         assertTrue(repository.get("ru").items().get("minecraft:dark_oak_planks").accepts("Доски из темного дуба"));
+        assertTrue(repository.get("it").items().get("minecraft:apple").accepts("Mela"));
         assertFalse(AnswerMatcher.matches("и", "й", List.of()));
     }
     @Test void customPacksAreLoadedAndNeverOverwritten() throws Exception {
@@ -91,10 +92,10 @@ class SayItemCoreTest {
 
     @Test void missingCustomTranslationUsesEnglishButNeverBypassesALock() throws Exception {
         var packs = new PackRepository(temp.resolve("packs"));
-        JsonFiles.write(temp.resolve("packs/it.json"), new LanguagePack(1, "it", "Italiano", "it",
+        JsonFiles.write(temp.resolve("packs/nl.json"), new LanguagePack(1, "nl", "Nederlands", "nl",
                 Map.of("minecraft:apple", new LanguagePack.Entry("mela", "", List.of()))));
         packs = new PackRepository(temp.resolve("packs"));
-        assertEquals("en", packs.phrase("it", "minecraft:stone", "Stone").whisperLanguage());
-        assertEquals("Stone", packs.phrase("it", "minecraft:stone", "Stone").entry().text());
+        assertEquals("en", packs.phrase("nl", "minecraft:stone", "Stone").whisperLanguage());
+        assertEquals("Stone", packs.phrase("nl", "minecraft:stone", "Stone").entry().text());
     }
 }

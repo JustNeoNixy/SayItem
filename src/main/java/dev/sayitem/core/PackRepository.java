@@ -6,7 +6,7 @@ import java.nio.file.*;
 import java.util.*;
 
 public final class PackRepository {
-    private static final List<String> BUILT_INS = List.of("en", "ja", "es", "fr", "de", "pl", "bg", "ru");
+    private static final List<String> BUILT_INS = List.of("en", "ja", "es", "fr", "de", "pl", "bg", "ru", "it");
     private final Map<String, LanguagePack> packs;
 
     public PackRepository(Path directory) throws IOException {
@@ -43,11 +43,13 @@ public final class PackRepository {
                             if (original != null && original.text().equals(custom.text())) {
                                 var aliases = new LinkedHashSet<>(custom.aliases());
                                 for (String alias : original.aliases()) if (aliases.size() < 32) aliases.add(alias);
-                                combined.put(item, new LanguagePack.Entry(custom.text(), custom.reading(), List.copyOf(aliases)));
+                                String reading = custom.reading().isBlank() ? original.reading() : custom.reading();
+                                combined.put(item, new LanguagePack.Entry(custom.text(), reading, List.copyOf(aliases)));
                             } else combined.put(item, custom);
                         });
                         pack = new LanguagePack(1, pack.id(), pack.name(), pack.whisperLanguage(), combined);
                     }
+                    pack = ReadingGuides.fillMissing(pack);
                     if (loaded.putIfAbsent(pack.id(), pack) != null)
                         throw new IllegalArgumentException("Duplicate pack id: " + pack.id());
                 } catch (RuntimeException exception) {

@@ -28,8 +28,15 @@ final class SayItemSettingsScreen extends Screen {
             if (ids.isEmpty()) return;
             int next = (ids.indexOf(SayItemClient.settings.language) + 1) % ids.size();
             SayItemClient.chooseLanguage(ids.get(next)); button.setMessage(languageLabel());
-        }).bounds(left, top, rowWidth, 20).build());
+        }).bounds(left, top, rowWidth - 92, 20).build());
         language.active = !ids.isEmpty();
+        addRenderableWidget(Button.builder(readingsLabel(), button -> {
+            SayItemClient.settings.showReadings = !SayItemClient.settings.showReadings;
+            try { SayItemClient.settings.save(); }
+            catch (IOException error) { SayItemClient.status = "Could not save reading settings."; }
+            button.setMessage(readingsLabel());
+        }).bounds(left + rowWidth - 88, top, 88, 20).tooltip(Tooltip.create(Component.literal(
+            "Show a Latin-letter reading under the item name. Automatic readings are approximate; language packs can provide their own."))).build());
         List<String> microphones;
         try { microphones = SpeechCapture.microphones(); }
         catch (RuntimeException e) { microphones = List.of(""); }
@@ -129,6 +136,7 @@ final class SayItemSettingsScreen extends Screen {
     private Component microphoneLabel() {
         return Component.literal("Microphone: " + (SayItemClient.settings.microphoneName.isBlank() ? "System default" : SayItemClient.settings.microphoneName));
     }
+    private Component readingsLabel() { return Component.literal("Readings: " + (SayItemClient.settings.showReadings ? "On" : "Off")); }
     @Override public boolean isPauseScreen() { return false; }
     @Override public void extractRenderState(GuiGraphicsExtractor graphics, int mouseX, int mouseY, float delta) {
         graphics.fill(0, 0, width, height, 0xED18232B);

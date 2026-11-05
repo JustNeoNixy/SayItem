@@ -10,6 +10,7 @@ public final class ClientSettings {
     public String microphoneName = "";
     public String language = "ja";
     public String speechProfile = "cpu";
+    public boolean showReadings = true;
     private static Path file() { return FabricLoader.getInstance().getConfigDir().resolve("sayitem/client.json"); }
     public static ClientSettings load() throws IOException {
         if (!Files.isRegularFile(file())) return new ClientSettings();

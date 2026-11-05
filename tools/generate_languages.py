@@ -1,17 +1,28 @@
-"""Reproduce Bulgarian/Russian packs from checksum-pinned Mojang language assets."""
+"""Reproduce Bulgarian/Russian/Italian packs from checksum-pinned Mojang assets."""
 import hashlib
 import json
 import urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-LANGUAGES = {'bg': ('bg_bg', 'Bulgarian · Български'), 'ru': ('ru_ru', 'Russian · Русский')}
+LANGUAGES = {'bg': ('bg_bg', 'Bulgarian · Български'), 'ru': ('ru_ru', 'Russian · Русский'),
+             'it': ('it_it', 'Italian · Italiano')}
 
 
 def generate():
     catalog = json.loads((ROOT / 'src/main/resources/item-catalog.json').read_text(encoding='utf-8'))
     sources = json.loads((ROOT / 'tools/translation-sources.json').read_text(encoding='utf-8'))
     cache = ROOT / 'build/language-source'; cache.mkdir(parents=True, exist_ok=True)
+    # New locales use the same pinned asset indexes as the existing packs.
+    for source in sources.values():
+        missing = [locale for locale, _ in LANGUAGES.values() if locale not in source['languages']]
+        if not missing: continue
+        with urllib.request.urlopen(source['assetIndex'], timeout=60) as response: payload = response.read()
+        expected = source['assetIndex'].split('/')[-2]
+        if hashlib.sha1(payload).hexdigest() != expected: raise RuntimeError('Mojang asset index checksum mismatch')
+        assets = json.loads(payload)['objects']
+        for locale in missing: source['languages'][locale] = assets[f'minecraft/lang/{locale}.json']['hash']
+    (ROOT / 'tools/translation-sources.json').write_text(json.dumps(sources, indent=2) + '\n', encoding='utf-8')
     for language, (locale, name) in LANGUAGES.items():
         names = {}
         for version, source in sources.items():

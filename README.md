@@ -16,7 +16,7 @@ Locked item types enter a **queue** when collected. Only the first item's timer 
 each waiting type gets its full **15 seconds by default** when it reaches the front.
 A correct answer unlocks it for that world; timeout removes all copies of that type
 from your inventory. Collect it again to retry. Creative and Spectator bypass locks.
-The HUD and K settings show **unlocked / total** item types.
+The bottom-left HUD counter and K settings show **unlocked / total** item types.
 
 The required text match defaults to **90%**. The world owner or server operators
 can choose **60–100%** and a **10–30 second timer** in K settings. Timer changes apply
@@ -38,7 +38,10 @@ Audio stays inside Minecraft and is never uploaded. Models/libraries download on
 and work offline afterward; the small mod jar contains no other mods or model weights.
 
 All **1,657 item types** across the supported versions are covered. Japanese includes
-romaji; English, Spanish, French, German, Polish, **Bulgarian**, and **Russian** are included.
+romaji; English, Spanish, French, German, Polish, Bulgarian, Russian, and **Italian** are included.
+**Readings** in K settings shows Latin-letter guides below item names, including Russian
+and Bulgarian. These are approximate reading aids, not exact phonetics. Custom packs can
+set `reading` for a precise guide; blank readings are converted automatically where supported.
 CPU speech uses CTranslate2 INT8; GPU speech uses whisper.cpp. All models are multilingual.
 
 ## Packs and servers

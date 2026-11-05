@@ -22,6 +22,7 @@ import java.io.IOException;
 public final class SayItemClient implements ClientModInitializer {
     static Packets.Challenge challenge;
     static String transcript = "";
+    static String displayReading = "";
     static String status = "Collect an item to begin.";
     static String selectedLanguage = "ja";
     static JsonObject languages = new JsonObject();
@@ -87,6 +88,8 @@ public final class SayItemClient implements ClientModInitializer {
                 speech.cancel(); awaitingAnswer = false;
                 status = "Hold " + key.getTranslatedKeyMessage().getString() + " and say the words.";
                 accuracy = -1;
+                displayReading = packet.reading().isBlank()
+                    ? dev.sayitem.core.ReadingGuides.forText(packet.text(), packet.whisperLanguage()) : packet.reading();
             }
             challenge = packet; deadline = System.nanoTime() + packet.remainingMillis() * 1_000_000;
         });
@@ -104,7 +107,7 @@ public final class SayItemClient implements ClientModInitializer {
         ClientPlayConnectionEvents.DISCONNECT.register((handler, client) -> {
             speech.cancel(); challenge = null; awaitingAnswer = false; languages = new JsonObject(); selectedLanguage = "ja";
             readinessSent = false; preferenceSent = false;
-            status = "Collect an item to begin."; transcript = ""; accuracy = -1;
+            status = "Collect an item to begin."; transcript = ""; displayReading = ""; accuracy = -1;
             requiredAccuracy = 90; timerSeconds = dev.sayitem.core.TimerLimit.DEFAULT; canConfigure = false;
             unlockedCount = 0; totalItemCount = 0; sharing = false;
         });
