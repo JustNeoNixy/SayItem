@@ -16,10 +16,15 @@ jobs:
           repository: ggml-org/whisper.cpp
           ref: d1be6fde11ac6e0407606b4e42fe72d34add8037
           path: build/native-source/whisper-vulkan
-      - uses: humbletim/install-vulkan-sdk@e7d6e7b937bde4503c7ba5c9584c9dc68f44c4b8
-        with:
-          version: 1.4.328.1
-          cache: true
+      - name: Install official Vulkan SDK on the build runner
+        shell: pwsh
+        run: |
+          $installer = Join-Path $env:RUNNER_TEMP 'vulkan-sdk.exe'
+          Invoke-WebRequest 'https://sdk.lunarg.com/sdk/download/1.4.328.1/windows/vulkansdk-windows-X64-1.4.328.1.exe' -OutFile $installer
+          $sdk = Join-Path $env:RUNNER_TEMP 'vulkan-sdk'
+          $process = Start-Process -FilePath $installer -ArgumentList @('--root', $sdk, '--accept-licenses', '--default-answer', '--confirm-command', 'install') -Wait -PassThru -WindowStyle Hidden
+          if ($process.ExitCode -ne 0) { throw 'Vulkan SDK installer failed' }
+          "VULKAN_SDK=$sdk" | Add-Content $env:GITHUB_ENV
       - name: Configure
         shell: pwsh
         run: |
