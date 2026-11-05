@@ -34,7 +34,16 @@ public final class PackRepository {
                     if (pack == null) throw new IllegalArgumentException("Empty pack");
                     LanguagePack bundled = defaults.get(pack.id());
                     if (bundled != null) {
-                        var combined = new HashMap<>(bundled.items()); combined.putAll(pack.items());
+                        var combined = new HashMap<>(bundled.items());
+                        pack.items().forEach((item, custom) -> {
+                            var original = bundled.items().get(item);
+                            // Apply pronunciation fixes to unchanged item text, including older exported packs.
+                            // Custom wording/readings and the user's file stay intact.
+                            if (original != null && original.text().equals(custom.text())) {
+                                var aliases = new LinkedHashSet<>(original.aliases()); aliases.addAll(custom.aliases());
+                                combined.put(item, new LanguagePack.Entry(custom.text(), custom.reading(), List.copyOf(aliases)));
+                            } else combined.put(item, custom);
+                        });
                         pack = new LanguagePack(1, pack.id(), pack.name(), pack.whisperLanguage(), combined);
                     }
                     if (loaded.putIfAbsent(pack.id(), pack) != null)

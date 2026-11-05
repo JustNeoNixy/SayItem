@@ -12,13 +12,14 @@ Say an item's name in another language to unlock it. Inspired by custom mods in
    into `.sayitem/speech/`. Later launches work offline. No Python or companion app.
 4. Collect an item, **hold V**, say the HUD text, then release. **K** opens settings.
 
-Each locked item type gets **15 seconds** from entering your inventory. A correct
+Each locked item type gets **15 seconds by default** from entering your inventory. A correct
 answer unlocks it for the run; timeout removes all copies of that type from your
 inventory. Collect it again to retry. Unlocks survive reconnects and reset when the
 world/server restarts. Creative and Spectator bypass locks.
 
 The required text match defaults to **90%**. The world owner or server operators
-can choose **60–100%** in K settings; everyone on the server uses that requirement.
+can choose **60–100%** and a **10–30 second timer** in K settings. Timer changes apply
+to newly collected locked types; active deadlines stay fixed. Server settings are saved.
 It measures recognized text, not accent. Short words can be harder for speech models.
 
 All **1,657 item types** across the supported versions are covered. Japanese includes
@@ -36,7 +37,7 @@ Add UTF-8 JSON to `config/sayitem/languages/` and restart the world/server. Exam
 ```
 
 Missing names use a marked English fallback. Install SayItem, Fabric API, and the
-packs on multiplayer servers too. Only clients load speech. This is a cooperative
+packs on multiplayer servers too; update clients and server together. Only clients load speech. This is a cooperative
 challenge, not cheat protection.
 
 Build with Java 25: `./gradlew build verifySingleJar`; use

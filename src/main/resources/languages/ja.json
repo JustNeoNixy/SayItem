@@ -2375,7 +2375,8 @@
       "text": "銅の剣",
       "reading": "dou no tsurugi",
       "aliases": [
-        "どうのつるぎ"
+        "どうのつるぎ",
+        "どうのけん"
       ]
     },
     "minecraft:copper_torch": {
@@ -3356,7 +3357,8 @@
       "text": "ダイヤモンドの剣",
       "reading": "daiyamondo no ken",
       "aliases": [
-        "だいやもんどのつるぎ"
+        "だいやもんどのつるぎ",
+        "だいやもんどのけん"
       ]
     },
     "minecraft:diorite": {
@@ -4262,7 +4264,8 @@
       "text": "金の剣",
       "reading": "kin no tsurugi",
       "aliases": [
-        "きんのつるぎ"
+        "きんのつるぎ",
+        "きんのけん"
       ]
     },
     "minecraft:granite": {
@@ -4979,7 +4982,8 @@
       "text": "鉄の剣",
       "reading": "tetsu no ken",
       "aliases": [
-        "てつのつるぎ"
+        "てつのつるぎ",
+        "てつのけん"
       ]
     },
     "minecraft:iron_trapdoor": {
@@ -6664,7 +6668,8 @@
       "text": "ネザライトの剣",
       "reading": "nezaraito no tsurugi",
       "aliases": [
-        "ねざらいとのつるぎ"
+        "ねざらいとのつるぎ",
+        "ねざらいとのけん"
       ]
     },
     "minecraft:netherite_upgrade_smithing_template": {
@@ -9697,7 +9702,8 @@
       "text": "石の剣",
       "reading": "ishi no ken",
       "aliases": [
-        "いしのつるぎ"
+        "いしのつるぎ",
+        "いしのけん"
       ]
     },
     "minecraft:stonecutter": {
@@ -11390,7 +11396,8 @@
       "text": "木の剣",
       "reading": "ki no ken",
       "aliases": [
-        "きのつるぎ"
+        "きのつるぎ",
+        "きのけん"
       ]
     },
     "minecraft:woodland_mansion_map": {

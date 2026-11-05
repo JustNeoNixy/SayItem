@@ -38,14 +38,18 @@ public final class SayItem implements ModInitializer {
         PayloadTypeRegistry.serverboundPlay().register(Packets.SelectLanguage.TYPE, Packets.SelectLanguage.CODEC);
         PayloadTypeRegistry.serverboundPlay().register(Packets.SpeechReady.TYPE, Packets.SpeechReady.CODEC);
         PayloadTypeRegistry.serverboundPlay().register(Packets.SetAccuracy.TYPE, Packets.SetAccuracy.CODEC);
+        PayloadTypeRegistry.serverboundPlay().register(Packets.SetTimer.TYPE, Packets.SetTimer.CODEC);
         ServerPlayNetworking.registerGlobalReceiver(Packets.SetAccuracy.TYPE, (packet, context) -> {
             var player = context.player();
             if (!canConfigure(player) || !AccuracyRequirement.valid(packet.percent())) { sendPacks(player); return; }
-            var updated = new ServerRules(); updated.requiredAccuracy = packet.percent();
-            try { updated.save(rulesFile()); }
-            catch (IOException e) { result(player, "", false, false, -1, "Could not save SayItem difficulty."); return; }
-            rules = updated;
-            for (var member : player.level().getServer().getPlayerList().getPlayers()) sendPacks(member);
+            var updated = rules.copy(); updated.requiredAccuracy = packet.percent();
+            saveRules(player, updated);
+        });
+        ServerPlayNetworking.registerGlobalReceiver(Packets.SetTimer.TYPE, (packet, context) -> {
+            var player = context.player();
+            if (!canConfigure(player) || !TimerLimit.valid(packet.seconds())) { sendPacks(player); return; }
+            var updated = rules.copy(); updated.timerSeconds = packet.seconds();
+            saveRules(player, updated);
         });
         ServerPlayNetworking.registerGlobalReceiver(Packets.SpeechReady.TYPE, (packet, context) -> speechReady.add(context.player().getUUID()));
         PayloadTypeRegistry.clientboundPlay().register(Packets.Challenge.TYPE, Packets.Challenge.CODEC);
@@ -85,7 +89,7 @@ public final class SayItem implements ModInitializer {
             .executes(ctx -> {
                 var state = run.player(ctx.getSource().getPlayerOrException().getUUID());
                 ctx.getSource().sendSuccess(() -> Component.literal("SayItem · " + state.language + " · " + state.unlocked.size()
-                    + " unlocked this run · 15 seconds · " + rules.requiredAccuracy + "% required"), false); return 1;
+                    + " unlocked this run · " + rules.timerSeconds + " seconds · " + rules.requiredAccuracy + "% required"), false); return 1;
             })
             .then(Commands.literal("challenge").executes(ctx -> { sendCurrent(ctx.getSource().getPlayerOrException(), now(), true); return 1; }))
             .then(Commands.literal("language").then(Commands.argument("id", StringArgumentType.word())
@@ -102,7 +106,13 @@ public final class SayItem implements ModInitializer {
         var names = new java.util.TreeMap<String, String>();
         for (String id : packs.ids()) names.put(id, packs.get(id).name());
         if (ServerPlayNetworking.canSend(p, Packets.PackInfo.TYPE))
-            ServerPlayNetworking.send(p, new Packets.PackInfo(JsonFiles.GSON.toJson(names), run.player(p.getUUID()).language, rules.requiredAccuracy, canConfigure(p)));
+            ServerPlayNetworking.send(p, new Packets.PackInfo(JsonFiles.GSON.toJson(names), run.player(p.getUUID()).language, rules.requiredAccuracy, rules.timerSeconds, canConfigure(p)));
+    }
+    private static void saveRules(ServerPlayer player, ServerRules updated) {
+        try { updated.save(rulesFile()); }
+        catch (IOException e) { result(player, "", false, false, -1, "Could not save SayItem settings."); sendPacks(player); return; }
+        rules = updated;
+        for (var member : player.level().getServer().getPlayerList().getPlayers()) sendPacks(member);
     }
     private static boolean canConfigure(ServerPlayer p) {
         var server = p.level().getServer();
@@ -126,7 +136,7 @@ public final class SayItem implements ModInitializer {
         collect(state, p.containerMenu.getCarried(), time);
     }
     private static void collect(RunState.PlayerRun state, ItemStack stack, long time) {
-        if (!stack.isEmpty()) state.collect(id(stack), time);
+        if (!stack.isEmpty()) state.collect(id(stack), time, rules.timerSeconds);
     }
     private static void removeItem(ServerPlayer p, String item) {
         var inventory = p.getInventory();
@@ -140,7 +150,7 @@ public final class SayItem implements ModInitializer {
     public static boolean allow(ServerPlayer p, ItemStack stack) {
         if (stack.isEmpty() || bypass(p) || run.player(p.getUUID()).unlocked.contains(id(stack))) return true;
         if (!speechReady.contains(p.getUUID())) return false;
-        run.player(p.getUUID()).collect(id(stack), now()); sendCurrent(p, now(), true); return false;
+        run.player(p.getUUID()).collect(id(stack), now(), rules.timerSeconds); sendCurrent(p, now(), true); return false;
     }
     private static PackRepository.Phrase phrase(ServerPlayer p, String item) {
         var type = BuiltInRegistries.ITEM.getValue(Identifier.parse(item));

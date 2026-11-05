@@ -4,7 +4,7 @@ import java.util.*;
 
 /** In-memory run state. A reconnect keeps unlocks; restarting the server/world resets them. */
 public final class RunState {
-    public static final long TIME_LIMIT_MS = 15_000;
+    public static final long TIME_LIMIT_MS = TimerLimit.DEFAULT * 1000L;
     public record Round(String nonce, String item, long deadline) {
         public long remaining(long now) { return Math.max(0, deadline - now); }
         public boolean expired(long now) { return now >= deadline; }
@@ -14,8 +14,12 @@ public final class RunState {
         public final Set<String> unlocked = new HashSet<>();
         public final Map<String, Round> rounds = new LinkedHashMap<>();
         public Round collect(String item, long now) {
+            return collect(item, now, TimerLimit.DEFAULT);
+        }
+        public Round collect(String item, long now, int timerSeconds) {
+            long duration = TimerLimit.millis(timerSeconds);
             if (unlocked.contains(item)) return null;
-            return rounds.computeIfAbsent(item, key -> new Round(UUID.randomUUID().toString(), key, now + TIME_LIMIT_MS));
+            return rounds.computeIfAbsent(item, key -> new Round(UUID.randomUUID().toString(), key, now + duration));
         }
         public Round current() { return rounds.values().stream().findFirst().orElse(null); }
         public void unlock(String item) { unlocked.add(item); rounds.remove(item); }

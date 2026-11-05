@@ -51,11 +51,17 @@ public final class Packets {
             (b, p) -> b.writeInt(p.percent), b -> new SetAccuracy(b.readInt()));
         @Override public Type<SetAccuracy> type() { return TYPE; }
     }
-    public record PackInfo(String languagesJson, String selected, int requiredAccuracy, boolean canConfigure) implements CustomPacketPayload {
+    public record SetTimer(int seconds) implements CustomPacketPayload {
+        public static final Type<SetTimer> TYPE = Packets.type("timer");
+        public static final StreamCodec<FriendlyByteBuf, SetTimer> CODEC = StreamCodec.of(
+            (b, p) -> b.writeInt(p.seconds), b -> new SetTimer(b.readInt()));
+        @Override public Type<SetTimer> type() { return TYPE; }
+    }
+    public record PackInfo(String languagesJson, String selected, int requiredAccuracy, int timerSeconds, boolean canConfigure) implements CustomPacketPayload {
         public static final Type<PackInfo> TYPE = Packets.type("packs");
         public static final StreamCodec<FriendlyByteBuf, PackInfo> CODEC = StreamCodec.of((b, p) -> {
-            b.writeUtf(p.languagesJson, 32767); b.writeUtf(p.selected, 32); b.writeInt(p.requiredAccuracy); b.writeBoolean(p.canConfigure);
-        }, b -> new PackInfo(b.readUtf(32767), b.readUtf(32), b.readInt(), b.readBoolean()));
+            b.writeUtf(p.languagesJson, 32767); b.writeUtf(p.selected, 32); b.writeInt(p.requiredAccuracy); b.writeInt(p.timerSeconds); b.writeBoolean(p.canConfigure);
+        }, b -> new PackInfo(b.readUtf(32767), b.readUtf(32), b.readInt(), b.readInt(), b.readBoolean()));
         @Override public Type<PackInfo> type() { return TYPE; }
     }
     public record Result(String nonce, boolean unlocked, boolean finished, int accuracy, String message) implements CustomPacketPayload {

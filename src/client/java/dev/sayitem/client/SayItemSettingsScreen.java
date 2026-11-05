@@ -13,7 +13,7 @@ import java.util.*;
 
 /** Native Minecraft controls; no companion window or external setup. */
 final class SayItemSettingsScreen extends Screen {
-    private AccuracySlider difficulty;
+    private RuleSlider difficulty, timer;
     SayItemSettingsScreen() { super(Component.literal("SayItem settings")); }
     @Override protected void init() {
         int rowWidth = Math.min(260, width - 32), left = (width - rowWidth) / 2;
@@ -36,37 +36,50 @@ final class SayItemSettingsScreen extends Screen {
             try { SayItemClient.settings.save(); } catch (IOException ignored) { SayItemClient.status = "Could not save microphone settings."; }
             button.setMessage(microphoneLabel());
         }).bounds(left, top + 24, rowWidth, 20).build());
-        difficulty = addRenderableWidget(new AccuracySlider(left, top + 48, rowWidth));
-        difficulty.active = SayItemClient.canConfigure;
-        if (!difficulty.active) difficulty.setTooltip(Tooltip.create(Component.literal("Only the world owner or a server operator can change difficulty.")));
+        int half = (rowWidth - 4) / 2;
+        difficulty = addRenderableWidget(new RuleSlider(left, top + 48, half, false));
+        timer = addRenderableWidget(new RuleSlider(left + half + 4, top + 48, rowWidth - half - 4, true));
+        syncRule(difficulty); syncRule(timer);
         addRenderableWidget(Button.builder(Component.literal("Done"), b -> onClose()).bounds((width - 160) / 2, height - 28, 160, 20).build());
         if (ClientPlayNetworking.canSend(Packets.Request.TYPE)) ClientPlayNetworking.send(new Packets.Request());
     }
     @Override public void tick() {
         if (difficulty == null) return;
-        difficulty.active = SayItemClient.canConfigure;
-        if (!difficulty.changed || !difficulty.active) {
-            difficulty.valueFromServer();
-            difficulty.changed = false;
+        syncRule(difficulty); syncRule(timer);
+    }
+    private void syncRule(RuleSlider slider) {
+        slider.active = SayItemClient.canConfigure;
+        if (!slider.changed || !slider.active) {
+            slider.valueFromServer(); slider.changed = false;
         }
-        difficulty.updateMessage();
+        slider.setTooltip(Tooltip.create(Component.literal(!slider.active
+            ? "Only the world owner or a server operator can change this setting."
+            : slider.timer ? "10–30 seconds for newly collected locked items. Active timers keep their deadline."
+            : "60–100% recognized text match required to unlock an item.")));
+        slider.updateMessage();
     }
     @Override public void onClose() {
         if (difficulty != null && difficulty.changed && SayItemClient.canConfigure
             && ClientPlayNetworking.canSend(Packets.SetAccuracy.TYPE))
             ClientPlayNetworking.send(new Packets.SetAccuracy(difficulty.percent()));
+        if (timer != null && timer.changed && SayItemClient.canConfigure
+            && ClientPlayNetworking.canSend(Packets.SetTimer.TYPE))
+            ClientPlayNetworking.send(new Packets.SetTimer(timer.amount()));
         super.onClose();
     }
-    private static final class AccuracySlider extends AbstractSliderButton {
+    private static final class RuleSlider extends AbstractSliderButton {
         private boolean changed;
-        AccuracySlider(int x, int y, int width) {
-            super(x, y, width, 20, Component.empty(), (SayItemClient.requiredAccuracy - 60) / 40.0);
+        private final boolean timer;
+        RuleSlider(int x, int y, int width, boolean timer) {
+            super(x, y, width, 20, Component.empty(), timer ? (SayItemClient.timerSeconds - 10) / 20.0 : (SayItemClient.requiredAccuracy - 60) / 40.0);
+            this.timer = timer;
             updateMessage();
         }
-        int percent() { return 60 + (int) Math.round(value * 40); }
-        void valueFromServer() { value = (SayItemClient.requiredAccuracy - 60) / 40.0; }
+        int amount() { return timer ? 10 + (int) Math.round(value * 20) : 60 + (int) Math.round(value * 40); }
+        int percent() { return amount(); }
+        void valueFromServer() { value = timer ? (SayItemClient.timerSeconds - 10) / 20.0 : (SayItemClient.requiredAccuracy - 60) / 40.0; }
         @Override protected void updateMessage() {
-            setMessage(Component.literal("Required match: " + percent() + "%" + (SayItemClient.canConfigure ? "" : " · host")));
+            setMessage(Component.literal(timer ? "Timer: " + amount() + "s" : "Match: " + amount() + "%"));
         }
         @Override protected void applyValue() { changed = true; updateMessage(); }
     }

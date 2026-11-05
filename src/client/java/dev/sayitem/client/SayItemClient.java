@@ -26,6 +26,7 @@ public final class SayItemClient implements ClientModInitializer {
     static JsonObject languages = new JsonObject();
     static int accuracy = -1;
     static int requiredAccuracy = 90;
+    static int timerSeconds = dev.sayitem.core.TimerLimit.DEFAULT;
     static boolean canConfigure;
     static long deadline;
     static long resultUntil;
@@ -55,6 +56,7 @@ public final class SayItemClient implements ClientModInitializer {
         HudElementRegistry.addLast(Identifier.fromNamespaceAndPath("sayitem", "challenge"), (graphics, delta) -> ChallengeHud.draw(graphics));
         ClientPlayNetworking.registerGlobalReceiver(Packets.PackInfo.TYPE, (packet, context) -> {
             requiredAccuracy = dev.sayitem.core.AccuracyRequirement.clamp(packet.requiredAccuracy());
+            timerSeconds = dev.sayitem.core.TimerLimit.clamp(packet.timerSeconds());
             canConfigure = packet.canConfigure();
             languages = JsonFiles.GSON.fromJson(packet.languagesJson(), JsonObject.class);
             selectedLanguage = packet.selected();
@@ -92,7 +94,7 @@ public final class SayItemClient implements ClientModInitializer {
             speech.cancel(); challenge = null; awaitingAnswer = false; languages = new JsonObject(); selectedLanguage = "ja";
             readinessSent = false; preferenceSent = false;
             status = "Collect an item to begin."; transcript = ""; accuracy = -1;
-            requiredAccuracy = 90; canConfigure = false;
+            requiredAccuracy = 90; timerSeconds = dev.sayitem.core.TimerLimit.DEFAULT; canConfigure = false;
         });
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             long clock = System.nanoTime();
