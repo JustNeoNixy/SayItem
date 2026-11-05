@@ -34,4 +34,12 @@ class PronunciationPackTest {
         assertEquals(previous.items().get("minecraft:apple"), loaded.items().get("minecraft:apple"));
         assertEquals(before, Files.readString(file));
     }
+    @Test void aCustomEntryWithTheMaximumNumberOfAliasesRemainsValid() throws Exception {
+        new PackRepository(directory);
+        var aliases = java.util.stream.IntStream.range(0, 32).mapToObj(i -> "custom alias " + i).toList();
+        var custom = new LanguagePack.Entry("ダイヤモンドの剣", "my reading", aliases);
+        JsonFiles.write(directory.resolve("ja.json"), new LanguagePack(1, "ja", "Japanese", "ja",
+            Map.of("minecraft:diamond_sword", custom)));
+        assertEquals(custom, new PackRepository(directory).get("ja").items().get("minecraft:diamond_sword"));
+    }
 }

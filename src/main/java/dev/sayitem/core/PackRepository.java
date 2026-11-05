@@ -40,7 +40,8 @@ public final class PackRepository {
                             // Apply pronunciation fixes to unchanged item text, including older exported packs.
                             // Custom wording/readings and the user's file stay intact.
                             if (original != null && original.text().equals(custom.text())) {
-                                var aliases = new LinkedHashSet<>(original.aliases()); aliases.addAll(custom.aliases());
+                                var aliases = new LinkedHashSet<>(custom.aliases());
+                                for (String alias : original.aliases()) if (aliases.size() < 32) aliases.add(alias);
                                 combined.put(item, new LanguagePack.Entry(custom.text(), custom.reading(), List.copyOf(aliases)));
                             } else combined.put(item, custom);
                         });
