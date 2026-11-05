@@ -35,9 +35,23 @@ tasks.named('sourcesJar') { exclude 'sayitem-speech/native/**', '**/*.bin', '**/
 def speechProperties = [
     'sayitem.runtime.bundle': providers.gradleProperty('speech_runtime_bundle').orElse('').get(),
     'sayitem.runtime.cache': layout.buildDirectory.dir('test-runtime-cache').get().asFile.absolutePath,
-    'sayitem.model.directory': providers.gradleProperty('speech_model_dir').orElse('').get()
+    'sayitem.model.directory': providers.gradleProperty('speech_model_dir').orElse('').get(),
+    'sayitem.gpu.bundle': providers.gradleProperty('gpu_runtime_bundle').orElse('').get(),
+    'sayitem.gpu.model.directory': providers.gradleProperty('gpu_model_dir').orElse('').get(),
+    'sayitem.gpu.tests': providers.gradleProperty('gpu_tests').orElse('false').get()
 ]
 test { useJUnitPlatform(); jvmArgs '--enable-native-access=ALL-UNNAMED'; systemProperties speechProperties }
+
+tasks.register('benchmarkSpeech', JavaExec) {
+    dependsOn testClasses
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'dev.sayitem.speech.SpeechBenchmark'
+    jvmArgs '--enable-native-access=ALL-UNNAMED'
+    systemProperties speechProperties
+    args providers.gradleProperty('speech_profiles').orElse('cpu,gpu_base,gpu_small').get(),
+        layout.buildDirectory.file('speech-benchmark.json').get().asFile.absolutePath,
+        layout.buildDirectory.dir('speech-benchmark-cache').get().asFile.absolutePath
+}
 tasks.register('exportItemCatalog', JavaExec) {
     dependsOn testClasses
     classpath = sourceSets.test.runtimeClasspath

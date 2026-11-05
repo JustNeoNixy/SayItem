@@ -2,7 +2,7 @@ package dev.sayitem.core;
 
 import java.util.*;
 
-/** In-memory run state. A reconnect keeps unlocks; restarting the server/world resets them. */
+/** In-memory challenge queues backed by world-owned unlock progress. */
 public final class RunState {
     public record Round(String nonce, String item, long durationMillis, long deadline, boolean active) {
         public long remaining(long now) { return active ? Math.max(0, deadline - now) : durationMillis; }
@@ -13,8 +13,14 @@ public final class RunState {
     }
     public static final class PlayerRun {
         public String language = "ja";
-        public final Set<String> unlocked = new HashSet<>();
+        public final Set<String> unlocked;
+        private final UUID player;
+        private final UnlockProgress progress;
+        private Long pausedAt;
         private final Map<String, Round> rounds = new LinkedHashMap<>();
+        private PlayerRun(UUID player, UnlockProgress progress) {
+            this.player = player; this.progress = progress; unlocked = progress.unlocked(player);
+        }
         public Round collect(String item, long now) {
             return collect(item, now, TimerLimit.DEFAULT);
         }
@@ -24,7 +30,7 @@ public final class RunState {
             var existing = rounds.get(item);
             if (existing != null) return existing;
             var round = new Round(UUID.randomUUID().toString(), item, duration, 0, false);
-            if (rounds.isEmpty()) round = round.start(now);
+            if (rounds.isEmpty() && pausedAt == null) round = round.start(now);
             rounds.put(item, round);
             return round;
         }
@@ -35,12 +41,20 @@ public final class RunState {
         }
         public int pendingCount() { return Math.max(0, rounds.size() - 1); }
         public boolean unlockCurrent(String nonce, long now) {
+            if (pausedAt != null) return false;
             var round = current(nonce);
             if (round == null || round.expired(now)) return false;
-            unlocked.add(round.item()); rounds.remove(round.item()); startNext(now);
+            progress.grant(player, round.item()); rounds.remove(round.item()); startNext(now);
             return true;
         }
+        public Round skipUnlocked(long now) {
+            var previous = current();
+            rounds.values().removeIf(round -> unlocked.contains(round.item()));
+            if (previous != null && unlocked.contains(previous.item())) { startNext(now); return previous; }
+            return null;
+        }
         public Round expireCurrent(long now) {
+            if (pausedAt != null) return null;
             var round = current();
             if (round == null || !round.expired(now)) return null;
             rounds.remove(round.item()); startNext(now);
@@ -48,7 +62,15 @@ public final class RunState {
         }
         private void startNext(long now) {
             var round = current();
-            if (round != null) rounds.put(round.item(), round.start(now));
+            if (round != null && pausedAt == null) rounds.put(round.item(), round.start(now));
+        }
+        public void pause(long now) { if (pausedAt == null) pausedAt = now; }
+        public void resume(long now) {
+            if (pausedAt == null) return;
+            var round = current();
+            if (round != null && round.active()) rounds.put(round.item(), new Round(round.nonce(), round.item(),
+                round.durationMillis(), round.deadline() + Math.max(0, now-pausedAt), true));
+            pausedAt = null; startNext(now);
         }
         public void selectLanguage(String selected) {
             if (language.equals(selected)) return;
@@ -58,6 +80,9 @@ public final class RunState {
                 round.durationMillis(), round.deadline(), round.active()));
         }
     }
+    private final UnlockProgress progress;
     private final Map<UUID, PlayerRun> players = new HashMap<>();
-    public PlayerRun player(UUID id) { return players.computeIfAbsent(id, key -> new PlayerRun()); }
+    public RunState() { this(new UnlockProgress()); }
+    public RunState(UnlockProgress progress) { this.progress = Objects.requireNonNull(progress); }
+    public PlayerRun player(UUID id) { return players.computeIfAbsent(id, key -> new PlayerRun(key, progress)); }
 }

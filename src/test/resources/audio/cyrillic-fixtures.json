@@ -1,0 +1,13 @@
+{
+  "description": "Synthetic regression recordings, not human microphone tests. PCM16 mono 16 kHz.",
+  "generator": "Piper 1.8.0; resampled from 22050 Hz with PyAV",
+  "sourceRevision": "e7229f7d33a10e145e109b886d661984201ac3c4",
+  "voices": {
+    "bg": {"name": "bg_BG-dimitar-medium", "modelCard": "https://huggingface.co/rhasspy/piper-voices/blob/e7229f7d33a10e145e109b886d661984201ac3c4/bg/bg_BG/dimitar/medium/MODEL_CARD", "datasetLicense": "CC0"},
+    "ru": {"name": "ru_RU-dmitri-medium", "modelCard": "https://huggingface.co/rhasspy/piper-voices/blob/e7229f7d33a10e145e109b886d661984201ac3c4/ru/ru_RU/dmitri/medium/MODEL_CARD", "datasetLicense": "CC0"}
+  },
+  "phrases": {
+    "bg-stone.wav": "Камък", "bg-apple.wav": "Ябълка", "bg-diamond-sword.wav": "Диамантен меч", "bg-iron-pickaxe.wav": "Желязна кирка", "bg-unrelated.wav": "Днес времето е хубаво.",
+    "ru-stone.wav": "Камень", "ru-apple.wav": "Яблоко", "ru-diamond-sword.wav": "Алмазный меч", "ru-iron-pickaxe.wav": "Железная кирка", "ru-unrelated.wav": "Сегодня хорошая погода."
+  }
+}

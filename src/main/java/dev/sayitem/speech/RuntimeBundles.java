@@ -14,6 +14,11 @@ final class RuntimeBundles {
         SpeechEngine create(Path cache) throws ReflectiveOperationException {
             return (SpeechEngine) implementation.getConstructor(Path.class, Path.class).newInstance(cache, root);
         }
+        SpeechEngine create(Path cache, SpeechProfile profile) throws ReflectiveOperationException {
+            if (!profile.gpu()) return create(cache);
+            var type = implementation.getClassLoader().loadClass("dev.sayitem.speech.local.VulkanEngine");
+            return (SpeechEngine) type.getConstructor(Path.class, SpeechProfile.class).newInstance(cache, profile);
+        }
     }
     private static Loaded loaded;
     static synchronized Loaded load(Path cache, Consumer<String> progress) throws Exception {
@@ -26,12 +31,35 @@ final class RuntimeBundles {
             spec = index.getAsJsonObject(platform);
             if (spec == null) throw new IOException("Unsupported speech platform: " + platform);
         }
+        Path root = install(cache, platform, spec, "sayitem.runtime.bundle", progress);
+        URL source = LocalWhisper.class.getProtectionDomain().getCodeSource().getLocation();
+        var loader = new URLClassLoader(new URL[]{source, root.resolve("onnxruntime.jar").toUri().toURL()}, LocalWhisper.class.getClassLoader()) {
+            @Override protected Class<?> loadClass(String name, boolean resolve) throws ClassNotFoundException {
+                if (name.startsWith("dev.sayitem.speech.local.") || name.startsWith("ai.onnxruntime.")) {
+                    synchronized (getClassLoadingLock(name)) {
+                        Class<?> type = findLoadedClass(name);
+                        if (type == null) type = findClass(name);
+                        if (resolve) resolveClass(type);
+                        return type;
+                    }
+                }
+                return super.loadClass(name, resolve);
+            }
+            @Override public URL getResource(String name) {
+                if (name.startsWith("ai/onnxruntime/")) { URL own = findResource(name); if (own != null) return own; }
+                return super.getResource(name);
+            }
+        };
+        loaded = new Loaded(loader.loadClass("dev.sayitem.speech.local.CTranslateEngine"), root);
+        return loaded;
+    }
+    static Path install(Path cache, String platform, JsonObject spec, String bundleProperty, Consumer<String> progress) throws IOException, InterruptedException {
         String override = System.getProperty("sayitem.runtime.cache", "");
         Path root = (override.isBlank() ? cache.resolve("runtimes") : Path.of(override))
             .resolve(platform + "-" + spec.get("sha256").getAsString().substring(0, 12)).toAbsolutePath();
         var files = spec.getAsJsonObject("files");
         if (!valid(root, files)) {
-            Path supplied = System.getProperty("sayitem.runtime.bundle", "").isBlank() ? null : Path.of(System.getProperty("sayitem.runtime.bundle"));
+            Path supplied = System.getProperty(bundleProperty, "").isBlank() ? null : Path.of(System.getProperty(bundleProperty));
             Path archive = root.resolveSibling(root.getFileName() + ".zip");
             AssetDownloads.ensure(archive, URI.create(spec.get("url").getAsString()), spec.get("sha256").getAsString(),
                 spec.get("bytes").getAsLong(), supplied, progress, "speech runtime");
@@ -53,26 +81,7 @@ final class RuntimeBundles {
             } finally { Files.deleteIfExists(archive); }
             if (!valid(root, files)) throw new IOException("Speech runtime is damaged; restart Minecraft to retry");
         }
-        URL source = LocalWhisper.class.getProtectionDomain().getCodeSource().getLocation();
-        var loader = new URLClassLoader(new URL[]{source, root.resolve("onnxruntime.jar").toUri().toURL()}, LocalWhisper.class.getClassLoader()) {
-            @Override protected Class<?> loadClass(String name, boolean resolve) throws ClassNotFoundException {
-                if (name.startsWith("dev.sayitem.speech.local.") || name.startsWith("ai.onnxruntime.")) {
-                    synchronized (getClassLoadingLock(name)) {
-                        Class<?> type = findLoadedClass(name);
-                        if (type == null) type = findClass(name);
-                        if (resolve) resolveClass(type);
-                        return type;
-                    }
-                }
-                return super.loadClass(name, resolve);
-            }
-            @Override public URL getResource(String name) {
-                if (name.startsWith("ai/onnxruntime/")) { URL own = findResource(name); if (own != null) return own; }
-                return super.getResource(name);
-            }
-        };
-        loaded = new Loaded(loader.loadClass("dev.sayitem.speech.local.CTranslateEngine"), root);
-        return loaded;
+        return root;
     }
     private static boolean valid(Path root, JsonObject files) throws IOException {
         for (var entry : files.entrySet()) {

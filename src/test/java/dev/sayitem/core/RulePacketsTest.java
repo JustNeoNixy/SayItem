@@ -7,6 +7,19 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class RulePacketsTest {
+    @Test void progressAndSharingSettingsSurviveNetworkEncoding() {
+        var bytes = new FriendlyByteBuf(Unpooled.buffer());
+        try {
+            var progress = new Packets.Progress(37, 1657, true);
+            Packets.Progress.CODEC.encode(bytes, progress);
+            assertEquals(progress, Packets.Progress.CODEC.decode(bytes));
+            assertEquals(0, bytes.readableBytes());
+            var edit = new Packets.SetSharing(false);
+            Packets.SetSharing.CODEC.encode(bytes, edit);
+            assertEquals(edit, Packets.SetSharing.CODEC.decode(bytes));
+            assertEquals(0, bytes.readableBytes());
+        } finally { bytes.release(); }
+    }
     @Test void serverMetadataKeepsTimerAccuracyAndPermissionsInTheirOwnFields() {
         var bytes = new FriendlyByteBuf(Unpooled.buffer());
         try {

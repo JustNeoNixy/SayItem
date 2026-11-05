@@ -6,12 +6,13 @@ import java.nio.file.*;
 import java.util.*;
 
 public final class PackRepository {
+    private static final List<String> BUILT_INS = List.of("en", "ja", "es", "fr", "de", "pl", "bg", "ru");
     private final Map<String, LanguagePack> packs;
 
     public PackRepository(Path directory) throws IOException {
         Files.createDirectories(directory);
         Map<String, LanguagePack> defaults = new HashMap<>();
-        for (String id : List.of("en", "ja", "es", "fr", "de", "pl")) {
+        for (String id : BUILT_INS) {
             Path file = directory.resolve(id + ".json");
             if (!Files.exists(file)) {
                 try (var input = PackRepository.class.getResourceAsStream("/languages/" + id + ".json")) {
@@ -20,7 +21,7 @@ public final class PackRepository {
                 }
             }
         }
-        for (String id : List.of("en", "ja", "es", "fr", "de", "pl")) {
+        for (String id : BUILT_INS) {
             try (var input = PackRepository.class.getResourceAsStream("/languages/" + id + ".json");
                  var reader = new java.io.InputStreamReader(Objects.requireNonNull(input), StandardCharsets.UTF_8)) {
                 defaults.put(id, JsonFiles.GSON.fromJson(reader, LanguagePack.class));

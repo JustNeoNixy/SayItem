@@ -1,0 +1,31 @@
+{
+  "runtime": {
+    "url": "https://github.com/JustNeoNixy/SayItem/releases/download/speech-vulkan-0.7.0/speech-vulkan-windows-x64.zip",
+    "bytes": 14511310,
+    "sha256": "607b95f0d2eab3e28c2b38d7c1b8a8815a120f1b810b94eff29f2809cc4f0edf",
+    "files": {
+      "sayitem-ggml-base.dll": "0c84f78712d5e6eb321a60907b4d3178fe0cf5e53a9774c870019cf6e6803216",
+      "sayitem-ggml-cpu.dll": "3cff8bf0c9d249e04ccadde9d9ab5958d569651ac8780f309c0d02d4f6473592",
+      "sayitem-ggml-vulkan.dll": "ce6f41e518b376e6951c9794466e0a0b81600a0c6ac01642f4025597113e13eb",
+      "sayitem-ggml.dll": "fcac3f7b2cf9e79c36c27045fcf22cac8a688b90628f3383e26dc36128977921",
+      "sayitem-whisper.dll": "6499abcfa28e2562c5bfef9c73d1447ced98aa555f7c2bdfc772579580b1fbe2",
+      "sayitem-vulkan.dll": "bb39f192560deada7839730d46fa2445f66bec445284911ae60957415edf4c64",
+      "whisper-MIT.txt": "bcd8ec749126d45cb06737d0690295d73df4b6e7e194205bcf91190368f27285",
+      "source.txt": "72ccbe12d4670b788bfa5c3bc4ec5f7ee5192f5f64c09c302c66cd17d9eb8d1a"
+    }
+  },
+  "models": {
+    "base": {
+      "filename": "ggml-base.bin",
+      "url": "https://huggingface.co/ggerganov/whisper.cpp/resolve/5359861c739e955e79d9a303bcbc70fb988958b1/ggml-base.bin",
+      "bytes": 147951465,
+      "sha256": "60ed5bc3dd14eea856493d334349b405782ddcaf0028d4b5df4088345fba2efe"
+    },
+    "small": {
+      "filename": "ggml-small-q5_1.bin",
+      "url": "https://huggingface.co/ggerganov/whisper.cpp/resolve/5359861c739e955e79d9a303bcbc70fb988958b1/ggml-small-q5_1.bin",
+      "bytes": 190085487,
+      "sha256": "ae85e4a935d7a567bd102fe55afc16bb595bdb618e11b2fc7591bc08120411bb"
+    }
+  }
+}

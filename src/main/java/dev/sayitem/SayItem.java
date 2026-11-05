@@ -16,13 +16,20 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.storage.LevelResource;
 import com.mojang.brigadier.arguments.StringArgumentType;
 import java.io.IOException;
 import java.util.*;
 
 public final class SayItem implements ModInitializer {
     private static PackRepository packs;
-    private static RunState run = new RunState();
+    private static UnlockProgress progress = new UnlockProgress();
+    private static RunState run = new RunState(progress);
+    private static java.nio.file.Path progressFile;
+    private static Set<String> registeredItems = Set.of();
+    private static long lastSaveAttempt;
+    private static boolean progressSaveFailed;
+    private static final org.slf4j.Logger LOGGER = org.slf4j.LoggerFactory.getLogger("sayitem");
     private static ServerRules rules = new ServerRules();
     private static java.nio.file.Path rulesFile() { return FabricLoader.getInstance().getConfigDir().resolve("sayitem/rules.json"); }
     private static final Map<UUID, String> lastSent = new HashMap<>();
@@ -39,6 +46,15 @@ public final class SayItem implements ModInitializer {
         PayloadTypeRegistry.serverboundPlay().register(Packets.SpeechReady.TYPE, Packets.SpeechReady.CODEC);
         PayloadTypeRegistry.serverboundPlay().register(Packets.SetAccuracy.TYPE, Packets.SetAccuracy.CODEC);
         PayloadTypeRegistry.serverboundPlay().register(Packets.SetTimer.TYPE, Packets.SetTimer.CODEC);
+        PayloadTypeRegistry.serverboundPlay().register(Packets.SetSharing.TYPE, Packets.SetSharing.CODEC);
+        PayloadTypeRegistry.clientboundPlay().register(Packets.Progress.TYPE, Packets.Progress.CODEC);
+        ServerPlayNetworking.registerGlobalReceiver(Packets.SetSharing.TYPE, (packet, context) -> {
+            var player = context.player();
+            if (!canConfigure(player)) { sendProgress(player); return; }
+            if (!progress.setSharing(packet.enabled())) { sendProgress(player); return; }
+            if (!saveProgress()) result(player, "", false, false, -1, "Sharing changed. World save pending; retrying.");
+            updateProgress(player.level().getServer(), now());
+        });
         ServerPlayNetworking.registerGlobalReceiver(Packets.SetAccuracy.TYPE, (packet, context) -> {
             var player = context.player();
             if (!canConfigure(player) || !AccuracyRequirement.valid(packet.percent())) { sendPacks(player); return; }
@@ -51,15 +67,19 @@ public final class SayItem implements ModInitializer {
             var updated = rules.copy(); updated.timerSeconds = packet.seconds();
             saveRules(player, updated);
         });
-        ServerPlayNetworking.registerGlobalReceiver(Packets.SpeechReady.TYPE, (packet, context) -> speechReady.add(context.player().getUUID()));
+        ServerPlayNetworking.registerGlobalReceiver(Packets.SpeechReady.TYPE, (packet, context) -> {
+            var id = context.player().getUUID(); run.player(id).resume(now()); speechReady.add(id);
+        });
         PayloadTypeRegistry.clientboundPlay().register(Packets.Challenge.TYPE, Packets.Challenge.CODEC);
         PayloadTypeRegistry.clientboundPlay().register(Packets.Result.TYPE, Packets.Result.CODEC);
         PayloadTypeRegistry.clientboundPlay().register(Packets.PackInfo.TYPE, Packets.PackInfo.CODEC);
-        ServerPlayConnectionEvents.JOIN.register((handler, sender, server) -> sendPacks(handler.player));
+        ServerPlayConnectionEvents.JOIN.register((handler, sender, server) -> {
+            run.player(handler.player.getUUID()).pause(now()); saveProgress(); sendPacks(handler.player); sendProgress(handler.player);
+        });
         ServerPlayNetworking.registerGlobalReceiver(Packets.Request.TYPE, (packet, context) -> {
             var p = context.player(); long time = now();
             if (requests.containsKey(p.getUUID()) && time - requests.get(p.getUUID()) < 250) return;
-            requests.put(p.getUUID(), time); sendPacks(p); scan(p, time); sendCurrent(p, time, true);
+            requests.put(p.getUUID(), time); sendPacks(p); sendProgress(p); scan(p, time); sendCurrent(p, time, true);
         });
         ServerPlayNetworking.registerGlobalReceiver(Packets.Attempt.TYPE, (packet, context) -> attempt(context.player(), packet));
         ServerPlayNetworking.registerGlobalReceiver(Packets.SelectLanguage.TYPE, (packet, context) -> selectLanguage(context.player(), packet.language()));
@@ -68,16 +88,31 @@ public final class SayItem implements ModInitializer {
             catch (IOException | RuntimeException e) { throw new IllegalStateException("Cannot load SayItem rules", e); }
             try { packs = new PackRepository(FabricLoader.getInstance().getConfigDir().resolve("sayitem/languages")); }
             catch (IOException e) { throw new IllegalStateException("Cannot reload SayItem packs", e); }
-            run = new RunState(); lastSent.clear(); requests.clear(); speechReady.clear();
+            progressFile = server.getWorldPath(LevelResource.ROOT).resolve("data/sayitem-unlocks.json");
+            try { progress = UnlockProgress.load(progressFile); }
+            catch (IOException e) { throw new IllegalStateException("Cannot load SayItem world unlock progress", e); }
+            var items = new HashSet<String>();
+            for (var item : BuiltInRegistries.ITEM) {
+                String id = BuiltInRegistries.ITEM.getKey(item).toString();
+                if (!id.equals("minecraft:air")) items.add(id);
+            }
+            registeredItems = Set.copyOf(items); progressSaveFailed = false; lastSaveAttempt = 0;
+            run = new RunState(progress); lastSent.clear(); requests.clear(); speechReady.clear();
         });
-        ServerLifecycleEvents.SERVER_STOPPED.register(server -> { run = new RunState(); lastSent.clear(); requests.clear(); speechReady.clear(); });
+        ServerLifecycleEvents.SERVER_STOPPING.register(server -> saveProgress());
+        ServerLifecycleEvents.SERVER_STOPPED.register(server -> {
+            progress = new UnlockProgress(); run = new RunState(progress); progressFile = null; registeredItems = Set.of();
+            lastSent.clear(); requests.clear(); speechReady.clear();
+        });
         ServerPlayConnectionEvents.DISCONNECT.register((handler, server) -> {
             lastSent.remove(handler.player.getUUID()); requests.remove(handler.player.getUUID());
             speechReady.remove(handler.player.getUUID());
+            run.player(handler.player.getUUID()).pause(now());
         });
         ServerTickEvents.END_SERVER_TICK.register(server -> {
             long time = now();
             for (var player : server.getPlayerList().getPlayers()) { scan(player, time); sendCurrent(player, time, false); }
+            if (progress.dirty() && time - lastSaveAttempt >= 5000) saveProgress();
         });
         UseItemCallback.EVENT.register((p, w, h) -> p instanceof ServerPlayer sp && !allow(sp, p.getItemInHand(h)) ? InteractionResult.FAIL : InteractionResult.PASS);
         UseBlockCallback.EVENT.register((p, w, h, hit) -> p instanceof ServerPlayer sp && !allow(sp, p.getItemInHand(h)) ? InteractionResult.FAIL : InteractionResult.PASS);
@@ -87,9 +122,12 @@ public final class SayItem implements ModInitializer {
         PlayerBlockBreakEvents.BEFORE.register((w, p, pos, state, e) -> !(p instanceof ServerPlayer sp) || allow(sp, p.getMainHandItem()));
         CommandRegistrationCallback.EVENT.register((dispatcher, access, env) -> dispatcher.register(Commands.literal("sayitem")
             .executes(ctx -> {
-                var state = run.player(ctx.getSource().getPlayerOrException().getUUID());
-                ctx.getSource().sendSuccess(() -> Component.literal("SayItem · " + state.language + " · " + state.unlocked.size()
-                    + " unlocked this run · " + rules.timerSeconds + " seconds · " + rules.requiredAccuracy + "% required"), false); return 1;
+                var player = ctx.getSource().getPlayerOrException();
+                var state = run.player(player.getUUID());
+                int unlocked = progress.count(player.getUUID(), registeredItems);
+                ctx.getSource().sendSuccess(() -> Component.literal("SayItem · " + state.language + " · " + unlocked
+                    + "/" + registeredItems.size() + " unlocked · " + (progress.sharing() ? "shared" : "personal")
+                    + " · " + rules.timerSeconds + " seconds · " + rules.requiredAccuracy + "% required"), false); return 1;
             })
             .then(Commands.literal("challenge").executes(ctx -> { sendCurrent(ctx.getSource().getPlayerOrException(), now(), true); return 1; }))
             .then(Commands.literal("language").then(Commands.argument("id", StringArgumentType.word())
@@ -114,6 +152,28 @@ public final class SayItem implements ModInitializer {
         rules = updated;
         for (var member : player.level().getServer().getPlayerList().getPlayers()) sendPacks(member);
     }
+    private static void sendProgress(ServerPlayer player) {
+        if (ServerPlayNetworking.canSend(player, Packets.Progress.TYPE))
+            ServerPlayNetworking.send(player, new Packets.Progress(progress.count(player.getUUID(), registeredItems), registeredItems.size(), progress.sharing()));
+    }
+    private static boolean saveProgress() {
+        if (progressFile == null || !progress.dirty()) return true;
+        lastSaveAttempt = now();
+        try { progress.save(progressFile); progressSaveFailed = false; return true; }
+        catch (IOException error) {
+            if (!progressSaveFailed) LOGGER.error("Could not save SayItem world unlock progress; retrying", error);
+            progressSaveFailed = true; return false;
+        }
+    }
+    private static void updateProgress(net.minecraft.server.MinecraftServer server, long time) {
+        for (var member : server.getPlayerList().getPlayers()) {
+            skipUnlocked(member, time); sendProgress(member); sendCurrent(member, time, true);
+        }
+    }
+    private static void skipUnlocked(ServerPlayer player, long time) {
+        var skipped = run.player(player.getUUID()).skipUnlocked(time);
+        if (skipped != null) result(player, skipped.nonce(), true, true, -1, "Unlocked through shared progress!");
+    }
     private static boolean canConfigure(ServerPlayer p) {
         var server = p.level().getServer();
         var identity = new net.minecraft.server.players.NameAndId(p.getGameProfile());
@@ -124,6 +184,7 @@ public final class SayItem implements ModInitializer {
     private static void scan(ServerPlayer p, long time) {
         if (bypass(p) || !speechReady.contains(p.getUUID())) return;
         var state = run.player(p.getUUID());
+        skipUnlocked(p, time);
         var expired = state.expireCurrent(time);
         if (expired != null) {
             removeItem(p, expired.item());
@@ -156,6 +217,7 @@ public final class SayItem implements ModInitializer {
         return packs.phrase(run.player(p.getUUID()).language, item, type.getDefaultInstance().getHoverName().getString());
     }
     private static void sendCurrent(ServerPlayer p, long time, boolean force) {
+        if (!speechReady.contains(p.getUUID())) return;
         var state = run.player(p.getUUID()); var current = state.current();
         if (current == null || current.expired(time) || !ServerPlayNetworking.canSend(p, Packets.Challenge.TYPE)) return;
         String signature = current.nonce() + state.language + current.remaining(time) / 1000 + ":" + state.pendingCount();
@@ -166,6 +228,7 @@ public final class SayItem implements ModInitializer {
             phrase.languageName(), phrase.whisperLanguage(), phrase.entry().text(), phrase.entry().reading(), current.remaining(time), state.pendingCount()));
     }
     private static void attempt(ServerPlayer p, Packets.Attempt attempt) {
+        if (!speechReady.contains(p.getUUID())) return;
         long time = now(); var state = run.player(p.getUUID());
         var round = state.current(attempt.nonce());
         if (round == null) return;
@@ -175,7 +238,9 @@ public final class SayItem implements ModInitializer {
         int percent = (int) Math.floor(score * 100 + 1e-8);
         if (AccuracyRequirement.accepts(score, rules.requiredAccuracy)) {
             if (!state.unlockCurrent(round.nonce(), time)) return;
-            result(p, round.nonce(), true, true, percent, "Unlocked for this run! " + percent + "% match."); sendCurrent(p, time, true);
+            boolean saved = saveProgress();
+            result(p, round.nonce(), true, true, percent, "Unlocked! " + percent + "% match." + (saved ? "" : " World save pending; retrying."));
+            updateProgress(p.level().getServer(), time);
         } else {
             result(p, round.nonce(), false, false, percent, attempt.transcript().isBlank()
                 ? "No speech heard. Try again before time runs out."

@@ -28,7 +28,7 @@ class SayItemCoreTest {
     }
     @Test void builtInPacksHaveMatchingCoverageAndJapaneseReadings() throws Exception {
         PackRepository repository = new PackRepository(temp.resolve("packs"));
-        assertEquals(Set.of("en", "ja", "es", "fr", "de", "pl"), repository.ids());
+        assertEquals(Set.of("en", "ja", "es", "fr", "de", "pl", "bg", "ru"), repository.ids());
         LanguagePack japanese = repository.get("ja");
         assertEquals(1657, japanese.items().size());
         for (String id : repository.ids()) {
@@ -37,6 +37,10 @@ class SayItemCoreTest {
         }
         assertTrue(japanese.items().values().stream().allMatch(e -> !e.reading().isBlank()));
         assertTrue(japanese.items().get("minecraft:apple").accepts("りんご。"));
+        assertTrue(repository.get("bg").items().get("minecraft:stone").accepts("Камък"));
+        assertTrue(repository.get("ru").items().get("minecraft:diamond_sword").accepts("Алмазный меч"));
+        assertTrue(repository.get("ru").items().get("minecraft:dark_oak_planks").accepts("Доски из темного дуба"));
+        assertFalse(AnswerMatcher.matches("и", "й", List.of()));
     }
     @Test void customPacksAreLoadedAndNeverOverwritten() throws Exception {
         Path directory = temp.resolve("packs");
@@ -74,7 +78,7 @@ class SayItemCoreTest {
         assertEquals(32000, state.collect(first.item(), 17000).deadline());
     }
 
-    @Test void unlocksLastForRunAcrossLanguagesButNotPlayersOrNewRuns() {
+    @Test void unlocksCrossLanguagesButStaySeparateBetweenPlayersAndFreshWorlds() {
         var run = new RunState(); UUID alice = UUID.randomUUID();
         var state = run.player(alice);
         state.collect("minecraft:stone", 0); assertTrue(state.unlockCurrent(state.current().nonce(), 1));

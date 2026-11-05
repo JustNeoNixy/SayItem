@@ -6,6 +6,31 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ChallengeQueueTest {
     private RunState.PlayerRun player() { return new RunState().player(UUID.randomUUID()); }
+    @Test void reconnectAndModelWarmupPreserveRemainingTimeWithoutResettingIt() {
+        var state = player(); var first = state.collect("minecraft:stone", 0, 10);
+        state.collect("minecraft:apple", 1, 30);
+        state.pause(4000); state.pause(5000);
+        assertNull(state.expireCurrent(100000));
+        assertFalse(state.unlockCurrent(first.nonce(), 5000));
+        state.resume(100000);
+        assertEquals(6000, state.current().remaining(100000));
+        state.resume(101000); assertEquals(106000, state.current().deadline());
+        assertEquals(first.nonce(), state.expireCurrent(106000).nonce());
+        assertEquals(30000, state.current().remaining(106000));
+    }
+    @Test void sharedUnlockWhileOfflineDoesNotStartTheNextTimerUntilReady() {
+        var progress = new UnlockProgress(); progress.setSharing(true); var id = UUID.randomUUID();
+        var state = new RunState(progress).player(id);
+        state.collect("minecraft:stone", 0, 10); state.collect("minecraft:apple", 1, 30);
+        state.pause(4000); progress.grant(UUID.randomUUID(), "minecraft:stone"); state.skipUnlocked(5000);
+        assertFalse(state.current().active()); state.resume(100000);
+        assertEquals(130000, state.current().deadline());
+    }
+    @Test void disconnectingAfterTheDeadlineCannotReviveAnExpiredChallenge() {
+        var state = player(); state.collect("minecraft:stone", 0, 10);
+        state.pause(11000); state.resume(100000);
+        assertNotNull(state.expireCurrent(100000));
+    }
 
     @Test void waitingTypesKeepTheirWholeDurationAndStartInCollectionOrder() {
         var state = player();
@@ -82,7 +107,7 @@ class ChallengeQueueTest {
         assertFalse(state.unlockCurrent(waiting.nonce(), 3000));
     }
 
-    @Test void reconnectKeepsTheQueueAndUnlocksWhileEachPlayerAndNewRunIsIndependent() {
+    @Test void reconnectKeepsTheQueueAndUnlocksWhileEachPlayerAndFreshWorldIsIndependent() {
         var run = new RunState(); var id = UUID.randomUUID();
         var state = run.player(id);
         var stone = state.collect("minecraft:stone", 0, 10);

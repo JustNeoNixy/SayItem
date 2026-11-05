@@ -4,6 +4,7 @@ import dev.sayitem.core.JsonFiles;
 import dev.sayitem.net.Packets;
 import dev.sayitem.speech.LocalWhisper;
 import dev.sayitem.speech.SpeechEngine;
+import dev.sayitem.speech.SpeechProfile;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientLifecycleEvents;
@@ -28,6 +29,8 @@ public final class SayItemClient implements ClientModInitializer {
     static int requiredAccuracy = 90;
     static int timerSeconds = dev.sayitem.core.TimerLimit.DEFAULT;
     static boolean canConfigure;
+    static int unlockedCount, totalItemCount;
+    static boolean sharing;
     static long deadline;
     static long resultUntil;
     static SpeechCapture speech;
@@ -35,6 +38,7 @@ public final class SayItemClient implements ClientModInitializer {
     static KeyMapping settingsKey;
     static ClientSettings settings;
     static SpeechEngine engine;
+    static String activeSpeechProfile = "cpu";
     private boolean readinessSent;
     private boolean preferenceSent;
     private String recordingNonce = "";
@@ -47,12 +51,19 @@ public final class SayItemClient implements ClientModInitializer {
     @Override public void onInitializeClient() {
         try { settings = ClientSettings.load(); }
         catch (IOException | RuntimeException e) { settings = new ClientSettings(); }
-        engine = new LocalWhisper(FabricLoader.getInstance().getGameDir().resolve(".sayitem/speech"));
-        engine.initialize();
-        speech = new SpeechCapture(settings, engine);
+        prepareSpeech();
+        ClientPlayConnectionEvents.JOIN.register((handler, sender, client) -> {
+            if (!activeSpeechProfile.equals(settings.speechProfile)) prepareSpeech();
+            engine.initialize();
+        });
         key = KeyMappingHelper.registerKeyMapping(new KeyMapping("key.sayitem.speak", InputConstants.KEY_V, KeyMapping.Category.GAMEPLAY));
         settingsKey = KeyMappingHelper.registerKeyMapping(new KeyMapping("key.sayitem.settings", InputConstants.KEY_K, KeyMapping.Category.GAMEPLAY));
         ClientLifecycleEvents.CLIENT_STOPPING.register(client -> { speech.cancel(); engine.close(); });
+        ClientPlayNetworking.registerGlobalReceiver(Packets.Progress.TYPE, (packet, context) -> {
+            totalItemCount = Math.max(0, packet.total());
+            unlockedCount = Math.clamp(packet.unlocked(), 0, totalItemCount);
+            sharing = packet.sharing();
+        });
         HudElementRegistry.addLast(Identifier.fromNamespaceAndPath("sayitem", "challenge"), (graphics, delta) -> ChallengeHud.draw(graphics));
         ClientPlayNetworking.registerGlobalReceiver(Packets.PackInfo.TYPE, (packet, context) -> {
             requiredAccuracy = dev.sayitem.core.AccuracyRequirement.clamp(packet.requiredAccuracy());
@@ -95,6 +106,7 @@ public final class SayItemClient implements ClientModInitializer {
             readinessSent = false; preferenceSent = false;
             status = "Collect an item to begin."; transcript = ""; accuracy = -1;
             requiredAccuracy = 90; timerSeconds = dev.sayitem.core.TimerLimit.DEFAULT; canConfigure = false;
+            unlockedCount = 0; totalItemCount = 0; sharing = false;
         });
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             long clock = System.nanoTime();
@@ -128,5 +140,12 @@ public final class SayItemClient implements ClientModInitializer {
         settings.language = language;
         try { settings.save(); } catch (IOException ignored) { status = "Could not save SayItem settings."; }
         if (ClientPlayNetworking.canSend(Packets.SelectLanguage.TYPE)) ClientPlayNetworking.send(new Packets.SelectLanguage(language));
+    }
+    private static void prepareSpeech() {
+        if (speech != null) speech.cancel();
+        if (engine != null) engine.close();
+        activeSpeechProfile = settings.speechProfile;
+        engine = new LocalWhisper(FabricLoader.getInstance().getGameDir().resolve(".sayitem/speech"), SpeechProfile.parse(activeSpeechProfile));
+        speech = new SpeechCapture(settings, engine);
     }
 }

@@ -57,6 +57,19 @@ public final class Packets {
             (b, p) -> b.writeInt(p.seconds), b -> new SetTimer(b.readInt()));
         @Override public Type<SetTimer> type() { return TYPE; }
     }
+    public record SetSharing(boolean enabled) implements CustomPacketPayload {
+        public static final Type<SetSharing> TYPE = Packets.type("sharing");
+        public static final StreamCodec<FriendlyByteBuf, SetSharing> CODEC = StreamCodec.of(
+            (b, p) -> b.writeBoolean(p.enabled), b -> new SetSharing(b.readBoolean()));
+        @Override public Type<SetSharing> type() { return TYPE; }
+    }
+    public record Progress(int unlocked, int total, boolean sharing) implements CustomPacketPayload {
+        public static final Type<Progress> TYPE = Packets.type("progress");
+        public static final StreamCodec<FriendlyByteBuf, Progress> CODEC = StreamCodec.of((b, p) -> {
+            b.writeInt(p.unlocked); b.writeInt(p.total); b.writeBoolean(p.sharing);
+        }, b -> new Progress(b.readInt(), b.readInt(), b.readBoolean()));
+        @Override public Type<Progress> type() { return TYPE; }
+    }
     public record PackInfo(String languagesJson, String selected, int requiredAccuracy, int timerSeconds, boolean canConfigure) implements CustomPacketPayload {
         public static final Type<PackInfo> TYPE = Packets.type("packs");
         public static final StreamCodec<FriendlyByteBuf, PackInfo> CODEC = StreamCodec.of((b, p) -> {

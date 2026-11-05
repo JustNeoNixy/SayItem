@@ -6,6 +6,8 @@ import net.minecraft.client.gui.components.AbstractSliderButton;
 import net.minecraft.client.gui.components.Tooltip;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import dev.sayitem.net.Packets;
+import dev.sayitem.speech.GpuRuntime;
+import dev.sayitem.speech.SpeechProfile;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
 import java.io.IOException;
@@ -14,8 +16,11 @@ import java.util.*;
 /** Native Minecraft controls; no companion window or external setup. */
 final class SayItemSettingsScreen extends Screen {
     private RuleSlider difficulty, timer;
+    private Button sharingButton;
+    private boolean sharingChoice = SayItemClient.sharing, sharingChanged;
     SayItemSettingsScreen() { super(Component.literal("SayItem settings")); }
     @Override protected void init() {
+        RuleSlider previousDifficulty = difficulty, previousTimer = timer;
         int rowWidth = Math.min(260, width - 32), left = (width - rowWidth) / 2;
         int top = Math.max(56, height / 2 - 52);
         var ids = SayItemClient.languages.keySet().stream().sorted().toList();
@@ -39,13 +44,41 @@ final class SayItemSettingsScreen extends Screen {
         int half = (rowWidth - 4) / 2;
         difficulty = addRenderableWidget(new RuleSlider(left, top + 48, half, false));
         timer = addRenderableWidget(new RuleSlider(left + half + 4, top + 48, rowWidth - half - 4, true));
+        difficulty.keepChoice(previousDifficulty); timer.keepChoice(previousTimer);
         syncRule(difficulty); syncRule(timer);
+        var backend = addRenderableWidget(Button.builder(backendLabel(), button -> {
+            SayItemClient.settings.speechProfile = SpeechProfile.parse(SayItemClient.settings.speechProfile).next().id();
+            try { SayItemClient.settings.save(); }
+            catch (IOException error) { SayItemClient.status = "Could not save speech settings."; }
+            button.setMessage(backendLabel());
+        }).bounds(left, top + 72, half, 20).build());
+        backend.active = GpuRuntime.supportedPlatform();
+        backend.setTooltip(Tooltip.create(Component.literal(backend.active
+            ? "CPU Base, faster GPU Base, or larger GPU Small. Speech changes apply when you rejoin a world."
+            : "GPU speech currently requires Windows x64 and a Vulkan-capable graphics driver.")));
+        sharingButton = addRenderableWidget(Button.builder(sharingLabel(), button -> {
+            sharingChoice = !sharingChoice; sharingChanged = true; button.setMessage(sharingLabel());
+        }).bounds(left + half + 4, top + 72, rowWidth - half - 4, 20).build());
+        syncSharing();
         addRenderableWidget(Button.builder(Component.literal("Done"), b -> onClose()).bounds((width - 160) / 2, height - 28, 160, 20).build());
         if (ClientPlayNetworking.canSend(Packets.Request.TYPE)) ClientPlayNetworking.send(new Packets.Request());
     }
     @Override public void tick() {
         if (difficulty == null) return;
         syncRule(difficulty); syncRule(timer);
+        syncSharing();
+    }
+    private void syncSharing() {
+        sharingButton.active = SayItemClient.canConfigure && ClientPlayNetworking.canSend(Packets.SetSharing.TYPE);
+        if (!sharingChanged || !sharingButton.active) { sharingChoice = SayItemClient.sharing; sharingChanged = false; }
+        sharingButton.setMessage(sharingLabel());
+        sharingButton.setTooltip(Tooltip.create(Component.literal(sharingButton.active
+            ? "Share unlocks with every player. Turning sharing off keeps unlocks already received."
+            : "Only the world owner or a server operator can change sharing on an updated SayItem server.")));
+    }
+    private Component sharingLabel() { return Component.literal("Sharing: " + (sharingChoice ? "On" : "Off")); }
+    private Component backendLabel() {
+        return Component.literal("Speech: " + SpeechProfile.parse(SayItemClient.settings.speechProfile).label());
     }
     private void syncRule(RuleSlider slider) {
         slider.active = SayItemClient.canConfigure;
@@ -65,6 +98,9 @@ final class SayItemSettingsScreen extends Screen {
         if (timer != null && timer.changed && SayItemClient.canConfigure
             && ClientPlayNetworking.canSend(Packets.SetTimer.TYPE))
             ClientPlayNetworking.send(new Packets.SetTimer(timer.amount()));
+        if (sharingChanged && sharingChoice != SayItemClient.sharing && SayItemClient.canConfigure
+            && ClientPlayNetworking.canSend(Packets.SetSharing.TYPE))
+            ClientPlayNetworking.send(new Packets.SetSharing(sharingChoice));
         super.onClose();
     }
     private static final class RuleSlider extends AbstractSliderButton {
@@ -76,6 +112,9 @@ final class SayItemSettingsScreen extends Screen {
             updateMessage();
         }
         int amount() { return timer ? 10 + (int) Math.round(value * 20) : 60 + (int) Math.round(value * 40); }
+        void keepChoice(RuleSlider previous) {
+            if (previous != null && previous.changed) { value = previous.value; changed = true; updateMessage(); }
+        }
         int percent() { return amount(); }
         void valueFromServer() { value = timer ? (SayItemClient.timerSeconds - 10) / 20.0 : (SayItemClient.requiredAccuracy - 60) / 40.0; }
         @Override protected void updateMessage() {
@@ -93,19 +132,27 @@ final class SayItemSettingsScreen extends Screen {
     @Override public boolean isPauseScreen() { return false; }
     @Override public void extractRenderState(GuiGraphicsExtractor graphics, int mouseX, int mouseY, float delta) {
         graphics.fill(0, 0, width, height, 0xED18232B);
-        graphics.centeredText(font, title, width / 2, 18, 0xFFFFFFFF);
+        String count = SayItemClient.totalItemCount > 0 ? " · " + SayItemClient.unlockedCount + "/" + SayItemClient.totalItemCount : "";
+        graphics.centeredText(font, Component.literal(title.getString() + count), width / 2, 18, 0xFFFFFFFF);
         int textWidth = Math.min(360, width - 32);
         var help = font.split(Component.literal("Speech runs inside Minecraft. Hold " + SayItemClient.key.getTranslatedKeyMessage().getString() + " to speak."), textWidth);
         for (int i = 0; i < Math.min(2, help.size()); i++) graphics.centeredText(font, help.get(i), width / 2, 34 + i * font.lineHeight, 0xFFCAD6DF);
-        int statusY = Math.max(56, height / 2 - 52) + 78;
-        drawLines(graphics, SayItemClient.engine.status(), statusY, textWidth, 0xFF8EE4CE);
+        int statusY = Math.max(56, height / 2 - 52) + 102;
+        String engineStatus = SayItemClient.engine.status();
+        if (net.minecraft.client.Minecraft.getInstance().player == null) engineStatus = "Join a world to prepare speech.";
+        else if (!SayItemClient.activeSpeechProfile.equals(SayItemClient.settings.speechProfile))
+            engineStatus = "Rejoin to use " + SpeechProfile.parse(SayItemClient.settings.speechProfile).label() + ".";
+        drawLines(graphics, engineStatus, statusY, textWidth, 0xFF8EE4CE, 2);
         if (!SayItemClient.transcript.isBlank() && statusY + 28 + font.lineHeight < height - 36)
             drawLines(graphics, "Last heard: " + SayItemClient.transcript, statusY + 28, textWidth, 0xFFFFFFFF);
         super.extractRenderState(graphics, mouseX, mouseY, delta);
     }
     private void drawLines(GuiGraphicsExtractor graphics, String text, int y, int textWidth, int color) {
+        drawLines(graphics, text, y, textWidth, color, Integer.MAX_VALUE);
+    }
+    private void drawLines(GuiGraphicsExtractor graphics, String text, int y, int textWidth, int color, int limit) {
         var lines = font.split(Component.literal(text), textWidth);
         int count = Math.max(0, (height - 36 - y) / font.lineHeight);
-        for (int i = 0; i < Math.min(count, lines.size()); i++) graphics.text(font, lines.get(i), (width - textWidth) / 2, y + i * font.lineHeight, color);
+        for (int i = 0; i < Math.min(limit, Math.min(count, lines.size())); i++) graphics.text(font, lines.get(i), (width - textWidth) / 2, y + i * font.lineHeight, color);
     }
 }

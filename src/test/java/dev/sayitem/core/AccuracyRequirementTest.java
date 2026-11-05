@@ -28,7 +28,8 @@ class AccuracyRequirementTest {
     }
     @Test void switchingLanguagesInvalidatesStaleSpeechWithoutExtendingTheTimerOrRelockingItems() {
         var state = new RunState().player(java.util.UUID.randomUUID());
-        state.unlocked.add("minecraft:apple");
+        var apple = state.collect("minecraft:apple", 0);
+        assertTrue(state.unlockCurrent(apple.nonce(), 1));
         var before = state.collect("minecraft:stone", 1000);
         state.selectLanguage("pl");
         var after = state.current();

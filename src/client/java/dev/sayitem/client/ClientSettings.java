@@ -9,6 +9,7 @@ import java.nio.file.*;
 public final class ClientSettings {
     public String microphoneName = "";
     public String language = "ja";
+    public String speechProfile = "cpu";
     private static Path file() { return FabricLoader.getInstance().getConfigDir().resolve("sayitem/client.json"); }
     public static ClientSettings load() throws IOException {
         if (!Files.isRegularFile(file())) return new ClientSettings();
@@ -17,6 +18,7 @@ public final class ClientSettings {
             if (settings == null) return new ClientSettings();
             if (settings.microphoneName == null) settings.microphoneName = "";
             if (settings.language == null || !settings.language.matches("[a-z]{2,3}(-[a-z0-9]+)?")) settings.language = "ja";
+            settings.speechProfile = dev.sayitem.speech.SpeechProfile.parse(settings.speechProfile).id();
             return settings;
         }
     }

@@ -1,0 +1,883 @@
+{
+  "date": "2026-11-05",
+  "hardware": {
+    "gpu": "Radeon RX 570, 4 GB",
+    "cpuThreads": 3,
+    "platform": "Windows x64"
+  },
+  "method": "Actual LocalWhisper Java/native mod path, initialized and warmed; 18 identical English/Polish/Bulgarian/Russian recordings, two runs per profile. No Minecraft rendering load. Some recordings are synthetic; this small regression set is not a general accuracy benchmark.",
+  "profiles": {
+    "cpu": {
+      "model": "multilingual Base, CTranslate2 INT8 CPU",
+      "samples": 36,
+      "median_ms": 2317.0,
+      "p95_ms": 3646,
+      "positive_samples": 30,
+      "matched_at_90_percent": 14
+    },
+    "gpu_base": {
+      "model": "multilingual Base, whisper.cpp Vulkan FP16 weights",
+      "samples": 36,
+      "median_ms": 416.0,
+      "p95_ms": 645,
+      "positive_samples": 30,
+      "matched_at_90_percent": 14
+    },
+    "gpu_small": {
+      "model": "multilingual Small Q5_1, whisper.cpp Vulkan",
+      "samples": 36,
+      "median_ms": 961.5,
+      "p95_ms": 1404,
+      "positive_samples": 30,
+      "matched_at_90_percent": 18
+    }
+  },
+  "results": [
+    {
+      "profile": "cpu",
+      "clip": "diamond-sword",
+      "repeat": 0,
+      "text": "Diamond sword.",
+      "elapsed_ms": 2705,
+      "match_percent": 100.0
+    },
+    {
+      "profile": "cpu",
+      "clip": "diamond-sword",
+      "repeat": 1,
+      "text": "Diamond sword.",
+      "elapsed_ms": 2390,
+      "match_percent": 100.0
+    },
+    {
+      "profile": "cpu",
+      "clip": "pl-stone",
+      "repeat": 0,
+      "text": "Kamiń.",
+      "elapsed_ms": 2507,
+      "match_percent": 83.3
+    },
+    {
+      "profile": "cpu",
+      "clip": "pl-stone",
+      "repeat": 1,
+      "text": "Kamiń.",
+      "elapsed_ms": 2877,
+      "match_percent": 83.3
+    },
+    {
+      "profile": "cpu",
+      "clip": "pl-cobblestone",
+      "repeat": 0,
+      "text": "Brok!",
+      "elapsed_ms": 2415,
+      "match_percent": 75.0
+    },
+    {
+      "profile": "cpu",
+      "clip": "pl-cobblestone",
+      "repeat": 1,
+      "text": "Brok!",
+      "elapsed_ms": 2573,
+      "match_percent": 75.0
+    },
+    {
+      "profile": "cpu",
+      "clip": "pl-diamond-sword",
+      "repeat": 0,
+      "text": "diamentowy miecz.",
+      "elapsed_ms": 4445,
+      "match_percent": 100.0
+    },
+    {
+      "profile": "cpu",
+      "clip": "pl-diamond-sword",
+      "repeat": 1,
+      "text": "diamentowy miecz.",
+      "elapsed_ms": 3165,
+      "match_percent": 100.0
+    },
+    {
+      "profile": "cpu",
+      "clip": "pl-oak-planks",
+      "repeat": 0,
+      "text": "dębowa deski.",
+      "elapsed_ms": 3208,
+      "match_percent": 90.9
+    },
+    {
+      "profile": "cpu",
+      "clip": "pl-oak-planks",
+      "repeat": 1,
+      "text": "dębowa deski.",
+      "elapsed_ms": 3300,
+      "match_percent": 90.9
+    },
+    {
+      "profile": "cpu",
+      "clip": "pl-iron-pickaxe",
+      "repeat": 0,
+      "text": "żalazny. Kielow.",
+      "elapsed_ms": 3646,
+      "match_percent": 76.9
+    },
+    {
+      "profile": "cpu",
+      "clip": "pl-iron-pickaxe",
+      "repeat": 1,
+      "text": "żalazny. Kielow.",
+      "elapsed_ms": 3458,
+      "match_percent": 76.9
+    },
+    {
+      "profile": "cpu",
+      "clip": "pl-apple",
+      "repeat": 0,
+      "text": "jabłko.",
+      "elapsed_ms": 3239,
+      "match_percent": 100.0
+    },
+    {
+      "profile": "cpu",
+      "clip": "pl-apple",
+      "repeat": 1,
+      "text": "jabłko.",
+      "elapsed_ms": 2742,
+      "match_percent": 100.0
+    },
+    {
+      "profile": "cpu",
+      "clip": "pl-unrelated",
+      "repeat": 0,
+      "text": "Dzisiaj jest ładna pogoda.",
+      "elapsed_ms": 3020
+    },
+    {
+      "profile": "cpu",
+      "clip": "pl-unrelated",
+      "repeat": 1,
+      "text": "Dzisiaj jest ładna pogoda.",
+      "elapsed_ms": 2858
+    },
+    {
+      "profile": "cpu",
+      "clip": "bg-stone",
+      "repeat": 0,
+      "text": "Кабак.",
+      "elapsed_ms": 2180,
+      "match_percent": 60.0
+    },
+    {
+      "profile": "cpu",
+      "clip": "bg-stone",
+      "repeat": 1,
+      "text": "Кабак.",
+      "elapsed_ms": 2303,
+      "match_percent": 60.0
+    },
+    {
+      "profile": "cpu",
+      "clip": "bg-apple",
+      "repeat": 0,
+      "text": "яболка.",
+      "elapsed_ms": 2282,
+      "match_percent": 83.3
+    },
+    {
+      "profile": "cpu",
+      "clip": "bg-apple",
+      "repeat": 1,
+      "text": "яболка.",
+      "elapsed_ms": 2181,
+      "match_percent": 83.3
+    },
+    {
+      "profile": "cpu",
+      "clip": "bg-diamond-sword",
+      "repeat": 0,
+      "text": "Диам антен мътч.",
+      "elapsed_ms": 2331,
+      "match_percent": 84.6
+    },
+    {
+      "profile": "cpu",
+      "clip": "bg-diamond-sword",
+      "repeat": 1,
+      "text": "Диам антен мътч.",
+      "elapsed_ms": 2257,
+      "match_percent": 84.6
+    },
+    {
+      "profile": "cpu",
+      "clip": "bg-iron-pickaxe",
+      "repeat": 0,
+      "text": "Желазна кирка.",
+      "elapsed_ms": 2203,
+      "match_percent": 91.7
+    },
+    {
+      "profile": "cpu",
+      "clip": "bg-iron-pickaxe",
+      "repeat": 1,
+      "text": "Желазна кирка.",
+      "elapsed_ms": 2187,
+      "match_percent": 91.7
+    },
+    {
+      "profile": "cpu",
+      "clip": "bg-unrelated",
+      "repeat": 0,
+      "text": "Незвреме трехобово.",
+      "elapsed_ms": 2263
+    },
+    {
+      "profile": "cpu",
+      "clip": "bg-unrelated",
+      "repeat": 1,
+      "text": "Незвреме трехобово.",
+      "elapsed_ms": 2246
+    },
+    {
+      "profile": "cpu",
+      "clip": "ru-stone",
+      "repeat": 0,
+      "text": "Паним!",
+      "elapsed_ms": 2109,
+      "match_percent": 16.7
+    },
+    {
+      "profile": "cpu",
+      "clip": "ru-stone",
+      "repeat": 1,
+      "text": "Паним!",
+      "elapsed_ms": 2172,
+      "match_percent": 16.7
+    },
+    {
+      "profile": "cpu",
+      "clip": "ru-apple",
+      "repeat": 0,
+      "text": "Девка.",
+      "elapsed_ms": 2118,
+      "match_percent": 16.7
+    },
+    {
+      "profile": "cpu",
+      "clip": "ru-apple",
+      "repeat": 1,
+      "text": "Девка.",
+      "elapsed_ms": 2135,
+      "match_percent": 16.7
+    },
+    {
+      "profile": "cpu",
+      "clip": "ru-diamond-sword",
+      "repeat": 0,
+      "text": "Амазный меч",
+      "elapsed_ms": 2185,
+      "match_percent": 91.7
+    },
+    {
+      "profile": "cpu",
+      "clip": "ru-diamond-sword",
+      "repeat": 1,
+      "text": "Амазный меч",
+      "elapsed_ms": 2206,
+      "match_percent": 91.7
+    },
+    {
+      "profile": "cpu",
+      "clip": "ru-iron-pickaxe",
+      "repeat": 0,
+      "text": "Железная керка.",
+      "elapsed_ms": 2433,
+      "match_percent": 92.3
+    },
+    {
+      "profile": "cpu",
+      "clip": "ru-iron-pickaxe",
+      "repeat": 1,
+      "text": "Железная керка.",
+      "elapsed_ms": 2257,
+      "match_percent": 92.3
+    },
+    {
+      "profile": "cpu",
+      "clip": "ru-unrelated",
+      "repeat": 0,
+      "text": "Сегодня хорошая погода.",
+      "elapsed_ms": 2217
+    },
+    {
+      "profile": "cpu",
+      "clip": "ru-unrelated",
+      "repeat": 1,
+      "text": "Сегодня хорошая погода.",
+      "elapsed_ms": 2291
+    },
+    {
+      "profile": "gpu_base",
+      "clip": "diamond-sword",
+      "repeat": 0,
+      "text": "diamond sword",
+      "elapsed_ms": 333,
+      "match_percent": 100.0
+    },
+    {
+      "profile": "gpu_base",
+      "clip": "diamond-sword",
+      "repeat": 1,
+      "text": "diamond sword",
+      "elapsed_ms": 325,
+      "match_percent": 100.0
+    },
+    {
+      "profile": "gpu_base",
+      "clip": "pl-stone",
+      "repeat": 0,
+      "text": "Kamiń.",
+      "elapsed_ms": 303,
+      "match_percent": 83.3
+    },
+    {
+      "profile": "gpu_base",
+      "clip": "pl-stone",
+      "repeat": 1,
+      "text": "Kamiń.",
+      "elapsed_ms": 330,
+      "match_percent": 83.3
+    },
+    {
+      "profile": "gpu_base",
+      "clip": "pl-cobblestone",
+      "repeat": 0,
+      "text": "BROK!",
+      "elapsed_ms": 327,
+      "match_percent": 75.0
+    },
+    {
+      "profile": "gpu_base",
+      "clip": "pl-cobblestone",
+      "repeat": 1,
+      "text": "BROK!",
+      "elapsed_ms": 512,
+      "match_percent": 75.0
+    },
+    {
+      "profile": "gpu_base",
+      "clip": "pl-diamond-sword",
+      "repeat": 0,
+      "text": "diamentowy miecz.",
+      "elapsed_ms": 472,
+      "match_percent": 100.0
+    },
+    {
+      "profile": "gpu_base",
+      "clip": "pl-diamond-sword",
+      "repeat": 1,
+      "text": "diamentowy miecz.",
+      "elapsed_ms": 471,
+      "match_percent": 100.0
+    },
+    {
+      "profile": "gpu_base",
+      "clip": "pl-oak-planks",
+      "repeat": 0,
+      "text": "Dembowa deski.",
+      "elapsed_ms": 412,
+      "match_percent": 83.3
+    },
+    {
+      "profile": "gpu_base",
+      "clip": "pl-oak-planks",
+      "repeat": 1,
+      "text": "Dembowa deski.",
+      "elapsed_ms": 410,
+      "match_percent": 83.3
+    },
+    {
+      "profile": "gpu_base",
+      "clip": "pl-iron-pickaxe",
+      "repeat": 0,
+      "text": "żelazny. Kilof.",
+      "elapsed_ms": 540,
+      "match_percent": 100.0
+    },
+    {
+      "profile": "gpu_base",
+      "clip": "pl-iron-pickaxe",
+      "repeat": 1,
+      "text": "żelazny. Kilof.",
+      "elapsed_ms": 549,
+      "match_percent": 100.0
+    },
+    {
+      "profile": "gpu_base",
+      "clip": "pl-apple",
+      "repeat": 0,
+      "text": "jabłko.",
+      "elapsed_ms": 364,
+      "match_percent": 100.0
+    },
+    {
+      "profile": "gpu_base",
+      "clip": "pl-apple",
+      "repeat": 1,
+      "text": "jabłko.",
+      "elapsed_ms": 352,
+      "match_percent": 100.0
+    },
+    {
+      "profile": "gpu_base",
+      "clip": "pl-unrelated",
+      "repeat": 0,
+      "text": "i dzisiaj jest ładna pogoda.",
+      "elapsed_ms": 495
+    },
+    {
+      "profile": "gpu_base",
+      "clip": "pl-unrelated",
+      "repeat": 1,
+      "text": "i dzisiaj jest ładna pogoda.",
+      "elapsed_ms": 492
+    },
+    {
+      "profile": "gpu_base",
+      "clip": "bg-stone",
+      "repeat": 0,
+      "text": "Кабак.",
+      "elapsed_ms": 324,
+      "match_percent": 60.0
+    },
+    {
+      "profile": "gpu_base",
+      "clip": "bg-stone",
+      "repeat": 1,
+      "text": "Кабак.",
+      "elapsed_ms": 327,
+      "match_percent": 60.0
+    },
+    {
+      "profile": "gpu_base",
+      "clip": "bg-apple",
+      "repeat": 0,
+      "text": "Я бълка.",
+      "elapsed_ms": 380,
+      "match_percent": 100.0
+    },
+    {
+      "profile": "gpu_base",
+      "clip": "bg-apple",
+      "repeat": 1,
+      "text": "Я бълка.",
+      "elapsed_ms": 383,
+      "match_percent": 100.0
+    },
+    {
+      "profile": "gpu_base",
+      "clip": "bg-diamond-sword",
+      "repeat": 0,
+      "text": "Диамонтен мъч.",
+      "elapsed_ms": 600,
+      "match_percent": 83.3
+    },
+    {
+      "profile": "gpu_base",
+      "clip": "bg-diamond-sword",
+      "repeat": 1,
+      "text": "Диамонтен мъч.",
+      "elapsed_ms": 600,
+      "match_percent": 83.3
+    },
+    {
+      "profile": "gpu_base",
+      "clip": "bg-iron-pickaxe",
+      "repeat": 0,
+      "text": "Желазна кирка.",
+      "elapsed_ms": 528,
+      "match_percent": 91.7
+    },
+    {
+      "profile": "gpu_base",
+      "clip": "bg-iron-pickaxe",
+      "repeat": 1,
+      "text": "Желазна кирка.",
+      "elapsed_ms": 510,
+      "match_percent": 91.7
+    },
+    {
+      "profile": "gpu_base",
+      "clip": "bg-unrelated",
+      "repeat": 0,
+      "text": "Не звреме тъхубово.",
+      "elapsed_ms": 655
+    },
+    {
+      "profile": "gpu_base",
+      "clip": "bg-unrelated",
+      "repeat": 1,
+      "text": "Не звреме тъхубово.",
+      "elapsed_ms": 645
+    },
+    {
+      "profile": "gpu_base",
+      "clip": "ru-stone",
+      "repeat": 0,
+      "text": "Паним!",
+      "elapsed_ms": 349,
+      "match_percent": 16.7
+    },
+    {
+      "profile": "gpu_base",
+      "clip": "ru-stone",
+      "repeat": 1,
+      "text": "Паним!",
+      "elapsed_ms": 347,
+      "match_percent": 16.7
+    },
+    {
+      "profile": "gpu_base",
+      "clip": "ru-apple",
+      "repeat": 0,
+      "text": "Всем пока!",
+      "elapsed_ms": 362,
+      "match_percent": 25.0
+    },
+    {
+      "profile": "gpu_base",
+      "clip": "ru-apple",
+      "repeat": 1,
+      "text": "Всем пока!",
+      "elapsed_ms": 345,
+      "match_percent": 25.0
+    },
+    {
+      "profile": "gpu_base",
+      "clip": "ru-diamond-sword",
+      "repeat": 0,
+      "text": "Амазный меч!",
+      "elapsed_ms": 402,
+      "match_percent": 91.7
+    },
+    {
+      "profile": "gpu_base",
+      "clip": "ru-diamond-sword",
+      "repeat": 1,
+      "text": "Амазный меч!",
+      "elapsed_ms": 420,
+      "match_percent": 91.7
+    },
+    {
+      "profile": "gpu_base",
+      "clip": "ru-iron-pickaxe",
+      "repeat": 0,
+      "text": "Железно, Кирка!",
+      "elapsed_ms": 547,
+      "match_percent": 84.6
+    },
+    {
+      "profile": "gpu_base",
+      "clip": "ru-iron-pickaxe",
+      "repeat": 1,
+      "text": "Железно, Кирка!",
+      "elapsed_ms": 516,
+      "match_percent": 84.6
+    },
+    {
+      "profile": "gpu_base",
+      "clip": "ru-unrelated",
+      "repeat": 0,
+      "text": "Сегодня хорошая погода!",
+      "elapsed_ms": 495
+    },
+    {
+      "profile": "gpu_base",
+      "clip": "ru-unrelated",
+      "repeat": 1,
+      "text": "Сегодня хорошая погода!",
+      "elapsed_ms": 493
+    },
+    {
+      "profile": "gpu_small",
+      "clip": "diamond-sword",
+      "repeat": 0,
+      "text": "Diamond Sword",
+      "elapsed_ms": 650,
+      "match_percent": 100.0
+    },
+    {
+      "profile": "gpu_small",
+      "clip": "diamond-sword",
+      "repeat": 1,
+      "text": "Diamond Sword",
+      "elapsed_ms": 639,
+      "match_percent": 100.0
+    },
+    {
+      "profile": "gpu_small",
+      "clip": "pl-stone",
+      "repeat": 0,
+      "text": "Kamień.",
+      "elapsed_ms": 704,
+      "match_percent": 100.0
+    },
+    {
+      "profile": "gpu_small",
+      "clip": "pl-stone",
+      "repeat": 1,
+      "text": "Kamień.",
+      "elapsed_ms": 712,
+      "match_percent": 100.0
+    },
+    {
+      "profile": "gpu_small",
+      "clip": "pl-cobblestone",
+      "repeat": 0,
+      "text": "Bruck.",
+      "elapsed_ms": 1404,
+      "match_percent": 80.0
+    },
+    {
+      "profile": "gpu_small",
+      "clip": "pl-cobblestone",
+      "repeat": 1,
+      "text": "Bruck.",
+      "elapsed_ms": 638,
+      "match_percent": 80.0
+    },
+    {
+      "profile": "gpu_small",
+      "clip": "pl-diamond-sword",
+      "repeat": 0,
+      "text": "\"Diamentowy miecz\".",
+      "elapsed_ms": 1343,
+      "match_percent": 100.0
+    },
+    {
+      "profile": "gpu_small",
+      "clip": "pl-diamond-sword",
+      "repeat": 1,
+      "text": "\"Diamentowy miecz\".",
+      "elapsed_ms": 1016,
+      "match_percent": 100.0
+    },
+    {
+      "profile": "gpu_small",
+      "clip": "pl-oak-planks",
+      "repeat": 0,
+      "text": "Dębowe deski.",
+      "elapsed_ms": 920,
+      "match_percent": 100.0
+    },
+    {
+      "profile": "gpu_small",
+      "clip": "pl-oak-planks",
+      "repeat": 1,
+      "text": "Dębowe deski.",
+      "elapsed_ms": 935,
+      "match_percent": 100.0
+    },
+    {
+      "profile": "gpu_small",
+      "clip": "pl-iron-pickaxe",
+      "repeat": 0,
+      "text": "Żelazny. KILOV.",
+      "elapsed_ms": 1091,
+      "match_percent": 91.7
+    },
+    {
+      "profile": "gpu_small",
+      "clip": "pl-iron-pickaxe",
+      "repeat": 1,
+      "text": "Żelazny. KILOV.",
+      "elapsed_ms": 1071,
+      "match_percent": 91.7
+    },
+    {
+      "profile": "gpu_small",
+      "clip": "pl-apple",
+      "repeat": 0,
+      "text": "Jabłko.",
+      "elapsed_ms": 705,
+      "match_percent": 100.0
+    },
+    {
+      "profile": "gpu_small",
+      "clip": "pl-apple",
+      "repeat": 1,
+      "text": "Jabłko.",
+      "elapsed_ms": 694,
+      "match_percent": 100.0
+    },
+    {
+      "profile": "gpu_small",
+      "clip": "pl-unrelated",
+      "repeat": 0,
+      "text": "Dzisiaj jest ładna pogoda.",
+      "elapsed_ms": 963
+    },
+    {
+      "profile": "gpu_small",
+      "clip": "pl-unrelated",
+      "repeat": 1,
+      "text": "Dzisiaj jest ładna pogoda.",
+      "elapsed_ms": 981
+    },
+    {
+      "profile": "gpu_small",
+      "clip": "bg-stone",
+      "repeat": 0,
+      "text": "Кабак.",
+      "elapsed_ms": 744,
+      "match_percent": 60.0
+    },
+    {
+      "profile": "gpu_small",
+      "clip": "bg-stone",
+      "repeat": 1,
+      "text": "Кабак.",
+      "elapsed_ms": 745,
+      "match_percent": 60.0
+    },
+    {
+      "profile": "gpu_small",
+      "clip": "bg-apple",
+      "repeat": 0,
+      "text": "Яблоко.",
+      "elapsed_ms": 768,
+      "match_percent": 50.0
+    },
+    {
+      "profile": "gpu_small",
+      "clip": "bg-apple",
+      "repeat": 1,
+      "text": "Яблоко.",
+      "elapsed_ms": 786,
+      "match_percent": 50.0
+    },
+    {
+      "profile": "gpu_small",
+      "clip": "bg-diamond-sword",
+      "repeat": 0,
+      "text": "Диамонтен меч.",
+      "elapsed_ms": 1031,
+      "match_percent": 91.7
+    },
+    {
+      "profile": "gpu_small",
+      "clip": "bg-diamond-sword",
+      "repeat": 1,
+      "text": "Диамонтен меч.",
+      "elapsed_ms": 1018,
+      "match_percent": 91.7
+    },
+    {
+      "profile": "gpu_small",
+      "clip": "bg-iron-pickaxe",
+      "repeat": 0,
+      "text": "желазна кирка.",
+      "elapsed_ms": 975,
+      "match_percent": 91.7
+    },
+    {
+      "profile": "gpu_small",
+      "clip": "bg-iron-pickaxe",
+      "repeat": 1,
+      "text": "желазна кирка.",
+      "elapsed_ms": 960,
+      "match_percent": 91.7
+    },
+    {
+      "profile": "gpu_small",
+      "clip": "bg-unrelated",
+      "repeat": 0,
+      "text": "Днес враме той хубаво.",
+      "elapsed_ms": 1269
+    },
+    {
+      "profile": "gpu_small",
+      "clip": "bg-unrelated",
+      "repeat": 1,
+      "text": "Днес враме той хубаво.",
+      "elapsed_ms": 1279
+    },
+    {
+      "profile": "gpu_small",
+      "clip": "ru-stone",
+      "repeat": 0,
+      "text": "Вспомним!",
+      "elapsed_ms": 742,
+      "match_percent": 12.5
+    },
+    {
+      "profile": "gpu_small",
+      "clip": "ru-stone",
+      "repeat": 1,
+      "text": "Вспомним!",
+      "elapsed_ms": 757,
+      "match_percent": 12.5
+    },
+    {
+      "profile": "gpu_small",
+      "clip": "ru-apple",
+      "repeat": 0,
+      "text": "Пока-пока!",
+      "elapsed_ms": 732,
+      "match_percent": 25.0
+    },
+    {
+      "profile": "gpu_small",
+      "clip": "ru-apple",
+      "repeat": 1,
+      "text": "Пока-пока!",
+      "elapsed_ms": 733,
+      "match_percent": 25.0
+    },
+    {
+      "profile": "gpu_small",
+      "clip": "ru-diamond-sword",
+      "repeat": 0,
+      "text": "Омаз на меч.",
+      "elapsed_ms": 975,
+      "match_percent": 58.3
+    },
+    {
+      "profile": "gpu_small",
+      "clip": "ru-diamond-sword",
+      "repeat": 1,
+      "text": "Омаз на меч.",
+      "elapsed_ms": 1031,
+      "match_percent": 58.3
+    },
+    {
+      "profile": "gpu_small",
+      "clip": "ru-iron-pickaxe",
+      "repeat": 0,
+      "text": "Железная кирка.",
+      "elapsed_ms": 1055,
+      "match_percent": 100.0
+    },
+    {
+      "profile": "gpu_small",
+      "clip": "ru-iron-pickaxe",
+      "repeat": 1,
+      "text": "Железная кирка.",
+      "elapsed_ms": 1716,
+      "match_percent": 100.0
+    },
+    {
+      "profile": "gpu_small",
+      "clip": "ru-unrelated",
+      "repeat": 0,
+      "text": "Сегодня хорошая погода.",
+      "elapsed_ms": 980
+    },
+    {
+      "profile": "gpu_small",
+      "clip": "ru-unrelated",
+      "repeat": 1,
+      "text": "Сегодня хорошая погода.",
+      "elapsed_ms": 1013
+    }
+  ]
+}

@@ -27,7 +27,7 @@ public final class PackagedSpeechSmoke {
             if (Files.size(mod) > 2 * 1024 * 1024) throw new AssertionError("Unexpected mod jar size");
             if (jar.stream().anyMatch(entry -> entry.getName().matches(".*\\.(dll|dylib|so|bin|onnx|part)$") || entry.getName().startsWith("ai/onnxruntime/")))
                 throw new AssertionError("Heavy runtime files must remain outside the mod jar");
-            if (jar.getEntry("sayitem-speech/runtime-index.json") == null || jar.getEntry("sayitem-speech/model.json") == null)
+            if (jar.getEntry("sayitem-speech/runtime-index.json") == null || jar.getEntry("sayitem-speech/model.json") == null || jar.getEntry("sayitem-speech/vulkan-index.json") == null)
                 throw new AssertionError("Missing speech download manifests");
         }
         URL gson = Gson.class.getProtectionDomain().getCodeSource().getLocation();
@@ -46,6 +46,24 @@ public final class PackagedSpeechSmoke {
                     if (!dev.sayitem.core.AnswerMatcher.matches(answer, "Diamond sword", java.util.List.of())) throw new AssertionError(answer);
                 }
             } finally { ((AutoCloseable) engine).close(); }
+            if (Boolean.getBoolean("sayitem.gpu.tests")) {
+                Class<?> profileType = loader.loadClass("dev.sayitem.speech.SpeechProfile");
+                Object profile = profileType.getField("GPU_SMALL").get(null);
+                Object gpu = type.getConstructor(Path.class, profileType).newInstance(work.resolve("gpu-model-cache"), profile);
+                try {
+                    ((CompletableFuture<?>) type.getMethod("initialize").invoke(gpu)).get(120, TimeUnit.SECONDS);
+                    String status = (String) type.getMethod("status").invoke(gpu);
+                    if (!status.contains("Vulkan")) throw new AssertionError("GPU must not silently fall back: " + status);
+                    try (var input = PackagedSpeechSmoke.class.getResourceAsStream("/audio/diamond-sword.wav");
+                         var audio = AudioSystem.getAudioInputStream(new java.io.BufferedInputStream(input))) {
+                        float[] samples = AudioSamples.fromPcm16(audio.readAllBytes());
+                        String answer = (String) ((CompletableFuture<?>) type.getMethod("transcribe", float[].class, String.class)
+                            .invoke(gpu, samples, "en")).get(30, TimeUnit.SECONDS);
+                        if (!dev.sayitem.core.AnswerMatcher.matches(answer, "Diamond sword", java.util.List.of())) throw new AssertionError(answer);
+                    }
+                    System.out.println("Packaged GPU speech verified: " + status);
+                } finally { ((AutoCloseable) gpu).close(); }
+            }
         }
         System.out.println("Mod smoke test passed: small jar, real speech through isolated runtime, no nested mods, external Fabric API.");
     }
