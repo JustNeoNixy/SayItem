@@ -18,11 +18,19 @@ jobs:
           path: build/native-source/whisper-vulkan
       - uses: humbletim/install-vulkan-sdk@e7d6e7b937bde4503c7ba5c9584c9dc68f44c4b8
         with:
-          version: 1.4.363.1
+          version: 1.4.328.1
           cache: true
       - name: Configure
         shell: pwsh
-        run: cmake -S native/vulkan -B build/vulkan-compiled "-DWHISPER_SOURCE=$((Get-Location).Path.Replace('\','/'))/build/native-source/whisper-vulkan" -A x64
+        run: |
+          $header = Get-ChildItem $env:VULKAN_SDK -Recurse -Filter vulkan_core.h | Select-Object -First 1
+          $library = Get-ChildItem $env:VULKAN_SDK -Recurse -Filter vulkan-1.lib | Where-Object { $_.FullName -notmatch 'Lib32' } | Select-Object -First 1
+          if (!$header -or !$library) {
+            Get-ChildItem $env:VULKAN_SDK -Directory -Recurse | Select-Object -First 35 -ExpandProperty FullName
+            throw 'Vulkan SDK headers or x64 import library are missing'
+          }
+          $include = $header.Directory.Parent.FullName
+          cmake -S native/vulkan -B build/vulkan-compiled "-DWHISPER_SOURCE=$((Get-Location).Path.Replace('\','/'))/build/native-source/whisper-vulkan" "-DVulkan_INCLUDE_DIR=$include" "-DVulkan_LIBRARY=$($library.FullName)" -A x64
       - name: Compile
         run: cmake --build build/vulkan-compiled --config Release --parallel 4 --target sayitem-vulkan whisper-cli
       - name: Package ordinary native libraries
@@ -33,7 +41,7 @@ jobs:
           Copy-Item build/vulkan-compiled/bin/Release/whisper-cli.exe build/vulkan-runtime
           Copy-Item build/native-source/whisper-vulkan/LICENSE build/vulkan-runtime/whisper-MIT.txt
           Copy-Item build/native-source/whisper-vulkan/ggml/LICENSE build/vulkan-runtime/ggml-MIT.txt
-          'whisper.cpp d1be6fde11ac6e0407606b4e42fe72d34add8037; Vulkan SDK 1.4.363.1' | Set-Content build/vulkan-runtime/source.txt
+          'whisper.cpp d1be6fde11ac6e0407606b4e42fe72d34add8037; Vulkan SDK 1.4.328.1' | Set-Content build/vulkan-runtime/source.txt
       - uses: actions/upload-artifact@v4
         with:
           name: vulkan-windows-x64
