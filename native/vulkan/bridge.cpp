@@ -21,6 +21,7 @@ static bool cancelled(void *data) {
 }
 API const char *sayitem_vk_version() { return "whisper.cpp-v1.9.5-d1be6fde"; }
 API const char *sayitem_vk_device() {
+    try {
     ggml_backend_load_all();
     for (size_t i = 0; i < ggml_backend_dev_count(); ++i) {
         auto device = ggml_backend_dev_get(i);
@@ -29,6 +30,7 @@ API const char *sayitem_vk_device() {
             return ggml_backend_dev_description(device);
     }
     return "";
+    } catch (const std::exception &) { return ""; }
 }
 API void *sayitem_vk_load(const char *path, int gpu, int threads, char *error, int capacity) {
     try {

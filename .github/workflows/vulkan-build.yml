@@ -45,7 +45,6 @@ jobs:
           Get-ChildItem build/vulkan-compiled -Recurse -Filter *.dll | Copy-Item -Destination build/vulkan-runtime
           Copy-Item build/vulkan-compiled/bin/Release/whisper-cli.exe build/vulkan-runtime
           Copy-Item build/native-source/whisper-vulkan/LICENSE build/vulkan-runtime/whisper-MIT.txt
-          Copy-Item build/native-source/whisper-vulkan/ggml/LICENSE build/vulkan-runtime/ggml-MIT.txt
           'whisper.cpp d1be6fde11ac6e0407606b4e42fe72d34add8037; Vulkan SDK 1.4.328.1' | Set-Content build/vulkan-runtime/source.txt
       - uses: actions/upload-artifact@v4
         with:
