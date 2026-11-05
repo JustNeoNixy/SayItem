@@ -1,0 +1,40 @@
+name: Build Vulkan speech runtime
+on:
+  push:
+    branches: [main]
+    paths: ['native/vulkan/**', '.github/workflows/vulkan-build.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  windows-vulkan:
+    runs-on: windows-2022
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: ggml-org/whisper.cpp
+          ref: d1be6fde11ac6e0407606b4e42fe72d34add8037
+          path: build/native-source/whisper-vulkan
+      - uses: humbletim/install-vulkan-sdk@e7d6e7b937bde4503c7ba5c9584c9dc68f44c4b8
+        with:
+          version: 1.4.363.1
+          cache: true
+      - name: Configure
+        shell: pwsh
+        run: cmake -S native/vulkan -B build/vulkan-compiled "-DWHISPER_SOURCE=$((Get-Location).Path.Replace('\','/'))/build/native-source/whisper-vulkan" -A x64
+      - name: Compile
+        run: cmake --build build/vulkan-compiled --config Release --parallel 4 --target sayitem-vulkan whisper-cli
+      - name: Package ordinary native libraries
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force build/vulkan-runtime | Out-Null
+          Get-ChildItem build/vulkan-compiled -Recurse -Filter *.dll | Copy-Item -Destination build/vulkan-runtime
+          Copy-Item build/vulkan-compiled/bin/Release/whisper-cli.exe build/vulkan-runtime
+          Copy-Item build/native-source/whisper-vulkan/LICENSE build/vulkan-runtime/whisper-MIT.txt
+          Copy-Item build/native-source/whisper-vulkan/ggml/LICENSE build/vulkan-runtime/ggml-MIT.txt
+          'whisper.cpp d1be6fde11ac6e0407606b4e42fe72d34add8037; Vulkan SDK 1.4.363.1' | Set-Content build/vulkan-runtime/source.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: vulkan-windows-x64
+          path: build/vulkan-runtime/
