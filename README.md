@@ -12,8 +12,9 @@ Say an item's name in another language to unlock it. Inspired by custom mods in
    into `.sayitem/speech/`. Later launches work offline. No Python or companion app.
 4. Collect an item, **hold V**, say the HUD text, then release. **K** opens settings.
 
-Each locked item type gets **15 seconds by default** from entering your inventory. A correct
-answer unlocks it for the run; timeout removes all copies of that type from your
+Locked item types enter a **queue** when collected. Only the first item's timer runs;
+each waiting type gets its full **15 seconds by default** when it reaches the front.
+A correct answer unlocks it for the run; timeout removes all copies of that type from your
 inventory. Collect it again to retry. Unlocks survive reconnects and reset when the
 world/server restarts. Creative and Spectator bypass locks.
 
@@ -24,8 +25,8 @@ It measures recognized text, not accent. Short words can be harder for speech mo
 
 All **1,657 item types** across the supported versions are covered. Japanese includes
 romaji; English, Spanish, French, German, and Polish are included. Audio is processed
-inside Minecraft and is never uploaded. Recognition uses the original faster-whisper
-**CTranslate2 INT8** engine, with speech filtering and CPU feature detection.
+inside Minecraft and is never uploaded. Recognition uses multilingual **Whisper Base**
+with the original faster-whisper **CTranslate2 INT8** CPU engine and speech filtering.
 The small mod jar contains no other mods, model weights, or native engines.
 
 ## Packs and servers

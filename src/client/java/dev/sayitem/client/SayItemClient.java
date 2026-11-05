@@ -80,7 +80,7 @@ public final class SayItemClient implements ClientModInitializer {
             challenge = packet; deadline = System.nanoTime() + packet.remainingMillis() * 1_000_000;
         });
         ClientPlayNetworking.registerGlobalReceiver(Packets.Result.TYPE, (packet, context) -> {
-            // Results for other independently expired item types must not cancel this recording.
+            // A delayed result for an earlier challenge must not cancel the current recording.
             boolean current = challenge != null && challenge.nonce().equals(packet.nonce());
             if (current || challenge == null || packet.nonce().isEmpty()) {
                 status = packet.message(); accuracy = packet.accuracy(); resultUntil = System.nanoTime() + 4_000_000_000L;

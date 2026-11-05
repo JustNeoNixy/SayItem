@@ -70,17 +70,17 @@ class SayItemCoreTest {
         assertFalse(first.expired(15999));
         assertTrue(first.expired(16000));
         assertEquals(0, first.remaining(17000));
-        state.rounds.remove(first.item());
+        assertEquals(first, state.expireCurrent(17000));
         assertEquals(32000, state.collect(first.item(), 17000).deadline());
     }
 
     @Test void unlocksLastForRunAcrossLanguagesButNotPlayersOrNewRuns() {
         var run = new RunState(); UUID alice = UUID.randomUUID();
         var state = run.player(alice);
-        state.collect("minecraft:stone", 0); state.unlock("minecraft:stone");
+        state.collect("minecraft:stone", 0); assertTrue(state.unlockCurrent(state.current().nonce(), 1));
         state.language = "es";
         assertNull(state.collect("minecraft:stone", 100));
-        assertTrue(state.rounds.isEmpty());
+        assertNull(state.current());
         assertNotNull(run.player(UUID.randomUUID()).collect("minecraft:stone", 100));
         assertNotNull(new RunState().player(alice).collect("minecraft:stone", 100));
     }

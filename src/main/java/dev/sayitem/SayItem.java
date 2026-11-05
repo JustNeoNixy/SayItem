@@ -124,11 +124,10 @@ public final class SayItem implements ModInitializer {
     private static void scan(ServerPlayer p, long time) {
         if (bypass(p) || !speechReady.contains(p.getUUID())) return;
         var state = run.player(p.getUUID());
-        for (var round : List.copyOf(state.rounds.values())) {
-            if (round.expired(time)) {
-                removeItem(p, round.item()); state.rounds.remove(round.item());
-                result(p, round.nonce(), false, true, -1, "Time's up. Item removed — collect it again to retry.");
-            }
+        var expired = state.expireCurrent(time);
+        if (expired != null) {
+            removeItem(p, expired.item());
+            result(p, expired.nonce(), false, true, -1, "Time's up. Item removed — collect it again to retry.");
         }
         var inventory = p.getInventory();
         for (int slot = 0; slot < inventory.getContainerSize(); slot++) collect(state, inventory.getItem(slot), time);
@@ -159,23 +158,23 @@ public final class SayItem implements ModInitializer {
     private static void sendCurrent(ServerPlayer p, long time, boolean force) {
         var state = run.player(p.getUUID()); var current = state.current();
         if (current == null || current.expired(time) || !ServerPlayNetworking.canSend(p, Packets.Challenge.TYPE)) return;
-        String signature = current.nonce() + state.language + current.remaining(time) / 1000 + ":" + state.rounds.size();
+        String signature = current.nonce() + state.language + current.remaining(time) / 1000 + ":" + state.pendingCount();
         if (!force && signature.equals(lastSent.get(p.getUUID()))) return;
         lastSent.put(p.getUUID(), signature);
         var phrase = phrase(p, current.item());
         ServerPlayNetworking.send(p, new Packets.Challenge(current.nonce(), current.item(), state.language,
-            phrase.languageName(), phrase.whisperLanguage(), phrase.entry().text(), phrase.entry().reading(), current.remaining(time), state.rounds.size() - 1));
+            phrase.languageName(), phrase.whisperLanguage(), phrase.entry().text(), phrase.entry().reading(), current.remaining(time), state.pendingCount()));
     }
     private static void attempt(ServerPlayer p, Packets.Attempt attempt) {
         long time = now(); var state = run.player(p.getUUID());
-        var round = state.rounds.values().stream().filter(r -> r.nonce().equals(attempt.nonce())).findFirst().orElse(null);
+        var round = state.current(attempt.nonce());
         if (round == null) return;
         if (round.expired(time)) { scan(p, time); return; }
         var entry = phrase(p, round.item()).entry();
         double score = AnswerMatcher.score(attempt.transcript(), entry.text(), entry.aliases());
         int percent = (int) Math.floor(score * 100 + 1e-8);
         if (AccuracyRequirement.accepts(score, rules.requiredAccuracy)) {
-            state.unlock(round.item());
+            if (!state.unlockCurrent(round.nonce(), time)) return;
             result(p, round.nonce(), true, true, percent, "Unlocked for this run! " + percent + "% match."); sendCurrent(p, time, true);
         } else {
             result(p, round.nonce(), false, false, percent, attempt.transcript().isBlank()

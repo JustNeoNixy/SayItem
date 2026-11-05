@@ -24,12 +24,17 @@ class TimerLimitTest {
         var state = new RunState().player(UUID.randomUUID());
         var first = state.collect("minecraft:stone", 0, 10);
         var second = state.collect("minecraft:apple", 5000, 30);
-        assertEquals(10000, first.deadline()); assertEquals(35000, second.deadline());
+        assertEquals(10000, first.deadline()); assertFalse(second.active());
+        assertEquals(30000, second.remaining(100000)); assertFalse(second.expired(100000));
         assertSame(first, state.collect("minecraft:stone", 9000, 30));
-        state.rounds.remove("minecraft:stone");
-        assertEquals(41000, state.collect("minecraft:stone", 11000, 30).deadline());
-        state.unlock("minecraft:stone");
-        assertNull(state.collect("minecraft:stone", 12000, 10));
+        assertEquals(first, state.expireCurrent(10000));
+        assertEquals(40000, state.current().deadline());
+        var retry = state.collect("minecraft:stone", 11000, 30);
+        assertFalse(retry.active());
+        assertTrue(state.unlockCurrent(state.current().nonce(), 12000));
+        assertEquals(42000, state.current().deadline());
+        assertTrue(state.unlockCurrent(state.current().nonce(), 12001));
+        assertNull(state.collect("minecraft:stone", 12002, 10));
     }
     @Test void oldRulesKeepFifteenSecondsAndBothSettingsPersistIndependently() throws Exception {
         Path file = directory.resolve("rules.json");
