@@ -45,12 +45,22 @@ public final class ReadingGuides {
         if (language.equals("de")) {
             var pronunciation = new StringBuilder();
             for (int codePoint : lowerCodePoints) {
+                boolean isNext = i + 1 < lowerCodePoints.length;
+
                 if (codePoint == 'ä') pronunciation.append("e");
 		else if (codePoint == 'ü') pronunciation.append("u(e)");
 		else if (codePoint == 'ö') pronunciation.append("o(e)");
 		else if (codePoint == 'z') pronunciation.append("ts");
+		else if (codePoint == 'e') {
+                    if (isNext && lowerCodePoints[i + 1] == 'i') {
+                        pronunciation.append("a");
+		    } else if (i > 0 && lowerCodePoints[i - 1] == 'i') {
+                        pronunciation.append("i");
+                    } else {
+                        pronunciation.append("e");
+		    }
+		}
 		else if (codePoint == 's') {
-                    boolean isNext = i + 1 < lowerCodePoints.length;
                     if (isNext && GERMAN_VOWELS.indexOf(lowerCodePoints[i + 1]) >= 0) {
                         pronunciation.append("z");
                     } else {
