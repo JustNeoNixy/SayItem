@@ -17,6 +17,7 @@ public final class ReadingGuides {
         "a", "b", "v", "g", "d", "e", "yo", "zh", "z", "i", "y", "k", "l", "m", "n",
         "o", "p", "r", "s", "t", "u", "f", "kh", "ts", "ch", "sh", "shch", "'", "y", "'", "e", "yu", "ya", "i"
     };
+    private static final String GERMAN_VOWELS = "aeiouäöü";
 
     public static String forText(String text, String language) {
         return forText(text, language, true);
@@ -27,9 +28,10 @@ public final class ReadingGuides {
         // supply contextual romaji for kanji instead of guessing a Chinese reading.
         if (language.equals("ja") && text.codePoints().anyMatch(c -> Character.UnicodeScript.of(c) == Character.UnicodeScript.HAN)) return "";
         String source = text;
+        int[] lowerCodePoints = source.toLowerCase(Locale.ROOT).codePoints().toArray();
         if (language.equals("ru") || language.equals("bg")) {
             var latin = new StringBuilder();
-            for (int codePoint : text.toLowerCase(Locale.ROOT).codePoints().toArray()) {
+            for (int codePoint : lowerCodePoints) {
                 int index = CYRILLIC.indexOf(codePoint);
                 if (index < 0) latin.appendCodePoint(codePoint);
                 else if (language.equals("bg") && codePoint == 'щ') latin.append("sht");
@@ -38,10 +40,32 @@ public final class ReadingGuides {
             }
             source = latin.toString();
         }
+
+        lowerCodePoints = source.toLowerCase(Locale.ROOT).codePoints().toArray();
+        if (language.equals("de")) {
+            var pronunciation = new StringBuilder();
+            for (int codePoint : lowerCodePoints) {
+                if (codePoint == 'ä') pronunciation.append("e");
+		else if (codePoint == 'ü') pronunciation.append("u(e)");
+		else if (codePoint == 'ö') pronunciation.append("o(e)");
+		else if (codePoint == 'z') pronunciation.append("ts");
+		else if (codePoint == 's') {
+                    boolean isNext = i + 1 < lowerCodePoints.length;
+                    if (isNext && GERMAN_VOWELS.indexOf(lowerCodePoints[i + 1]) >= 0) {
+                        pronunciation.append("z");
+                    } else {
+                        pronunciation.append("s");
+		    }
+		}
+            }
+            source = pronunciation.toString();
+        }
+
         String reading = java.text.Normalizer.normalize(source, java.text.Normalizer.Form.NFD)
             .replaceAll("\\p{M}+", "").replace("ł", "l").replace("Ł", "L")
             .replace("ß", "ss").replace("œ", "oe").replace("Œ", "Oe")
             .replace("æ", "ae").replace("Æ", "Ae").strip();
+
         if (reading.codePoints().anyMatch(c -> Character.isLetter(c) && c > 127)) {
             if (!universal) return "";
             try { reading = Universal.LATIN.get().transliterate(source).strip(); }
