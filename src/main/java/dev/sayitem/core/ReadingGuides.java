@@ -19,6 +19,9 @@ public final class ReadingGuides {
     };
 
     public static String forText(String text, String language) {
+        return forText(text, language, true);
+    }
+    private static String forText(String text, String language, boolean universal) {
         if (text.codePoints().noneMatch(c -> Character.isLetter(c) && c > 127)) return "";
         // Generic Han transliteration is Chinese, not Japanese. Japanese packs
         // supply contextual romaji for kanji instead of guessing a Chinese reading.
@@ -40,6 +43,7 @@ public final class ReadingGuides {
             .replace("ß", "ss").replace("œ", "oe").replace("Œ", "Oe")
             .replace("æ", "ae").replace("Æ", "Ae").strip();
         if (reading.codePoints().anyMatch(c -> Character.isLetter(c) && c > 127)) {
+            if (!universal) return "";
             try { reading = Universal.LATIN.get().transliterate(source).strip(); }
             catch (LinkageError | IllegalArgumentException unavailable) { return ""; }
         }
@@ -53,7 +57,7 @@ public final class ReadingGuides {
     static LanguagePack fillMissing(LanguagePack pack) {
         var items = new java.util.HashMap<String, LanguagePack.Entry>();
         pack.items().forEach((id, entry) -> items.put(id, entry.reading().isBlank()
-            ? new LanguagePack.Entry(entry.text(), forText(entry.text(), pack.whisperLanguage()), entry.aliases()) : entry));
+            ? new LanguagePack.Entry(entry.text(), forText(entry.text(), pack.whisperLanguage(), false), entry.aliases()) : entry));
         return new LanguagePack(pack.schemaVersion(), pack.id(), pack.name(), pack.whisperLanguage(), items);
     }
 }

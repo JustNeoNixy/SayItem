@@ -6,7 +6,7 @@ import java.nio.file.*;
 import java.util.*;
 
 public final class PackRepository {
-    private static final List<String> BUILT_INS = List.of("en", "ja", "es", "fr", "de", "pl", "bg", "ru", "it");
+    private static final List<String> BUILT_INS = BuiltInLanguages.LOCALES.keySet().stream().sorted().toList();
     private final Map<String, LanguagePack> packs;
 
     public PackRepository(Path directory) throws IOException {
@@ -61,13 +61,16 @@ public final class PackRepository {
     }
     public LanguagePack get(String id) { return packs.get(id); }
     public Set<String> ids() { return packs.keySet(); }
-    public record Phrase(LanguagePack.Entry entry, String whisperLanguage, String languageName) {}
+    public List<String> languagesFor(String item) {
+        return packs.values().stream().filter(pack -> pack.items().containsKey(item)).map(LanguagePack::id).sorted().toList();
+    }
+    public record Phrase(LanguagePack.Entry entry, String whisperLanguage, String languageName, String language) {}
     public Phrase phrase(String language, String item, String fallback) {
         LanguagePack pack = packs.getOrDefault(language, packs.get("ja"));
         LanguagePack.Entry entry = pack.items().get(item);
-        if (entry != null) return new Phrase(entry, pack.whisperLanguage(), pack.name());
+        if (entry != null) return new Phrase(entry, pack.whisperLanguage(), pack.name(), pack.id());
         entry = packs.get("en").items().get(item);
         if (entry == null) entry = new LanguagePack.Entry(fallback, "", List.of());
-        return new Phrase(entry, "en", "English · missing " + pack.id() + " translation");
+        return new Phrase(entry, "en", "English · missing " + pack.id() + " translation", "en");
     }
 }

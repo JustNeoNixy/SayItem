@@ -44,6 +44,11 @@ public final class SayItem implements ModInitializer {
         PayloadTypeRegistry.serverboundPlay().register(Packets.Attempt.TYPE, Packets.Attempt.CODEC);
         PayloadTypeRegistry.serverboundPlay().register(Packets.SelectLanguage.TYPE, Packets.SelectLanguage.CODEC);
         PayloadTypeRegistry.serverboundPlay().register(Packets.SpeechReady.TYPE, Packets.SpeechReady.CODEC);
+        PayloadTypeRegistry.serverboundPlay().register(Packets.LanguageLoading.TYPE, Packets.LanguageLoading.CODEC);
+        ServerPlayNetworking.registerGlobalReceiver(Packets.LanguageLoading.TYPE, (packet, context) -> {
+            var id = context.player().getUUID();
+            speechReady.remove(id); run.player(id).pause(now());
+        });
         PayloadTypeRegistry.serverboundPlay().register(Packets.SetAccuracy.TYPE, Packets.SetAccuracy.CODEC);
         PayloadTypeRegistry.serverboundPlay().register(Packets.SetTimer.TYPE, Packets.SetTimer.CODEC);
         PayloadTypeRegistry.serverboundPlay().register(Packets.SetSharing.TYPE, Packets.SetSharing.CODEC);
@@ -131,11 +136,12 @@ public final class SayItem implements ModInitializer {
             })
             .then(Commands.literal("challenge").executes(ctx -> { sendCurrent(ctx.getSource().getPlayerOrException(), now(), true); return 1; }))
             .then(Commands.literal("language").then(Commands.argument("id", StringArgumentType.word())
-                .suggests((ctx, b) -> { packs.ids().stream().sorted().filter(id -> id.startsWith(b.getRemaining())).forEach(b::suggest); return b.buildFuture(); })
+                .suggests((ctx, b) -> { java.util.stream.Stream.concat(packs.ids().stream(), java.util.stream.Stream.of(BuiltInLanguages.RANDOM))
+                    .sorted().filter(id -> id.startsWith(b.getRemaining())).forEach(b::suggest); return b.buildFuture(); })
                 .executes(ctx -> selectLanguage(ctx.getSource().getPlayerOrException(), StringArgumentType.getString(ctx, "id")) ? 1 : 0)))));
     }
     private static boolean selectLanguage(ServerPlayer p, String language) {
-        if (packs.get(language) == null) {
+        if (!BuiltInLanguages.RANDOM.equals(language) && packs.get(language) == null) {
             result(p, "", false, false, -1, "This server has no “" + language + "” pack. Import it and restart the world/server."); return false;
         }
         run.player(p.getUUID()).selectLanguage(language); sendPacks(p); sendCurrent(p, now(), true); return true;
@@ -143,6 +149,7 @@ public final class SayItem implements ModInitializer {
     private static void sendPacks(ServerPlayer p) {
         var names = new java.util.TreeMap<String, String>();
         for (String id : packs.ids()) names.put(id, packs.get(id).name());
+        names.put(BuiltInLanguages.RANDOM, "Random per item");
         if (ServerPlayNetworking.canSend(p, Packets.PackInfo.TYPE))
             ServerPlayNetworking.send(p, new Packets.PackInfo(JsonFiles.GSON.toJson(names), run.player(p.getUUID()).language, rules.requiredAccuracy, rules.timerSeconds, canConfigure(p)));
     }
@@ -188,7 +195,7 @@ public final class SayItem implements ModInitializer {
         var expired = state.expireCurrent(time);
         if (expired != null) {
             removeItem(p, expired.item());
-            result(p, expired.nonce(), false, true, -1, "Time's up. Item removed — collect it again to retry.");
+            result(p, expired.nonce(), false, true, -1, "Time's up. Item removed. Collect it again to retry.");
         }
         var inventory = p.getInventory();
         for (int slot = 0; slot < inventory.getContainerSize(); slot++) collect(state, inventory.getItem(slot), time);
@@ -214,7 +221,9 @@ public final class SayItem implements ModInitializer {
     }
     private static PackRepository.Phrase phrase(ServerPlayer p, String item) {
         var type = BuiltInRegistries.ITEM.getValue(Identifier.parse(item));
-        return packs.phrase(run.player(p.getUUID()).language, item, type.getDefaultInstance().getHoverName().getString());
+        var state = run.player(p.getUUID());
+        String language = state.challengeLanguage(packs.languagesFor(item), bound -> java.util.concurrent.ThreadLocalRandom.current().nextInt(bound));
+        return packs.phrase(language, item, type.getDefaultInstance().getHoverName().getString());
     }
     private static void sendCurrent(ServerPlayer p, long time, boolean force) {
         if (!speechReady.contains(p.getUUID())) return;
@@ -224,7 +233,7 @@ public final class SayItem implements ModInitializer {
         if (!force && signature.equals(lastSent.get(p.getUUID()))) return;
         lastSent.put(p.getUUID(), signature);
         var phrase = phrase(p, current.item());
-        ServerPlayNetworking.send(p, new Packets.Challenge(current.nonce(), current.item(), state.language,
+        ServerPlayNetworking.send(p, new Packets.Challenge(current.nonce(), current.item(), phrase.language(),
             phrase.languageName(), phrase.whisperLanguage(), phrase.entry().text(), phrase.entry().reading(), current.remaining(time), state.pendingCount()));
     }
     private static void attempt(ServerPlayer p, Packets.Attempt attempt) {

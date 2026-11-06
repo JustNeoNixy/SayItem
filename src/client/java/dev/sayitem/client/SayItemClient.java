@@ -40,6 +40,8 @@ public final class SayItemClient implements ClientModInitializer {
     static ClientSettings settings;
     static SpeechEngine engine;
     static String activeSpeechProfile = "cpu";
+    static dev.sayitem.core.GameLanguageSync gameLanguage;
+    private static boolean joined;
     private boolean readinessSent;
     private boolean preferenceSent;
     private String recordingNonce = "";
@@ -53,7 +55,10 @@ public final class SayItemClient implements ClientModInitializer {
         try { settings = ClientSettings.load(); }
         catch (IOException | RuntimeException e) { settings = new ClientSettings(); }
         prepareSpeech();
+        gameLanguage = new dev.sayitem.core.GameLanguageSync(new MinecraftLanguageHost());
+        ClientLifecycleEvents.CLIENT_STARTED.register(client -> gameLanguage.restore());
         ClientPlayConnectionEvents.JOIN.register((handler, sender, client) -> {
+            joined = true;
             if (!activeSpeechProfile.equals(settings.speechProfile)) prepareSpeech();
             engine.initialize();
         });
@@ -71,6 +76,9 @@ public final class SayItemClient implements ClientModInitializer {
             timerSeconds = dev.sayitem.core.TimerLimit.clamp(packet.timerSeconds());
             canConfigure = packet.canConfigure();
             languages = JsonFiles.GSON.fromJson(packet.languagesJson(), JsonObject.class);
+            if (!selectedLanguage.equals(packet.selected()) && challenge != null) {
+                speech.cancel(); challenge = null; awaitingAnswer = false;
+            }
             selectedLanguage = packet.selected();
             if (!preferenceSent) {
                 preferenceSent = true;
@@ -82,6 +90,7 @@ public final class SayItemClient implements ClientModInitializer {
             }
             settings.language = selectedLanguage;
             try { settings.save(); } catch (IOException ignored) { status = "Could not save SayItem language preference."; }
+            syncGameLanguage();
         });
         ClientPlayNetworking.registerGlobalReceiver(Packets.Challenge.TYPE, (packet, context) -> {
             if (challenge == null || !challenge.nonce().equals(packet.nonce())) {
@@ -92,6 +101,7 @@ public final class SayItemClient implements ClientModInitializer {
                     ? dev.sayitem.core.ReadingGuides.forText(packet.text(), packet.whisperLanguage()) : packet.reading();
             }
             challenge = packet; deadline = System.nanoTime() + packet.remainingMillis() * 1_000_000;
+            syncGameLanguage();
         });
         ClientPlayNetworking.registerGlobalReceiver(Packets.Result.TYPE, (packet, context) -> {
             // A delayed result for an earlier challenge must not cancel the current recording.
@@ -105,19 +115,21 @@ public final class SayItemClient implements ClientModInitializer {
             }
         });
         ClientPlayConnectionEvents.DISCONNECT.register((handler, client) -> {
+            joined = false;
             speech.cancel(); challenge = null; awaitingAnswer = false; languages = new JsonObject(); selectedLanguage = "ja";
             readinessSent = false; preferenceSent = false;
             status = "Collect an item to begin."; transcript = ""; displayReading = ""; accuracy = -1;
             requiredAccuracy = 90; timerSeconds = dev.sayitem.core.TimerLimit.DEFAULT; canConfigure = false;
             unlockedCount = 0; totalItemCount = 0; sharing = false;
+            gameLanguage.restore();
         });
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             long clock = System.nanoTime();
-            if (!readinessSent && engine.isReady() && client.player != null && ClientPlayNetworking.canSend(Packets.SpeechReady.TYPE)) {
+            if (!readinessSent && joined && preferenceSent && !gameLanguage.busy() && engine.isReady() && client.player != null && ClientPlayNetworking.canSend(Packets.SpeechReady.TYPE)) {
                 ClientPlayNetworking.send(new Packets.SpeechReady()); readinessSent = true;
             }
             while (settingsKey.consumeClick()) if (ClientUi.screen(client) == null) ClientUi.open(client, new SayItemSettingsScreen());
-            boolean down = key.isDown() && client.player != null && ClientUi.screen(client) == null;
+            boolean down = key.isDown() && client.player != null && !gameLanguage.busy() && ClientUi.screen(client) == null;
             if (down && !wasDown && challenge != null && remaining() > 0 && !speech.isBusy() && !awaitingAnswer) {
                 recordingNonce = challenge.nonce();
                 String nonce = recordingNonce;
@@ -143,6 +155,44 @@ public final class SayItemClient implements ClientModInitializer {
         settings.language = language;
         try { settings.save(); } catch (IOException ignored) { status = "Could not save SayItem settings."; }
         if (ClientPlayNetworking.canSend(Packets.SelectLanguage.TYPE)) ClientPlayNetworking.send(new Packets.SelectLanguage(language));
+    }
+    static void syncGameLanguage() {
+        if (!settings.syncMinecraftLanguage || !joined) { gameLanguage.restore(); return; }
+        if (challenge != null) gameLanguage.follow(challenge.language(), challenge.whisperLanguage());
+        else if (!selectedLanguage.equals(dev.sayitem.core.BuiltInLanguages.RANDOM)) gameLanguage.follow(selectedLanguage, selectedLanguage);
+    }
+    private final class MinecraftLanguageHost implements dev.sayitem.core.GameLanguageSync.Host {
+        private final Minecraft client = Minecraft.getInstance();
+        public String current() { return client.getLanguageManager().getSelected(); }
+        public boolean available(String locale) { return client.getLanguageManager().getLanguage(locale) != null; }
+        public String previous() { return settings.previousMinecraftLanguage; }
+        public void previous(String locale) {
+            settings.previousMinecraftLanguage = locale;
+            try { settings.save(); } catch (IOException error) { status = "Could not save Minecraft language preference."; }
+        }
+        public java.util.concurrent.CompletableFuture<Void> change(String locale) {
+            String before = current();
+            var manager = client.getLanguageManager(); manager.setSelected(locale); client.options.languageCode = locale;
+            return client.reloadResourcePacks().handleAsync((ignored, error) -> {
+                if (error == null) { client.options.save(); return java.util.concurrent.CompletableFuture.<Void>completedFuture(null); }
+                manager.setSelected(before); client.options.languageCode = before;
+                return client.reloadResourcePacks().<Void>handleAsync((rolledBack, rollbackError) -> {
+                    throw new java.util.concurrent.CompletionException(error);
+                }, client::execute);
+            }, client::execute).thenCompose(result -> result);
+        }
+        public void execute(Runnable task) { client.execute(task); }
+        public void busy(boolean loading) {
+            if (!loading) return;
+            speech.cancel(); readinessSent = false;
+            if (joined && client.player != null && ClientPlayNetworking.canSend(Packets.LanguageLoading.TYPE))
+                ClientPlayNetworking.send(new Packets.LanguageLoading());
+        }
+        public void failed() {
+            settings.syncMinecraftLanguage = false;
+            try { settings.save(); } catch (IOException ignored) { /* Recovery language remains in memory. */ }
+            status = "Could not switch Minecraft's language. Matching turned off.";
+        }
     }
     private static void prepareSpeech() {
         if (speech != null) speech.cancel();

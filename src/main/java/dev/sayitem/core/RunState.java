@@ -17,6 +17,7 @@ public final class RunState {
         private final UUID player;
         private final UnlockProgress progress;
         private Long pausedAt;
+        private String randomNonce = "", randomLanguage = "";
         private final Map<String, Round> rounds = new LinkedHashMap<>();
         private PlayerRun(UUID player, UnlockProgress progress) {
             this.player = player; this.progress = progress; unlocked = progress.unlocked(player);
@@ -40,6 +41,16 @@ public final class RunState {
             return round != null && round.nonce().equals(nonce) ? round : null;
         }
         public int pendingCount() { return Math.max(0, rounds.size() - 1); }
+        public String challengeLanguage(List<String> available, java.util.function.IntUnaryOperator choose) {
+            if (!language.equals(BuiltInLanguages.RANDOM)) return language;
+            var round = current();
+            if (round == null) return "en";
+            if (!randomNonce.equals(round.nonce())) {
+                randomLanguage = available.isEmpty() ? "en" : available.get(choose.applyAsInt(available.size()));
+                randomNonce = round.nonce();
+            }
+            return randomLanguage;
+        }
         public boolean unlockCurrent(String nonce, long now) {
             if (pausedAt != null) return false;
             var round = current(nonce);

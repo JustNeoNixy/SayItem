@@ -28,7 +28,8 @@ class SayItemCoreTest {
     }
     @Test void builtInPacksHaveMatchingCoverageAndJapaneseReadings() throws Exception {
         PackRepository repository = new PackRepository(temp.resolve("packs"));
-        assertEquals(Set.of("en", "ja", "es", "fr", "de", "pl", "bg", "ru", "it"), repository.ids());
+        assertEquals(BuiltInLanguages.LOCALES.keySet(), repository.ids());
+        assertEquals(26, repository.ids().size());
         LanguagePack japanese = repository.get("ja");
         assertEquals(1657, japanese.items().size());
         for (String id : repository.ids()) {
@@ -92,10 +93,10 @@ class SayItemCoreTest {
 
     @Test void missingCustomTranslationUsesEnglishButNeverBypassesALock() throws Exception {
         var packs = new PackRepository(temp.resolve("packs"));
-        JsonFiles.write(temp.resolve("packs/nl.json"), new LanguagePack(1, "nl", "Nederlands", "nl",
+        JsonFiles.write(temp.resolve("packs/la.json"), new LanguagePack(1, "la", "Latin", "la",
                 Map.of("minecraft:apple", new LanguagePack.Entry("mela", "", List.of()))));
         packs = new PackRepository(temp.resolve("packs"));
-        assertEquals("en", packs.phrase("nl", "minecraft:stone", "Stone").whisperLanguage());
-        assertEquals("Stone", packs.phrase("nl", "minecraft:stone", "Stone").entry().text());
+        assertEquals("en", packs.phrase("la", "minecraft:stone", "Stone").whisperLanguage());
+        assertEquals("Stone", packs.phrase("la", "minecraft:stone", "Stone").entry().text());
     }
 }

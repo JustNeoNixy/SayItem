@@ -1,0 +1,8293 @@
+{
+  "schemaVersion": 1,
+  "id": "ko",
+  "name": "Korean · 한국어",
+  "whisperLanguage": "ko",
+  "items": {
+    "minecraft:abandoned_camp_map": {
+      "text": "버려진 야영지 지도",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:acacia_boat": {
+      "text": "아카시아나무 보트",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:acacia_button": {
+      "text": "아카시아나무 버튼",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:acacia_chest_boat": {
+      "text": "상자가 실린 아카시아나무 보트",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:acacia_door": {
+      "text": "아카시아나무 문",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:acacia_fence": {
+      "text": "아카시아나무 울타리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:acacia_fence_gate": {
+      "text": "아카시아나무 울타리 문",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:acacia_hanging_sign": {
+      "text": "아카시아나무 매다는 표지판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:acacia_leaves": {
+      "text": "아카시아나무 잎",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:acacia_log": {
+      "text": "아카시아나무 원목",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:acacia_planks": {
+      "text": "아카시아나무 판자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:acacia_pressure_plate": {
+      "text": "아카시아나무 압력판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:acacia_sapling": {
+      "text": "아카시아나무 묘목",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:acacia_shelf": {
+      "text": "아카시아나무 선반",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:acacia_sign": {
+      "text": "아카시아나무 표지판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:acacia_slab": {
+      "text": "아카시아나무 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:acacia_stairs": {
+      "text": "아카시아나무 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:acacia_trapdoor": {
+      "text": "아카시아나무 다락문",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:acacia_wood": {
+      "text": "아카시아나무",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:activator_rail": {
+      "text": "활성화 레일",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:allay_spawn_egg": {
+      "text": "알레이 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:allium": {
+      "text": "알리움",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:amethyst_block": {
+      "text": "자수정 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:amethyst_cluster": {
+      "text": "자수정 군집",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:amethyst_shard": {
+      "text": "자수정 조각",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:ancient_debris": {
+      "text": "고대 잔해",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:andesite": {
+      "text": "안산암",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:andesite_slab": {
+      "text": "안산암 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:andesite_stairs": {
+      "text": "안산암 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:andesite_wall": {
+      "text": "안산암 담장",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:angler_pottery_sherd": {
+      "text": "낚시꾼 도자기 조각",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:anvil": {
+      "text": "모루",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:apple": {
+      "text": "사과",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:archer_pottery_sherd": {
+      "text": "궁수 도자기 조각",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:armadillo_scute": {
+      "text": "아르마딜로 인갑",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:armadillo_spawn_egg": {
+      "text": "아르마딜로 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:armor_stand": {
+      "text": "갑옷 거치대",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:arms_up_pottery_sherd": {
+      "text": "만세 도자기 조각",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:arrow": {
+      "text": "화살",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:axolotl_bucket": {
+      "text": "아홀로틀이 담긴 양동이",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:axolotl_spawn_egg": {
+      "text": "아홀로틀 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:azalea": {
+      "text": "진달래",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:azalea_leaves": {
+      "text": "진달래 잎",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:azure_bluet": {
+      "text": "선애기별꽃",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:baked_potato": {
+      "text": "구운 감자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bamboo": {
+      "text": "대나무",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bamboo_block": {
+      "text": "대나무 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bamboo_button": {
+      "text": "대나무 버튼",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bamboo_chest_raft": {
+      "text": "상자가 실린 대나무 뗏목",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bamboo_door": {
+      "text": "대나무 문",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bamboo_fence": {
+      "text": "대나무 울타리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bamboo_fence_gate": {
+      "text": "대나무 울타리 문",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bamboo_hanging_sign": {
+      "text": "대나무 매다는 표지판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bamboo_mosaic": {
+      "text": "대나무 모자이크",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bamboo_mosaic_slab": {
+      "text": "대나무 모자이크 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bamboo_mosaic_stairs": {
+      "text": "대나무 모자이크 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bamboo_planks": {
+      "text": "대나무 판자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bamboo_pressure_plate": {
+      "text": "대나무 압력판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bamboo_raft": {
+      "text": "대나무 뗏목",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bamboo_shelf": {
+      "text": "대나무 선반",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bamboo_sign": {
+      "text": "대나무 표지판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bamboo_slab": {
+      "text": "대나무 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bamboo_stairs": {
+      "text": "대나무 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bamboo_trapdoor": {
+      "text": "대나무 다락문",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:barrel": {
+      "text": "통",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:barrier": {
+      "text": "방벽",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:basalt": {
+      "text": "현무암",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bat_spawn_egg": {
+      "text": "박쥐 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:beacon": {
+      "text": "신호기",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bedrock": {
+      "text": "기반암",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bee_nest": {
+      "text": "벌집",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bee_spawn_egg": {
+      "text": "꿀벌 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:beef": {
+      "text": "익히지 않은 소고기",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:beehive": {
+      "text": "벌통",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:beetroot": {
+      "text": "비트",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:beetroot_seeds": {
+      "text": "비트 씨앗",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:beetroot_soup": {
+      "text": "비트 수프",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bell": {
+      "text": "종",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:big_dripleaf": {
+      "text": "큰 흘림잎",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:birch_boat": {
+      "text": "자작나무 보트",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:birch_button": {
+      "text": "자작나무 버튼",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:birch_chest_boat": {
+      "text": "상자가 실린 자작나무 보트",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:birch_door": {
+      "text": "자작나무 문",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:birch_fence": {
+      "text": "자작나무 울타리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:birch_fence_gate": {
+      "text": "자작나무 울타리 문",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:birch_hanging_sign": {
+      "text": "자작나무 매다는 표지판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:birch_leaves": {
+      "text": "자작나무 잎",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:birch_log": {
+      "text": "자작나무 원목",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:birch_planks": {
+      "text": "자작나무 판자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:birch_pressure_plate": {
+      "text": "자작나무 압력판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:birch_sapling": {
+      "text": "자작나무 묘목",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:birch_shelf": {
+      "text": "자작나무 선반",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:birch_sign": {
+      "text": "자작나무 표지판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:birch_slab": {
+      "text": "자작나무 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:birch_stairs": {
+      "text": "자작나무 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:birch_trapdoor": {
+      "text": "자작나무 다락문",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:birch_wood": {
+      "text": "자작나무",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:black_banner": {
+      "text": "검은색 현수막",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:black_bed": {
+      "text": "검은색 침대",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:black_bundle": {
+      "text": "검은색 꾸러미",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:black_candle": {
+      "text": "검은색 초",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:black_carpet": {
+      "text": "검은색 양탄자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:black_concrete": {
+      "text": "검은색 콘크리트",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:black_concrete_powder": {
+      "text": "검은색 콘크리트 가루",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:black_concrete_slab": {
+      "text": "검은색 콘크리트 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:black_concrete_stairs": {
+      "text": "검은색 콘크리트 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:black_cushion": {
+      "text": "검은색 방석",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:black_dye": {
+      "text": "검은색 염료",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:black_glazed_terracotta": {
+      "text": "검은색 유광 테라코타",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:black_harness": {
+      "text": "검은색 하네스",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:black_shulker_box": {
+      "text": "검은색 셜커 상자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:black_stained_glass": {
+      "text": "검은색 색유리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:black_stained_glass_pane": {
+      "text": "검은색 색유리 판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:black_terracotta": {
+      "text": "검은색 테라코타",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:black_wool": {
+      "text": "검은색 양털",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:black_wool_slab": {
+      "text": "검은색 양털 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:black_wool_stairs": {
+      "text": "검은색 양털 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:blackstone": {
+      "text": "흑암",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:blackstone_slab": {
+      "text": "흑암 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:blackstone_stairs": {
+      "text": "흑암 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:blackstone_wall": {
+      "text": "흑암 담장",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:blade_pottery_sherd": {
+      "text": "칼날 도자기 조각",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:blast_furnace": {
+      "text": "용광로",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:blaze_powder": {
+      "text": "블레이즈 가루",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:blaze_rod": {
+      "text": "블레이즈 막대기",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:blaze_spawn_egg": {
+      "text": "블레이즈 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:blue_banner": {
+      "text": "파란색 현수막",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:blue_bed": {
+      "text": "파란색 침대",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:blue_bundle": {
+      "text": "파란색 꾸러미",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:blue_candle": {
+      "text": "파란색 초",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:blue_carpet": {
+      "text": "파란색 양탄자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:blue_concrete": {
+      "text": "파란색 콘크리트",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:blue_concrete_powder": {
+      "text": "파란색 콘크리트 가루",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:blue_concrete_slab": {
+      "text": "파란색 콘크리트 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:blue_concrete_stairs": {
+      "text": "파란색 콘크리트 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:blue_cushion": {
+      "text": "파란색 방석",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:blue_dye": {
+      "text": "파란색 염료",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:blue_egg": {
+      "text": "파란색 달걀",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:blue_glazed_terracotta": {
+      "text": "파란색 유광 테라코타",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:blue_harness": {
+      "text": "파란색 하네스",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:blue_ice": {
+      "text": "푸른얼음",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:blue_orchid": {
+      "text": "파란색 난초",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:blue_shulker_box": {
+      "text": "파란색 셜커 상자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:blue_stained_glass": {
+      "text": "파란색 색유리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:blue_stained_glass_pane": {
+      "text": "파란색 색유리 판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:blue_terracotta": {
+      "text": "파란색 테라코타",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:blue_wool": {
+      "text": "파란색 양털",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:blue_wool_slab": {
+      "text": "파란색 양털 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:blue_wool_stairs": {
+      "text": "파란색 양털 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bogged_spawn_egg": {
+      "text": "보그드 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bolt_armor_trim_smithing_template": {
+      "text": "대장장이 형판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bone": {
+      "text": "뼈다귀",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bone_block": {
+      "text": "뼈 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bone_meal": {
+      "text": "뼛가루",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:book": {
+      "text": "책",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bookshelf": {
+      "text": "책장",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bordure_indented_banner_pattern": {
+      "text": "톱니 테두리 현수막 무늬",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bow": {
+      "text": "활",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bowl": {
+      "text": "그릇",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:brain_coral": {
+      "text": "뇌 산호",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:brain_coral_block": {
+      "text": "뇌 산호 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:brain_coral_fan": {
+      "text": "부채형 뇌 산호",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bread": {
+      "text": "빵",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:breeze_rod": {
+      "text": "브리즈 막대기",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:breeze_spawn_egg": {
+      "text": "브리즈 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:brewer_pottery_sherd": {
+      "text": "양조가 도자기 조각",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:brewing_stand": {
+      "text": "양조기",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:brick": {
+      "text": "벽돌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:brick_slab": {
+      "text": "벽돌 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:brick_stairs": {
+      "text": "벽돌 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:brick_wall": {
+      "text": "벽돌 담장",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bricks": {
+      "text": "벽돌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:brown_banner": {
+      "text": "갈색 현수막",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:brown_bed": {
+      "text": "갈색 침대",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:brown_bundle": {
+      "text": "갈색 꾸러미",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:brown_candle": {
+      "text": "갈색 초",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:brown_carpet": {
+      "text": "갈색 양탄자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:brown_concrete": {
+      "text": "갈색 콘크리트",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:brown_concrete_powder": {
+      "text": "갈색 콘크리트 가루",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:brown_concrete_slab": {
+      "text": "갈색 콘크리트 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:brown_concrete_stairs": {
+      "text": "갈색 콘크리트 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:brown_cushion": {
+      "text": "갈색 방석",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:brown_dye": {
+      "text": "갈색 염료",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:brown_egg": {
+      "text": "갈색 달걀",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:brown_glazed_terracotta": {
+      "text": "갈색 유광 테라코타",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:brown_harness": {
+      "text": "갈색 하네스",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:brown_mushroom": {
+      "text": "갈색 버섯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:brown_mushroom_block": {
+      "text": "갈색 버섯 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:brown_shulker_box": {
+      "text": "갈색 셜커 상자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:brown_stained_glass": {
+      "text": "갈색 색유리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:brown_stained_glass_pane": {
+      "text": "갈색 색유리 판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:brown_terracotta": {
+      "text": "갈색 테라코타",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:brown_wool": {
+      "text": "갈색 양털",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:brown_wool_slab": {
+      "text": "갈색 양털 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:brown_wool_stairs": {
+      "text": "갈색 양털 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:brush": {
+      "text": "솔",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bubble_coral": {
+      "text": "거품 산호",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bubble_coral_block": {
+      "text": "거품 산호 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bubble_coral_fan": {
+      "text": "부채형 거품 산호",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bucket": {
+      "text": "양동이",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:budding_amethyst": {
+      "text": "싹 틔우는 자수정",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bundle": {
+      "text": "꾸러미",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:buried_ancient_city_map": {
+      "text": "땅에 묻힌 고대 도시 지도",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:buried_mineshaft_map": {
+      "text": "땅에 묻힌 폐광 지도",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:buried_treasure_map": {
+      "text": "땅에 묻힌 보물 지도",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:buried_trial_chambers_map": {
+      "text": "땅에 묻힌 시련의 회당 지도",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:burn_pottery_sherd": {
+      "text": "불탐 도자기 조각",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bush": {
+      "text": "덤불",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cactus": {
+      "text": "선인장",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cactus_flower": {
+      "text": "선인장 꽃",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cake": {
+      "text": "케이크",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:calcite": {
+      "text": "방해석",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:calibrated_sculk_sensor": {
+      "text": "조율한 스컬크 감지체",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:camel_husk_spawn_egg": {
+      "text": "낙타 허스크 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:camel_spawn_egg": {
+      "text": "낙타 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:campfire": {
+      "text": "모닥불",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:candle": {
+      "text": "초",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:carrot": {
+      "text": "당근",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:carrot_on_a_stick": {
+      "text": "당근 낚싯대",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cartography_table": {
+      "text": "지도 제작대",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:carved_pumpkin": {
+      "text": "조각된 호박",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cat_spawn_egg": {
+      "text": "고양이 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cauldron": {
+      "text": "가마솥",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cave_spider_spawn_egg": {
+      "text": "동굴 거미 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:chain_command_block": {
+      "text": "연쇄형 명령 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:chainmail_boots": {
+      "text": "사슬 부츠",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:chainmail_chestplate": {
+      "text": "사슬 흉갑",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:chainmail_helmet": {
+      "text": "사슬 투구",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:chainmail_leggings": {
+      "text": "사슬 레깅스",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:charcoal": {
+      "text": "숯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cherry_boat": {
+      "text": "벚나무 보트",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cherry_button": {
+      "text": "벚나무 버튼",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cherry_chest_boat": {
+      "text": "상자가 실린 벚나무 보트",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cherry_door": {
+      "text": "벚나무 문",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cherry_fence": {
+      "text": "벚나무 울타리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cherry_fence_gate": {
+      "text": "벚나무 울타리 문",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cherry_hanging_sign": {
+      "text": "벚나무 매다는 표지판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cherry_leaves": {
+      "text": "벚나무 잎",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cherry_log": {
+      "text": "벚나무 원목",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cherry_planks": {
+      "text": "벚나무 판자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cherry_pressure_plate": {
+      "text": "벚나무 압력판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cherry_sapling": {
+      "text": "벚나무 묘목",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cherry_shelf": {
+      "text": "벚나무 선반",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cherry_sign": {
+      "text": "벚나무 표지판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cherry_slab": {
+      "text": "벚나무 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cherry_stairs": {
+      "text": "벚나무 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cherry_trapdoor": {
+      "text": "벚나무 다락문",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cherry_wood": {
+      "text": "벚나무",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:chest": {
+      "text": "상자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:chest_minecart": {
+      "text": "상자가 실린 광산 수레",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:chicken": {
+      "text": "익히지 않은 닭고기",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:chicken_spawn_egg": {
+      "text": "닭 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:chipped_anvil": {
+      "text": "금 간 모루",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:chiseled_bookshelf": {
+      "text": "조각된 책장",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:chiseled_cinnabar": {
+      "text": "조각된 진사",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:chiseled_copper": {
+      "text": "조각된 구리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:chiseled_deepslate": {
+      "text": "조각된 심층암",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:chiseled_nether_bricks": {
+      "text": "조각된 네더 벽돌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:chiseled_polished_blackstone": {
+      "text": "조각된 윤나는 흑암",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:chiseled_quartz_block": {
+      "text": "조각된 석영 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:chiseled_red_sandstone": {
+      "text": "조각된 붉은 사암",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:chiseled_resin_bricks": {
+      "text": "조각된 수지 벽돌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:chiseled_sandstone": {
+      "text": "조각된 사암",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:chiseled_stone_bricks": {
+      "text": "조각된 석재 벽돌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:chiseled_sulfur": {
+      "text": "조각된 유황",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:chiseled_tuff": {
+      "text": "조각된 응회암",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:chiseled_tuff_bricks": {
+      "text": "조각된 응회암 벽돌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:chorus_flower": {
+      "text": "후렴화",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:chorus_fruit": {
+      "text": "후렴과",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:chorus_plant": {
+      "text": "후렴초",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cinnabar": {
+      "text": "진사",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cinnabar_brick_slab": {
+      "text": "진사 벽돌 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cinnabar_brick_stairs": {
+      "text": "진사 벽돌 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cinnabar_brick_wall": {
+      "text": "진사 벽돌 담장",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cinnabar_bricks": {
+      "text": "진사 벽돌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cinnabar_slab": {
+      "text": "진사 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cinnabar_stairs": {
+      "text": "진사 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cinnabar_wall": {
+      "text": "진사 담장",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:clay": {
+      "text": "점토",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:clay_ball": {
+      "text": "점토 덩이",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:clock": {
+      "text": "시계",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:closed_eyeblossom": {
+      "text": "감은 눈망울꽃",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:coal": {
+      "text": "석탄",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:coal_block": {
+      "text": "석탄 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:coal_ore": {
+      "text": "석탄 광석",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:coarse_dirt": {
+      "text": "거친 흙",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:coast_armor_trim_smithing_template": {
+      "text": "대장장이 형판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cobbled_deepslate": {
+      "text": "심층암 조약돌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cobbled_deepslate_slab": {
+      "text": "심층암 조약돌 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cobbled_deepslate_stairs": {
+      "text": "심층암 조약돌 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cobbled_deepslate_wall": {
+      "text": "심층암 조약돌 담장",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cobblestone": {
+      "text": "조약돌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cobblestone_slab": {
+      "text": "조약돌 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cobblestone_stairs": {
+      "text": "조약돌 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cobblestone_wall": {
+      "text": "조약돌 담장",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cobweb": {
+      "text": "거미줄",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cocoa_beans": {
+      "text": "코코아 콩",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cod": {
+      "text": "익히지 않은 대구",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cod_bucket": {
+      "text": "대구가 담긴 양동이",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cod_spawn_egg": {
+      "text": "대구 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:command_block": {
+      "text": "명령 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:command_block_minecart": {
+      "text": "명령 블록이 실린 광산 수레",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:comparator": {
+      "text": "레드스톤 비교기",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:compass": {
+      "text": "나침반",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:composter": {
+      "text": "퇴비통",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:conduit": {
+      "text": "전달체",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cooked_beef": {
+      "text": "스테이크",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cooked_chicken": {
+      "text": "익힌 닭고기",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cooked_cod": {
+      "text": "익힌 대구",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cooked_mutton": {
+      "text": "익힌 양고기",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cooked_porkchop": {
+      "text": "익힌 돼지고기",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cooked_rabbit": {
+      "text": "익힌 토끼고기",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cooked_salmon": {
+      "text": "익힌 연어",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cookie": {
+      "text": "쿠키",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:copper_axe": {
+      "text": "구리 도끼",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:copper_bars": {
+      "text": "구리 창살",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:copper_block": {
+      "text": "구리 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:copper_boots": {
+      "text": "구리 부츠",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:copper_bulb": {
+      "text": "구리 전구",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:copper_chain": {
+      "text": "구리 사슬",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:copper_chest": {
+      "text": "구리 상자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:copper_chestplate": {
+      "text": "구리 흉갑",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:copper_door": {
+      "text": "구리 문",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:copper_golem_spawn_egg": {
+      "text": "구리 골렘 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:copper_golem_statue": {
+      "text": "구리 골렘 동상",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:copper_grate": {
+      "text": "구리 격자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:copper_helmet": {
+      "text": "구리 투구",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:copper_hoe": {
+      "text": "구리 괭이",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:copper_horse_armor": {
+      "text": "구리 말 갑옷",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:copper_ingot": {
+      "text": "구리 주괴",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:copper_lantern": {
+      "text": "구리 랜턴",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:copper_leggings": {
+      "text": "구리 레깅스",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:copper_nautilus_armor": {
+      "text": "구리 앵무조개 갑옷",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:copper_nugget": {
+      "text": "구리 조각",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:copper_ore": {
+      "text": "구리 광석",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:copper_pickaxe": {
+      "text": "구리 곡괭이",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:copper_shovel": {
+      "text": "구리 삽",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:copper_spear": {
+      "text": "구리 창",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:copper_sword": {
+      "text": "구리 검",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:copper_torch": {
+      "text": "구리 횃불",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:copper_trapdoor": {
+      "text": "구리 다락문",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cornflower": {
+      "text": "수레국화",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cow_spawn_egg": {
+      "text": "소 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cracked_deepslate_bricks": {
+      "text": "금 간 심층암 벽돌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cracked_deepslate_tiles": {
+      "text": "금 간 심층암 타일",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cracked_nether_bricks": {
+      "text": "금 간 네더 벽돌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cracked_polished_blackstone_bricks": {
+      "text": "금 간 윤나는 흑암 벽돌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cracked_stone_bricks": {
+      "text": "금 간 석재 벽돌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:crafter": {
+      "text": "제작기",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:crafting_table": {
+      "text": "제작대",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:creaking_heart": {
+      "text": "크리킹 심장",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:creaking_spawn_egg": {
+      "text": "크리킹 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:creeper_banner_pattern": {
+      "text": "현수막 무늬",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:creeper_head": {
+      "text": "크리퍼 머리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:creeper_spawn_egg": {
+      "text": "크리퍼 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:crimson_button": {
+      "text": "진홍빛 버튼",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:crimson_door": {
+      "text": "진홍빛 문",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:crimson_fence": {
+      "text": "진홍빛 울타리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:crimson_fence_gate": {
+      "text": "진홍빛 울타리 문",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:crimson_fungus": {
+      "text": "진홍빛 균",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:crimson_hanging_sign": {
+      "text": "진홍빛 매다는 표지판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:crimson_hyphae": {
+      "text": "진홍빛 균사",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:crimson_nylium": {
+      "text": "진홍빛 네사체",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:crimson_planks": {
+      "text": "진홍빛 판자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:crimson_pressure_plate": {
+      "text": "진홍빛 압력판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:crimson_roots": {
+      "text": "진홍빛 뿌리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:crimson_shelf": {
+      "text": "진홍빛 선반",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:crimson_sign": {
+      "text": "진홍빛 표지판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:crimson_slab": {
+      "text": "진홍빛 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:crimson_stairs": {
+      "text": "진홍빛 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:crimson_stem": {
+      "text": "진홍빛 자루",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:crimson_trapdoor": {
+      "text": "진홍빛 다락문",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:crossbow": {
+      "text": "쇠뇌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:crying_obsidian": {
+      "text": "우는 흑요석",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cut_copper": {
+      "text": "깎인 구리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cut_copper_slab": {
+      "text": "깎인 구리 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cut_copper_stairs": {
+      "text": "깎인 구리 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cut_red_sandstone": {
+      "text": "깎인 붉은 사암",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cut_red_sandstone_slab": {
+      "text": "깎인 붉은 사암 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cut_sandstone": {
+      "text": "깎인 사암",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cut_sandstone_slab": {
+      "text": "깎인 사암 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cyan_banner": {
+      "text": "청록색 현수막",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cyan_bed": {
+      "text": "청록색 침대",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cyan_bundle": {
+      "text": "청록색 꾸러미",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cyan_candle": {
+      "text": "청록색 초",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cyan_carpet": {
+      "text": "청록색 양탄자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cyan_concrete": {
+      "text": "청록색 콘크리트",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cyan_concrete_powder": {
+      "text": "청록색 콘크리트 가루",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cyan_concrete_slab": {
+      "text": "청록색 콘크리트 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cyan_concrete_stairs": {
+      "text": "청록색 콘크리트 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cyan_cushion": {
+      "text": "청록색 방석",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cyan_dye": {
+      "text": "청록색 염료",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cyan_glazed_terracotta": {
+      "text": "청록색 유광 테라코타",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cyan_harness": {
+      "text": "청록색 하네스",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cyan_shulker_box": {
+      "text": "청록색 셜커 상자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cyan_stained_glass": {
+      "text": "청록색 색유리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cyan_stained_glass_pane": {
+      "text": "청록색 색유리 판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cyan_terracotta": {
+      "text": "청록색 테라코타",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cyan_wool": {
+      "text": "청록색 양털",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cyan_wool_slab": {
+      "text": "청록색 양털 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cyan_wool_stairs": {
+      "text": "청록색 양털 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:damaged_anvil": {
+      "text": "손상된 모루",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dandelion": {
+      "text": "민들레",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:danger_pottery_sherd": {
+      "text": "위험 도자기 조각",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dark_oak_boat": {
+      "text": "짙은 참나무 보트",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dark_oak_button": {
+      "text": "짙은 참나무 버튼",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dark_oak_chest_boat": {
+      "text": "상자가 실린 짙은 참나무 보트",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dark_oak_door": {
+      "text": "짙은 참나무 문",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dark_oak_fence": {
+      "text": "짙은 참나무 울타리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dark_oak_fence_gate": {
+      "text": "짙은 참나무 울타리 문",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dark_oak_hanging_sign": {
+      "text": "짙은 참나무 매다는 표지판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dark_oak_leaves": {
+      "text": "짙은 참나무 잎",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dark_oak_log": {
+      "text": "짙은 참나무 원목",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dark_oak_planks": {
+      "text": "짙은 참나무 판자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dark_oak_pressure_plate": {
+      "text": "짙은 참나무 압력판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dark_oak_sapling": {
+      "text": "짙은 참나무 묘목",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dark_oak_shelf": {
+      "text": "짙은 참나무 선반",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dark_oak_sign": {
+      "text": "짙은 참나무 표지판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dark_oak_slab": {
+      "text": "짙은 참나무 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dark_oak_stairs": {
+      "text": "짙은 참나무 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dark_oak_trapdoor": {
+      "text": "짙은 참나무 다락문",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dark_oak_wood": {
+      "text": "짙은 참나무",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dark_prismarine": {
+      "text": "짙은 프리즈머린",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dark_prismarine_slab": {
+      "text": "짙은 프리즈머린 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dark_prismarine_stairs": {
+      "text": "짙은 프리즈머린 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:daylight_detector": {
+      "text": "햇빛 감지기",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dead_brain_coral": {
+      "text": "죽은 뇌 산호",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dead_brain_coral_block": {
+      "text": "죽은 뇌 산호 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dead_brain_coral_fan": {
+      "text": "죽은 부채형 뇌 산호",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dead_bubble_coral": {
+      "text": "죽은 거품 산호",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dead_bubble_coral_block": {
+      "text": "죽은 거품 산호 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dead_bubble_coral_fan": {
+      "text": "죽은 부채형 거품 산호",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dead_bush": {
+      "text": "마른 덤불",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dead_fire_coral": {
+      "text": "죽은 불 산호",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dead_fire_coral_block": {
+      "text": "죽은 불 산호 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dead_fire_coral_fan": {
+      "text": "죽은 부채형 불 산호",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dead_horn_coral": {
+      "text": "죽은 사방산호",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dead_horn_coral_block": {
+      "text": "죽은 사방산호 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dead_horn_coral_fan": {
+      "text": "죽은 부채형 사방산호",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dead_tube_coral": {
+      "text": "죽은 관 산호",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dead_tube_coral_block": {
+      "text": "죽은 관 산호 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dead_tube_coral_fan": {
+      "text": "죽은 부채형 관 산호",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:debug_stick": {
+      "text": "디버그 막대기",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:decorated_pot": {
+      "text": "장식된 도자기",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:deepslate": {
+      "text": "심층암",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:deepslate_brick_slab": {
+      "text": "심층암 벽돌 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:deepslate_brick_stairs": {
+      "text": "심층암 벽돌 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:deepslate_brick_wall": {
+      "text": "심층암 벽돌 담장",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:deepslate_bricks": {
+      "text": "심층암 벽돌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:deepslate_coal_ore": {
+      "text": "심층암 석탄 광석",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:deepslate_copper_ore": {
+      "text": "심층암 구리 광석",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:deepslate_diamond_ore": {
+      "text": "심층암 다이아몬드 광석",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:deepslate_emerald_ore": {
+      "text": "심층암 에메랄드 광석",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:deepslate_gold_ore": {
+      "text": "심층암 금 광석",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:deepslate_iron_ore": {
+      "text": "심층암 철 광석",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:deepslate_lapis_ore": {
+      "text": "심층암 청금석 광석",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:deepslate_redstone_ore": {
+      "text": "심층암 레드스톤 광석",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:deepslate_tile_slab": {
+      "text": "심층암 타일 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:deepslate_tile_stairs": {
+      "text": "심층암 타일 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:deepslate_tile_wall": {
+      "text": "심층암 타일 담장",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:deepslate_tiles": {
+      "text": "심층암 타일",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:desert_pyramid_map": {
+      "text": "사막 피라미드 지도",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:desert_village_map": {
+      "text": "사막 마을 지도",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:detector_rail": {
+      "text": "감지 레일",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:diamond": {
+      "text": "다이아몬드",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:diamond_axe": {
+      "text": "다이아몬드 도끼",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:diamond_block": {
+      "text": "다이아몬드 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:diamond_boots": {
+      "text": "다이아몬드 부츠",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:diamond_chestplate": {
+      "text": "다이아몬드 흉갑",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:diamond_helmet": {
+      "text": "다이아몬드 투구",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:diamond_hoe": {
+      "text": "다이아몬드 괭이",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:diamond_horse_armor": {
+      "text": "다이아몬드 말 갑옷",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:diamond_leggings": {
+      "text": "다이아몬드 레깅스",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:diamond_nautilus_armor": {
+      "text": "다이아몬드 앵무조개 갑옷",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:diamond_ore": {
+      "text": "다이아몬드 광석",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:diamond_pickaxe": {
+      "text": "다이아몬드 곡괭이",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:diamond_shovel": {
+      "text": "다이아몬드 삽",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:diamond_spear": {
+      "text": "다이아몬드 창",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:diamond_sword": {
+      "text": "다이아몬드 검",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:diorite": {
+      "text": "섬록암",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:diorite_slab": {
+      "text": "섬록암 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:diorite_stairs": {
+      "text": "섬록암 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:diorite_wall": {
+      "text": "섬록암 담장",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dirt": {
+      "text": "흙",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dirt_path": {
+      "text": "흙 길",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:disc_fragment_5": {
+      "text": "음반 파편",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dispenser": {
+      "text": "발사기",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dolphin_spawn_egg": {
+      "text": "돌고래 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:donkey_spawn_egg": {
+      "text": "당나귀 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dragon_breath": {
+      "text": "드래곤의 숨결",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dragon_egg": {
+      "text": "드래곤 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dragon_head": {
+      "text": "드래곤 머리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dried_ghast": {
+      "text": "마른 가스트",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dried_kelp": {
+      "text": "말린 켈프",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dried_kelp_block": {
+      "text": "말린 켈프 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dripstone_block": {
+      "text": "점적석 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dropper": {
+      "text": "공급기",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:drowned_spawn_egg": {
+      "text": "드라운드 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dune_armor_trim_smithing_template": {
+      "text": "대장장이 형판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:echo_shard": {
+      "text": "메아리 조각",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:egg": {
+      "text": "달걀",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:elder_guardian_spawn_egg": {
+      "text": "엘더 가디언 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:elytra": {
+      "text": "겉날개",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:emerald": {
+      "text": "에메랄드",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:emerald_block": {
+      "text": "에메랄드 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:emerald_ore": {
+      "text": "에메랄드 광석",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:enchanted_book": {
+      "text": "마법이 부여된 책",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:enchanted_golden_apple": {
+      "text": "마법이 부여된 황금 사과",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:enchanting_table": {
+      "text": "마법 부여대",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:end_crystal": {
+      "text": "엔드 수정",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:end_portal_frame": {
+      "text": "엔드 차원문 틀",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:end_rod": {
+      "text": "엔드 막대기",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:end_stone": {
+      "text": "엔드 돌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:end_stone_brick_slab": {
+      "text": "엔드 석재 벽돌 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:end_stone_brick_stairs": {
+      "text": "엔드 석재 벽돌 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:end_stone_brick_wall": {
+      "text": "엔드 석재 벽돌 담장",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:end_stone_bricks": {
+      "text": "엔드 석재 벽돌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:ender_chest": {
+      "text": "엔더 상자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:ender_dragon_spawn_egg": {
+      "text": "엔더 드래곤 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:ender_eye": {
+      "text": "엔더의 눈",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:ender_pearl": {
+      "text": "엔더 진주",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:enderman_spawn_egg": {
+      "text": "엔더맨 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:endermite_spawn_egg": {
+      "text": "엔더마이트 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:evoker_spawn_egg": {
+      "text": "소환사 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:experience_bottle": {
+      "text": "경험치 병",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:explorer_pottery_sherd": {
+      "text": "탐험가 도자기 조각",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:exposed_chiseled_copper": {
+      "text": "약간 녹슨 조각된 구리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:exposed_copper": {
+      "text": "약간 녹슨 구리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:exposed_copper_bars": {
+      "text": "약간 녹슨 구리 창살",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:exposed_copper_bulb": {
+      "text": "약간 녹슨 구리 전구",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:exposed_copper_chain": {
+      "text": "약간 녹슨 구리 사슬",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:exposed_copper_chest": {
+      "text": "약간 녹슨 구리 상자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:exposed_copper_door": {
+      "text": "약간 녹슨 구리 문",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:exposed_copper_golem_statue": {
+      "text": "약간 녹슨 구리 골렘 동상",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:exposed_copper_grate": {
+      "text": "약간 녹슨 구리 격자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:exposed_copper_lantern": {
+      "text": "약간 녹슨 구리 랜턴",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:exposed_copper_trapdoor": {
+      "text": "약간 녹슨 구리 다락문",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:exposed_cut_copper": {
+      "text": "약간 녹슨 깎인 구리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:exposed_cut_copper_slab": {
+      "text": "약간 녹슨 깎인 구리 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:exposed_cut_copper_stairs": {
+      "text": "약간 녹슨 깎인 구리 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:exposed_lightning_rod": {
+      "text": "약간 녹슨 피뢰침",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:eye_armor_trim_smithing_template": {
+      "text": "대장장이 형판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:farmland": {
+      "text": "경작지",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:feather": {
+      "text": "깃털",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:fermented_spider_eye": {
+      "text": "발효된 거미 눈",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:fern": {
+      "text": "고사리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:field_masoned_banner_pattern": {
+      "text": "벽돌 현수막 무늬",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:filled_map": {
+      "text": "지도",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:fire_charge": {
+      "text": "화염구",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:fire_coral": {
+      "text": "불 산호",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:fire_coral_block": {
+      "text": "불 산호 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:fire_coral_fan": {
+      "text": "부채형 불 산호",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:firefly_bush": {
+      "text": "반딧불이 덤불",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:firework_rocket": {
+      "text": "폭죽 로켓",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:firework_star": {
+      "text": "폭죽 탄약",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:fishing_rod": {
+      "text": "낚싯대",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:fletching_table": {
+      "text": "화살 작업대",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:flint": {
+      "text": "부싯돌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:flint_and_steel": {
+      "text": "부싯돌과 부시",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:flow_armor_trim_smithing_template": {
+      "text": "대장장이 형판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:flow_banner_pattern": {
+      "text": "현수막 무늬",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:flow_pottery_sherd": {
+      "text": "흐름 도자기 조각",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:flower_banner_pattern": {
+      "text": "현수막 무늬",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:flower_pot": {
+      "text": "화분",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:flowering_azalea": {
+      "text": "꽃 핀 진달래",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:flowering_azalea_leaves": {
+      "text": "꽃 핀 진달래 잎",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:fox_spawn_egg": {
+      "text": "여우 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:friend_pottery_sherd": {
+      "text": "친구 도자기 조각",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:frog_spawn_egg": {
+      "text": "개구리 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:frogspawn": {
+      "text": "개구리알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:furnace": {
+      "text": "화로",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:furnace_minecart": {
+      "text": "화로가 실린 광산 수레",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:ghast_spawn_egg": {
+      "text": "가스트 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:ghast_tear": {
+      "text": "가스트 눈물",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:gilded_blackstone": {
+      "text": "황금이 박힌 흑암",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:glass": {
+      "text": "유리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:glass_bottle": {
+      "text": "유리병",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:glass_pane": {
+      "text": "유리판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:glistering_melon_slice": {
+      "text": "반짝이는 수박 조각",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:globe_banner_pattern": {
+      "text": "현수막 무늬",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:glow_berries": {
+      "text": "발광 열매",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:glow_ink_sac": {
+      "text": "발광 먹물 주머니",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:glow_item_frame": {
+      "text": "발광 아이템 액자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:glow_lichen": {
+      "text": "발광 이끼",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:glow_squid_spawn_egg": {
+      "text": "발광 오징어 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:glowstone": {
+      "text": "발광석",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:glowstone_dust": {
+      "text": "발광석 가루",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:goat_horn": {
+      "text": "염소 뿔",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:goat_spawn_egg": {
+      "text": "염소 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:gold_block": {
+      "text": "금 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:gold_ingot": {
+      "text": "금 주괴",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:gold_nugget": {
+      "text": "금 조각",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:gold_ore": {
+      "text": "금 광석",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:golden_apple": {
+      "text": "황금 사과",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:golden_axe": {
+      "text": "금 도끼",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:golden_boots": {
+      "text": "금 부츠",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:golden_carrot": {
+      "text": "황금 당근",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:golden_chestplate": {
+      "text": "금 흉갑",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:golden_dandelion": {
+      "text": "황금 민들레",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:golden_helmet": {
+      "text": "금 투구",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:golden_hoe": {
+      "text": "금 괭이",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:golden_horse_armor": {
+      "text": "금 말 갑옷",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:golden_leggings": {
+      "text": "금 레깅스",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:golden_nautilus_armor": {
+      "text": "금 앵무조개 갑옷",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:golden_pickaxe": {
+      "text": "금 곡괭이",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:golden_shovel": {
+      "text": "금 삽",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:golden_spear": {
+      "text": "금 창",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:golden_sword": {
+      "text": "금 검",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:granite": {
+      "text": "화강암",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:granite_slab": {
+      "text": "화강암 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:granite_stairs": {
+      "text": "화강암 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:granite_wall": {
+      "text": "화강암 담장",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:grass_block": {
+      "text": "잔디 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:gravel": {
+      "text": "자갈",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:gray_banner": {
+      "text": "회색 현수막",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:gray_bed": {
+      "text": "회색 침대",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:gray_bundle": {
+      "text": "회색 꾸러미",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:gray_candle": {
+      "text": "회색 초",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:gray_carpet": {
+      "text": "회색 양탄자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:gray_concrete": {
+      "text": "회색 콘크리트",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:gray_concrete_powder": {
+      "text": "회색 콘크리트 가루",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:gray_concrete_slab": {
+      "text": "회색 콘크리트 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:gray_concrete_stairs": {
+      "text": "회색 콘크리트 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:gray_cushion": {
+      "text": "회색 방석",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:gray_dye": {
+      "text": "회색 염료",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:gray_glazed_terracotta": {
+      "text": "회색 유광 테라코타",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:gray_harness": {
+      "text": "회색 하네스",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:gray_shulker_box": {
+      "text": "회색 셜커 상자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:gray_stained_glass": {
+      "text": "회색 색유리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:gray_stained_glass_pane": {
+      "text": "회색 색유리 판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:gray_terracotta": {
+      "text": "회색 테라코타",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:gray_wool": {
+      "text": "회색 양털",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:gray_wool_slab": {
+      "text": "회색 양털 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:gray_wool_stairs": {
+      "text": "회색 양털 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:green_banner": {
+      "text": "초록색 현수막",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:green_bed": {
+      "text": "초록색 침대",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:green_bundle": {
+      "text": "초록색 꾸러미",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:green_candle": {
+      "text": "초록색 초",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:green_carpet": {
+      "text": "초록색 양탄자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:green_concrete": {
+      "text": "초록색 콘크리트",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:green_concrete_powder": {
+      "text": "초록색 콘크리트 가루",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:green_concrete_slab": {
+      "text": "초록색 콘크리트 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:green_concrete_stairs": {
+      "text": "초록색 콘크리트 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:green_cushion": {
+      "text": "초록색 방석",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:green_dye": {
+      "text": "초록색 염료",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:green_glazed_terracotta": {
+      "text": "초록색 유광 테라코타",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:green_harness": {
+      "text": "초록색 하네스",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:green_shulker_box": {
+      "text": "초록색 셜커 상자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:green_stained_glass": {
+      "text": "초록색 색유리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:green_stained_glass_pane": {
+      "text": "초록색 색유리 판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:green_terracotta": {
+      "text": "초록색 테라코타",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:green_wool": {
+      "text": "초록색 양털",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:green_wool_slab": {
+      "text": "초록색 양털 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:green_wool_stairs": {
+      "text": "초록색 양털 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:grindstone": {
+      "text": "숫돌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:guardian_spawn_egg": {
+      "text": "가디언 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:gunpowder": {
+      "text": "화약",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:guster_banner_pattern": {
+      "text": "현수막 무늬",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:guster_pottery_sherd": {
+      "text": "소용돌이 도자기 조각",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:hanging_roots": {
+      "text": "매달린 뿌리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:happy_ghast_spawn_egg": {
+      "text": "행복한 가스트 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:hay_block": {
+      "text": "건초 더미",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:heart_of_the_sea": {
+      "text": "바다의 심장",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:heart_pottery_sherd": {
+      "text": "심장 도자기 조각",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:heartbreak_pottery_sherd": {
+      "text": "찢어진 심장 도자기 조각",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:heavy_core": {
+      "text": "무거운 코어",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:heavy_weighted_pressure_plate": {
+      "text": "중형 무게 압력판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:hoglin_spawn_egg": {
+      "text": "호글린 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:honey_block": {
+      "text": "꿀 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:honey_bottle": {
+      "text": "꿀이 든 병",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:honeycomb": {
+      "text": "벌집 조각",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:honeycomb_block": {
+      "text": "벌집 조각 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:hopper": {
+      "text": "호퍼",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:hopper_minecart": {
+      "text": "호퍼가 실린 광산 수레",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:horn_coral": {
+      "text": "사방산호",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:horn_coral_block": {
+      "text": "사방산호 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:horn_coral_fan": {
+      "text": "부채형 사방산호",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:horse_spawn_egg": {
+      "text": "말 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:host_armor_trim_smithing_template": {
+      "text": "대장장이 형판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:howl_pottery_sherd": {
+      "text": "짖음 도자기 조각",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:husk_spawn_egg": {
+      "text": "허스크 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:ice": {
+      "text": "얼음",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:infested_chiseled_stone_bricks": {
+      "text": "벌레 먹은 조각된 석재 벽돌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:infested_cobblestone": {
+      "text": "벌레 먹은 조약돌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:infested_cracked_stone_bricks": {
+      "text": "벌레 먹은 금 간 석재 벽돌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:infested_deepslate": {
+      "text": "벌레 먹은 심층암",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:infested_mossy_stone_bricks": {
+      "text": "벌레 먹은 이끼 낀 석재 벽돌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:infested_stone": {
+      "text": "벌레 먹은 돌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:infested_stone_bricks": {
+      "text": "벌레 먹은 석재 벽돌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:ink_sac": {
+      "text": "먹물 주머니",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:iron_axe": {
+      "text": "철 도끼",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:iron_bars": {
+      "text": "철 창살",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:iron_block": {
+      "text": "철 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:iron_boots": {
+      "text": "철 부츠",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:iron_chain": {
+      "text": "철 사슬",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:iron_chestplate": {
+      "text": "철 흉갑",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:iron_door": {
+      "text": "철 문",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:iron_golem_spawn_egg": {
+      "text": "철 골렘 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:iron_helmet": {
+      "text": "철 투구",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:iron_hoe": {
+      "text": "철 괭이",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:iron_horse_armor": {
+      "text": "철 말 갑옷",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:iron_ingot": {
+      "text": "철 주괴",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:iron_leggings": {
+      "text": "철 레깅스",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:iron_nautilus_armor": {
+      "text": "철 앵무조개 갑옷",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:iron_nugget": {
+      "text": "철 조각",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:iron_ore": {
+      "text": "철 광석",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:iron_pickaxe": {
+      "text": "철 곡괭이",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:iron_shovel": {
+      "text": "철 삽",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:iron_spear": {
+      "text": "철 창",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:iron_sword": {
+      "text": "철 검",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:iron_trapdoor": {
+      "text": "철 다락문",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:item_frame": {
+      "text": "아이템 액자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:jack_o_lantern": {
+      "text": "잭오랜턴",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:jigsaw": {
+      "text": "직소 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:jukebox": {
+      "text": "주크박스",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:jungle_boat": {
+      "text": "정글나무 보트",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:jungle_button": {
+      "text": "정글나무 버튼",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:jungle_chest_boat": {
+      "text": "상자가 실린 정글나무 보트",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:jungle_door": {
+      "text": "정글나무 문",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:jungle_fence": {
+      "text": "정글나무 울타리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:jungle_fence_gate": {
+      "text": "정글나무 울타리 문",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:jungle_hanging_sign": {
+      "text": "정글나무 매다는 표지판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:jungle_leaves": {
+      "text": "정글나무 잎",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:jungle_log": {
+      "text": "정글나무 원목",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:jungle_planks": {
+      "text": "정글나무 판자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:jungle_pressure_plate": {
+      "text": "정글나무 압력판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:jungle_pyramid_map": {
+      "text": "정글 피라미드 지도",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:jungle_sapling": {
+      "text": "정글나무 묘목",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:jungle_shelf": {
+      "text": "정글나무 선반",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:jungle_sign": {
+      "text": "정글나무 표지판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:jungle_slab": {
+      "text": "정글나무 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:jungle_stairs": {
+      "text": "정글나무 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:jungle_trapdoor": {
+      "text": "정글나무 다락문",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:jungle_wood": {
+      "text": "정글나무",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:kelp": {
+      "text": "켈프",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:knowledge_book": {
+      "text": "지식의 책",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:ladder": {
+      "text": "사다리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:lantern": {
+      "text": "랜턴",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:lapis_block": {
+      "text": "청금석 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:lapis_lazuli": {
+      "text": "청금석",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:lapis_ore": {
+      "text": "청금석 광석",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:large_amethyst_bud": {
+      "text": "큰 자수정 봉오리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:large_fern": {
+      "text": "큰 고사리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:lava_bucket": {
+      "text": "용암 양동이",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:lead": {
+      "text": "끈",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:leaf_litter": {
+      "text": "낙엽",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:leather": {
+      "text": "가죽",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:leather_boots": {
+      "text": "가죽 장화",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:leather_chestplate": {
+      "text": "가죽 조끼",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:leather_helmet": {
+      "text": "가죽 모자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:leather_horse_armor": {
+      "text": "가죽 말 갑옷",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:leather_leggings": {
+      "text": "가죽 바지",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:lectern": {
+      "text": "독서대",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:lever": {
+      "text": "레버",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light": {
+      "text": "빛",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_blue_banner": {
+      "text": "하늘색 현수막",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_blue_bed": {
+      "text": "하늘색 침대",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_blue_bundle": {
+      "text": "하늘색 꾸러미",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_blue_candle": {
+      "text": "하늘색 초",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_blue_carpet": {
+      "text": "하늘색 양탄자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_blue_concrete": {
+      "text": "하늘색 콘크리트",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_blue_concrete_powder": {
+      "text": "하늘색 콘크리트 가루",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_blue_concrete_slab": {
+      "text": "하늘색 콘크리트 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_blue_concrete_stairs": {
+      "text": "하늘색 콘크리트 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_blue_cushion": {
+      "text": "하늘색 방석",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_blue_dye": {
+      "text": "하늘색 염료",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_blue_glazed_terracotta": {
+      "text": "하늘색 유광 테라코타",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_blue_harness": {
+      "text": "하늘색 하네스",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_blue_shulker_box": {
+      "text": "하늘색 셜커 상자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_blue_stained_glass": {
+      "text": "하늘색 색유리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_blue_stained_glass_pane": {
+      "text": "하늘색 색유리 판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_blue_terracotta": {
+      "text": "하늘색 테라코타",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_blue_wool": {
+      "text": "하늘색 양털",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_blue_wool_slab": {
+      "text": "하늘색 양털 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_blue_wool_stairs": {
+      "text": "하늘색 양털 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_gray_banner": {
+      "text": "회백색 현수막",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_gray_bed": {
+      "text": "회백색 침대",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_gray_bundle": {
+      "text": "회백색 꾸러미",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_gray_candle": {
+      "text": "회백색 초",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_gray_carpet": {
+      "text": "회백색 양탄자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_gray_concrete": {
+      "text": "회백색 콘크리트",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_gray_concrete_powder": {
+      "text": "회백색 콘크리트 가루",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_gray_concrete_slab": {
+      "text": "회백색 콘크리트 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_gray_concrete_stairs": {
+      "text": "회백색 콘크리트 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_gray_cushion": {
+      "text": "회백색 방석",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_gray_dye": {
+      "text": "회백색 염료",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_gray_glazed_terracotta": {
+      "text": "회백색 유광 테라코타",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_gray_harness": {
+      "text": "회백색 하네스",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_gray_shulker_box": {
+      "text": "회백색 셜커 상자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_gray_stained_glass": {
+      "text": "회백색 색유리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_gray_stained_glass_pane": {
+      "text": "회백색 색유리 판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_gray_terracotta": {
+      "text": "회백색 테라코타",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_gray_wool": {
+      "text": "회백색 양털",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_gray_wool_slab": {
+      "text": "회백색 양털 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_gray_wool_stairs": {
+      "text": "회백색 양털 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_weighted_pressure_plate": {
+      "text": "경형 무게 압력판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:lightning_rod": {
+      "text": "피뢰침",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:lilac": {
+      "text": "라일락",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:lily_of_the_valley": {
+      "text": "은방울꽃",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:lily_pad": {
+      "text": "수련잎",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:lime_banner": {
+      "text": "연두색 현수막",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:lime_bed": {
+      "text": "연두색 침대",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:lime_bundle": {
+      "text": "연두색 꾸러미",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:lime_candle": {
+      "text": "연두색 초",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:lime_carpet": {
+      "text": "연두색 양탄자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:lime_concrete": {
+      "text": "연두색 콘크리트",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:lime_concrete_powder": {
+      "text": "연두색 콘크리트 가루",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:lime_concrete_slab": {
+      "text": "연두색 콘크리트 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:lime_concrete_stairs": {
+      "text": "연두색 콘크리트 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:lime_cushion": {
+      "text": "연두색 방석",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:lime_dye": {
+      "text": "연두색 염료",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:lime_glazed_terracotta": {
+      "text": "연두색 유광 테라코타",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:lime_harness": {
+      "text": "연두색 하네스",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:lime_shulker_box": {
+      "text": "연두색 셜커 상자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:lime_stained_glass": {
+      "text": "연두색 색유리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:lime_stained_glass_pane": {
+      "text": "연두색 색유리 판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:lime_terracotta": {
+      "text": "연두색 테라코타",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:lime_wool": {
+      "text": "연두색 양털",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:lime_wool_slab": {
+      "text": "연두색 양털 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:lime_wool_stairs": {
+      "text": "연두색 양털 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:lingering_potion": {
+      "text": "잔류형 물약",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:llama_spawn_egg": {
+      "text": "라마 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:lodestone": {
+      "text": "자석석",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:loom": {
+      "text": "베틀",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mace": {
+      "text": "철퇴",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:magenta_banner": {
+      "text": "자홍색 현수막",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:magenta_bed": {
+      "text": "자홍색 침대",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:magenta_bundle": {
+      "text": "자홍색 꾸러미",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:magenta_candle": {
+      "text": "자홍색 초",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:magenta_carpet": {
+      "text": "자홍색 양탄자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:magenta_concrete": {
+      "text": "자홍색 콘크리트",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:magenta_concrete_powder": {
+      "text": "자홍색 콘크리트 가루",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:magenta_concrete_slab": {
+      "text": "자홍색 콘크리트 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:magenta_concrete_stairs": {
+      "text": "자홍색 콘크리트 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:magenta_cushion": {
+      "text": "자홍색 방석",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:magenta_dye": {
+      "text": "자홍색 염료",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:magenta_glazed_terracotta": {
+      "text": "자홍색 유광 테라코타",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:magenta_harness": {
+      "text": "자홍색 하네스",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:magenta_shulker_box": {
+      "text": "자홍색 셜커 상자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:magenta_stained_glass": {
+      "text": "자홍색 색유리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:magenta_stained_glass_pane": {
+      "text": "자홍색 색유리 판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:magenta_terracotta": {
+      "text": "자홍색 테라코타",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:magenta_wool": {
+      "text": "자홍색 양털",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:magenta_wool_slab": {
+      "text": "자홍색 양털 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:magenta_wool_stairs": {
+      "text": "자홍색 양털 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:magma_block": {
+      "text": "마그마 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:magma_cream": {
+      "text": "마그마 크림",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:magma_cube_spawn_egg": {
+      "text": "마그마 큐브 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mangrove_boat": {
+      "text": "맹그로브나무 보트",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mangrove_button": {
+      "text": "맹그로브나무 버튼",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mangrove_chest_boat": {
+      "text": "상자가 실린 맹그로브나무 보트",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mangrove_door": {
+      "text": "맹그로브나무 문",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mangrove_fence": {
+      "text": "맹그로브나무 울타리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mangrove_fence_gate": {
+      "text": "맹그로브나무 울타리 문",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mangrove_hanging_sign": {
+      "text": "맹그로브나무 매다는 표지판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mangrove_leaves": {
+      "text": "맹그로브나무 잎",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mangrove_log": {
+      "text": "맹그로브나무 원목",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mangrove_planks": {
+      "text": "맹그로브나무 판자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mangrove_pressure_plate": {
+      "text": "맹그로브나무 압력판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mangrove_propagule": {
+      "text": "맹그로브나무 주아",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mangrove_roots": {
+      "text": "맹그로브나무 뿌리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mangrove_shelf": {
+      "text": "맹그로브나무 선반",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mangrove_sign": {
+      "text": "맹그로브나무 표지판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mangrove_slab": {
+      "text": "맹그로브나무 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mangrove_stairs": {
+      "text": "맹그로브나무 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mangrove_trapdoor": {
+      "text": "맹그로브나무 다락문",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mangrove_wood": {
+      "text": "맹그로브나무",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:map": {
+      "text": "빈 지도",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:medium_amethyst_bud": {
+      "text": "중간 자수정 봉오리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:melon": {
+      "text": "수박",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:melon_seeds": {
+      "text": "수박씨",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:melon_slice": {
+      "text": "수박 조각",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:milk_bucket": {
+      "text": "우유 양동이",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:minecart": {
+      "text": "광산 수레",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:miner_pottery_sherd": {
+      "text": "광부 도자기 조각",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mojang_banner_pattern": {
+      "text": "현수막 무늬",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mooshroom_spawn_egg": {
+      "text": "무시룸 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:moss_block": {
+      "text": "이끼 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:moss_carpet": {
+      "text": "이끼 바닥",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mossy_cobblestone": {
+      "text": "이끼 낀 조약돌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mossy_cobblestone_slab": {
+      "text": "이끼 낀 조약돌 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mossy_cobblestone_stairs": {
+      "text": "이끼 낀 조약돌 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mossy_cobblestone_wall": {
+      "text": "이끼 낀 조약돌 담장",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mossy_stone_brick_slab": {
+      "text": "이끼 낀 석재 벽돌 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mossy_stone_brick_stairs": {
+      "text": "이끼 낀 석재 벽돌 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mossy_stone_brick_wall": {
+      "text": "이끼 낀 석재 벽돌 담장",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mossy_stone_bricks": {
+      "text": "이끼 낀 석재 벽돌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mourner_pottery_sherd": {
+      "text": "애도자 도자기 조각",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mud": {
+      "text": "진흙",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mud_brick_slab": {
+      "text": "진흙 벽돌 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mud_brick_stairs": {
+      "text": "진흙 벽돌 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mud_brick_wall": {
+      "text": "진흙 벽돌 담장",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mud_bricks": {
+      "text": "진흙 벽돌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:muddy_mangrove_roots": {
+      "text": "진흙에 묻힌 맹그로브나무 뿌리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mule_spawn_egg": {
+      "text": "노새 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mushroom_stem": {
+      "text": "버섯 자루",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mushroom_stew": {
+      "text": "버섯 스튜",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:music_disc_11": {
+      "text": "음반",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:music_disc_13": {
+      "text": "음반",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:music_disc_5": {
+      "text": "음반",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:music_disc_blocks": {
+      "text": "음반",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:music_disc_bounce": {
+      "text": "음반",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:music_disc_cat": {
+      "text": "음반",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:music_disc_chirp": {
+      "text": "음반",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:music_disc_creator": {
+      "text": "음반",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:music_disc_creator_music_box": {
+      "text": "음반",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:music_disc_far": {
+      "text": "음반",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:music_disc_lava_chicken": {
+      "text": "음반",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:music_disc_mall": {
+      "text": "음반",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:music_disc_mellohi": {
+      "text": "음반",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:music_disc_otherside": {
+      "text": "음반",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:music_disc_pigstep": {
+      "text": "음반",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:music_disc_precipice": {
+      "text": "음반",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:music_disc_relic": {
+      "text": "음반",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:music_disc_stal": {
+      "text": "음반",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:music_disc_strad": {
+      "text": "음반",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:music_disc_tears": {
+      "text": "음반",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:music_disc_wait": {
+      "text": "음반",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:music_disc_ward": {
+      "text": "음반",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mutton": {
+      "text": "익히지 않은 양고기",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mycelium": {
+      "text": "균사체",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:name_tag": {
+      "text": "이름표",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:nautilus_shell": {
+      "text": "앵무조개 껍데기",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:nautilus_spawn_egg": {
+      "text": "앵무조개 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:nether_brick": {
+      "text": "네더 벽돌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:nether_brick_fence": {
+      "text": "네더 벽돌 울타리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:nether_brick_slab": {
+      "text": "네더 벽돌 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:nether_brick_stairs": {
+      "text": "네더 벽돌 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:nether_brick_wall": {
+      "text": "네더 벽돌 담장",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:nether_bricks": {
+      "text": "네더 벽돌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:nether_gold_ore": {
+      "text": "네더 금 광석",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:nether_quartz_ore": {
+      "text": "네더 석영 광석",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:nether_sprouts": {
+      "text": "네더 싹",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:nether_star": {
+      "text": "네더의 별",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:nether_wart": {
+      "text": "네더 사마귀",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:nether_wart_block": {
+      "text": "네더 사마귀 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:netherite_axe": {
+      "text": "네더라이트 도끼",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:netherite_block": {
+      "text": "네더라이트 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:netherite_boots": {
+      "text": "네더라이트 부츠",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:netherite_chestplate": {
+      "text": "네더라이트 흉갑",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:netherite_helmet": {
+      "text": "네더라이트 투구",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:netherite_hoe": {
+      "text": "네더라이트 괭이",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:netherite_horse_armor": {
+      "text": "네더라이트 말 갑옷",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:netherite_ingot": {
+      "text": "네더라이트 주괴",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:netherite_leggings": {
+      "text": "네더라이트 레깅스",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:netherite_nautilus_armor": {
+      "text": "네더라이트 앵무조개 갑옷",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:netherite_pickaxe": {
+      "text": "네더라이트 곡괭이",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:netherite_scrap": {
+      "text": "네더라이트 파편",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:netherite_shovel": {
+      "text": "네더라이트 삽",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:netherite_spear": {
+      "text": "네더라이트 창",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:netherite_sword": {
+      "text": "네더라이트 검",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:netherite_upgrade_smithing_template": {
+      "text": "대장장이 형판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:netherrack": {
+      "text": "네더랙",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:note_block": {
+      "text": "소리 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:oak_boat": {
+      "text": "참나무 보트",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:oak_button": {
+      "text": "참나무 버튼",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:oak_chest_boat": {
+      "text": "상자가 실린 참나무 보트",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:oak_door": {
+      "text": "참나무 문",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:oak_fence": {
+      "text": "참나무 울타리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:oak_fence_gate": {
+      "text": "참나무 울타리 문",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:oak_hanging_sign": {
+      "text": "참나무 매다는 표지판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:oak_leaves": {
+      "text": "참나무 잎",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:oak_log": {
+      "text": "참나무 원목",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:oak_planks": {
+      "text": "참나무 판자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:oak_pressure_plate": {
+      "text": "참나무 압력판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:oak_sapling": {
+      "text": "참나무 묘목",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:oak_shelf": {
+      "text": "참나무 선반",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:oak_sign": {
+      "text": "참나무 표지판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:oak_slab": {
+      "text": "참나무 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:oak_stairs": {
+      "text": "참나무 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:oak_trapdoor": {
+      "text": "참나무 다락문",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:oak_wood": {
+      "text": "참나무",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:observer": {
+      "text": "관측기",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:obsidian": {
+      "text": "흑요석",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:ocean_monument_map": {
+      "text": "바다 유적 지도",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:ocelot_spawn_egg": {
+      "text": "오실롯 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:ochre_froglight": {
+      "text": "황톳빛 개구리불",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:ominous_bottle": {
+      "text": "불길한 병",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:ominous_trial_key": {
+      "text": "불길한 시련 열쇠",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:open_eyeblossom": {
+      "text": "뜬 눈망울꽃",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:orange_banner": {
+      "text": "주황색 현수막",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:orange_bed": {
+      "text": "주황색 침대",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:orange_bundle": {
+      "text": "주황색 꾸러미",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:orange_candle": {
+      "text": "주황색 초",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:orange_carpet": {
+      "text": "주황색 양탄자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:orange_concrete": {
+      "text": "주황색 콘크리트",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:orange_concrete_powder": {
+      "text": "주황색 콘크리트 가루",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:orange_concrete_slab": {
+      "text": "주황색 콘크리트 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:orange_concrete_stairs": {
+      "text": "주황색 콘크리트 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:orange_cushion": {
+      "text": "주황색 방석",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:orange_dye": {
+      "text": "주황색 염료",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:orange_glazed_terracotta": {
+      "text": "주황색 유광 테라코타",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:orange_harness": {
+      "text": "주황색 하네스",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:orange_poplar_leaves": {
+      "text": "주황색 포플러나무 잎",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:orange_shulker_box": {
+      "text": "주황색 셜커 상자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:orange_stained_glass": {
+      "text": "주황색 색유리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:orange_stained_glass_pane": {
+      "text": "주황색 색유리 판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:orange_terracotta": {
+      "text": "주황색 테라코타",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:orange_tulip": {
+      "text": "주황색 튤립",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:orange_wool": {
+      "text": "주황색 양털",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:orange_wool_slab": {
+      "text": "주황색 양털 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:orange_wool_stairs": {
+      "text": "주황색 양털 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:oxeye_daisy": {
+      "text": "데이지",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:oxidized_chiseled_copper": {
+      "text": "산화된 조각된 구리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:oxidized_copper": {
+      "text": "산화된 구리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:oxidized_copper_bars": {
+      "text": "산화된 구리 창살",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:oxidized_copper_bulb": {
+      "text": "산화된 구리 전구",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:oxidized_copper_chain": {
+      "text": "산화된 구리 사슬",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:oxidized_copper_chest": {
+      "text": "산화된 구리 상자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:oxidized_copper_door": {
+      "text": "산화된 구리 문",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:oxidized_copper_golem_statue": {
+      "text": "산화된 구리 골렘 동상",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:oxidized_copper_grate": {
+      "text": "산화된 구리 격자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:oxidized_copper_lantern": {
+      "text": "산화된 구리 랜턴",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:oxidized_copper_trapdoor": {
+      "text": "산화된 구리 다락문",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:oxidized_cut_copper": {
+      "text": "산화된 깎인 구리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:oxidized_cut_copper_slab": {
+      "text": "산화된 깎인 구리 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:oxidized_cut_copper_stairs": {
+      "text": "산화된 깎인 구리 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:oxidized_lightning_rod": {
+      "text": "산화된 피뢰침",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:packed_ice": {
+      "text": "꽁꽁 언 얼음",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:packed_mud": {
+      "text": "단단한 진흙",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:painting": {
+      "text": "그림",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pale_hanging_moss": {
+      "text": "창백한 매달린 이끼",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pale_moss_block": {
+      "text": "창백한 이끼 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pale_moss_carpet": {
+      "text": "창백한 이끼 바닥",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pale_oak_boat": {
+      "text": "창백한 참나무 보트",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pale_oak_button": {
+      "text": "창백한 참나무 버튼",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pale_oak_chest_boat": {
+      "text": "상자가 실린 창백한 참나무 보트",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pale_oak_door": {
+      "text": "창백한 참나무 문",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pale_oak_fence": {
+      "text": "창백한 참나무 울타리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pale_oak_fence_gate": {
+      "text": "창백한 참나무 울타리 문",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pale_oak_hanging_sign": {
+      "text": "창백한 참나무 매다는 표지판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pale_oak_leaves": {
+      "text": "창백한 참나무 잎",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pale_oak_log": {
+      "text": "창백한 참나무 원목",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pale_oak_planks": {
+      "text": "창백한 참나무 판자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pale_oak_pressure_plate": {
+      "text": "창백한 참나무 압력판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pale_oak_sapling": {
+      "text": "창백한 참나무 묘목",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pale_oak_shelf": {
+      "text": "창백한 참나무 선반",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pale_oak_sign": {
+      "text": "창백한 참나무 표지판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pale_oak_slab": {
+      "text": "창백한 참나무 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pale_oak_stairs": {
+      "text": "창백한 참나무 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pale_oak_trapdoor": {
+      "text": "창백한 참나무 다락문",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pale_oak_wood": {
+      "text": "창백한 참나무",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:panda_spawn_egg": {
+      "text": "판다 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:paper": {
+      "text": "종이",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:parched_spawn_egg": {
+      "text": "파치트 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:parrot_spawn_egg": {
+      "text": "앵무새 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pearlescent_froglight": {
+      "text": "진줏빛 개구리불",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:peony": {
+      "text": "모란",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:petrified_oak_slab": {
+      "text": "규화한 참나무 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:phantom_membrane": {
+      "text": "팬텀 막",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:phantom_spawn_egg": {
+      "text": "팬텀 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pig_spawn_egg": {
+      "text": "돼지 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:piglin_banner_pattern": {
+      "text": "현수막 무늬",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:piglin_brute_spawn_egg": {
+      "text": "난폭한 피글린 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:piglin_head": {
+      "text": "피글린 머리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:piglin_spawn_egg": {
+      "text": "피글린 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pillager_spawn_egg": {
+      "text": "약탈자 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pink_banner": {
+      "text": "분홍색 현수막",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pink_bed": {
+      "text": "분홍색 침대",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pink_bundle": {
+      "text": "분홍색 꾸러미",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pink_candle": {
+      "text": "분홍색 초",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pink_carpet": {
+      "text": "분홍색 양탄자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pink_concrete": {
+      "text": "분홍색 콘크리트",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pink_concrete_powder": {
+      "text": "분홍색 콘크리트 가루",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pink_concrete_slab": {
+      "text": "분홍색 콘크리트 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pink_concrete_stairs": {
+      "text": "분홍색 콘크리트 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pink_cushion": {
+      "text": "분홍색 방석",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pink_dye": {
+      "text": "분홍색 염료",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pink_glazed_terracotta": {
+      "text": "분홍색 유광 테라코타",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pink_harness": {
+      "text": "분홍색 하네스",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pink_petals": {
+      "text": "분홍 꽃잎",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pink_shulker_box": {
+      "text": "분홍색 셜커 상자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pink_stained_glass": {
+      "text": "분홍색 색유리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pink_stained_glass_pane": {
+      "text": "분홍색 색유리 판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pink_terracotta": {
+      "text": "분홍색 테라코타",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pink_tulip": {
+      "text": "분홍색 튤립",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pink_wool": {
+      "text": "분홍색 양털",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pink_wool_slab": {
+      "text": "분홍색 양털 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pink_wool_stairs": {
+      "text": "분홍색 양털 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:piston": {
+      "text": "피스톤",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pitcher_plant": {
+      "text": "벌레잡이풀",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pitcher_pod": {
+      "text": "벌레잡이풀 꼬투리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:plains_village_map": {
+      "text": "평원 마을 지도",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:player_head": {
+      "text": "플레이어 머리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:plenty_pottery_sherd": {
+      "text": "풍부 도자기 조각",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:podzol": {
+      "text": "회백토",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pointed_dripstone": {
+      "text": "뾰족한 점적석",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:poisonous_potato": {
+      "text": "독이 있는 감자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polar_bear_spawn_egg": {
+      "text": "북극곰 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_andesite": {
+      "text": "윤나는 안산암",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_andesite_slab": {
+      "text": "윤나는 안산암 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_andesite_stairs": {
+      "text": "윤나는 안산암 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_basalt": {
+      "text": "윤나는 현무암",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_blackstone": {
+      "text": "윤나는 흑암",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_blackstone_brick_slab": {
+      "text": "윤나는 흑암 벽돌 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_blackstone_brick_stairs": {
+      "text": "윤나는 흑암 벽돌 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_blackstone_brick_wall": {
+      "text": "윤나는 흑암 벽돌 담장",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_blackstone_bricks": {
+      "text": "윤나는 흑암 벽돌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_blackstone_button": {
+      "text": "윤나는 흑암 버튼",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_blackstone_pressure_plate": {
+      "text": "윤나는 흑암 압력판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_blackstone_slab": {
+      "text": "윤나는 흑암 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_blackstone_stairs": {
+      "text": "윤나는 흑암 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_blackstone_wall": {
+      "text": "윤나는 흑암 담장",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_cinnabar": {
+      "text": "윤나는 진사",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_cinnabar_slab": {
+      "text": "윤나는 진사 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_cinnabar_stairs": {
+      "text": "윤나는 진사 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_cinnabar_wall": {
+      "text": "윤나는 진사 담장",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_deepslate": {
+      "text": "윤나는 심층암",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_deepslate_slab": {
+      "text": "윤나는 심층암 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_deepslate_stairs": {
+      "text": "윤나는 심층암 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_deepslate_wall": {
+      "text": "윤나는 심층암 담장",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_diorite": {
+      "text": "윤나는 섬록암",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_diorite_slab": {
+      "text": "윤나는 섬록암 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_diorite_stairs": {
+      "text": "윤나는 섬록암 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_granite": {
+      "text": "윤나는 화강암",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_granite_slab": {
+      "text": "윤나는 화강암 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_granite_stairs": {
+      "text": "윤나는 화강암 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_sulfur": {
+      "text": "윤나는 유황",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_sulfur_slab": {
+      "text": "윤나는 유황 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_sulfur_stairs": {
+      "text": "윤나는 유황 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_sulfur_wall": {
+      "text": "윤나는 유황 담장",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_tuff": {
+      "text": "윤나는 응회암",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_tuff_slab": {
+      "text": "윤나는 응회암 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_tuff_stairs": {
+      "text": "윤나는 응회암 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_tuff_wall": {
+      "text": "윤나는 응회암 담장",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:poplar_boat": {
+      "text": "포플러나무 보트",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:poplar_button": {
+      "text": "포플러나무 버튼",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:poplar_chest_boat": {
+      "text": "상자가 실린 포플러나무 보트",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:poplar_door": {
+      "text": "포플러나무 문",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:poplar_fence": {
+      "text": "포플러나무 울타리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:poplar_fence_gate": {
+      "text": "포플러나무 울타리 문",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:poplar_hanging_sign": {
+      "text": "포플러나무 매다는 표지판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:poplar_log": {
+      "text": "포플러나무 원목",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:poplar_planks": {
+      "text": "포플러나무 판자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:poplar_pressure_plate": {
+      "text": "포플러나무 압력판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:poplar_sapling": {
+      "text": "포플러나무 묘목",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:poplar_shelf": {
+      "text": "포플러나무 선반",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:poplar_sign": {
+      "text": "포플러나무 표지판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:poplar_slab": {
+      "text": "포플러나무 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:poplar_stairs": {
+      "text": "포플러나무 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:poplar_trapdoor": {
+      "text": "포플러나무 다락문",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:poplar_wood": {
+      "text": "포플러나무",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:popped_chorus_fruit": {
+      "text": "튀긴 후렴과",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:poppy": {
+      "text": "양귀비",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:porkchop": {
+      "text": "익히지 않은 돼지고기",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:potato": {
+      "text": "감자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:potent_sulfur": {
+      "text": "독한 유황",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:potion": {
+      "text": "물약",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:powder_snow_bucket": {
+      "text": "가루눈 양동이",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:powered_rail": {
+      "text": "동력 레일",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:prismarine": {
+      "text": "프리즈머린",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:prismarine_brick_slab": {
+      "text": "프리즈머린 벽돌 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:prismarine_brick_stairs": {
+      "text": "프리즈머린 벽돌 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:prismarine_bricks": {
+      "text": "프리즈머린 벽돌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:prismarine_crystals": {
+      "text": "프리즈머린 수정",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:prismarine_shard": {
+      "text": "프리즈머린 조각",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:prismarine_slab": {
+      "text": "프리즈머린 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:prismarine_stairs": {
+      "text": "프리즈머린 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:prismarine_wall": {
+      "text": "프리즈머린 담장",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:prize_pottery_sherd": {
+      "text": "보물 도자기 조각",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pufferfish": {
+      "text": "복어",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pufferfish_bucket": {
+      "text": "복어가 담긴 양동이",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pufferfish_spawn_egg": {
+      "text": "복어 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pumpkin": {
+      "text": "호박",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pumpkin_pie": {
+      "text": "호박 파이",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pumpkin_seeds": {
+      "text": "호박씨",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:purple_banner": {
+      "text": "보라색 현수막",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:purple_bed": {
+      "text": "보라색 침대",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:purple_bundle": {
+      "text": "보라색 꾸러미",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:purple_candle": {
+      "text": "보라색 초",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:purple_carpet": {
+      "text": "보라색 양탄자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:purple_concrete": {
+      "text": "보라색 콘크리트",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:purple_concrete_powder": {
+      "text": "보라색 콘크리트 가루",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:purple_concrete_slab": {
+      "text": "보라색 콘크리트 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:purple_concrete_stairs": {
+      "text": "보라색 콘크리트 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:purple_cushion": {
+      "text": "보라색 방석",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:purple_dye": {
+      "text": "보라색 염료",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:purple_glazed_terracotta": {
+      "text": "보라색 유광 테라코타",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:purple_harness": {
+      "text": "보라색 하네스",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:purple_shulker_box": {
+      "text": "보라색 셜커 상자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:purple_stained_glass": {
+      "text": "보라색 색유리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:purple_stained_glass_pane": {
+      "text": "보라색 색유리 판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:purple_terracotta": {
+      "text": "보라색 테라코타",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:purple_wool": {
+      "text": "보라색 양털",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:purple_wool_slab": {
+      "text": "보라색 양털 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:purple_wool_stairs": {
+      "text": "보라색 양털 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:purpur_block": {
+      "text": "퍼퍼 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:purpur_pillar": {
+      "text": "퍼퍼 기둥",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:purpur_slab": {
+      "text": "퍼퍼 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:purpur_stairs": {
+      "text": "퍼퍼 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:quartz": {
+      "text": "네더 석영",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:quartz_block": {
+      "text": "석영 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:quartz_bricks": {
+      "text": "석영 벽돌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:quartz_pillar": {
+      "text": "석영 기둥",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:quartz_slab": {
+      "text": "석영 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:quartz_stairs": {
+      "text": "석영 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:rabbit": {
+      "text": "익히지 않은 토끼고기",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:rabbit_foot": {
+      "text": "토끼발",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:rabbit_hide": {
+      "text": "토끼 가죽",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:rabbit_spawn_egg": {
+      "text": "토끼 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:rabbit_stew": {
+      "text": "토끼 스튜",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:rail": {
+      "text": "레일",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:raiser_armor_trim_smithing_template": {
+      "text": "대장장이 형판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:ravager_spawn_egg": {
+      "text": "파괴수 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:raw_copper": {
+      "text": "구리 원석",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:raw_copper_block": {
+      "text": "구리 원석 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:raw_gold": {
+      "text": "금 원석",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:raw_gold_block": {
+      "text": "금 원석 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:raw_iron": {
+      "text": "철 원석",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:raw_iron_block": {
+      "text": "철 원석 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:recovery_compass": {
+      "text": "만회 나침반",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:red_banner": {
+      "text": "빨간색 현수막",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:red_bed": {
+      "text": "빨간색 침대",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:red_bundle": {
+      "text": "빨간색 꾸러미",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:red_candle": {
+      "text": "빨간색 초",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:red_carpet": {
+      "text": "빨간색 양탄자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:red_concrete": {
+      "text": "빨간색 콘크리트",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:red_concrete_powder": {
+      "text": "빨간색 콘크리트 가루",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:red_concrete_slab": {
+      "text": "빨간색 콘크리트 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:red_concrete_stairs": {
+      "text": "빨간색 콘크리트 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:red_cushion": {
+      "text": "빨간색 방석",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:red_dye": {
+      "text": "빨간색 염료",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:red_glazed_terracotta": {
+      "text": "빨간색 유광 테라코타",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:red_harness": {
+      "text": "빨간색 하네스",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:red_mushroom": {
+      "text": "빨간색 버섯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:red_mushroom_block": {
+      "text": "빨간색 버섯 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:red_nether_brick_slab": {
+      "text": "붉은 네더 벽돌 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:red_nether_brick_stairs": {
+      "text": "붉은 네더 벽돌 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:red_nether_brick_wall": {
+      "text": "붉은 네더 벽돌 담장",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:red_nether_bricks": {
+      "text": "붉은 네더 벽돌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:red_poplar_leaves": {
+      "text": "빨간색 포플러나무 잎",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:red_sand": {
+      "text": "붉은 모래",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:red_sandstone": {
+      "text": "붉은 사암",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:red_sandstone_slab": {
+      "text": "붉은 사암 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:red_sandstone_stairs": {
+      "text": "붉은 사암 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:red_sandstone_wall": {
+      "text": "붉은 사암 담장",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:red_shrub": {
+      "text": "붉은 관목",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:red_shulker_box": {
+      "text": "빨간색 셜커 상자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:red_stained_glass": {
+      "text": "빨간색 색유리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:red_stained_glass_pane": {
+      "text": "빨간색 색유리 판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:red_terracotta": {
+      "text": "빨간색 테라코타",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:red_tulip": {
+      "text": "빨간색 튤립",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:red_wool": {
+      "text": "빨간색 양털",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:red_wool_slab": {
+      "text": "빨간색 양털 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:red_wool_stairs": {
+      "text": "빨간색 양털 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:redstone": {
+      "text": "레드스톤 가루",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:redstone_block": {
+      "text": "레드스톤 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:redstone_lamp": {
+      "text": "레드스톤 조명",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:redstone_ore": {
+      "text": "레드스톤 광석",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:redstone_torch": {
+      "text": "레드스톤 횃불",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:reinforced_deepslate": {
+      "text": "보강된 심층암",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:repeater": {
+      "text": "레드스톤 중계기",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:repeating_command_block": {
+      "text": "반복형 명령 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:resin_block": {
+      "text": "수지 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:resin_brick": {
+      "text": "수지 벽돌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:resin_brick_slab": {
+      "text": "수지 벽돌 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:resin_brick_stairs": {
+      "text": "수지 벽돌 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:resin_brick_wall": {
+      "text": "수지 벽돌 담장",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:resin_bricks": {
+      "text": "수지 벽돌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:resin_clump": {
+      "text": "수지 덩어리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:respawn_anchor": {
+      "text": "리스폰 정박기",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:rib_armor_trim_smithing_template": {
+      "text": "대장장이 형판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:rooted_dirt": {
+      "text": "뿌리내린 흙",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:rose_bush": {
+      "text": "장미 덤불",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:rotten_flesh": {
+      "text": "썩은 살점",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:saddle": {
+      "text": "안장",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:salmon": {
+      "text": "익히지 않은 연어",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:salmon_bucket": {
+      "text": "연어가 담긴 양동이",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:salmon_spawn_egg": {
+      "text": "연어 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:sand": {
+      "text": "모래",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:sandstone": {
+      "text": "사암",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:sandstone_slab": {
+      "text": "사암 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:sandstone_stairs": {
+      "text": "사암 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:sandstone_wall": {
+      "text": "사암 담장",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:savanna_village_map": {
+      "text": "사바나 마을 지도",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:scaffolding": {
+      "text": "비계",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:scrape_pottery_sherd": {
+      "text": "긁개 도자기 조각",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:sculk": {
+      "text": "스컬크",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:sculk_catalyst": {
+      "text": "스컬크 촉매",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:sculk_sensor": {
+      "text": "스컬크 감지체",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:sculk_shrieker": {
+      "text": "스컬크 비명체",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:sculk_vein": {
+      "text": "스컬크 정맥",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:sea_lantern": {
+      "text": "바다 랜턴",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:sea_pickle": {
+      "text": "불우렁쉥이",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:seagrass": {
+      "text": "해초",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:sentry_armor_trim_smithing_template": {
+      "text": "대장장이 형판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:shaper_armor_trim_smithing_template": {
+      "text": "대장장이 형판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:sheaf_pottery_sherd": {
+      "text": "다발 도자기 조각",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:shears": {
+      "text": "가위",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:sheep_spawn_egg": {
+      "text": "양 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:shelf_mushroom": {
+      "text": "선반 버섯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:shelter_pottery_sherd": {
+      "text": "피신처 도자기 조각",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:shield": {
+      "text": "방패",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:short_dry_grass": {
+      "text": "키 작은 마른 잔디",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:short_grass": {
+      "text": "키 작은 잔디",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:shroomlight": {
+      "text": "버섯불",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:shulker_box": {
+      "text": "셜커 상자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:shulker_shell": {
+      "text": "셜커 껍데기",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:shulker_spawn_egg": {
+      "text": "셜커 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:silence_armor_trim_smithing_template": {
+      "text": "대장장이 형판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:silverfish_spawn_egg": {
+      "text": "좀벌레 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:skeleton_horse_spawn_egg": {
+      "text": "스켈레톤 말 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:skeleton_skull": {
+      "text": "스켈레톤 해골",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:skeleton_spawn_egg": {
+      "text": "스켈레톤 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:skull_banner_pattern": {
+      "text": "현수막 무늬",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:skull_pottery_sherd": {
+      "text": "해골 도자기 조각",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:slime_ball": {
+      "text": "슬라임볼",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:slime_block": {
+      "text": "슬라임 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:slime_spawn_egg": {
+      "text": "슬라임 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:small_amethyst_bud": {
+      "text": "작은 자수정 봉오리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:small_dripleaf": {
+      "text": "작은 흘림잎",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:smithing_table": {
+      "text": "대장장이 작업대",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:smoker": {
+      "text": "훈연기",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:smooth_basalt": {
+      "text": "매끄러운 현무암",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:smooth_quartz": {
+      "text": "매끄러운 석영 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:smooth_quartz_slab": {
+      "text": "매끄러운 석영 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:smooth_quartz_stairs": {
+      "text": "매끄러운 석영 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:smooth_red_sandstone": {
+      "text": "매끄러운 붉은 사암",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:smooth_red_sandstone_slab": {
+      "text": "매끄러운 붉은 사암 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:smooth_red_sandstone_stairs": {
+      "text": "매끄러운 붉은 사암 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:smooth_sandstone": {
+      "text": "매끄러운 사암",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:smooth_sandstone_slab": {
+      "text": "매끄러운 사암 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:smooth_sandstone_stairs": {
+      "text": "매끄러운 사암 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:smooth_stone": {
+      "text": "매끄러운 돌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:smooth_stone_slab": {
+      "text": "매끄러운 돌 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:sniffer_egg": {
+      "text": "스니퍼 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:sniffer_spawn_egg": {
+      "text": "스니퍼 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:snort_pottery_sherd": {
+      "text": "콧바람 도자기 조각",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:snout_armor_trim_smithing_template": {
+      "text": "대장장이 형판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:snow": {
+      "text": "눈",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:snow_block": {
+      "text": "눈 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:snow_golem_spawn_egg": {
+      "text": "눈 골렘 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:snowball": {
+      "text": "눈덩이",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:snowy_village_map": {
+      "text": "눈 덮인 마을 지도",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:soul_campfire": {
+      "text": "영혼 모닥불",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:soul_lantern": {
+      "text": "영혼 랜턴",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:soul_sand": {
+      "text": "영혼 모래",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:soul_soil": {
+      "text": "영혼 흙",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:soul_torch": {
+      "text": "영혼 횃불",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:spawner": {
+      "text": "몬스터 생성기",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:spectral_arrow": {
+      "text": "분광 화살",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:spider_eye": {
+      "text": "거미 눈",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:spider_spawn_egg": {
+      "text": "거미 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:spire_armor_trim_smithing_template": {
+      "text": "대장장이 형판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:splash_potion": {
+      "text": "투척용 물약",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:sponge": {
+      "text": "스펀지",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:spore_blossom": {
+      "text": "포자 꽃",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:spruce_boat": {
+      "text": "가문비나무 보트",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:spruce_button": {
+      "text": "가문비나무 버튼",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:spruce_chest_boat": {
+      "text": "상자가 실린 가문비나무 보트",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:spruce_door": {
+      "text": "가문비나무 문",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:spruce_fence": {
+      "text": "가문비나무 울타리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:spruce_fence_gate": {
+      "text": "가문비나무 울타리 문",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:spruce_hanging_sign": {
+      "text": "가문비나무 매다는 표지판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:spruce_leaves": {
+      "text": "가문비나무 잎",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:spruce_log": {
+      "text": "가문비나무 원목",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:spruce_planks": {
+      "text": "가문비나무 판자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:spruce_pressure_plate": {
+      "text": "가문비나무 압력판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:spruce_sapling": {
+      "text": "가문비나무 묘목",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:spruce_shelf": {
+      "text": "가문비나무 선반",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:spruce_sign": {
+      "text": "가문비나무 표지판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:spruce_slab": {
+      "text": "가문비나무 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:spruce_stairs": {
+      "text": "가문비나무 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:spruce_trapdoor": {
+      "text": "가문비나무 다락문",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:spruce_wood": {
+      "text": "가문비나무",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:spyglass": {
+      "text": "망원경",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:squid_spawn_egg": {
+      "text": "오징어 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stick": {
+      "text": "막대기",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:sticky_piston": {
+      "text": "끈끈이 피스톤",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stone": {
+      "text": "돌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stone_axe": {
+      "text": "돌 도끼",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stone_brick_slab": {
+      "text": "석재 벽돌 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stone_brick_stairs": {
+      "text": "석재 벽돌 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stone_brick_wall": {
+      "text": "석재 벽돌 담장",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stone_bricks": {
+      "text": "석재 벽돌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stone_button": {
+      "text": "돌 버튼",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stone_hoe": {
+      "text": "돌 괭이",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stone_pickaxe": {
+      "text": "돌 곡괭이",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stone_pressure_plate": {
+      "text": "돌 압력판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stone_shovel": {
+      "text": "돌 삽",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stone_slab": {
+      "text": "돌 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stone_spear": {
+      "text": "돌 창",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stone_stairs": {
+      "text": "돌 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stone_sword": {
+      "text": "돌 검",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stonecutter": {
+      "text": "석재 절단기",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:straw_bed": {
+      "text": "밀짚 침대",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stray_spawn_egg": {
+      "text": "스트레이 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:strider_spawn_egg": {
+      "text": "스트라이더 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:string": {
+      "text": "실",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stripped_acacia_log": {
+      "text": "껍질 벗긴 아카시아나무 원목",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stripped_acacia_wood": {
+      "text": "껍질 벗긴 아카시아나무",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stripped_bamboo_block": {
+      "text": "껍질 벗긴 대나무 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stripped_birch_log": {
+      "text": "껍질 벗긴 자작나무 원목",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stripped_birch_wood": {
+      "text": "껍질 벗긴 자작나무",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stripped_cherry_log": {
+      "text": "껍질 벗긴 벚나무 원목",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stripped_cherry_wood": {
+      "text": "껍질 벗긴 벚나무",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stripped_crimson_hyphae": {
+      "text": "껍질 벗긴 진홍빛 균사",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stripped_crimson_stem": {
+      "text": "껍질 벗긴 진홍빛 자루",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stripped_dark_oak_log": {
+      "text": "껍질 벗긴 짙은 참나무 원목",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stripped_dark_oak_wood": {
+      "text": "껍질 벗긴 짙은 참나무",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stripped_jungle_log": {
+      "text": "껍질 벗긴 정글나무 원목",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stripped_jungle_wood": {
+      "text": "껍질 벗긴 정글나무",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stripped_mangrove_log": {
+      "text": "껍질 벗긴 맹그로브나무 원목",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stripped_mangrove_wood": {
+      "text": "껍질 벗긴 맹그로브나무",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stripped_oak_log": {
+      "text": "껍질 벗긴 참나무 원목",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stripped_oak_wood": {
+      "text": "껍질 벗긴 참나무",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stripped_pale_oak_log": {
+      "text": "껍질 벗긴 창백한 참나무 원목",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stripped_pale_oak_wood": {
+      "text": "껍질 벗긴 창백한 참나무",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stripped_poplar_log": {
+      "text": "껍질 벗긴 포플러나무 원목",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stripped_poplar_wood": {
+      "text": "껍질 벗긴 포플러나무",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stripped_spruce_log": {
+      "text": "껍질 벗긴 가문비나무 원목",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stripped_spruce_wood": {
+      "text": "껍질 벗긴 가문비나무",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stripped_warped_hyphae": {
+      "text": "껍질 벗긴 뒤틀린 균사",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stripped_warped_stem": {
+      "text": "껍질 벗긴 뒤틀린 자루",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:structure_block": {
+      "text": "구조물 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:structure_void": {
+      "text": "구조물 공허 공간",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:sugar": {
+      "text": "설탕",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:sugar_cane": {
+      "text": "사탕수수",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:sulfur": {
+      "text": "유황",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:sulfur_brick_slab": {
+      "text": "유황 벽돌 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:sulfur_brick_stairs": {
+      "text": "유황 벽돌 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:sulfur_brick_wall": {
+      "text": "유황 벽돌 담장",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:sulfur_bricks": {
+      "text": "유황 벽돌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:sulfur_cube_bucket": {
+      "text": "유황 큐브가 담긴 양동이",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:sulfur_cube_spawn_egg": {
+      "text": "유황 큐브 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:sulfur_slab": {
+      "text": "유황 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:sulfur_spike": {
+      "text": "유황 가시",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:sulfur_stairs": {
+      "text": "유황 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:sulfur_wall": {
+      "text": "유황 담장",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:sunflower": {
+      "text": "해바라기",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:suspicious_gravel": {
+      "text": "수상한 자갈",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:suspicious_sand": {
+      "text": "수상한 모래",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:suspicious_stew": {
+      "text": "수상한 스튜",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:swamp_hut_map": {
+      "text": "늪 오두막 지도",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:sweet_berries": {
+      "text": "달콤한 열매",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:tadpole_bucket": {
+      "text": "올챙이가 담긴 양동이",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:tadpole_spawn_egg": {
+      "text": "올챙이 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:taiga_village_map": {
+      "text": "타이가 마을 지도",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:tall_dry_grass": {
+      "text": "키 큰 마른 잔디",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:tall_grass": {
+      "text": "키 큰 잔디",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:target": {
+      "text": "과녁",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:terracotta": {
+      "text": "테라코타",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:test_block": {
+      "text": "테스트 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:test_instance_block": {
+      "text": "테스트 인스턴스 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:tide_armor_trim_smithing_template": {
+      "text": "대장장이 형판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:tinted_glass": {
+      "text": "차광 유리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:tipped_arrow": {
+      "text": "물약이 묻은 화살",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:tnt": {
+      "text": "TNT",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:tnt_minecart": {
+      "text": "TNT가 실린 광산 수레",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:torch": {
+      "text": "횃불",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:torchflower": {
+      "text": "횃불꽃",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:torchflower_seeds": {
+      "text": "횃불꽃 씨앗",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:totem_of_undying": {
+      "text": "불사의 토템",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:trader_llama_spawn_egg": {
+      "text": "상인 라마 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:trapped_chest": {
+      "text": "덫 상자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:trial_key": {
+      "text": "시련 열쇠",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:trial_spawner": {
+      "text": "시련 생성기",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:trident": {
+      "text": "삼지창",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:tripwire_hook": {
+      "text": "철사 덫 갈고리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:tropical_fish": {
+      "text": "열대어",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:tropical_fish_bucket": {
+      "text": "열대어가 담긴 양동이",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:tropical_fish_spawn_egg": {
+      "text": "열대어 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:tube_coral": {
+      "text": "관 산호",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:tube_coral_block": {
+      "text": "관 산호 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:tube_coral_fan": {
+      "text": "부채형 관 산호",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:tuff": {
+      "text": "응회암",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:tuff_brick_slab": {
+      "text": "응회암 벽돌 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:tuff_brick_stairs": {
+      "text": "응회암 벽돌 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:tuff_brick_wall": {
+      "text": "응회암 벽돌 담장",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:tuff_bricks": {
+      "text": "응회암 벽돌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:tuff_slab": {
+      "text": "응회암 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:tuff_stairs": {
+      "text": "응회암 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:tuff_wall": {
+      "text": "응회암 담장",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:turtle_egg": {
+      "text": "거북알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:turtle_helmet": {
+      "text": "거북 등딱지",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:turtle_scute": {
+      "text": "거북 인갑",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:turtle_spawn_egg": {
+      "text": "거북 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:twisting_vines": {
+      "text": "휘어진 덩굴",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:vault": {
+      "text": "금고",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:verdant_froglight": {
+      "text": "잔딧빛 개구리불",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:vex_armor_trim_smithing_template": {
+      "text": "대장장이 형판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:vex_spawn_egg": {
+      "text": "벡스 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:villager_spawn_egg": {
+      "text": "주민 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:vindicator_spawn_egg": {
+      "text": "변명자 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:vine": {
+      "text": "덩굴",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:wandering_trader_spawn_egg": {
+      "text": "떠돌이 상인 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:ward_armor_trim_smithing_template": {
+      "text": "대장장이 형판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:warden_spawn_egg": {
+      "text": "워든 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:warm_ocean_ruins_map": {
+      "text": "따뜻한 바다 폐허 지도",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:warped_button": {
+      "text": "뒤틀린 버튼",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:warped_door": {
+      "text": "뒤틀린 문",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:warped_fence": {
+      "text": "뒤틀린 울타리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:warped_fence_gate": {
+      "text": "뒤틀린 울타리 문",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:warped_fungus": {
+      "text": "뒤틀린 균",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:warped_fungus_on_a_stick": {
+      "text": "뒤틀린 균 낚싯대",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:warped_hanging_sign": {
+      "text": "뒤틀린 매다는 표지판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:warped_hyphae": {
+      "text": "뒤틀린 균사",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:warped_nylium": {
+      "text": "뒤틀린 네사체",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:warped_planks": {
+      "text": "뒤틀린 판자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:warped_pressure_plate": {
+      "text": "뒤틀린 압력판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:warped_roots": {
+      "text": "뒤틀린 뿌리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:warped_shelf": {
+      "text": "뒤틀린 선반",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:warped_sign": {
+      "text": "뒤틀린 표지판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:warped_slab": {
+      "text": "뒤틀린 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:warped_stairs": {
+      "text": "뒤틀린 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:warped_stem": {
+      "text": "뒤틀린 자루",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:warped_trapdoor": {
+      "text": "뒤틀린 다락문",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:warped_wart_block": {
+      "text": "뒤틀린 사마귀 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:water_bucket": {
+      "text": "물 양동이",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_chiseled_copper": {
+      "text": "밀랍칠한 조각된 구리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_copper_bars": {
+      "text": "밀랍칠한 구리 창살",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_copper_block": {
+      "text": "밀랍칠한 구리 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_copper_bulb": {
+      "text": "밀랍칠한 구리 전구",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_copper_chain": {
+      "text": "밀랍칠한 구리 사슬",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_copper_chest": {
+      "text": "밀랍칠한 구리 상자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_copper_door": {
+      "text": "밀랍칠한 구리 문",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_copper_golem_statue": {
+      "text": "밀랍칠한 구리 골렘 동상",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_copper_grate": {
+      "text": "밀랍칠한 구리 격자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_copper_lantern": {
+      "text": "밀랍칠한 구리 랜턴",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_copper_trapdoor": {
+      "text": "밀랍칠한 구리 다락문",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_cut_copper": {
+      "text": "밀랍칠한 깎인 구리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_cut_copper_slab": {
+      "text": "밀랍칠한 깎인 구리 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_cut_copper_stairs": {
+      "text": "밀랍칠한 깎인 구리 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_exposed_chiseled_copper": {
+      "text": "밀랍칠한 약간 녹슨 조각된 구리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_exposed_copper": {
+      "text": "밀랍칠한 약간 녹슨 구리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_exposed_copper_bars": {
+      "text": "밀랍칠한 약간 녹슨 구리 창살",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_exposed_copper_bulb": {
+      "text": "밀랍칠한 약간 녹슨 구리 전구",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_exposed_copper_chain": {
+      "text": "밀랍칠한 약간 녹슨 구리 사슬",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_exposed_copper_chest": {
+      "text": "밀랍칠한 약간 녹슨 구리 상자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_exposed_copper_door": {
+      "text": "밀랍칠한 약간 녹슨 구리 문",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_exposed_copper_golem_statue": {
+      "text": "밀랍칠한 약간 녹슨 구리 골렘 동상",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_exposed_copper_grate": {
+      "text": "밀랍칠한 약간 녹슨 구리 격자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_exposed_copper_lantern": {
+      "text": "밀랍칠한 약간 녹슨 구리 랜턴",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_exposed_copper_trapdoor": {
+      "text": "밀랍칠한 약간 녹슨 구리 다락문",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_exposed_cut_copper": {
+      "text": "밀랍칠한 약간 녹슨 깎인 구리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_exposed_cut_copper_slab": {
+      "text": "밀랍칠한 약간 녹슨 깎인 구리 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_exposed_cut_copper_stairs": {
+      "text": "밀랍칠한 약간 녹슨 깎인 구리 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_exposed_lightning_rod": {
+      "text": "밀랍칠한 약간 녹슨 피뢰침",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_lightning_rod": {
+      "text": "밀랍칠한 피뢰침",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_oxidized_chiseled_copper": {
+      "text": "밀랍칠한 산화된 조각된 구리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_oxidized_copper": {
+      "text": "밀랍칠한 산화된 구리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_oxidized_copper_bars": {
+      "text": "밀랍칠한 산화된 구리 창살",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_oxidized_copper_bulb": {
+      "text": "밀랍칠한 산화된 구리 전구",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_oxidized_copper_chain": {
+      "text": "밀랍칠한 산화된 구리 사슬",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_oxidized_copper_chest": {
+      "text": "밀랍칠한 산화된 구리 상자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_oxidized_copper_door": {
+      "text": "밀랍칠한 산화된 구리 문",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_oxidized_copper_golem_statue": {
+      "text": "밀랍칠한 산화된 구리 골렘 동상",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_oxidized_copper_grate": {
+      "text": "밀랍칠한 산화된 구리 격자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_oxidized_copper_lantern": {
+      "text": "밀랍칠한 산화된 구리 랜턴",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_oxidized_copper_trapdoor": {
+      "text": "밀랍칠한 산화된 구리 다락문",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_oxidized_cut_copper": {
+      "text": "밀랍칠한 산화된 깎인 구리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_oxidized_cut_copper_slab": {
+      "text": "밀랍칠한 산화된 깎인 구리 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_oxidized_cut_copper_stairs": {
+      "text": "밀랍칠한 산화된 깎인 구리 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_oxidized_lightning_rod": {
+      "text": "밀랍칠한 산화된 피뢰침",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_weathered_chiseled_copper": {
+      "text": "밀랍칠한 녹슨 조각된 구리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_weathered_copper": {
+      "text": "밀랍칠한 녹슨 구리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_weathered_copper_bars": {
+      "text": "밀랍칠한 녹슨 구리 창살",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_weathered_copper_bulb": {
+      "text": "밀랍칠한 녹슨 구리 전구",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_weathered_copper_chain": {
+      "text": "밀랍칠한 녹슨 구리 사슬",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_weathered_copper_chest": {
+      "text": "밀랍칠한 녹슨 구리 상자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_weathered_copper_door": {
+      "text": "밀랍칠한 녹슨 구리 문",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_weathered_copper_golem_statue": {
+      "text": "밀랍칠한 녹슨 구리 골렘 동상",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_weathered_copper_grate": {
+      "text": "밀랍칠한 녹슨 구리 격자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_weathered_copper_lantern": {
+      "text": "밀랍칠한 녹슨 구리 랜턴",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_weathered_copper_trapdoor": {
+      "text": "밀랍칠한 녹슨 구리 다락문",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_weathered_cut_copper": {
+      "text": "밀랍칠한 녹슨 깎인 구리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_weathered_cut_copper_slab": {
+      "text": "밀랍칠한 녹슨 깎인 구리 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_weathered_cut_copper_stairs": {
+      "text": "밀랍칠한 녹슨 깎인 구리 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_weathered_lightning_rod": {
+      "text": "밀랍칠한 녹슨 피뢰침",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:wayfinder_armor_trim_smithing_template": {
+      "text": "대장장이 형판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:weathered_chiseled_copper": {
+      "text": "녹슨 조각된 구리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:weathered_copper": {
+      "text": "녹슨 구리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:weathered_copper_bars": {
+      "text": "녹슨 구리 창살",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:weathered_copper_bulb": {
+      "text": "녹슨 구리 전구",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:weathered_copper_chain": {
+      "text": "녹슨 구리 사슬",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:weathered_copper_chest": {
+      "text": "녹슨 구리 상자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:weathered_copper_door": {
+      "text": "녹슨 구리 문",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:weathered_copper_golem_statue": {
+      "text": "녹슨 구리 골렘 동상",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:weathered_copper_grate": {
+      "text": "녹슨 구리 격자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:weathered_copper_lantern": {
+      "text": "녹슨 구리 랜턴",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:weathered_copper_trapdoor": {
+      "text": "녹슨 구리 다락문",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:weathered_cut_copper": {
+      "text": "녹슨 깎인 구리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:weathered_cut_copper_slab": {
+      "text": "녹슨 깎인 구리 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:weathered_cut_copper_stairs": {
+      "text": "녹슨 깎인 구리 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:weathered_lightning_rod": {
+      "text": "녹슨 피뢰침",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:weeping_vines": {
+      "text": "늘어진 덩굴",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:wet_sponge": {
+      "text": "젖은 스펀지",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:wheat": {
+      "text": "밀",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:wheat_seeds": {
+      "text": "밀 씨앗",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:white_banner": {
+      "text": "하얀색 현수막",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:white_bed": {
+      "text": "하얀색 침대",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:white_bundle": {
+      "text": "하얀색 꾸러미",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:white_candle": {
+      "text": "하얀색 초",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:white_carpet": {
+      "text": "하얀색 양탄자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:white_concrete": {
+      "text": "하얀색 콘크리트",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:white_concrete_powder": {
+      "text": "하얀색 콘크리트 가루",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:white_concrete_slab": {
+      "text": "하얀색 콘크리트 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:white_concrete_stairs": {
+      "text": "하얀색 콘크리트 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:white_cushion": {
+      "text": "하얀색 방석",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:white_dye": {
+      "text": "하얀색 염료",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:white_glazed_terracotta": {
+      "text": "하얀색 유광 테라코타",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:white_harness": {
+      "text": "하얀색 하네스",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:white_shulker_box": {
+      "text": "하얀색 셜커 상자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:white_stained_glass": {
+      "text": "하얀색 색유리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:white_stained_glass_pane": {
+      "text": "하얀색 색유리 판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:white_terracotta": {
+      "text": "하얀색 테라코타",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:white_tulip": {
+      "text": "하얀색 튤립",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:white_wool": {
+      "text": "하얀색 양털",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:white_wool_slab": {
+      "text": "하얀색 양털 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:white_wool_stairs": {
+      "text": "하얀색 양털 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:wild_armor_trim_smithing_template": {
+      "text": "대장장이 형판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:wildflowers": {
+      "text": "들꽃",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:wind_charge": {
+      "text": "돌풍구",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:witch_spawn_egg": {
+      "text": "마녀 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:wither_rose": {
+      "text": "위더 장미",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:wither_skeleton_skull": {
+      "text": "위더 스켈레톤 해골",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:wither_skeleton_spawn_egg": {
+      "text": "위더 스켈레톤 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:wither_spawn_egg": {
+      "text": "위더 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:wolf_armor": {
+      "text": "늑대 갑옷",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:wolf_spawn_egg": {
+      "text": "늑대 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:wooden_axe": {
+      "text": "나무 도끼",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:wooden_hoe": {
+      "text": "나무 괭이",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:wooden_pickaxe": {
+      "text": "나무 곡괭이",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:wooden_shovel": {
+      "text": "나무 삽",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:wooden_spear": {
+      "text": "나무 창",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:wooden_sword": {
+      "text": "나무 검",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:woodland_mansion_map": {
+      "text": "삼림 대저택 지도",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:writable_book": {
+      "text": "책과 깃펜",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:written_book": {
+      "text": "글이 쓰인 책",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:yellow_banner": {
+      "text": "노란색 현수막",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:yellow_bed": {
+      "text": "노란색 침대",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:yellow_bundle": {
+      "text": "노란색 꾸러미",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:yellow_candle": {
+      "text": "노란색 초",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:yellow_carpet": {
+      "text": "노란색 양탄자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:yellow_concrete": {
+      "text": "노란색 콘크리트",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:yellow_concrete_powder": {
+      "text": "노란색 콘크리트 가루",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:yellow_concrete_slab": {
+      "text": "노란색 콘크리트 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:yellow_concrete_stairs": {
+      "text": "노란색 콘크리트 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:yellow_cushion": {
+      "text": "노란색 방석",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:yellow_dye": {
+      "text": "노란색 염료",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:yellow_glazed_terracotta": {
+      "text": "노란색 유광 테라코타",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:yellow_harness": {
+      "text": "노란색 하네스",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:yellow_poplar_leaves": {
+      "text": "노란색 포플러나무 잎",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:yellow_shulker_box": {
+      "text": "노란색 셜커 상자",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:yellow_stained_glass": {
+      "text": "노란색 색유리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:yellow_stained_glass_pane": {
+      "text": "노란색 색유리 판",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:yellow_terracotta": {
+      "text": "노란색 테라코타",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:yellow_wool": {
+      "text": "노란색 양털",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:yellow_wool_slab": {
+      "text": "노란색 양털 반 블록",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:yellow_wool_stairs": {
+      "text": "노란색 양털 계단",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:zoglin_spawn_egg": {
+      "text": "조글린 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:zombie_head": {
+      "text": "좀비 머리",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:zombie_horse_spawn_egg": {
+      "text": "좀비 말 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:zombie_nautilus_spawn_egg": {
+      "text": "좀비 앵무조개 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:zombie_spawn_egg": {
+      "text": "좀비 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:zombie_villager_spawn_egg": {
+      "text": "좀비 주민 생성 알",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:zombified_piglin_spawn_egg": {
+      "text": "좀비화 피글린 생성 알",
+      "reading": "",
+      "aliases": []
+    }
+  }
+}

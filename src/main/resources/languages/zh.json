@@ -1,0 +1,8293 @@
+{
+  "schemaVersion": 1,
+  "id": "zh",
+  "name": "Chinese · 简体中文",
+  "whisperLanguage": "zh",
+  "items": {
+    "minecraft:abandoned_camp_map": {
+      "text": "废弃营地地图",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:acacia_boat": {
+      "text": "金合欢木船",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:acacia_button": {
+      "text": "金合欢木按钮",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:acacia_chest_boat": {
+      "text": "金合欢木运输船",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:acacia_door": {
+      "text": "金合欢木门",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:acacia_fence": {
+      "text": "金合欢木栅栏",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:acacia_fence_gate": {
+      "text": "金合欢木栅栏门",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:acacia_hanging_sign": {
+      "text": "悬挂式金合欢木告示牌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:acacia_leaves": {
+      "text": "金合欢树叶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:acacia_log": {
+      "text": "金合欢原木",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:acacia_planks": {
+      "text": "金合欢木板",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:acacia_pressure_plate": {
+      "text": "金合欢木压力板",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:acacia_sapling": {
+      "text": "金合欢树苗",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:acacia_shelf": {
+      "text": "金合欢木展示架",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:acacia_sign": {
+      "text": "金合欢木告示牌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:acacia_slab": {
+      "text": "金合欢木台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:acacia_stairs": {
+      "text": "金合欢木楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:acacia_trapdoor": {
+      "text": "金合欢木活板门",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:acacia_wood": {
+      "text": "金合欢木",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:activator_rail": {
+      "text": "激活铁轨",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:allay_spawn_egg": {
+      "text": "悦灵刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:allium": {
+      "text": "绒球葱",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:amethyst_block": {
+      "text": "紫水晶块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:amethyst_cluster": {
+      "text": "紫水晶簇",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:amethyst_shard": {
+      "text": "紫水晶碎片",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:ancient_debris": {
+      "text": "远古残骸",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:andesite": {
+      "text": "安山岩",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:andesite_slab": {
+      "text": "安山岩台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:andesite_stairs": {
+      "text": "安山岩楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:andesite_wall": {
+      "text": "安山岩墙",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:angler_pottery_sherd": {
+      "text": "垂钓纹样陶片",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:anvil": {
+      "text": "铁砧",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:apple": {
+      "text": "苹果",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:archer_pottery_sherd": {
+      "text": "弓箭纹样陶片",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:armadillo_scute": {
+      "text": "犰狳鳞甲",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:armadillo_spawn_egg": {
+      "text": "犰狳刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:armor_stand": {
+      "text": "盔甲架",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:arms_up_pottery_sherd": {
+      "text": "举臂纹样陶片",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:arrow": {
+      "text": "箭",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:axolotl_bucket": {
+      "text": "美西螈桶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:axolotl_spawn_egg": {
+      "text": "美西螈刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:azalea": {
+      "text": "杜鹃花丛",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:azalea_leaves": {
+      "text": "杜鹃树叶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:azure_bluet": {
+      "text": "蓝花美耳草",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:baked_potato": {
+      "text": "烤马铃薯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bamboo": {
+      "text": "竹子",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bamboo_block": {
+      "text": "竹块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bamboo_button": {
+      "text": "竹按钮",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bamboo_chest_raft": {
+      "text": "运输竹筏",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bamboo_door": {
+      "text": "竹门",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bamboo_fence": {
+      "text": "竹栅栏",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bamboo_fence_gate": {
+      "text": "竹栅栏门",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bamboo_hanging_sign": {
+      "text": "悬挂式竹告示牌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bamboo_mosaic": {
+      "text": "竹马赛克",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bamboo_mosaic_slab": {
+      "text": "竹马赛克台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bamboo_mosaic_stairs": {
+      "text": "竹马赛克楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bamboo_planks": {
+      "text": "竹板",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bamboo_pressure_plate": {
+      "text": "竹压力板",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bamboo_raft": {
+      "text": "竹筏",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bamboo_shelf": {
+      "text": "竹展示架",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bamboo_sign": {
+      "text": "竹告示牌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bamboo_slab": {
+      "text": "竹台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bamboo_stairs": {
+      "text": "竹楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bamboo_trapdoor": {
+      "text": "竹活板门",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:barrel": {
+      "text": "木桶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:barrier": {
+      "text": "屏障",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:basalt": {
+      "text": "玄武岩",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bat_spawn_egg": {
+      "text": "蝙蝠刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:beacon": {
+      "text": "信标",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bedrock": {
+      "text": "基岩",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bee_nest": {
+      "text": "蜂巢",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bee_spawn_egg": {
+      "text": "蜜蜂刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:beef": {
+      "text": "生牛肉",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:beehive": {
+      "text": "蜂箱",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:beetroot": {
+      "text": "甜菜根",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:beetroot_seeds": {
+      "text": "甜菜种子",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:beetroot_soup": {
+      "text": "甜菜汤",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bell": {
+      "text": "钟",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:big_dripleaf": {
+      "text": "大型垂滴叶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:birch_boat": {
+      "text": "白桦木船",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:birch_button": {
+      "text": "白桦木按钮",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:birch_chest_boat": {
+      "text": "白桦木运输船",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:birch_door": {
+      "text": "白桦木门",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:birch_fence": {
+      "text": "白桦木栅栏",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:birch_fence_gate": {
+      "text": "白桦木栅栏门",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:birch_hanging_sign": {
+      "text": "悬挂式白桦木告示牌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:birch_leaves": {
+      "text": "白桦树叶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:birch_log": {
+      "text": "白桦原木",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:birch_planks": {
+      "text": "白桦木板",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:birch_pressure_plate": {
+      "text": "白桦木压力板",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:birch_sapling": {
+      "text": "白桦树苗",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:birch_shelf": {
+      "text": "白桦木展示架",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:birch_sign": {
+      "text": "白桦木告示牌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:birch_slab": {
+      "text": "白桦木台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:birch_stairs": {
+      "text": "白桦木楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:birch_trapdoor": {
+      "text": "白桦木活板门",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:birch_wood": {
+      "text": "白桦木",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:black_banner": {
+      "text": "黑色旗帜",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:black_bed": {
+      "text": "黑色床",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:black_bundle": {
+      "text": "黑色收纳袋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:black_candle": {
+      "text": "黑色蜡烛",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:black_carpet": {
+      "text": "黑色地毯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:black_concrete": {
+      "text": "黑色混凝土",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:black_concrete_powder": {
+      "text": "黑色混凝土粉末",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:black_concrete_slab": {
+      "text": "黑色混凝土台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:black_concrete_stairs": {
+      "text": "黑色混凝土楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:black_cushion": {
+      "text": "黑色坐垫",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:black_dye": {
+      "text": "黑色染料",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:black_glazed_terracotta": {
+      "text": "黑色带釉陶瓦",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:black_harness": {
+      "text": "黑色挽具",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:black_shulker_box": {
+      "text": "黑色潜影盒",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:black_stained_glass": {
+      "text": "黑色染色玻璃",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:black_stained_glass_pane": {
+      "text": "黑色染色玻璃板",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:black_terracotta": {
+      "text": "黑色陶瓦",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:black_wool": {
+      "text": "黑色羊毛",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:black_wool_slab": {
+      "text": "黑色羊毛台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:black_wool_stairs": {
+      "text": "黑色羊毛楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:blackstone": {
+      "text": "黑石",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:blackstone_slab": {
+      "text": "黑石台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:blackstone_stairs": {
+      "text": "黑石楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:blackstone_wall": {
+      "text": "黑石墙",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:blade_pottery_sherd": {
+      "text": "利刃纹样陶片",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:blast_furnace": {
+      "text": "高炉",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:blaze_powder": {
+      "text": "烈焰粉",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:blaze_rod": {
+      "text": "烈焰棒",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:blaze_spawn_egg": {
+      "text": "烈焰人刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:blue_banner": {
+      "text": "蓝色旗帜",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:blue_bed": {
+      "text": "蓝色床",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:blue_bundle": {
+      "text": "蓝色收纳袋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:blue_candle": {
+      "text": "蓝色蜡烛",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:blue_carpet": {
+      "text": "蓝色地毯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:blue_concrete": {
+      "text": "蓝色混凝土",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:blue_concrete_powder": {
+      "text": "蓝色混凝土粉末",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:blue_concrete_slab": {
+      "text": "蓝色混凝土台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:blue_concrete_stairs": {
+      "text": "蓝色混凝土楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:blue_cushion": {
+      "text": "蓝色坐垫",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:blue_dye": {
+      "text": "蓝色染料",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:blue_egg": {
+      "text": "蓝色鸡蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:blue_glazed_terracotta": {
+      "text": "蓝色带釉陶瓦",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:blue_harness": {
+      "text": "蓝色挽具",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:blue_ice": {
+      "text": "蓝冰",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:blue_orchid": {
+      "text": "兰花",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:blue_shulker_box": {
+      "text": "蓝色潜影盒",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:blue_stained_glass": {
+      "text": "蓝色染色玻璃",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:blue_stained_glass_pane": {
+      "text": "蓝色染色玻璃板",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:blue_terracotta": {
+      "text": "蓝色陶瓦",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:blue_wool": {
+      "text": "蓝色羊毛",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:blue_wool_slab": {
+      "text": "蓝色羊毛台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:blue_wool_stairs": {
+      "text": "蓝色羊毛楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bogged_spawn_egg": {
+      "text": "沼骸刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bolt_armor_trim_smithing_template": {
+      "text": "锻造模板",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bone": {
+      "text": "骨头",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bone_block": {
+      "text": "骨块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bone_meal": {
+      "text": "骨粉",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:book": {
+      "text": "书",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bookshelf": {
+      "text": "书架",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bordure_indented_banner_pattern": {
+      "text": "波纹边旗帜图案",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bow": {
+      "text": "弓",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bowl": {
+      "text": "碗",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:brain_coral": {
+      "text": "脑纹珊瑚",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:brain_coral_block": {
+      "text": "脑纹珊瑚块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:brain_coral_fan": {
+      "text": "脑纹珊瑚扇",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bread": {
+      "text": "面包",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:breeze_rod": {
+      "text": "旋风棒",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:breeze_spawn_egg": {
+      "text": "旋风人刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:brewer_pottery_sherd": {
+      "text": "佳酿纹样陶片",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:brewing_stand": {
+      "text": "酿造台",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:brick": {
+      "text": "红砖",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:brick_slab": {
+      "text": "红砖台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:brick_stairs": {
+      "text": "红砖楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:brick_wall": {
+      "text": "红砖墙",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bricks": {
+      "text": "红砖块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:brown_banner": {
+      "text": "棕色旗帜",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:brown_bed": {
+      "text": "棕色床",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:brown_bundle": {
+      "text": "棕色收纳袋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:brown_candle": {
+      "text": "棕色蜡烛",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:brown_carpet": {
+      "text": "棕色地毯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:brown_concrete": {
+      "text": "棕色混凝土",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:brown_concrete_powder": {
+      "text": "棕色混凝土粉末",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:brown_concrete_slab": {
+      "text": "棕色混凝土台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:brown_concrete_stairs": {
+      "text": "棕色混凝土楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:brown_cushion": {
+      "text": "棕色坐垫",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:brown_dye": {
+      "text": "棕色染料",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:brown_egg": {
+      "text": "棕色鸡蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:brown_glazed_terracotta": {
+      "text": "棕色带釉陶瓦",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:brown_harness": {
+      "text": "棕色挽具",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:brown_mushroom": {
+      "text": "棕色蘑菇",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:brown_mushroom_block": {
+      "text": "棕色蘑菇方块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:brown_shulker_box": {
+      "text": "棕色潜影盒",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:brown_stained_glass": {
+      "text": "棕色染色玻璃",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:brown_stained_glass_pane": {
+      "text": "棕色染色玻璃板",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:brown_terracotta": {
+      "text": "棕色陶瓦",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:brown_wool": {
+      "text": "棕色羊毛",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:brown_wool_slab": {
+      "text": "棕色羊毛台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:brown_wool_stairs": {
+      "text": "棕色羊毛楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:brush": {
+      "text": "刷子",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bubble_coral": {
+      "text": "气泡珊瑚",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bubble_coral_block": {
+      "text": "气泡珊瑚块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bubble_coral_fan": {
+      "text": "气泡珊瑚扇",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bucket": {
+      "text": "铁桶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:budding_amethyst": {
+      "text": "紫水晶母岩",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bundle": {
+      "text": "收纳袋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:buried_ancient_city_map": {
+      "text": "埋藏的远古城市地图",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:buried_mineshaft_map": {
+      "text": "埋藏的废弃矿井地图",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:buried_treasure_map": {
+      "text": "藏宝图",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:buried_trial_chambers_map": {
+      "text": "埋藏的试炼密室地图",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:burn_pottery_sherd": {
+      "text": "烈焰纹样陶片",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:bush": {
+      "text": "灌木丛",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cactus": {
+      "text": "仙人掌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cactus_flower": {
+      "text": "仙人掌花",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cake": {
+      "text": "蛋糕",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:calcite": {
+      "text": "方解石",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:calibrated_sculk_sensor": {
+      "text": "校频幽匿感测体",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:camel_husk_spawn_egg": {
+      "text": "骆驼尸壳刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:camel_spawn_egg": {
+      "text": "骆驼刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:campfire": {
+      "text": "营火",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:candle": {
+      "text": "蜡烛",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:carrot": {
+      "text": "胡萝卜",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:carrot_on_a_stick": {
+      "text": "胡萝卜钓竿",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cartography_table": {
+      "text": "制图台",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:carved_pumpkin": {
+      "text": "雕刻南瓜",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cat_spawn_egg": {
+      "text": "猫刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cauldron": {
+      "text": "炼药锅",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cave_spider_spawn_egg": {
+      "text": "洞穴蜘蛛刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:chain_command_block": {
+      "text": "连锁型命令方块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:chainmail_boots": {
+      "text": "锁链靴子",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:chainmail_chestplate": {
+      "text": "锁链胸甲",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:chainmail_helmet": {
+      "text": "锁链头盔",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:chainmail_leggings": {
+      "text": "锁链护腿",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:charcoal": {
+      "text": "木炭",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cherry_boat": {
+      "text": "樱花木船",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cherry_button": {
+      "text": "樱花木按钮",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cherry_chest_boat": {
+      "text": "樱花木运输船",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cherry_door": {
+      "text": "樱花木门",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cherry_fence": {
+      "text": "樱花木栅栏",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cherry_fence_gate": {
+      "text": "樱花木栅栏门",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cherry_hanging_sign": {
+      "text": "悬挂式樱花木告示牌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cherry_leaves": {
+      "text": "樱花树叶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cherry_log": {
+      "text": "樱花原木",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cherry_planks": {
+      "text": "樱花木板",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cherry_pressure_plate": {
+      "text": "樱花木压力板",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cherry_sapling": {
+      "text": "樱花树苗",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cherry_shelf": {
+      "text": "樱花木展示架",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cherry_sign": {
+      "text": "樱花木告示牌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cherry_slab": {
+      "text": "樱花木台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cherry_stairs": {
+      "text": "樱花木楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cherry_trapdoor": {
+      "text": "樱花木活板门",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cherry_wood": {
+      "text": "樱花木",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:chest": {
+      "text": "箱子",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:chest_minecart": {
+      "text": "运输矿车",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:chicken": {
+      "text": "生鸡肉",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:chicken_spawn_egg": {
+      "text": "鸡刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:chipped_anvil": {
+      "text": "开裂的铁砧",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:chiseled_bookshelf": {
+      "text": "雕纹书架",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:chiseled_cinnabar": {
+      "text": "雕纹朱砂",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:chiseled_copper": {
+      "text": "雕纹铜块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:chiseled_deepslate": {
+      "text": "雕纹深板岩",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:chiseled_nether_bricks": {
+      "text": "雕纹下界砖块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:chiseled_polished_blackstone": {
+      "text": "雕纹磨制黑石",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:chiseled_quartz_block": {
+      "text": "雕纹石英块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:chiseled_red_sandstone": {
+      "text": "雕纹红砂岩",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:chiseled_resin_bricks": {
+      "text": "雕纹树脂砖块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:chiseled_sandstone": {
+      "text": "雕纹砂岩",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:chiseled_stone_bricks": {
+      "text": "雕纹石砖",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:chiseled_sulfur": {
+      "text": "雕纹硫黄",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:chiseled_tuff": {
+      "text": "雕纹凝灰岩",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:chiseled_tuff_bricks": {
+      "text": "雕纹凝灰岩砖",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:chorus_flower": {
+      "text": "紫颂花",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:chorus_fruit": {
+      "text": "紫颂果",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:chorus_plant": {
+      "text": "紫颂植株",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cinnabar": {
+      "text": "朱砂",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cinnabar_brick_slab": {
+      "text": "朱砂砖台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cinnabar_brick_stairs": {
+      "text": "朱砂砖楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cinnabar_brick_wall": {
+      "text": "朱砂砖墙",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cinnabar_bricks": {
+      "text": "朱砂砖",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cinnabar_slab": {
+      "text": "朱砂台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cinnabar_stairs": {
+      "text": "朱砂楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cinnabar_wall": {
+      "text": "朱砂墙",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:clay": {
+      "text": "黏土",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:clay_ball": {
+      "text": "黏土球",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:clock": {
+      "text": "时钟",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:closed_eyeblossom": {
+      "text": "闭合的眼眸花",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:coal": {
+      "text": "煤炭",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:coal_block": {
+      "text": "煤炭块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:coal_ore": {
+      "text": "煤矿石",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:coarse_dirt": {
+      "text": "砂土",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:coast_armor_trim_smithing_template": {
+      "text": "锻造模板",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cobbled_deepslate": {
+      "text": "深板岩圆石",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cobbled_deepslate_slab": {
+      "text": "深板岩圆石台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cobbled_deepslate_stairs": {
+      "text": "深板岩圆石楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cobbled_deepslate_wall": {
+      "text": "深板岩圆石墙",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cobblestone": {
+      "text": "圆石",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cobblestone_slab": {
+      "text": "圆石台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cobblestone_stairs": {
+      "text": "圆石楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cobblestone_wall": {
+      "text": "圆石墙",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cobweb": {
+      "text": "蜘蛛网",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cocoa_beans": {
+      "text": "可可豆",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cod": {
+      "text": "生鳕鱼",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cod_bucket": {
+      "text": "鳕鱼桶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cod_spawn_egg": {
+      "text": "鳕鱼刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:command_block": {
+      "text": "命令方块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:command_block_minecart": {
+      "text": "命令方块矿车",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:comparator": {
+      "text": "红石比较器",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:compass": {
+      "text": "指南针",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:composter": {
+      "text": "堆肥桶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:conduit": {
+      "text": "潮涌核心",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cooked_beef": {
+      "text": "牛排",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cooked_chicken": {
+      "text": "熟鸡肉",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cooked_cod": {
+      "text": "熟鳕鱼",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cooked_mutton": {
+      "text": "熟羊肉",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cooked_porkchop": {
+      "text": "熟猪排",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cooked_rabbit": {
+      "text": "熟兔肉",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cooked_salmon": {
+      "text": "熟鲑鱼",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cookie": {
+      "text": "曲奇",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:copper_axe": {
+      "text": "铜斧",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:copper_bars": {
+      "text": "铜栏杆",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:copper_block": {
+      "text": "铜块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:copper_boots": {
+      "text": "铜靴子",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:copper_bulb": {
+      "text": "铜灯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:copper_chain": {
+      "text": "铜链",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:copper_chest": {
+      "text": "铜箱子",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:copper_chestplate": {
+      "text": "铜胸甲",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:copper_door": {
+      "text": "铜门",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:copper_golem_spawn_egg": {
+      "text": "铜傀儡刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:copper_golem_statue": {
+      "text": "铜傀儡像",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:copper_grate": {
+      "text": "铜格栅",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:copper_helmet": {
+      "text": "铜头盔",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:copper_hoe": {
+      "text": "铜锄",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:copper_horse_armor": {
+      "text": "铜马铠",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:copper_ingot": {
+      "text": "铜锭",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:copper_lantern": {
+      "text": "铜灯笼",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:copper_leggings": {
+      "text": "铜护腿",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:copper_nautilus_armor": {
+      "text": "铜鹦鹉螺铠",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:copper_nugget": {
+      "text": "铜粒",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:copper_ore": {
+      "text": "铜矿石",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:copper_pickaxe": {
+      "text": "铜镐",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:copper_shovel": {
+      "text": "铜锹",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:copper_spear": {
+      "text": "铜矛",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:copper_sword": {
+      "text": "铜剑",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:copper_torch": {
+      "text": "铜火把",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:copper_trapdoor": {
+      "text": "铜活板门",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cornflower": {
+      "text": "矢车菊",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cow_spawn_egg": {
+      "text": "牛刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cracked_deepslate_bricks": {
+      "text": "裂纹深板岩砖",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cracked_deepslate_tiles": {
+      "text": "裂纹深板岩瓦",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cracked_nether_bricks": {
+      "text": "裂纹下界砖块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cracked_polished_blackstone_bricks": {
+      "text": "裂纹磨制黑石砖",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cracked_stone_bricks": {
+      "text": "裂纹石砖",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:crafter": {
+      "text": "合成器",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:crafting_table": {
+      "text": "工作台",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:creaking_heart": {
+      "text": "嘎枝之心",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:creaking_spawn_egg": {
+      "text": "嘎枝刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:creeper_banner_pattern": {
+      "text": "旗帜图案",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:creeper_head": {
+      "text": "苦力怕的头",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:creeper_spawn_egg": {
+      "text": "苦力怕刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:crimson_button": {
+      "text": "绯红木按钮",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:crimson_door": {
+      "text": "绯红木门",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:crimson_fence": {
+      "text": "绯红木栅栏",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:crimson_fence_gate": {
+      "text": "绯红木栅栏门",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:crimson_fungus": {
+      "text": "绯红菌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:crimson_hanging_sign": {
+      "text": "悬挂式绯红木告示牌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:crimson_hyphae": {
+      "text": "绯红菌核",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:crimson_nylium": {
+      "text": "绯红菌岩",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:crimson_planks": {
+      "text": "绯红木板",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:crimson_pressure_plate": {
+      "text": "绯红木压力板",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:crimson_roots": {
+      "text": "绯红菌索",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:crimson_shelf": {
+      "text": "绯红木展示架",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:crimson_sign": {
+      "text": "绯红木告示牌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:crimson_slab": {
+      "text": "绯红木台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:crimson_stairs": {
+      "text": "绯红木楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:crimson_stem": {
+      "text": "绯红菌柄",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:crimson_trapdoor": {
+      "text": "绯红木活板门",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:crossbow": {
+      "text": "弩",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:crying_obsidian": {
+      "text": "哭泣的黑曜石",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cut_copper": {
+      "text": "切制铜块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cut_copper_slab": {
+      "text": "切制铜台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cut_copper_stairs": {
+      "text": "切制铜楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cut_red_sandstone": {
+      "text": "切制红砂岩",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cut_red_sandstone_slab": {
+      "text": "切制红砂岩台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cut_sandstone": {
+      "text": "切制砂岩",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cut_sandstone_slab": {
+      "text": "切制砂岩台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cyan_banner": {
+      "text": "青色旗帜",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cyan_bed": {
+      "text": "青色床",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cyan_bundle": {
+      "text": "青色收纳袋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cyan_candle": {
+      "text": "青色蜡烛",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cyan_carpet": {
+      "text": "青色地毯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cyan_concrete": {
+      "text": "青色混凝土",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cyan_concrete_powder": {
+      "text": "青色混凝土粉末",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cyan_concrete_slab": {
+      "text": "青色混凝土台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cyan_concrete_stairs": {
+      "text": "青色混凝土楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cyan_cushion": {
+      "text": "青色坐垫",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cyan_dye": {
+      "text": "青色染料",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cyan_glazed_terracotta": {
+      "text": "青色带釉陶瓦",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cyan_harness": {
+      "text": "青色挽具",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cyan_shulker_box": {
+      "text": "青色潜影盒",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cyan_stained_glass": {
+      "text": "青色染色玻璃",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cyan_stained_glass_pane": {
+      "text": "青色染色玻璃板",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cyan_terracotta": {
+      "text": "青色陶瓦",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cyan_wool": {
+      "text": "青色羊毛",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cyan_wool_slab": {
+      "text": "青色羊毛台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:cyan_wool_stairs": {
+      "text": "青色羊毛楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:damaged_anvil": {
+      "text": "损坏的铁砧",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dandelion": {
+      "text": "蒲公英",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:danger_pottery_sherd": {
+      "text": "危机纹样陶片",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dark_oak_boat": {
+      "text": "深色橡木船",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dark_oak_button": {
+      "text": "深色橡木按钮",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dark_oak_chest_boat": {
+      "text": "深色橡木运输船",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dark_oak_door": {
+      "text": "深色橡木门",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dark_oak_fence": {
+      "text": "深色橡木栅栏",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dark_oak_fence_gate": {
+      "text": "深色橡木栅栏门",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dark_oak_hanging_sign": {
+      "text": "悬挂式深色橡木告示牌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dark_oak_leaves": {
+      "text": "深色橡树树叶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dark_oak_log": {
+      "text": "深色橡木原木",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dark_oak_planks": {
+      "text": "深色橡木木板",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dark_oak_pressure_plate": {
+      "text": "深色橡木压力板",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dark_oak_sapling": {
+      "text": "深色橡树树苗",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dark_oak_shelf": {
+      "text": "深色橡木展示架",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dark_oak_sign": {
+      "text": "深色橡木告示牌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dark_oak_slab": {
+      "text": "深色橡木台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dark_oak_stairs": {
+      "text": "深色橡木楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dark_oak_trapdoor": {
+      "text": "深色橡木活板门",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dark_oak_wood": {
+      "text": "深色橡木",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dark_prismarine": {
+      "text": "暗海晶石",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dark_prismarine_slab": {
+      "text": "暗海晶石台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dark_prismarine_stairs": {
+      "text": "暗海晶石楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:daylight_detector": {
+      "text": "阳光探测器",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dead_brain_coral": {
+      "text": "失活的脑纹珊瑚",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dead_brain_coral_block": {
+      "text": "失活的脑纹珊瑚块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dead_brain_coral_fan": {
+      "text": "失活的脑纹珊瑚扇",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dead_bubble_coral": {
+      "text": "失活的气泡珊瑚",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dead_bubble_coral_block": {
+      "text": "失活的气泡珊瑚块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dead_bubble_coral_fan": {
+      "text": "失活的气泡珊瑚扇",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dead_bush": {
+      "text": "枯萎的灌木",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dead_fire_coral": {
+      "text": "失活的火珊瑚",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dead_fire_coral_block": {
+      "text": "失活的火珊瑚块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dead_fire_coral_fan": {
+      "text": "失活的火珊瑚扇",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dead_horn_coral": {
+      "text": "失活的鹿角珊瑚",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dead_horn_coral_block": {
+      "text": "失活的鹿角珊瑚块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dead_horn_coral_fan": {
+      "text": "失活的鹿角珊瑚扇",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dead_tube_coral": {
+      "text": "失活的管珊瑚",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dead_tube_coral_block": {
+      "text": "失活的管珊瑚块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dead_tube_coral_fan": {
+      "text": "失活的管珊瑚扇",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:debug_stick": {
+      "text": "调试棒",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:decorated_pot": {
+      "text": "饰纹陶罐",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:deepslate": {
+      "text": "深板岩",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:deepslate_brick_slab": {
+      "text": "深板岩砖台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:deepslate_brick_stairs": {
+      "text": "深板岩砖楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:deepslate_brick_wall": {
+      "text": "深板岩砖墙",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:deepslate_bricks": {
+      "text": "深板岩砖",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:deepslate_coal_ore": {
+      "text": "深层煤矿石",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:deepslate_copper_ore": {
+      "text": "深层铜矿石",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:deepslate_diamond_ore": {
+      "text": "深层钻石矿石",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:deepslate_emerald_ore": {
+      "text": "深层绿宝石矿石",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:deepslate_gold_ore": {
+      "text": "深层金矿石",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:deepslate_iron_ore": {
+      "text": "深层铁矿石",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:deepslate_lapis_ore": {
+      "text": "深层青金石矿石",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:deepslate_redstone_ore": {
+      "text": "深层红石矿石",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:deepslate_tile_slab": {
+      "text": "深板岩瓦台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:deepslate_tile_stairs": {
+      "text": "深板岩瓦楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:deepslate_tile_wall": {
+      "text": "深板岩瓦墙",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:deepslate_tiles": {
+      "text": "深板岩瓦",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:desert_pyramid_map": {
+      "text": "沙漠神殿地图",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:desert_village_map": {
+      "text": "沙漠村庄地图",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:detector_rail": {
+      "text": "探测铁轨",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:diamond": {
+      "text": "钻石",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:diamond_axe": {
+      "text": "钻石斧",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:diamond_block": {
+      "text": "钻石块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:diamond_boots": {
+      "text": "钻石靴子",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:diamond_chestplate": {
+      "text": "钻石胸甲",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:diamond_helmet": {
+      "text": "钻石头盔",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:diamond_hoe": {
+      "text": "钻石锄",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:diamond_horse_armor": {
+      "text": "钻石马铠",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:diamond_leggings": {
+      "text": "钻石护腿",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:diamond_nautilus_armor": {
+      "text": "钻石鹦鹉螺铠",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:diamond_ore": {
+      "text": "钻石矿石",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:diamond_pickaxe": {
+      "text": "钻石镐",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:diamond_shovel": {
+      "text": "钻石锹",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:diamond_spear": {
+      "text": "钻石矛",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:diamond_sword": {
+      "text": "钻石剑",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:diorite": {
+      "text": "闪长岩",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:diorite_slab": {
+      "text": "闪长岩台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:diorite_stairs": {
+      "text": "闪长岩楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:diorite_wall": {
+      "text": "闪长岩墙",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dirt": {
+      "text": "泥土",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dirt_path": {
+      "text": "土径",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:disc_fragment_5": {
+      "text": "唱片残片",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dispenser": {
+      "text": "发射器",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dolphin_spawn_egg": {
+      "text": "海豚刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:donkey_spawn_egg": {
+      "text": "驴刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dragon_breath": {
+      "text": "龙息",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dragon_egg": {
+      "text": "龙蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dragon_head": {
+      "text": "龙首",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dried_ghast": {
+      "text": "失水恶魂",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dried_kelp": {
+      "text": "干海带",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dried_kelp_block": {
+      "text": "干海带块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dripstone_block": {
+      "text": "滴水石块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dropper": {
+      "text": "投掷器",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:drowned_spawn_egg": {
+      "text": "溺尸刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:dune_armor_trim_smithing_template": {
+      "text": "锻造模板",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:echo_shard": {
+      "text": "回响碎片",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:egg": {
+      "text": "鸡蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:elder_guardian_spawn_egg": {
+      "text": "远古守卫者刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:elytra": {
+      "text": "鞘翅",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:emerald": {
+      "text": "绿宝石",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:emerald_block": {
+      "text": "绿宝石块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:emerald_ore": {
+      "text": "绿宝石矿石",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:enchanted_book": {
+      "text": "附魔书",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:enchanted_golden_apple": {
+      "text": "附魔金苹果",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:enchanting_table": {
+      "text": "附魔台",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:end_crystal": {
+      "text": "末地水晶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:end_portal_frame": {
+      "text": "末地传送门框架",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:end_rod": {
+      "text": "末地烛",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:end_stone": {
+      "text": "末地石",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:end_stone_brick_slab": {
+      "text": "末地石砖台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:end_stone_brick_stairs": {
+      "text": "末地石砖楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:end_stone_brick_wall": {
+      "text": "末地石砖墙",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:end_stone_bricks": {
+      "text": "末地石砖",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:ender_chest": {
+      "text": "末影箱",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:ender_dragon_spawn_egg": {
+      "text": "末影龙刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:ender_eye": {
+      "text": "末影之眼",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:ender_pearl": {
+      "text": "末影珍珠",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:enderman_spawn_egg": {
+      "text": "末影人刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:endermite_spawn_egg": {
+      "text": "末影螨刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:evoker_spawn_egg": {
+      "text": "唤魔者刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:experience_bottle": {
+      "text": "附魔之瓶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:explorer_pottery_sherd": {
+      "text": "探险纹样陶片",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:exposed_chiseled_copper": {
+      "text": "斑驳的雕纹铜块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:exposed_copper": {
+      "text": "斑驳的铜块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:exposed_copper_bars": {
+      "text": "斑驳的铜栏杆",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:exposed_copper_bulb": {
+      "text": "斑驳的铜灯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:exposed_copper_chain": {
+      "text": "斑驳的铜链",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:exposed_copper_chest": {
+      "text": "斑驳的铜箱子",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:exposed_copper_door": {
+      "text": "斑驳的铜门",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:exposed_copper_golem_statue": {
+      "text": "斑驳的铜傀儡像",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:exposed_copper_grate": {
+      "text": "斑驳的铜格栅",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:exposed_copper_lantern": {
+      "text": "斑驳的铜灯笼",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:exposed_copper_trapdoor": {
+      "text": "斑驳的铜活板门",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:exposed_cut_copper": {
+      "text": "斑驳的切制铜块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:exposed_cut_copper_slab": {
+      "text": "斑驳的切制铜台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:exposed_cut_copper_stairs": {
+      "text": "斑驳的切制铜楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:exposed_lightning_rod": {
+      "text": "斑驳的避雷针",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:eye_armor_trim_smithing_template": {
+      "text": "锻造模板",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:farmland": {
+      "text": "耕地",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:feather": {
+      "text": "羽毛",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:fermented_spider_eye": {
+      "text": "发酵蛛眼",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:fern": {
+      "text": "蕨",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:field_masoned_banner_pattern": {
+      "text": "砖纹旗帜图案",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:filled_map": {
+      "text": "地图",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:fire_charge": {
+      "text": "火焰弹",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:fire_coral": {
+      "text": "火珊瑚",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:fire_coral_block": {
+      "text": "火珊瑚块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:fire_coral_fan": {
+      "text": "火珊瑚扇",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:firefly_bush": {
+      "text": "萤火虫灌木丛",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:firework_rocket": {
+      "text": "烟花火箭",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:firework_star": {
+      "text": "烟火之星",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:fishing_rod": {
+      "text": "钓鱼竿",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:fletching_table": {
+      "text": "制箭台",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:flint": {
+      "text": "燧石",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:flint_and_steel": {
+      "text": "打火石",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:flow_armor_trim_smithing_template": {
+      "text": "锻造模板",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:flow_banner_pattern": {
+      "text": "旗帜图案",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:flow_pottery_sherd": {
+      "text": "涡流纹样陶片",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:flower_banner_pattern": {
+      "text": "旗帜图案",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:flower_pot": {
+      "text": "花盆",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:flowering_azalea": {
+      "text": "盛开的杜鹃花丛",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:flowering_azalea_leaves": {
+      "text": "盛开的杜鹃树叶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:fox_spawn_egg": {
+      "text": "狐狸刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:friend_pottery_sherd": {
+      "text": "挚友纹样陶片",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:frog_spawn_egg": {
+      "text": "青蛙刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:frogspawn": {
+      "text": "青蛙卵",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:furnace": {
+      "text": "熔炉",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:furnace_minecart": {
+      "text": "动力矿车",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:ghast_spawn_egg": {
+      "text": "恶魂刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:ghast_tear": {
+      "text": "恶魂之泪",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:gilded_blackstone": {
+      "text": "镶金黑石",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:glass": {
+      "text": "玻璃",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:glass_bottle": {
+      "text": "玻璃瓶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:glass_pane": {
+      "text": "玻璃板",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:glistering_melon_slice": {
+      "text": "闪烁的西瓜片",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:globe_banner_pattern": {
+      "text": "旗帜图案",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:glow_berries": {
+      "text": "发光浆果",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:glow_ink_sac": {
+      "text": "荧光墨囊",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:glow_item_frame": {
+      "text": "荧光物品展示框",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:glow_lichen": {
+      "text": "发光地衣",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:glow_squid_spawn_egg": {
+      "text": "发光鱿鱼刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:glowstone": {
+      "text": "荧石",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:glowstone_dust": {
+      "text": "荧石粉",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:goat_horn": {
+      "text": "山羊角",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:goat_spawn_egg": {
+      "text": "山羊刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:gold_block": {
+      "text": "金块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:gold_ingot": {
+      "text": "金锭",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:gold_nugget": {
+      "text": "金粒",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:gold_ore": {
+      "text": "金矿石",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:golden_apple": {
+      "text": "金苹果",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:golden_axe": {
+      "text": "金斧",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:golden_boots": {
+      "text": "金靴子",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:golden_carrot": {
+      "text": "金胡萝卜",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:golden_chestplate": {
+      "text": "金胸甲",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:golden_dandelion": {
+      "text": "金蒲公英",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:golden_helmet": {
+      "text": "金头盔",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:golden_hoe": {
+      "text": "金锄",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:golden_horse_armor": {
+      "text": "金马铠",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:golden_leggings": {
+      "text": "金护腿",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:golden_nautilus_armor": {
+      "text": "金鹦鹉螺铠",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:golden_pickaxe": {
+      "text": "金镐",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:golden_shovel": {
+      "text": "金锹",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:golden_spear": {
+      "text": "金矛",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:golden_sword": {
+      "text": "金剑",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:granite": {
+      "text": "花岗岩",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:granite_slab": {
+      "text": "花岗岩台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:granite_stairs": {
+      "text": "花岗岩楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:granite_wall": {
+      "text": "花岗岩墙",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:grass_block": {
+      "text": "草方块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:gravel": {
+      "text": "沙砾",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:gray_banner": {
+      "text": "灰色旗帜",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:gray_bed": {
+      "text": "灰色床",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:gray_bundle": {
+      "text": "灰色收纳袋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:gray_candle": {
+      "text": "灰色蜡烛",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:gray_carpet": {
+      "text": "灰色地毯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:gray_concrete": {
+      "text": "灰色混凝土",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:gray_concrete_powder": {
+      "text": "灰色混凝土粉末",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:gray_concrete_slab": {
+      "text": "灰色混凝土台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:gray_concrete_stairs": {
+      "text": "灰色混凝土楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:gray_cushion": {
+      "text": "灰色坐垫",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:gray_dye": {
+      "text": "灰色染料",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:gray_glazed_terracotta": {
+      "text": "灰色带釉陶瓦",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:gray_harness": {
+      "text": "灰色挽具",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:gray_shulker_box": {
+      "text": "灰色潜影盒",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:gray_stained_glass": {
+      "text": "灰色染色玻璃",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:gray_stained_glass_pane": {
+      "text": "灰色染色玻璃板",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:gray_terracotta": {
+      "text": "灰色陶瓦",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:gray_wool": {
+      "text": "灰色羊毛",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:gray_wool_slab": {
+      "text": "灰色羊毛台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:gray_wool_stairs": {
+      "text": "灰色羊毛楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:green_banner": {
+      "text": "绿色旗帜",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:green_bed": {
+      "text": "绿色床",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:green_bundle": {
+      "text": "绿色收纳袋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:green_candle": {
+      "text": "绿色蜡烛",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:green_carpet": {
+      "text": "绿色地毯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:green_concrete": {
+      "text": "绿色混凝土",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:green_concrete_powder": {
+      "text": "绿色混凝土粉末",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:green_concrete_slab": {
+      "text": "绿色混凝土台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:green_concrete_stairs": {
+      "text": "绿色混凝土楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:green_cushion": {
+      "text": "绿色坐垫",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:green_dye": {
+      "text": "绿色染料",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:green_glazed_terracotta": {
+      "text": "绿色带釉陶瓦",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:green_harness": {
+      "text": "绿色挽具",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:green_shulker_box": {
+      "text": "绿色潜影盒",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:green_stained_glass": {
+      "text": "绿色染色玻璃",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:green_stained_glass_pane": {
+      "text": "绿色染色玻璃板",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:green_terracotta": {
+      "text": "绿色陶瓦",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:green_wool": {
+      "text": "绿色羊毛",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:green_wool_slab": {
+      "text": "绿色羊毛台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:green_wool_stairs": {
+      "text": "绿色羊毛楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:grindstone": {
+      "text": "砂轮",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:guardian_spawn_egg": {
+      "text": "守卫者刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:gunpowder": {
+      "text": "火药",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:guster_banner_pattern": {
+      "text": "旗帜图案",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:guster_pottery_sherd": {
+      "text": "旋风纹样陶片",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:hanging_roots": {
+      "text": "垂根",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:happy_ghast_spawn_egg": {
+      "text": "快乐恶魂刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:hay_block": {
+      "text": "干草捆",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:heart_of_the_sea": {
+      "text": "海洋之心",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:heart_pottery_sherd": {
+      "text": "爱心纹样陶片",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:heartbreak_pottery_sherd": {
+      "text": "心碎纹样陶片",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:heavy_core": {
+      "text": "沉重核心",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:heavy_weighted_pressure_plate": {
+      "text": "重质测重压力板",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:hoglin_spawn_egg": {
+      "text": "疣猪兽刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:honey_block": {
+      "text": "蜂蜜块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:honey_bottle": {
+      "text": "蜂蜜瓶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:honeycomb": {
+      "text": "蜜脾",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:honeycomb_block": {
+      "text": "蜜脾块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:hopper": {
+      "text": "漏斗",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:hopper_minecart": {
+      "text": "漏斗矿车",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:horn_coral": {
+      "text": "鹿角珊瑚",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:horn_coral_block": {
+      "text": "鹿角珊瑚块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:horn_coral_fan": {
+      "text": "鹿角珊瑚扇",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:horse_spawn_egg": {
+      "text": "马刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:host_armor_trim_smithing_template": {
+      "text": "锻造模板",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:howl_pottery_sherd": {
+      "text": "狼嚎纹样陶片",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:husk_spawn_egg": {
+      "text": "尸壳刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:ice": {
+      "text": "冰",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:infested_chiseled_stone_bricks": {
+      "text": "虫蚀雕纹石砖",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:infested_cobblestone": {
+      "text": "虫蚀圆石",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:infested_cracked_stone_bricks": {
+      "text": "虫蚀裂纹石砖",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:infested_deepslate": {
+      "text": "虫蚀深板岩",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:infested_mossy_stone_bricks": {
+      "text": "虫蚀苔石砖",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:infested_stone": {
+      "text": "虫蚀石头",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:infested_stone_bricks": {
+      "text": "虫蚀石砖",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:ink_sac": {
+      "text": "墨囊",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:iron_axe": {
+      "text": "铁斧",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:iron_bars": {
+      "text": "铁栏杆",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:iron_block": {
+      "text": "铁块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:iron_boots": {
+      "text": "铁靴子",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:iron_chain": {
+      "text": "铁链",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:iron_chestplate": {
+      "text": "铁胸甲",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:iron_door": {
+      "text": "铁门",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:iron_golem_spawn_egg": {
+      "text": "铁傀儡刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:iron_helmet": {
+      "text": "铁头盔",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:iron_hoe": {
+      "text": "铁锄",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:iron_horse_armor": {
+      "text": "铁马铠",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:iron_ingot": {
+      "text": "铁锭",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:iron_leggings": {
+      "text": "铁护腿",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:iron_nautilus_armor": {
+      "text": "铁鹦鹉螺铠",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:iron_nugget": {
+      "text": "铁粒",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:iron_ore": {
+      "text": "铁矿石",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:iron_pickaxe": {
+      "text": "铁镐",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:iron_shovel": {
+      "text": "铁锹",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:iron_spear": {
+      "text": "铁矛",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:iron_sword": {
+      "text": "铁剑",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:iron_trapdoor": {
+      "text": "铁活板门",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:item_frame": {
+      "text": "物品展示框",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:jack_o_lantern": {
+      "text": "南瓜灯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:jigsaw": {
+      "text": "拼图方块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:jukebox": {
+      "text": "唱片机",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:jungle_boat": {
+      "text": "丛林木船",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:jungle_button": {
+      "text": "丛林木按钮",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:jungle_chest_boat": {
+      "text": "丛林木运输船",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:jungle_door": {
+      "text": "丛林木门",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:jungle_fence": {
+      "text": "丛林木栅栏",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:jungle_fence_gate": {
+      "text": "丛林木栅栏门",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:jungle_hanging_sign": {
+      "text": "悬挂式丛林木告示牌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:jungle_leaves": {
+      "text": "丛林树叶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:jungle_log": {
+      "text": "丛林原木",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:jungle_planks": {
+      "text": "丛林木板",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:jungle_pressure_plate": {
+      "text": "丛林木压力板",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:jungle_pyramid_map": {
+      "text": "丛林神庙地图",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:jungle_sapling": {
+      "text": "丛林树苗",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:jungle_shelf": {
+      "text": "丛林木展示架",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:jungle_sign": {
+      "text": "丛林木告示牌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:jungle_slab": {
+      "text": "丛林木台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:jungle_stairs": {
+      "text": "丛林木楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:jungle_trapdoor": {
+      "text": "丛林木活板门",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:jungle_wood": {
+      "text": "丛林木",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:kelp": {
+      "text": "海带",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:knowledge_book": {
+      "text": "知识之书",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:ladder": {
+      "text": "梯子",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:lantern": {
+      "text": "灯笼",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:lapis_block": {
+      "text": "青金石块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:lapis_lazuli": {
+      "text": "青金石",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:lapis_ore": {
+      "text": "青金石矿石",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:large_amethyst_bud": {
+      "text": "大型紫晶芽",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:large_fern": {
+      "text": "大型蕨",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:lava_bucket": {
+      "text": "熔岩桶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:lead": {
+      "text": "拴绳",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:leaf_litter": {
+      "text": "枯叶堆",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:leather": {
+      "text": "皮革",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:leather_boots": {
+      "text": "皮革靴子",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:leather_chestplate": {
+      "text": "皮革外套",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:leather_helmet": {
+      "text": "皮革帽子",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:leather_horse_armor": {
+      "text": "皮革马铠",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:leather_leggings": {
+      "text": "皮革裤子",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:lectern": {
+      "text": "讲台",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:lever": {
+      "text": "拉杆",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light": {
+      "text": "光源方块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_blue_banner": {
+      "text": "淡蓝色旗帜",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_blue_bed": {
+      "text": "淡蓝色床",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_blue_bundle": {
+      "text": "淡蓝色收纳袋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_blue_candle": {
+      "text": "淡蓝色蜡烛",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_blue_carpet": {
+      "text": "淡蓝色地毯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_blue_concrete": {
+      "text": "淡蓝色混凝土",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_blue_concrete_powder": {
+      "text": "淡蓝色混凝土粉末",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_blue_concrete_slab": {
+      "text": "淡蓝色混凝土台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_blue_concrete_stairs": {
+      "text": "淡蓝色混凝土楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_blue_cushion": {
+      "text": "淡蓝色坐垫",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_blue_dye": {
+      "text": "淡蓝色染料",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_blue_glazed_terracotta": {
+      "text": "淡蓝色带釉陶瓦",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_blue_harness": {
+      "text": "淡蓝色挽具",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_blue_shulker_box": {
+      "text": "淡蓝色潜影盒",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_blue_stained_glass": {
+      "text": "淡蓝色染色玻璃",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_blue_stained_glass_pane": {
+      "text": "淡蓝色染色玻璃板",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_blue_terracotta": {
+      "text": "淡蓝色陶瓦",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_blue_wool": {
+      "text": "淡蓝色羊毛",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_blue_wool_slab": {
+      "text": "淡蓝色羊毛台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_blue_wool_stairs": {
+      "text": "淡蓝色羊毛楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_gray_banner": {
+      "text": "淡灰色旗帜",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_gray_bed": {
+      "text": "淡灰色床",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_gray_bundle": {
+      "text": "淡灰色收纳袋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_gray_candle": {
+      "text": "淡灰色蜡烛",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_gray_carpet": {
+      "text": "淡灰色地毯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_gray_concrete": {
+      "text": "淡灰色混凝土",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_gray_concrete_powder": {
+      "text": "淡灰色混凝土粉末",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_gray_concrete_slab": {
+      "text": "淡灰色混凝土台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_gray_concrete_stairs": {
+      "text": "淡灰色混凝土楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_gray_cushion": {
+      "text": "淡灰色坐垫",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_gray_dye": {
+      "text": "淡灰色染料",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_gray_glazed_terracotta": {
+      "text": "淡灰色带釉陶瓦",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_gray_harness": {
+      "text": "淡灰色挽具",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_gray_shulker_box": {
+      "text": "淡灰色潜影盒",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_gray_stained_glass": {
+      "text": "淡灰色染色玻璃",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_gray_stained_glass_pane": {
+      "text": "淡灰色染色玻璃板",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_gray_terracotta": {
+      "text": "淡灰色陶瓦",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_gray_wool": {
+      "text": "淡灰色羊毛",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_gray_wool_slab": {
+      "text": "淡灰色羊毛台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_gray_wool_stairs": {
+      "text": "淡灰色羊毛楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:light_weighted_pressure_plate": {
+      "text": "轻质测重压力板",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:lightning_rod": {
+      "text": "避雷针",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:lilac": {
+      "text": "丁香",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:lily_of_the_valley": {
+      "text": "铃兰",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:lily_pad": {
+      "text": "睡莲",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:lime_banner": {
+      "text": "黄绿色旗帜",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:lime_bed": {
+      "text": "黄绿色床",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:lime_bundle": {
+      "text": "黄绿色收纳袋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:lime_candle": {
+      "text": "黄绿色蜡烛",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:lime_carpet": {
+      "text": "黄绿色地毯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:lime_concrete": {
+      "text": "黄绿色混凝土",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:lime_concrete_powder": {
+      "text": "黄绿色混凝土粉末",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:lime_concrete_slab": {
+      "text": "黄绿色混凝土台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:lime_concrete_stairs": {
+      "text": "黄绿色混凝土楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:lime_cushion": {
+      "text": "黄绿色坐垫",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:lime_dye": {
+      "text": "黄绿色染料",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:lime_glazed_terracotta": {
+      "text": "黄绿色带釉陶瓦",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:lime_harness": {
+      "text": "黄绿色挽具",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:lime_shulker_box": {
+      "text": "黄绿色潜影盒",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:lime_stained_glass": {
+      "text": "黄绿色染色玻璃",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:lime_stained_glass_pane": {
+      "text": "黄绿色染色玻璃板",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:lime_terracotta": {
+      "text": "黄绿色陶瓦",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:lime_wool": {
+      "text": "黄绿色羊毛",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:lime_wool_slab": {
+      "text": "黄绿色羊毛台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:lime_wool_stairs": {
+      "text": "黄绿色羊毛楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:lingering_potion": {
+      "text": "滞留药水",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:llama_spawn_egg": {
+      "text": "羊驼刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:lodestone": {
+      "text": "磁石",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:loom": {
+      "text": "织布机",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mace": {
+      "text": "重锤",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:magenta_banner": {
+      "text": "品红色旗帜",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:magenta_bed": {
+      "text": "品红色床",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:magenta_bundle": {
+      "text": "品红色收纳袋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:magenta_candle": {
+      "text": "品红色蜡烛",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:magenta_carpet": {
+      "text": "品红色地毯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:magenta_concrete": {
+      "text": "品红色混凝土",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:magenta_concrete_powder": {
+      "text": "品红色混凝土粉末",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:magenta_concrete_slab": {
+      "text": "品红色混凝土台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:magenta_concrete_stairs": {
+      "text": "品红色混凝土楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:magenta_cushion": {
+      "text": "品红色坐垫",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:magenta_dye": {
+      "text": "品红色染料",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:magenta_glazed_terracotta": {
+      "text": "品红色带釉陶瓦",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:magenta_harness": {
+      "text": "品红色挽具",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:magenta_shulker_box": {
+      "text": "品红色潜影盒",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:magenta_stained_glass": {
+      "text": "品红色染色玻璃",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:magenta_stained_glass_pane": {
+      "text": "品红色染色玻璃板",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:magenta_terracotta": {
+      "text": "品红色陶瓦",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:magenta_wool": {
+      "text": "品红色羊毛",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:magenta_wool_slab": {
+      "text": "品红色羊毛台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:magenta_wool_stairs": {
+      "text": "品红色羊毛楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:magma_block": {
+      "text": "岩浆块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:magma_cream": {
+      "text": "岩浆膏",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:magma_cube_spawn_egg": {
+      "text": "岩浆怪刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mangrove_boat": {
+      "text": "红树木船",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mangrove_button": {
+      "text": "红树木按钮",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mangrove_chest_boat": {
+      "text": "红树木运输船",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mangrove_door": {
+      "text": "红树木门",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mangrove_fence": {
+      "text": "红树木栅栏",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mangrove_fence_gate": {
+      "text": "红树木栅栏门",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mangrove_hanging_sign": {
+      "text": "悬挂式红树木告示牌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mangrove_leaves": {
+      "text": "红树树叶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mangrove_log": {
+      "text": "红树原木",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mangrove_planks": {
+      "text": "红树木板",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mangrove_pressure_plate": {
+      "text": "红树木压力板",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mangrove_propagule": {
+      "text": "红树胎生苗",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mangrove_roots": {
+      "text": "红树根",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mangrove_shelf": {
+      "text": "红树木展示架",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mangrove_sign": {
+      "text": "红树木告示牌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mangrove_slab": {
+      "text": "红树木台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mangrove_stairs": {
+      "text": "红树木楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mangrove_trapdoor": {
+      "text": "红树木活板门",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mangrove_wood": {
+      "text": "红树木",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:map": {
+      "text": "空地图",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:medium_amethyst_bud": {
+      "text": "中型紫晶芽",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:melon": {
+      "text": "西瓜",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:melon_seeds": {
+      "text": "西瓜种子",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:melon_slice": {
+      "text": "西瓜片",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:milk_bucket": {
+      "text": "奶桶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:minecart": {
+      "text": "矿车",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:miner_pottery_sherd": {
+      "text": "采矿纹样陶片",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mojang_banner_pattern": {
+      "text": "旗帜图案",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mooshroom_spawn_egg": {
+      "text": "哞菇刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:moss_block": {
+      "text": "苔藓块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:moss_carpet": {
+      "text": "覆地苔藓",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mossy_cobblestone": {
+      "text": "苔石",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mossy_cobblestone_slab": {
+      "text": "苔石台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mossy_cobblestone_stairs": {
+      "text": "苔石楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mossy_cobblestone_wall": {
+      "text": "苔石墙",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mossy_stone_brick_slab": {
+      "text": "苔石砖台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mossy_stone_brick_stairs": {
+      "text": "苔石砖楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mossy_stone_brick_wall": {
+      "text": "苔石砖墙",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mossy_stone_bricks": {
+      "text": "苔石砖",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mourner_pottery_sherd": {
+      "text": "悲恸纹样陶片",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mud": {
+      "text": "泥巴",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mud_brick_slab": {
+      "text": "泥砖台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mud_brick_stairs": {
+      "text": "泥砖楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mud_brick_wall": {
+      "text": "泥砖墙",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mud_bricks": {
+      "text": "泥砖",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:muddy_mangrove_roots": {
+      "text": "沾泥的红树根",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mule_spawn_egg": {
+      "text": "骡刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mushroom_stem": {
+      "text": "蘑菇柄",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mushroom_stew": {
+      "text": "蘑菇煲",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:music_disc_11": {
+      "text": "音乐唱片",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:music_disc_13": {
+      "text": "音乐唱片",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:music_disc_5": {
+      "text": "音乐唱片",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:music_disc_blocks": {
+      "text": "音乐唱片",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:music_disc_bounce": {
+      "text": "音乐唱片",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:music_disc_cat": {
+      "text": "音乐唱片",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:music_disc_chirp": {
+      "text": "音乐唱片",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:music_disc_creator": {
+      "text": "音乐唱片",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:music_disc_creator_music_box": {
+      "text": "音乐唱片",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:music_disc_far": {
+      "text": "音乐唱片",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:music_disc_lava_chicken": {
+      "text": "音乐唱片",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:music_disc_mall": {
+      "text": "音乐唱片",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:music_disc_mellohi": {
+      "text": "音乐唱片",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:music_disc_otherside": {
+      "text": "音乐唱片",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:music_disc_pigstep": {
+      "text": "音乐唱片",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:music_disc_precipice": {
+      "text": "音乐唱片",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:music_disc_relic": {
+      "text": "音乐唱片",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:music_disc_stal": {
+      "text": "音乐唱片",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:music_disc_strad": {
+      "text": "音乐唱片",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:music_disc_tears": {
+      "text": "音乐唱片",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:music_disc_wait": {
+      "text": "音乐唱片",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:music_disc_ward": {
+      "text": "音乐唱片",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mutton": {
+      "text": "生羊肉",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:mycelium": {
+      "text": "菌丝体",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:name_tag": {
+      "text": "命名牌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:nautilus_shell": {
+      "text": "鹦鹉螺壳",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:nautilus_spawn_egg": {
+      "text": "鹦鹉螺刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:nether_brick": {
+      "text": "下界砖",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:nether_brick_fence": {
+      "text": "下界砖栅栏",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:nether_brick_slab": {
+      "text": "下界砖台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:nether_brick_stairs": {
+      "text": "下界砖楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:nether_brick_wall": {
+      "text": "下界砖墙",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:nether_bricks": {
+      "text": "下界砖块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:nether_gold_ore": {
+      "text": "下界金矿石",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:nether_quartz_ore": {
+      "text": "下界石英矿石",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:nether_sprouts": {
+      "text": "下界苗",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:nether_star": {
+      "text": "下界之星",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:nether_wart": {
+      "text": "下界疣",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:nether_wart_block": {
+      "text": "下界疣块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:netherite_axe": {
+      "text": "下界合金斧",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:netherite_block": {
+      "text": "下界合金块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:netherite_boots": {
+      "text": "下界合金靴子",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:netherite_chestplate": {
+      "text": "下界合金胸甲",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:netherite_helmet": {
+      "text": "下界合金头盔",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:netherite_hoe": {
+      "text": "下界合金锄",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:netherite_horse_armor": {
+      "text": "下界合金马铠",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:netherite_ingot": {
+      "text": "下界合金锭",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:netherite_leggings": {
+      "text": "下界合金护腿",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:netherite_nautilus_armor": {
+      "text": "下界合金鹦鹉螺铠",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:netherite_pickaxe": {
+      "text": "下界合金镐",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:netherite_scrap": {
+      "text": "下界合金碎片",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:netherite_shovel": {
+      "text": "下界合金锹",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:netherite_spear": {
+      "text": "下界合金矛",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:netherite_sword": {
+      "text": "下界合金剑",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:netherite_upgrade_smithing_template": {
+      "text": "锻造模板",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:netherrack": {
+      "text": "下界岩",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:note_block": {
+      "text": "音符盒",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:oak_boat": {
+      "text": "橡木船",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:oak_button": {
+      "text": "橡木按钮",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:oak_chest_boat": {
+      "text": "橡木运输船",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:oak_door": {
+      "text": "橡木门",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:oak_fence": {
+      "text": "橡木栅栏",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:oak_fence_gate": {
+      "text": "橡木栅栏门",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:oak_hanging_sign": {
+      "text": "悬挂式橡木告示牌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:oak_leaves": {
+      "text": "橡树树叶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:oak_log": {
+      "text": "橡木原木",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:oak_planks": {
+      "text": "橡木木板",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:oak_pressure_plate": {
+      "text": "橡木压力板",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:oak_sapling": {
+      "text": "橡树树苗",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:oak_shelf": {
+      "text": "橡木展示架",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:oak_sign": {
+      "text": "橡木告示牌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:oak_slab": {
+      "text": "橡木台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:oak_stairs": {
+      "text": "橡木楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:oak_trapdoor": {
+      "text": "橡木活板门",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:oak_wood": {
+      "text": "橡木",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:observer": {
+      "text": "侦测器",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:obsidian": {
+      "text": "黑曜石",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:ocean_monument_map": {
+      "text": "海底神殿地图",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:ocelot_spawn_egg": {
+      "text": "豹猫刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:ochre_froglight": {
+      "text": "赭黄蛙明灯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:ominous_bottle": {
+      "text": "不祥之瓶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:ominous_trial_key": {
+      "text": "不祥试炼钥匙",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:open_eyeblossom": {
+      "text": "张开的眼眸花",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:orange_banner": {
+      "text": "橙色旗帜",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:orange_bed": {
+      "text": "橙色床",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:orange_bundle": {
+      "text": "橙色收纳袋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:orange_candle": {
+      "text": "橙色蜡烛",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:orange_carpet": {
+      "text": "橙色地毯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:orange_concrete": {
+      "text": "橙色混凝土",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:orange_concrete_powder": {
+      "text": "橙色混凝土粉末",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:orange_concrete_slab": {
+      "text": "橙色混凝土台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:orange_concrete_stairs": {
+      "text": "橙色混凝土楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:orange_cushion": {
+      "text": "橙色坐垫",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:orange_dye": {
+      "text": "橙色染料",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:orange_glazed_terracotta": {
+      "text": "橙色带釉陶瓦",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:orange_harness": {
+      "text": "橙色挽具",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:orange_poplar_leaves": {
+      "text": "橙色杨树树叶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:orange_shulker_box": {
+      "text": "橙色潜影盒",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:orange_stained_glass": {
+      "text": "橙色染色玻璃",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:orange_stained_glass_pane": {
+      "text": "橙色染色玻璃板",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:orange_terracotta": {
+      "text": "橙色陶瓦",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:orange_tulip": {
+      "text": "橙色郁金香",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:orange_wool": {
+      "text": "橙色羊毛",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:orange_wool_slab": {
+      "text": "橙色羊毛台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:orange_wool_stairs": {
+      "text": "橙色羊毛楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:oxeye_daisy": {
+      "text": "滨菊",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:oxidized_chiseled_copper": {
+      "text": "氧化的雕纹铜块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:oxidized_copper": {
+      "text": "氧化的铜块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:oxidized_copper_bars": {
+      "text": "氧化的铜栏杆",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:oxidized_copper_bulb": {
+      "text": "氧化的铜灯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:oxidized_copper_chain": {
+      "text": "氧化的铜链",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:oxidized_copper_chest": {
+      "text": "氧化的铜箱子",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:oxidized_copper_door": {
+      "text": "氧化的铜门",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:oxidized_copper_golem_statue": {
+      "text": "氧化的铜傀儡像",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:oxidized_copper_grate": {
+      "text": "氧化的铜格栅",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:oxidized_copper_lantern": {
+      "text": "氧化的铜灯笼",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:oxidized_copper_trapdoor": {
+      "text": "氧化的铜活板门",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:oxidized_cut_copper": {
+      "text": "氧化的切制铜块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:oxidized_cut_copper_slab": {
+      "text": "氧化的切制铜台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:oxidized_cut_copper_stairs": {
+      "text": "氧化的切制铜楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:oxidized_lightning_rod": {
+      "text": "氧化的避雷针",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:packed_ice": {
+      "text": "浮冰",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:packed_mud": {
+      "text": "泥坯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:painting": {
+      "text": "画",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pale_hanging_moss": {
+      "text": "苍白垂须",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pale_moss_block": {
+      "text": "苍白苔藓块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pale_moss_carpet": {
+      "text": "苍白覆地苔藓",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pale_oak_boat": {
+      "text": "苍白橡木船",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pale_oak_button": {
+      "text": "苍白橡木按钮",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pale_oak_chest_boat": {
+      "text": "苍白橡木运输船",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pale_oak_door": {
+      "text": "苍白橡木门",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pale_oak_fence": {
+      "text": "苍白橡木栅栏",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pale_oak_fence_gate": {
+      "text": "苍白橡木栅栏门",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pale_oak_hanging_sign": {
+      "text": "悬挂式苍白橡木告示牌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pale_oak_leaves": {
+      "text": "苍白橡树树叶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pale_oak_log": {
+      "text": "苍白橡木原木",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pale_oak_planks": {
+      "text": "苍白橡木木板",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pale_oak_pressure_plate": {
+      "text": "苍白橡木压力板",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pale_oak_sapling": {
+      "text": "苍白橡树树苗",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pale_oak_shelf": {
+      "text": "苍白橡木展示架",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pale_oak_sign": {
+      "text": "苍白橡木告示牌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pale_oak_slab": {
+      "text": "苍白橡木台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pale_oak_stairs": {
+      "text": "苍白橡木楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pale_oak_trapdoor": {
+      "text": "苍白橡木活板门",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pale_oak_wood": {
+      "text": "苍白橡木",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:panda_spawn_egg": {
+      "text": "熊猫刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:paper": {
+      "text": "纸",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:parched_spawn_egg": {
+      "text": "焦骸刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:parrot_spawn_egg": {
+      "text": "鹦鹉刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pearlescent_froglight": {
+      "text": "珠光蛙明灯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:peony": {
+      "text": "牡丹",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:petrified_oak_slab": {
+      "text": "石化橡木台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:phantom_membrane": {
+      "text": "幻翼膜",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:phantom_spawn_egg": {
+      "text": "幻翼刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pig_spawn_egg": {
+      "text": "猪刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:piglin_banner_pattern": {
+      "text": "旗帜图案",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:piglin_brute_spawn_egg": {
+      "text": "猪灵蛮兵刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:piglin_head": {
+      "text": "猪灵的头",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:piglin_spawn_egg": {
+      "text": "猪灵刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pillager_spawn_egg": {
+      "text": "掠夺者刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pink_banner": {
+      "text": "粉红色旗帜",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pink_bed": {
+      "text": "粉红色床",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pink_bundle": {
+      "text": "粉红色收纳袋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pink_candle": {
+      "text": "粉红色蜡烛",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pink_carpet": {
+      "text": "粉红色地毯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pink_concrete": {
+      "text": "粉红色混凝土",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pink_concrete_powder": {
+      "text": "粉红色混凝土粉末",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pink_concrete_slab": {
+      "text": "粉红色混凝土台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pink_concrete_stairs": {
+      "text": "粉红色混凝土楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pink_cushion": {
+      "text": "粉红色坐垫",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pink_dye": {
+      "text": "粉红色染料",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pink_glazed_terracotta": {
+      "text": "粉红色带釉陶瓦",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pink_harness": {
+      "text": "粉红色挽具",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pink_petals": {
+      "text": "粉红色花簇",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pink_shulker_box": {
+      "text": "粉红色潜影盒",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pink_stained_glass": {
+      "text": "粉红色染色玻璃",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pink_stained_glass_pane": {
+      "text": "粉红色染色玻璃板",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pink_terracotta": {
+      "text": "粉红色陶瓦",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pink_tulip": {
+      "text": "粉红色郁金香",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pink_wool": {
+      "text": "粉红色羊毛",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pink_wool_slab": {
+      "text": "粉红色羊毛台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pink_wool_stairs": {
+      "text": "粉红色羊毛楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:piston": {
+      "text": "活塞",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pitcher_plant": {
+      "text": "瓶子草",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pitcher_pod": {
+      "text": "瓶子草荚果",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:plains_village_map": {
+      "text": "平原村庄地图",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:player_head": {
+      "text": "玩家的头",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:plenty_pottery_sherd": {
+      "text": "富饶纹样陶片",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:podzol": {
+      "text": "灰化土",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pointed_dripstone": {
+      "text": "滴水石锥",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:poisonous_potato": {
+      "text": "毒马铃薯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polar_bear_spawn_egg": {
+      "text": "北极熊刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_andesite": {
+      "text": "磨制安山岩",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_andesite_slab": {
+      "text": "磨制安山岩台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_andesite_stairs": {
+      "text": "磨制安山岩楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_basalt": {
+      "text": "磨制玄武岩",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_blackstone": {
+      "text": "磨制黑石",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_blackstone_brick_slab": {
+      "text": "磨制黑石砖台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_blackstone_brick_stairs": {
+      "text": "磨制黑石砖楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_blackstone_brick_wall": {
+      "text": "磨制黑石砖墙",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_blackstone_bricks": {
+      "text": "磨制黑石砖",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_blackstone_button": {
+      "text": "磨制黑石按钮",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_blackstone_pressure_plate": {
+      "text": "磨制黑石压力板",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_blackstone_slab": {
+      "text": "磨制黑石台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_blackstone_stairs": {
+      "text": "磨制黑石楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_blackstone_wall": {
+      "text": "磨制黑石墙",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_cinnabar": {
+      "text": "磨制朱砂",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_cinnabar_slab": {
+      "text": "磨制朱砂台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_cinnabar_stairs": {
+      "text": "磨制朱砂楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_cinnabar_wall": {
+      "text": "磨制朱砂墙",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_deepslate": {
+      "text": "磨制深板岩",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_deepslate_slab": {
+      "text": "磨制深板岩台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_deepslate_stairs": {
+      "text": "磨制深板岩楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_deepslate_wall": {
+      "text": "磨制深板岩墙",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_diorite": {
+      "text": "磨制闪长岩",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_diorite_slab": {
+      "text": "磨制闪长岩台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_diorite_stairs": {
+      "text": "磨制闪长岩楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_granite": {
+      "text": "磨制花岗岩",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_granite_slab": {
+      "text": "磨制花岗岩台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_granite_stairs": {
+      "text": "磨制花岗岩楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_sulfur": {
+      "text": "磨制硫黄",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_sulfur_slab": {
+      "text": "磨制硫黄台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_sulfur_stairs": {
+      "text": "磨制硫黄楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_sulfur_wall": {
+      "text": "磨制硫黄墙",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_tuff": {
+      "text": "磨制凝灰岩",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_tuff_slab": {
+      "text": "磨制凝灰岩台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_tuff_stairs": {
+      "text": "磨制凝灰岩楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:polished_tuff_wall": {
+      "text": "磨制凝灰岩墙",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:poplar_boat": {
+      "text": "杨木船",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:poplar_button": {
+      "text": "杨木按钮",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:poplar_chest_boat": {
+      "text": "杨木运输船",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:poplar_door": {
+      "text": "杨木门",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:poplar_fence": {
+      "text": "杨木栅栏",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:poplar_fence_gate": {
+      "text": "杨木栅栏门",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:poplar_hanging_sign": {
+      "text": "悬挂式杨木告示牌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:poplar_log": {
+      "text": "杨木原木",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:poplar_planks": {
+      "text": "杨木木板",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:poplar_pressure_plate": {
+      "text": "杨木压力板",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:poplar_sapling": {
+      "text": "杨树树苗",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:poplar_shelf": {
+      "text": "杨木展示架",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:poplar_sign": {
+      "text": "杨木告示牌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:poplar_slab": {
+      "text": "杨木台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:poplar_stairs": {
+      "text": "杨木楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:poplar_trapdoor": {
+      "text": "杨木活板门",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:poplar_wood": {
+      "text": "杨木",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:popped_chorus_fruit": {
+      "text": "爆裂紫颂果",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:poppy": {
+      "text": "虞美人",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:porkchop": {
+      "text": "生猪排",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:potato": {
+      "text": "马铃薯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:potent_sulfur": {
+      "text": "烈性硫黄",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:potion": {
+      "text": "药水",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:powder_snow_bucket": {
+      "text": "细雪桶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:powered_rail": {
+      "text": "动力铁轨",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:prismarine": {
+      "text": "海晶石",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:prismarine_brick_slab": {
+      "text": "海晶石砖台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:prismarine_brick_stairs": {
+      "text": "海晶石砖楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:prismarine_bricks": {
+      "text": "海晶石砖",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:prismarine_crystals": {
+      "text": "海晶砂粒",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:prismarine_shard": {
+      "text": "海晶碎片",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:prismarine_slab": {
+      "text": "海晶石台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:prismarine_stairs": {
+      "text": "海晶石楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:prismarine_wall": {
+      "text": "海晶石墙",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:prize_pottery_sherd": {
+      "text": "珍宝纹样陶片",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pufferfish": {
+      "text": "河豚",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pufferfish_bucket": {
+      "text": "河豚桶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pufferfish_spawn_egg": {
+      "text": "河豚刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pumpkin": {
+      "text": "南瓜",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pumpkin_pie": {
+      "text": "南瓜派",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:pumpkin_seeds": {
+      "text": "南瓜种子",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:purple_banner": {
+      "text": "紫色旗帜",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:purple_bed": {
+      "text": "紫色床",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:purple_bundle": {
+      "text": "紫色收纳袋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:purple_candle": {
+      "text": "紫色蜡烛",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:purple_carpet": {
+      "text": "紫色地毯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:purple_concrete": {
+      "text": "紫色混凝土",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:purple_concrete_powder": {
+      "text": "紫色混凝土粉末",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:purple_concrete_slab": {
+      "text": "紫色混凝土台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:purple_concrete_stairs": {
+      "text": "紫色混凝土楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:purple_cushion": {
+      "text": "紫色坐垫",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:purple_dye": {
+      "text": "紫色染料",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:purple_glazed_terracotta": {
+      "text": "紫色带釉陶瓦",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:purple_harness": {
+      "text": "紫色挽具",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:purple_shulker_box": {
+      "text": "紫色潜影盒",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:purple_stained_glass": {
+      "text": "紫色染色玻璃",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:purple_stained_glass_pane": {
+      "text": "紫色染色玻璃板",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:purple_terracotta": {
+      "text": "紫色陶瓦",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:purple_wool": {
+      "text": "紫色羊毛",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:purple_wool_slab": {
+      "text": "紫色羊毛台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:purple_wool_stairs": {
+      "text": "紫色羊毛楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:purpur_block": {
+      "text": "紫珀块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:purpur_pillar": {
+      "text": "紫珀柱",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:purpur_slab": {
+      "text": "紫珀台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:purpur_stairs": {
+      "text": "紫珀楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:quartz": {
+      "text": "下界石英",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:quartz_block": {
+      "text": "石英块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:quartz_bricks": {
+      "text": "石英砖",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:quartz_pillar": {
+      "text": "石英柱",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:quartz_slab": {
+      "text": "石英台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:quartz_stairs": {
+      "text": "石英楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:rabbit": {
+      "text": "生兔肉",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:rabbit_foot": {
+      "text": "兔子脚",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:rabbit_hide": {
+      "text": "兔子皮",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:rabbit_spawn_egg": {
+      "text": "兔子刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:rabbit_stew": {
+      "text": "兔肉煲",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:rail": {
+      "text": "铁轨",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:raiser_armor_trim_smithing_template": {
+      "text": "锻造模板",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:ravager_spawn_egg": {
+      "text": "劫掠兽刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:raw_copper": {
+      "text": "粗铜",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:raw_copper_block": {
+      "text": "粗铜块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:raw_gold": {
+      "text": "粗金",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:raw_gold_block": {
+      "text": "粗金块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:raw_iron": {
+      "text": "粗铁",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:raw_iron_block": {
+      "text": "粗铁块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:recovery_compass": {
+      "text": "追溯指针",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:red_banner": {
+      "text": "红色旗帜",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:red_bed": {
+      "text": "红色床",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:red_bundle": {
+      "text": "红色收纳袋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:red_candle": {
+      "text": "红色蜡烛",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:red_carpet": {
+      "text": "红色地毯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:red_concrete": {
+      "text": "红色混凝土",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:red_concrete_powder": {
+      "text": "红色混凝土粉末",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:red_concrete_slab": {
+      "text": "红色混凝土台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:red_concrete_stairs": {
+      "text": "红色混凝土楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:red_cushion": {
+      "text": "红色坐垫",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:red_dye": {
+      "text": "红色染料",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:red_glazed_terracotta": {
+      "text": "红色带釉陶瓦",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:red_harness": {
+      "text": "红色挽具",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:red_mushroom": {
+      "text": "红色蘑菇",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:red_mushroom_block": {
+      "text": "红色蘑菇方块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:red_nether_brick_slab": {
+      "text": "红色下界砖台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:red_nether_brick_stairs": {
+      "text": "红色下界砖楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:red_nether_brick_wall": {
+      "text": "红色下界砖墙",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:red_nether_bricks": {
+      "text": "红色下界砖块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:red_poplar_leaves": {
+      "text": "红色杨树树叶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:red_sand": {
+      "text": "红沙",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:red_sandstone": {
+      "text": "红砂岩",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:red_sandstone_slab": {
+      "text": "红砂岩台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:red_sandstone_stairs": {
+      "text": "红砂岩楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:red_sandstone_wall": {
+      "text": "红砂岩墙",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:red_shrub": {
+      "text": "红灌木",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:red_shulker_box": {
+      "text": "红色潜影盒",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:red_stained_glass": {
+      "text": "红色染色玻璃",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:red_stained_glass_pane": {
+      "text": "红色染色玻璃板",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:red_terracotta": {
+      "text": "红色陶瓦",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:red_tulip": {
+      "text": "红色郁金香",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:red_wool": {
+      "text": "红色羊毛",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:red_wool_slab": {
+      "text": "红色羊毛台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:red_wool_stairs": {
+      "text": "红色羊毛楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:redstone": {
+      "text": "红石粉",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:redstone_block": {
+      "text": "红石块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:redstone_lamp": {
+      "text": "红石灯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:redstone_ore": {
+      "text": "红石矿石",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:redstone_torch": {
+      "text": "红石火把",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:reinforced_deepslate": {
+      "text": "强化深板岩",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:repeater": {
+      "text": "红石中继器",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:repeating_command_block": {
+      "text": "循环型命令方块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:resin_block": {
+      "text": "树脂块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:resin_brick": {
+      "text": "树脂砖",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:resin_brick_slab": {
+      "text": "树脂砖台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:resin_brick_stairs": {
+      "text": "树脂砖楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:resin_brick_wall": {
+      "text": "树脂砖墙",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:resin_bricks": {
+      "text": "树脂砖块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:resin_clump": {
+      "text": "树脂团",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:respawn_anchor": {
+      "text": "重生锚",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:rib_armor_trim_smithing_template": {
+      "text": "锻造模板",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:rooted_dirt": {
+      "text": "缠根泥土",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:rose_bush": {
+      "text": "玫瑰丛",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:rotten_flesh": {
+      "text": "腐肉",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:saddle": {
+      "text": "鞍",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:salmon": {
+      "text": "生鲑鱼",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:salmon_bucket": {
+      "text": "鲑鱼桶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:salmon_spawn_egg": {
+      "text": "鲑鱼刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:sand": {
+      "text": "沙子",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:sandstone": {
+      "text": "砂岩",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:sandstone_slab": {
+      "text": "砂岩台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:sandstone_stairs": {
+      "text": "砂岩楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:sandstone_wall": {
+      "text": "砂岩墙",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:savanna_village_map": {
+      "text": "热带草原村庄地图",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:scaffolding": {
+      "text": "脚手架",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:scrape_pottery_sherd": {
+      "text": "刮削纹样陶片",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:sculk": {
+      "text": "幽匿块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:sculk_catalyst": {
+      "text": "幽匿催发体",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:sculk_sensor": {
+      "text": "幽匿感测体",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:sculk_shrieker": {
+      "text": "幽匿尖啸体",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:sculk_vein": {
+      "text": "幽匿脉络",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:sea_lantern": {
+      "text": "海晶灯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:sea_pickle": {
+      "text": "海泡菜",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:seagrass": {
+      "text": "海草",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:sentry_armor_trim_smithing_template": {
+      "text": "锻造模板",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:shaper_armor_trim_smithing_template": {
+      "text": "锻造模板",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:sheaf_pottery_sherd": {
+      "text": "麦捆纹样陶片",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:shears": {
+      "text": "剪刀",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:sheep_spawn_egg": {
+      "text": "绵羊刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:shelf_mushroom": {
+      "text": "层孔菇",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:shelter_pottery_sherd": {
+      "text": "树荫纹样陶片",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:shield": {
+      "text": "盾牌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:short_dry_grass": {
+      "text": "矮枯草丛",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:short_grass": {
+      "text": "矮草丛",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:shroomlight": {
+      "text": "菌光体",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:shulker_box": {
+      "text": "潜影盒",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:shulker_shell": {
+      "text": "潜影壳",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:shulker_spawn_egg": {
+      "text": "潜影贝刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:silence_armor_trim_smithing_template": {
+      "text": "锻造模板",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:silverfish_spawn_egg": {
+      "text": "蠹虫刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:skeleton_horse_spawn_egg": {
+      "text": "骷髅马刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:skeleton_skull": {
+      "text": "骷髅头颅",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:skeleton_spawn_egg": {
+      "text": "骷髅刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:skull_banner_pattern": {
+      "text": "旗帜图案",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:skull_pottery_sherd": {
+      "text": "头颅纹样陶片",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:slime_ball": {
+      "text": "黏液球",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:slime_block": {
+      "text": "黏液块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:slime_spawn_egg": {
+      "text": "史莱姆刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:small_amethyst_bud": {
+      "text": "小型紫晶芽",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:small_dripleaf": {
+      "text": "小型垂滴叶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:smithing_table": {
+      "text": "锻造台",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:smoker": {
+      "text": "烟熏炉",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:smooth_basalt": {
+      "text": "平滑玄武岩",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:smooth_quartz": {
+      "text": "平滑石英块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:smooth_quartz_slab": {
+      "text": "平滑石英台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:smooth_quartz_stairs": {
+      "text": "平滑石英楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:smooth_red_sandstone": {
+      "text": "平滑红砂岩",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:smooth_red_sandstone_slab": {
+      "text": "平滑红砂岩台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:smooth_red_sandstone_stairs": {
+      "text": "平滑红砂岩楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:smooth_sandstone": {
+      "text": "平滑砂岩",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:smooth_sandstone_slab": {
+      "text": "平滑砂岩台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:smooth_sandstone_stairs": {
+      "text": "平滑砂岩楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:smooth_stone": {
+      "text": "平滑石头",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:smooth_stone_slab": {
+      "text": "平滑石头台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:sniffer_egg": {
+      "text": "嗅探兽蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:sniffer_spawn_egg": {
+      "text": "嗅探兽刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:snort_pottery_sherd": {
+      "text": "嗅探纹样陶片",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:snout_armor_trim_smithing_template": {
+      "text": "锻造模板",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:snow": {
+      "text": "雪",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:snow_block": {
+      "text": "雪块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:snow_golem_spawn_egg": {
+      "text": "雪傀儡刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:snowball": {
+      "text": "雪球",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:snowy_village_map": {
+      "text": "雪原村庄地图",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:soul_campfire": {
+      "text": "灵魂营火",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:soul_lantern": {
+      "text": "灵魂灯笼",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:soul_sand": {
+      "text": "灵魂沙",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:soul_soil": {
+      "text": "灵魂土",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:soul_torch": {
+      "text": "灵魂火把",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:spawner": {
+      "text": "刷怪笼",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:spectral_arrow": {
+      "text": "光灵箭",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:spider_eye": {
+      "text": "蜘蛛眼",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:spider_spawn_egg": {
+      "text": "蜘蛛刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:spire_armor_trim_smithing_template": {
+      "text": "锻造模板",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:splash_potion": {
+      "text": "喷溅药水",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:sponge": {
+      "text": "海绵",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:spore_blossom": {
+      "text": "孢子花",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:spruce_boat": {
+      "text": "云杉木船",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:spruce_button": {
+      "text": "云杉木按钮",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:spruce_chest_boat": {
+      "text": "云杉木运输船",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:spruce_door": {
+      "text": "云杉木门",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:spruce_fence": {
+      "text": "云杉木栅栏",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:spruce_fence_gate": {
+      "text": "云杉木栅栏门",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:spruce_hanging_sign": {
+      "text": "悬挂式云杉木告示牌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:spruce_leaves": {
+      "text": "云杉树叶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:spruce_log": {
+      "text": "云杉原木",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:spruce_planks": {
+      "text": "云杉木板",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:spruce_pressure_plate": {
+      "text": "云杉木压力板",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:spruce_sapling": {
+      "text": "云杉树苗",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:spruce_shelf": {
+      "text": "云杉木展示架",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:spruce_sign": {
+      "text": "云杉木告示牌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:spruce_slab": {
+      "text": "云杉木台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:spruce_stairs": {
+      "text": "云杉木楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:spruce_trapdoor": {
+      "text": "云杉木活板门",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:spruce_wood": {
+      "text": "云杉木",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:spyglass": {
+      "text": "望远镜",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:squid_spawn_egg": {
+      "text": "鱿鱼刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stick": {
+      "text": "木棍",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:sticky_piston": {
+      "text": "黏性活塞",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stone": {
+      "text": "石头",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stone_axe": {
+      "text": "石斧",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stone_brick_slab": {
+      "text": "石砖台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stone_brick_stairs": {
+      "text": "石砖楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stone_brick_wall": {
+      "text": "石砖墙",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stone_bricks": {
+      "text": "石砖",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stone_button": {
+      "text": "石头按钮",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stone_hoe": {
+      "text": "石锄",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stone_pickaxe": {
+      "text": "石镐",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stone_pressure_plate": {
+      "text": "石头压力板",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stone_shovel": {
+      "text": "石锹",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stone_slab": {
+      "text": "石头台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stone_spear": {
+      "text": "石矛",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stone_stairs": {
+      "text": "石头楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stone_sword": {
+      "text": "石剑",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stonecutter": {
+      "text": "切石机",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:straw_bed": {
+      "text": "麦秆床",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stray_spawn_egg": {
+      "text": "流浪者刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:strider_spawn_egg": {
+      "text": "炽足兽刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:string": {
+      "text": "线",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stripped_acacia_log": {
+      "text": "去皮金合欢原木",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stripped_acacia_wood": {
+      "text": "去皮金合欢木",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stripped_bamboo_block": {
+      "text": "去皮竹块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stripped_birch_log": {
+      "text": "去皮白桦原木",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stripped_birch_wood": {
+      "text": "去皮白桦木",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stripped_cherry_log": {
+      "text": "去皮樱花原木",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stripped_cherry_wood": {
+      "text": "去皮樱花木",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stripped_crimson_hyphae": {
+      "text": "去皮绯红菌核",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stripped_crimson_stem": {
+      "text": "去皮绯红菌柄",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stripped_dark_oak_log": {
+      "text": "去皮深色橡木原木",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stripped_dark_oak_wood": {
+      "text": "去皮深色橡木",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stripped_jungle_log": {
+      "text": "去皮丛林原木",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stripped_jungle_wood": {
+      "text": "去皮丛林木",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stripped_mangrove_log": {
+      "text": "去皮红树原木",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stripped_mangrove_wood": {
+      "text": "去皮红树木",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stripped_oak_log": {
+      "text": "去皮橡木原木",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stripped_oak_wood": {
+      "text": "去皮橡木",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stripped_pale_oak_log": {
+      "text": "去皮苍白橡木原木",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stripped_pale_oak_wood": {
+      "text": "去皮苍白橡木",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stripped_poplar_log": {
+      "text": "去皮杨木原木",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stripped_poplar_wood": {
+      "text": "去皮杨木",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stripped_spruce_log": {
+      "text": "去皮云杉原木",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stripped_spruce_wood": {
+      "text": "去皮云杉木",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stripped_warped_hyphae": {
+      "text": "去皮诡异菌核",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:stripped_warped_stem": {
+      "text": "去皮诡异菌柄",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:structure_block": {
+      "text": "结构方块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:structure_void": {
+      "text": "结构空位",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:sugar": {
+      "text": "糖",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:sugar_cane": {
+      "text": "甘蔗",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:sulfur": {
+      "text": "硫黄",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:sulfur_brick_slab": {
+      "text": "硫黄砖台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:sulfur_brick_stairs": {
+      "text": "硫黄砖楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:sulfur_brick_wall": {
+      "text": "硫黄砖墙",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:sulfur_bricks": {
+      "text": "硫黄砖",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:sulfur_cube_bucket": {
+      "text": "硫方怪桶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:sulfur_cube_spawn_egg": {
+      "text": "硫方怪刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:sulfur_slab": {
+      "text": "硫黄台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:sulfur_spike": {
+      "text": "硫黄尖锥",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:sulfur_stairs": {
+      "text": "硫黄楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:sulfur_wall": {
+      "text": "硫黄墙",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:sunflower": {
+      "text": "向日葵",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:suspicious_gravel": {
+      "text": "可疑的沙砾",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:suspicious_sand": {
+      "text": "可疑的沙子",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:suspicious_stew": {
+      "text": "谜之炖菜",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:swamp_hut_map": {
+      "text": "沼泽小屋地图",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:sweet_berries": {
+      "text": "甜浆果",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:tadpole_bucket": {
+      "text": "蝌蚪桶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:tadpole_spawn_egg": {
+      "text": "蝌蚪刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:taiga_village_map": {
+      "text": "针叶林村庄地图",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:tall_dry_grass": {
+      "text": "高枯草丛",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:tall_grass": {
+      "text": "高草丛",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:target": {
+      "text": "标靶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:terracotta": {
+      "text": "陶瓦",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:test_block": {
+      "text": "测试方块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:test_instance_block": {
+      "text": "测试实例方块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:tide_armor_trim_smithing_template": {
+      "text": "锻造模板",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:tinted_glass": {
+      "text": "遮光玻璃",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:tipped_arrow": {
+      "text": "药箭",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:tnt": {
+      "text": "TNT",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:tnt_minecart": {
+      "text": "TNT矿车",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:torch": {
+      "text": "火把",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:torchflower": {
+      "text": "火把花",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:torchflower_seeds": {
+      "text": "火把花种子",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:totem_of_undying": {
+      "text": "不死图腾",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:trader_llama_spawn_egg": {
+      "text": "行商羊驼刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:trapped_chest": {
+      "text": "陷阱箱",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:trial_key": {
+      "text": "试炼钥匙",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:trial_spawner": {
+      "text": "试炼刷怪笼",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:trident": {
+      "text": "三叉戟",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:tripwire_hook": {
+      "text": "绊线钩",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:tropical_fish": {
+      "text": "热带鱼",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:tropical_fish_bucket": {
+      "text": "热带鱼桶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:tropical_fish_spawn_egg": {
+      "text": "热带鱼刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:tube_coral": {
+      "text": "管珊瑚",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:tube_coral_block": {
+      "text": "管珊瑚块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:tube_coral_fan": {
+      "text": "管珊瑚扇",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:tuff": {
+      "text": "凝灰岩",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:tuff_brick_slab": {
+      "text": "凝灰岩砖台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:tuff_brick_stairs": {
+      "text": "凝灰岩砖楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:tuff_brick_wall": {
+      "text": "凝灰岩砖墙",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:tuff_bricks": {
+      "text": "凝灰岩砖",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:tuff_slab": {
+      "text": "凝灰岩台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:tuff_stairs": {
+      "text": "凝灰岩楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:tuff_wall": {
+      "text": "凝灰岩墙",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:turtle_egg": {
+      "text": "海龟蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:turtle_helmet": {
+      "text": "海龟壳",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:turtle_scute": {
+      "text": "海龟鳞甲",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:turtle_spawn_egg": {
+      "text": "海龟刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:twisting_vines": {
+      "text": "缠怨藤",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:vault": {
+      "text": "宝库",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:verdant_froglight": {
+      "text": "青翠蛙明灯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:vex_armor_trim_smithing_template": {
+      "text": "锻造模板",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:vex_spawn_egg": {
+      "text": "恼鬼刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:villager_spawn_egg": {
+      "text": "村民刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:vindicator_spawn_egg": {
+      "text": "卫道士刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:vine": {
+      "text": "藤蔓",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:wandering_trader_spawn_egg": {
+      "text": "流浪商人刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:ward_armor_trim_smithing_template": {
+      "text": "锻造模板",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:warden_spawn_egg": {
+      "text": "监守者刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:warm_ocean_ruins_map": {
+      "text": "暖水海底废墟地图",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:warped_button": {
+      "text": "诡异木按钮",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:warped_door": {
+      "text": "诡异木门",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:warped_fence": {
+      "text": "诡异木栅栏",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:warped_fence_gate": {
+      "text": "诡异木栅栏门",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:warped_fungus": {
+      "text": "诡异菌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:warped_fungus_on_a_stick": {
+      "text": "诡异菌钓竿",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:warped_hanging_sign": {
+      "text": "悬挂式诡异木告示牌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:warped_hyphae": {
+      "text": "诡异菌核",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:warped_nylium": {
+      "text": "诡异菌岩",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:warped_planks": {
+      "text": "诡异木板",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:warped_pressure_plate": {
+      "text": "诡异木压力板",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:warped_roots": {
+      "text": "诡异菌索",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:warped_shelf": {
+      "text": "诡异木展示架",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:warped_sign": {
+      "text": "诡异木告示牌",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:warped_slab": {
+      "text": "诡异木台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:warped_stairs": {
+      "text": "诡异木楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:warped_stem": {
+      "text": "诡异菌柄",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:warped_trapdoor": {
+      "text": "诡异木活板门",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:warped_wart_block": {
+      "text": "诡异疣块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:water_bucket": {
+      "text": "水桶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_chiseled_copper": {
+      "text": "涂蜡的雕纹铜块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_copper_bars": {
+      "text": "涂蜡的铜栏杆",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_copper_block": {
+      "text": "涂蜡的铜块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_copper_bulb": {
+      "text": "涂蜡的铜灯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_copper_chain": {
+      "text": "涂蜡的铜链",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_copper_chest": {
+      "text": "涂蜡的铜箱子",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_copper_door": {
+      "text": "涂蜡的铜门",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_copper_golem_statue": {
+      "text": "涂蜡的铜傀儡像",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_copper_grate": {
+      "text": "涂蜡的铜格栅",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_copper_lantern": {
+      "text": "涂蜡的铜灯笼",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_copper_trapdoor": {
+      "text": "涂蜡的铜活板门",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_cut_copper": {
+      "text": "涂蜡的切制铜块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_cut_copper_slab": {
+      "text": "涂蜡的切制铜台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_cut_copper_stairs": {
+      "text": "涂蜡的切制铜楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_exposed_chiseled_copper": {
+      "text": "涂蜡的斑驳雕纹铜块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_exposed_copper": {
+      "text": "涂蜡的斑驳铜块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_exposed_copper_bars": {
+      "text": "涂蜡的斑驳铜栏杆",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_exposed_copper_bulb": {
+      "text": "涂蜡的斑驳铜灯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_exposed_copper_chain": {
+      "text": "涂蜡的斑驳铜链",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_exposed_copper_chest": {
+      "text": "涂蜡的斑驳铜箱子",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_exposed_copper_door": {
+      "text": "涂蜡的斑驳铜门",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_exposed_copper_golem_statue": {
+      "text": "涂蜡的斑驳铜傀儡像",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_exposed_copper_grate": {
+      "text": "涂蜡的斑驳铜格栅",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_exposed_copper_lantern": {
+      "text": "涂蜡的斑驳铜灯笼",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_exposed_copper_trapdoor": {
+      "text": "涂蜡的斑驳铜活板门",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_exposed_cut_copper": {
+      "text": "涂蜡的斑驳切制铜块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_exposed_cut_copper_slab": {
+      "text": "涂蜡的斑驳切制铜台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_exposed_cut_copper_stairs": {
+      "text": "涂蜡的斑驳切制铜楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_exposed_lightning_rod": {
+      "text": "涂蜡的斑驳避雷针",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_lightning_rod": {
+      "text": "涂蜡的避雷针",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_oxidized_chiseled_copper": {
+      "text": "涂蜡的氧化雕纹铜块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_oxidized_copper": {
+      "text": "涂蜡的氧化铜块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_oxidized_copper_bars": {
+      "text": "涂蜡的氧化铜栏杆",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_oxidized_copper_bulb": {
+      "text": "涂蜡的氧化铜灯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_oxidized_copper_chain": {
+      "text": "涂蜡的氧化铜链",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_oxidized_copper_chest": {
+      "text": "涂蜡的氧化铜箱子",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_oxidized_copper_door": {
+      "text": "涂蜡的氧化铜门",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_oxidized_copper_golem_statue": {
+      "text": "涂蜡的氧化铜傀儡像",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_oxidized_copper_grate": {
+      "text": "涂蜡的氧化铜格栅",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_oxidized_copper_lantern": {
+      "text": "涂蜡的氧化铜灯笼",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_oxidized_copper_trapdoor": {
+      "text": "涂蜡的氧化铜活板门",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_oxidized_cut_copper": {
+      "text": "涂蜡的氧化切制铜块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_oxidized_cut_copper_slab": {
+      "text": "涂蜡的氧化切制铜台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_oxidized_cut_copper_stairs": {
+      "text": "涂蜡的氧化切制铜楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_oxidized_lightning_rod": {
+      "text": "涂蜡的氧化避雷针",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_weathered_chiseled_copper": {
+      "text": "涂蜡的锈蚀雕纹铜块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_weathered_copper": {
+      "text": "涂蜡的锈蚀铜块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_weathered_copper_bars": {
+      "text": "涂蜡的锈蚀铜栏杆",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_weathered_copper_bulb": {
+      "text": "涂蜡的锈蚀铜灯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_weathered_copper_chain": {
+      "text": "涂蜡的锈蚀铜链",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_weathered_copper_chest": {
+      "text": "涂蜡的锈蚀铜箱子",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_weathered_copper_door": {
+      "text": "涂蜡的锈蚀铜门",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_weathered_copper_golem_statue": {
+      "text": "涂蜡的锈蚀铜傀儡像",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_weathered_copper_grate": {
+      "text": "涂蜡的锈蚀铜格栅",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_weathered_copper_lantern": {
+      "text": "涂蜡的锈蚀铜灯笼",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_weathered_copper_trapdoor": {
+      "text": "涂蜡的锈蚀铜活板门",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_weathered_cut_copper": {
+      "text": "涂蜡的锈蚀切制铜块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_weathered_cut_copper_slab": {
+      "text": "涂蜡的锈蚀切制铜台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_weathered_cut_copper_stairs": {
+      "text": "涂蜡的锈蚀切制铜楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:waxed_weathered_lightning_rod": {
+      "text": "涂蜡的锈蚀避雷针",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:wayfinder_armor_trim_smithing_template": {
+      "text": "锻造模板",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:weathered_chiseled_copper": {
+      "text": "锈蚀的雕纹铜块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:weathered_copper": {
+      "text": "锈蚀的铜块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:weathered_copper_bars": {
+      "text": "锈蚀的铜栏杆",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:weathered_copper_bulb": {
+      "text": "锈蚀的铜灯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:weathered_copper_chain": {
+      "text": "锈蚀的铜链",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:weathered_copper_chest": {
+      "text": "锈蚀的铜箱子",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:weathered_copper_door": {
+      "text": "锈蚀的铜门",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:weathered_copper_golem_statue": {
+      "text": "锈蚀的铜傀儡像",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:weathered_copper_grate": {
+      "text": "锈蚀的铜格栅",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:weathered_copper_lantern": {
+      "text": "锈蚀的铜灯笼",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:weathered_copper_trapdoor": {
+      "text": "锈蚀的铜活板门",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:weathered_cut_copper": {
+      "text": "锈蚀的切制铜块",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:weathered_cut_copper_slab": {
+      "text": "锈蚀的切制铜台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:weathered_cut_copper_stairs": {
+      "text": "锈蚀的切制铜楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:weathered_lightning_rod": {
+      "text": "锈蚀的避雷针",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:weeping_vines": {
+      "text": "垂泪藤",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:wet_sponge": {
+      "text": "湿海绵",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:wheat": {
+      "text": "小麦",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:wheat_seeds": {
+      "text": "小麦种子",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:white_banner": {
+      "text": "白色旗帜",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:white_bed": {
+      "text": "白色床",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:white_bundle": {
+      "text": "白色收纳袋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:white_candle": {
+      "text": "白色蜡烛",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:white_carpet": {
+      "text": "白色地毯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:white_concrete": {
+      "text": "白色混凝土",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:white_concrete_powder": {
+      "text": "白色混凝土粉末",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:white_concrete_slab": {
+      "text": "白色混凝土台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:white_concrete_stairs": {
+      "text": "白色混凝土楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:white_cushion": {
+      "text": "白色坐垫",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:white_dye": {
+      "text": "白色染料",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:white_glazed_terracotta": {
+      "text": "白色带釉陶瓦",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:white_harness": {
+      "text": "白色挽具",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:white_shulker_box": {
+      "text": "白色潜影盒",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:white_stained_glass": {
+      "text": "白色染色玻璃",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:white_stained_glass_pane": {
+      "text": "白色染色玻璃板",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:white_terracotta": {
+      "text": "白色陶瓦",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:white_tulip": {
+      "text": "白色郁金香",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:white_wool": {
+      "text": "白色羊毛",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:white_wool_slab": {
+      "text": "白色羊毛台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:white_wool_stairs": {
+      "text": "白色羊毛楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:wild_armor_trim_smithing_template": {
+      "text": "锻造模板",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:wildflowers": {
+      "text": "野花簇",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:wind_charge": {
+      "text": "风弹",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:witch_spawn_egg": {
+      "text": "女巫刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:wither_rose": {
+      "text": "凋灵玫瑰",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:wither_skeleton_skull": {
+      "text": "凋灵骷髅头颅",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:wither_skeleton_spawn_egg": {
+      "text": "凋灵骷髅刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:wither_spawn_egg": {
+      "text": "凋灵刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:wolf_armor": {
+      "text": "狼铠",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:wolf_spawn_egg": {
+      "text": "狼刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:wooden_axe": {
+      "text": "木斧",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:wooden_hoe": {
+      "text": "木锄",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:wooden_pickaxe": {
+      "text": "木镐",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:wooden_shovel": {
+      "text": "木锹",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:wooden_spear": {
+      "text": "木矛",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:wooden_sword": {
+      "text": "木剑",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:woodland_mansion_map": {
+      "text": "林地府邸地图",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:writable_book": {
+      "text": "书与笔",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:written_book": {
+      "text": "成书",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:yellow_banner": {
+      "text": "黄色旗帜",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:yellow_bed": {
+      "text": "黄色床",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:yellow_bundle": {
+      "text": "黄色收纳袋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:yellow_candle": {
+      "text": "黄色蜡烛",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:yellow_carpet": {
+      "text": "黄色地毯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:yellow_concrete": {
+      "text": "黄色混凝土",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:yellow_concrete_powder": {
+      "text": "黄色混凝土粉末",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:yellow_concrete_slab": {
+      "text": "黄色混凝土台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:yellow_concrete_stairs": {
+      "text": "黄色混凝土楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:yellow_cushion": {
+      "text": "黄色坐垫",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:yellow_dye": {
+      "text": "黄色染料",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:yellow_glazed_terracotta": {
+      "text": "黄色带釉陶瓦",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:yellow_harness": {
+      "text": "黄色挽具",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:yellow_poplar_leaves": {
+      "text": "黄色杨树树叶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:yellow_shulker_box": {
+      "text": "黄色潜影盒",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:yellow_stained_glass": {
+      "text": "黄色染色玻璃",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:yellow_stained_glass_pane": {
+      "text": "黄色染色玻璃板",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:yellow_terracotta": {
+      "text": "黄色陶瓦",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:yellow_wool": {
+      "text": "黄色羊毛",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:yellow_wool_slab": {
+      "text": "黄色羊毛台阶",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:yellow_wool_stairs": {
+      "text": "黄色羊毛楼梯",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:zoglin_spawn_egg": {
+      "text": "僵尸疣猪兽刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:zombie_head": {
+      "text": "僵尸的头",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:zombie_horse_spawn_egg": {
+      "text": "僵尸马刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:zombie_nautilus_spawn_egg": {
+      "text": "僵尸鹦鹉螺刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:zombie_spawn_egg": {
+      "text": "僵尸刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:zombie_villager_spawn_egg": {
+      "text": "僵尸村民刷怪蛋",
+      "reading": "",
+      "aliases": []
+    },
+    "minecraft:zombified_piglin_spawn_egg": {
+      "text": "僵尸猪灵刷怪蛋",
+      "reading": "",
+      "aliases": []
+    }
+  }
+}

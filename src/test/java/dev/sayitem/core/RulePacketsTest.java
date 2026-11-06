@@ -7,6 +7,19 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class RulePacketsTest {
+    @Test void languageReloadPauseAndReadinessPacketsKeepTheStreamAligned() {
+        var bytes = new FriendlyByteBuf(Unpooled.buffer());
+        try {
+            Packets.LanguageLoading.CODEC.encode(bytes, new Packets.LanguageLoading());
+            Packets.SpeechReady.CODEC.encode(bytes, new Packets.SpeechReady());
+            var choice = new Packets.SelectLanguage("random");
+            Packets.SelectLanguage.CODEC.encode(bytes, choice);
+            assertEquals(new Packets.LanguageLoading(), Packets.LanguageLoading.CODEC.decode(bytes));
+            assertEquals(new Packets.SpeechReady(), Packets.SpeechReady.CODEC.decode(bytes));
+            assertEquals(choice, Packets.SelectLanguage.CODEC.decode(bytes));
+            assertEquals(0, bytes.readableBytes());
+        } finally { bytes.release(); }
+    }
     @Test void progressAndSharingSettingsSurviveNetworkEncoding() {
         var bytes = new FriendlyByteBuf(Unpooled.buffer());
         try {

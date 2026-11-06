@@ -11,6 +11,8 @@ public final class ClientSettings {
     public String language = "ja";
     public String speechProfile = "cpu";
     public boolean showReadings = true;
+    public boolean syncMinecraftLanguage = false;
+    public String previousMinecraftLanguage = "";
     private static Path file() { return FabricLoader.getInstance().getConfigDir().resolve("sayitem/client.json"); }
     public static ClientSettings load() throws IOException {
         if (!Files.isRegularFile(file())) return new ClientSettings();
@@ -18,7 +20,8 @@ public final class ClientSettings {
             ClientSettings settings = JsonFiles.GSON.fromJson(reader, ClientSettings.class);
             if (settings == null) return new ClientSettings();
             if (settings.microphoneName == null) settings.microphoneName = "";
-            if (settings.language == null || !settings.language.matches("[a-z]{2,3}(-[a-z0-9]+)?")) settings.language = "ja";
+            if (!dev.sayitem.core.BuiltInLanguages.validChoice(settings.language)) settings.language = "ja";
+            if (settings.previousMinecraftLanguage == null || !settings.previousMinecraftLanguage.matches("[a-z]{2,3}_[a-z]{2,3}")) settings.previousMinecraftLanguage = "";
             settings.speechProfile = dev.sayitem.speech.SpeechProfile.parse(settings.speechProfile).id();
             return settings;
         }

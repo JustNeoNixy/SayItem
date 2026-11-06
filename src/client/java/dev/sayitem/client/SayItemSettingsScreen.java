@@ -23,13 +23,11 @@ final class SayItemSettingsScreen extends Screen {
         RuleSlider previousDifficulty = difficulty, previousTimer = timer;
         int rowWidth = Math.min(260, width - 32), left = (width - rowWidth) / 2;
         int top = Math.max(56, height / 2 - 52);
-        var ids = SayItemClient.languages.keySet().stream().sorted().toList();
         var language = addRenderableWidget(Button.builder(languageLabel(), button -> {
-            if (ids.isEmpty()) return;
-            int next = (ids.indexOf(SayItemClient.settings.language) + 1) % ids.size();
-            SayItemClient.chooseLanguage(ids.get(next)); button.setMessage(languageLabel());
+            ClientUi.open(net.minecraft.client.Minecraft.getInstance(), new LanguageSettingsScreen(this));
         }).bounds(left, top, rowWidth - 92, 20).build());
-        language.active = !ids.isEmpty();
+        language.active = !SayItemClient.languages.isEmpty();
+        language.setTooltip(Tooltip.create(Component.literal("Choose a language, random mode, or match Minecraft's language.")));
         addRenderableWidget(Button.builder(readingsLabel(), button -> {
             SayItemClient.settings.showReadings = !SayItemClient.settings.showReadings;
             try { SayItemClient.settings.save(); }
@@ -94,8 +92,8 @@ final class SayItemSettingsScreen extends Screen {
         }
         slider.setTooltip(Tooltip.create(Component.literal(!slider.active
             ? "Only the world owner or a server operator can change this setting."
-            : slider.timer ? "10–30 seconds for newly collected locked items. Active timers keep their deadline."
-            : "60–100% recognized text match required to unlock an item.")));
+            : slider.timer ? "10 to 30 seconds for newly collected locked items. Active timers keep their deadline."
+            : "60 to 100% recognized text match required to unlock an item.")));
         slider.updateMessage();
     }
     @Override public void onClose() {

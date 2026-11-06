@@ -1,4 +1,4 @@
-"""Reproduce Bulgarian/Russian/Italian packs from checksum-pinned Mojang assets."""
+"""Generate additional language packs from checksum-pinned Mojang assets."""
 import hashlib
 import json
 import urllib.request
@@ -6,7 +6,16 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 LANGUAGES = {'bg': ('bg_bg', 'Bulgarian · Български'), 'ru': ('ru_ru', 'Russian · Русский'),
-             'it': ('it_it', 'Italian · Italiano')}
+             'it': ('it_it', 'Italian · Italiano'),
+             'pt': ('pt_pt', 'Portuguese · Português'), 'nl': ('nl_nl', 'Dutch · Nederlands'),
+             'sv': ('sv_se', 'Swedish · Svenska'), 'da': ('da_dk', 'Danish · Dansk'),
+             'no': ('no_no', 'Norwegian · Norsk'), 'fi': ('fi_fi', 'Finnish · Suomi'),
+             'cs': ('cs_cz', 'Czech · Čeština'), 'sk': ('sk_sk', 'Slovak · Slovenčina'),
+             'uk': ('uk_ua', 'Ukrainian · Українська'), 'el': ('el_gr', 'Greek · Ελληνικά'),
+             'tr': ('tr_tr', 'Turkish · Türkçe'), 'hu': ('hu_hu', 'Hungarian · Magyar'),
+             'ro': ('ro_ro', 'Romanian · Română'), 'ko': ('ko_kr', 'Korean · 한국어'),
+             'zh': ('zh_cn', 'Chinese · 简体中文'), 'id': ('id_id', 'Indonesian · Indonesia'),
+             'vi': ('vi_vn', 'Vietnamese · Tiếng Việt')}
 
 
 def generate():

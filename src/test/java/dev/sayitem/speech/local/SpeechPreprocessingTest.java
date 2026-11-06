@@ -13,6 +13,26 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class SpeechPreprocessingTest {
     @TempDir Path directory;
+    @Test void everyBuiltInLanguageHasADistinctTokenInTheActualWhisperModel() throws Exception {
+        JsonObject manifest;
+        try (var stream = getClass().getResourceAsStream("/sayitem-speech/model.json")) {
+            manifest = JsonParser.parseReader(new InputStreamReader(Objects.requireNonNull(stream), StandardCharsets.UTF_8)).getAsJsonObject();
+        }
+        String name = "base/tokenizer.json";
+        var spec = manifest.getAsJsonObject("files").getAsJsonObject(name);
+        String supplied = System.getProperty("sayitem.model.directory", "");
+        Path tokenizerFile = directory.resolve("actual-tokenizer.json");
+        dev.sayitem.speech.AssetDownloads.ensure(tokenizerFile, java.net.URI.create(spec.get("url").getAsString()),
+            spec.get("sha256").getAsString(), spec.get("bytes").getAsLong(),
+            supplied.isBlank() ? null : Path.of(supplied).resolve(name), ignored -> {}, "Whisper vocabulary");
+        var tokenizer = new WhisperTokenizer(tokenizerFile);
+        var languageTokens = new HashSet<Integer>();
+        for (String language : dev.sayitem.core.BuiltInLanguages.LOCALES.keySet()) {
+            int[] prefix = tokenizer.prefix(language);
+            assertEquals(4, prefix.length); assertTrue(languageTokens.add(prefix[1]), language);
+        }
+        assertEquals(26, languageTokens.size());
+    }
     @Test void javaLogMelMatchesThePreviousPythonFeatureExtractor() throws Exception {
         float[] actual;
         try (var stream = getClass().getResourceAsStream("/audio/diamond-sword.wav");
