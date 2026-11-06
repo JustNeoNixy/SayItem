@@ -66,7 +66,7 @@ public final class ReadingGuides {
                     } else {
                         pronunciation.append("s");
 		    }
-		}
+		} else pronunciation.append(codePoint);
             }
             source = pronunciation.toString();
         }
