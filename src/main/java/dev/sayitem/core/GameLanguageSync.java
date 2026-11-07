@@ -19,6 +19,9 @@ public final class GameLanguageSync {
     private boolean restoring, loading, busy;
     public GameLanguageSync(Host host) { this.host = host; }
     public boolean busy() { return busy; }
+    public static boolean validLocale(String locale) {
+        return locale != null && locale.matches("[a-z0-9_-]{2,64}");
+    }
     public void follow(String pack, String whisperLanguage) {
         String target = pack.replace('-', '_');
         if (!host.available(target)) target = BuiltInLanguages.LOCALES.getOrDefault(whisperLanguage, "");

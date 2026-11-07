@@ -31,7 +31,7 @@ public final class VulkanEngine implements SpeechEngine {
             try {
                 Path root = GpuRuntime.prepare(cache, text -> status = text);
                 api = VulkanApi.load(root);
-                if (!api.sayitem_vk_version().equals("whisper.cpp-v1.9.5-d1be6fde")) throw new IOException("GPU engine version mismatch");
+                if (!api.sayitem_vk_version().equals("whisper.cpp-v1.9.5-d1be6fde-bridge3")) throw new IOException("GPU engine version mismatch");
                 String device = api.sayitem_vk_device();
                 if (device == null || device.isBlank()) throw new IOException("No compatible Vulkan GPU");
                 Path model = GpuRuntime.model(cache, profile, text -> status = text);
@@ -55,8 +55,8 @@ public final class VulkanEngine implements SpeechEngine {
     }
     @Override public CompletableFuture<String> transcribe(float[] samples, String language) {
         if (closed) return CompletableFuture.failedFuture(new IllegalStateException("Speech engine is closed"));
-        if (samples.length < 3200 || samples.length > 96000 || language == null || !language.matches("[a-z]{2,3}"))
-            return CompletableFuture.failedFuture(new IllegalArgumentException("Record 0.2 to 6 seconds in a supported language"));
+        if (samples.length < 3200 || samples.length > AudioSamples.MAX_SAMPLES || language == null || !language.matches("[a-z]{2,3}"))
+            return CompletableFuture.failedFuture(new IllegalArgumentException("Record 0.2 to 12 seconds in a supported language"));
         float[] normalized = AudioSamples.normalize(samples);
         if (!AudioSamples.hasSpeechEnergy(normalized)) return CompletableFuture.completedFuture("");
         var result = new CompletableFuture<String>();

@@ -50,6 +50,9 @@ def generate():
             aliases = []
             if language == 'ru' and 'ё' in text.lower(): aliases.append(text.replace('ё', 'е').replace('Ё', 'Е'))
             if language == 'bg' and 'ѝ' in text: aliases.append(text.replace('ѝ', 'и'))
+            if language == 'el':
+                variant = text.replace('αβγ', 'αυγ').replace('Αβγ', 'Αυγ')
+                if variant != text: aliases.append(variant)
             items[identifier] = {'text': text, 'reading': '', 'aliases': aliases}
         pack = {'schemaVersion': 1, 'id': language, 'name': name, 'whisperLanguage': language, 'items': items}
         output = ROOT / f'src/main/resources/languages/{language}.json'

@@ -20,6 +20,16 @@ class RulePacketsTest {
             assertEquals(0, bytes.readableBytes());
         } finally { bytes.release(); }
     }
+    @Test void recognitionLifecyclePacketsKeepNoncesAndStreamBoundaries() {
+        var bytes = new FriendlyByteBuf(Unpooled.buffer());
+        try {
+            var start = new Packets.RecognitionStarted("capture-nonce"); var cancel = new Packets.RecognitionCancelled("capture-nonce");
+            Packets.RecognitionStarted.CODEC.encode(bytes, start); Packets.RecognitionCancelled.CODEC.encode(bytes, cancel);
+            assertEquals(start, Packets.RecognitionStarted.CODEC.decode(bytes));
+            assertEquals(cancel, Packets.RecognitionCancelled.CODEC.decode(bytes));
+            assertEquals(0, bytes.readableBytes());
+        } finally { bytes.release(); }
+    }
     @Test void progressAndSharingSettingsSurviveNetworkEncoding() {
         var bytes = new FriendlyByteBuf(Unpooled.buffer());
         try {

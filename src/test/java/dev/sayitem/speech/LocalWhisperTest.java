@@ -37,6 +37,10 @@ class LocalWhisperTest {
                 System.out.println("Cancelled native speech job drained in " + TimeUnit.NANOSECONDS.toMillis(System.nanoTime() - cancelledAt) + "ms");
                 String next = engine.transcribe(samples, "en").get(60, TimeUnit.SECONDS);
                 assertTrue(dev.sayitem.core.AnswerMatcher.matches(next, "Diamond sword", java.util.List.of()), next);
+                float[] full = new float[AudioSamples.MAX_SAMPLES];
+                System.arraycopy(samples, 0, full, full.length-samples.length, samples.length);
+                String tail = engine.transcribe(full, "en").get(90, TimeUnit.SECONDS);
+                assertTrue(dev.sayitem.core.AnswerMatcher.matches(tail, "Diamond sword", java.util.List.of()), tail);
             }
             assertTrue(engine.transcribe(new float[10], "ja").isCompletedExceptionally());
         }

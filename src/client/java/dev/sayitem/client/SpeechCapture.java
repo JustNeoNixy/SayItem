@@ -30,6 +30,9 @@ public final class SpeechCapture {
         return List.copyOf(names);
     }
     public void start(String language, Consumer<String> status, Consumer<String> transcript, Consumer<String> error) {
+        start(language, () -> {}, status, transcript, error);
+    }
+    public void start(String language, Runnable processing, Consumer<String> status, Consumer<String> transcript, Consumer<String> error) {
         if (!engine.isReady()) { error.accept(engine.status()); return; }
         if (!busy.compareAndSet(false, true)) return;
         recording = true; cancelled = false;
@@ -50,14 +53,15 @@ public final class SpeechCapture {
                     active.open(FORMAT); active.start();
                     status.accept("Listening… release your speak key when finished.");
                     var audio = new ByteArrayOutputStream(); byte[] buffer = new byte[1024];
-                    while (recording && !cancelled && audio.size() < 6 * 32_000) {
-                        int count = active.read(buffer, 0, Math.min(buffer.length, 6 * 32_000 - audio.size()));
+                    while (recording && !cancelled && audio.size() < AudioSamples.MAX_SAMPLES * 2) {
+                        int count = active.read(buffer, 0, Math.min(buffer.length, AudioSamples.MAX_SAMPLES * 2 - audio.size()));
                         if (count > 0) audio.write(buffer, 0, count);
                     }
                     pcm = audio.toByteArray();
                 } finally { line = null; recording = false; }
                 if (cancelled) return;
                 if (pcm.length < 6400) throw new IOException("Recording too short. Hold your speak key while talking.");
+                processing.run();
                 status.accept("Recognizing locally…");
                 request = engine.transcribe(AudioSamples.fromPcm16(pcm), language);
                 if (cancelled) { request.cancel(false); return; }
@@ -68,7 +72,7 @@ public final class SpeechCapture {
                     Throwable cause = e;
                     while (cause.getCause() != null) cause = cause.getCause();
                     error.accept("Speech unavailable: " + (cause.getMessage() == null ? cause.getClass().getSimpleName() : cause.getMessage())
-                        + ". Check your microphone in SayItem settings (K).");
+                        + ". Open SayItem settings (K) to check speech and microphone settings.");
                 }
             } finally { recording = false; busy.set(false); }
         });

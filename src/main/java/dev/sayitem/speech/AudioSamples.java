@@ -2,6 +2,8 @@ package dev.sayitem.speech;
 
 /** 16 kHz mono signed PCM16 input, normalized to the float samples Whisper expects. */
 public final class AudioSamples {
+    public static final int MAX_RECORDING_SECONDS = 12;
+    public static final int MAX_SAMPLES = MAX_RECORDING_SECONDS * 16000;
     private AudioSamples() {}
     public static float[] fromPcm16(byte[] pcm) {
         if (pcm.length % 2 != 0) throw new IllegalArgumentException("Incomplete PCM16 sample");

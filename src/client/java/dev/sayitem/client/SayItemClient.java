@@ -48,8 +48,20 @@ public final class SayItemClient implements ClientModInitializer {
     private boolean wasDown;
     private boolean awaitingAnswer;
     private long submittedAt;
+    private static String processingNonce = "";
+    private static long processingRemaining, captureGeneration;
 
-    static long remaining() { return Math.max(0, (deadline - System.nanoTime()) / 1_000_000); }
+    static long remaining() { return processingNonce.isEmpty() ? Math.max(0, (deadline - System.nanoTime()) / 1_000_000) : processingRemaining; }
+    static void cancelSpeech() {
+        captureGeneration++;
+        if (speech != null) speech.cancel();
+        if (!processingNonce.isEmpty()) {
+            if (joined && Minecraft.getInstance().getConnection() != null && ClientPlayNetworking.canSend(Packets.RecognitionCancelled.TYPE))
+                ClientPlayNetworking.send(new Packets.RecognitionCancelled(processingNonce));
+            deadline = System.nanoTime() + processingRemaining * 1_000_000;
+            processingNonce = ""; processingRemaining = 0;
+        }
+    }
 
     @Override public void onInitializeClient() {
         try { settings = ClientSettings.load(); }
@@ -64,7 +76,7 @@ public final class SayItemClient implements ClientModInitializer {
         });
         key = KeyMappingHelper.registerKeyMapping(new KeyMapping("key.sayitem.speak", InputConstants.KEY_V, KeyMapping.Category.GAMEPLAY));
         settingsKey = KeyMappingHelper.registerKeyMapping(new KeyMapping("key.sayitem.settings", InputConstants.KEY_K, KeyMapping.Category.GAMEPLAY));
-        ClientLifecycleEvents.CLIENT_STOPPING.register(client -> { speech.cancel(); engine.close(); });
+        ClientLifecycleEvents.CLIENT_STOPPING.register(client -> { cancelSpeech(); engine.close(); });
         ClientPlayNetworking.registerGlobalReceiver(Packets.Progress.TYPE, (packet, context) -> {
             totalItemCount = Math.max(0, packet.total());
             unlockedCount = Math.clamp(packet.unlocked(), 0, totalItemCount);
@@ -77,7 +89,7 @@ public final class SayItemClient implements ClientModInitializer {
             canConfigure = packet.canConfigure();
             languages = JsonFiles.GSON.fromJson(packet.languagesJson(), JsonObject.class);
             if (!selectedLanguage.equals(packet.selected()) && challenge != null) {
-                speech.cancel(); challenge = null; awaitingAnswer = false;
+                cancelSpeech(); challenge = null; awaitingAnswer = false;
             }
             selectedLanguage = packet.selected();
             if (!preferenceSent) {
@@ -94,13 +106,14 @@ public final class SayItemClient implements ClientModInitializer {
         });
         ClientPlayNetworking.registerGlobalReceiver(Packets.Challenge.TYPE, (packet, context) -> {
             if (challenge == null || !challenge.nonce().equals(packet.nonce())) {
-                speech.cancel(); awaitingAnswer = false;
+                cancelSpeech(); awaitingAnswer = false;
                 status = "Hold " + key.getTranslatedKeyMessage().getString() + " and say the words.";
                 accuracy = -1;
                 displayReading = packet.reading().isBlank()
                     ? dev.sayitem.core.ReadingGuides.forText(packet.text(), packet.whisperLanguage()) : packet.reading();
             }
             challenge = packet; deadline = System.nanoTime() + packet.remainingMillis() * 1_000_000;
+            if (processingNonce.equals(packet.nonce())) processingRemaining = packet.remainingMillis();
             syncGameLanguage();
         });
         ClientPlayNetworking.registerGlobalReceiver(Packets.Result.TYPE, (packet, context) -> {
@@ -111,12 +124,13 @@ public final class SayItemClient implements ClientModInitializer {
             }
             if (current) {
                 awaitingAnswer = false;
-                if (packet.finished()) { speech.cancel(); challenge = null; }
+                if (processingNonce.equals(packet.nonce())) cancelSpeech();
+                if (packet.finished()) { cancelSpeech(); challenge = null; }
             }
         });
         ClientPlayConnectionEvents.DISCONNECT.register((handler, client) -> {
             joined = false;
-            speech.cancel(); challenge = null; awaitingAnswer = false; languages = new JsonObject(); selectedLanguage = "ja";
+            cancelSpeech(); challenge = null; awaitingAnswer = false; languages = new JsonObject(); selectedLanguage = "ja";
             readinessSent = false; preferenceSent = false;
             status = "Collect an item to begin."; transcript = ""; displayReading = ""; accuracy = -1;
             requiredAccuracy = 90; timerSeconds = dev.sayitem.core.TimerLimit.DEFAULT; canConfigure = false;
@@ -133,20 +147,27 @@ public final class SayItemClient implements ClientModInitializer {
             if (down && !wasDown && challenge != null && remaining() > 0 && !speech.isBusy() && !awaitingAnswer) {
                 recordingNonce = challenge.nonce();
                 String nonce = recordingNonce;
-                speech.start(challenge.whisperLanguage(), message -> client.execute(() -> {
-                    if (challenge != null && challenge.nonce().equals(nonce)) status = message;
+                long capture = ++captureGeneration;
+                speech.start(challenge.whisperLanguage(), () -> client.execute(() -> {
+                    if (capture != captureGeneration || challenge == null || !challenge.nonce().equals(nonce) || remaining() <= 0) return;
+                    if (ClientPlayNetworking.canSend(Packets.RecognitionStarted.TYPE)) {
+                        processingRemaining = remaining(); processingNonce = nonce;
+                        ClientPlayNetworking.send(new Packets.RecognitionStarted(nonce));
+                    }
+                }), message -> client.execute(() -> {
+                    if (capture == captureGeneration && challenge != null && challenge.nonce().equals(nonce)) status = message;
                 }), heard -> client.execute(() -> {
-                    if (challenge == null || !challenge.nonce().equals(nonce) || remaining() <= 0) return;
+                    if (capture != captureGeneration || challenge == null || !challenge.nonce().equals(nonce) || remaining() <= 0) return;
                     transcript = heard; status = "Checking…"; awaitingAnswer = true; submittedAt = System.nanoTime();
                     ClientPlayNetworking.send(new Packets.Attempt(nonce, heard));
                 }), error -> client.execute(() -> {
-                    if (challenge != null && challenge.nonce().equals(nonce)) status = error;
+                    if (capture == captureGeneration && challenge != null && challenge.nonce().equals(nonce)) { cancelSpeech(); status = error; }
                 }));
             }
             if (!down && wasDown && speech.isRecording()) speech.finish();
             wasDown = down;
-            if (challenge != null && remaining() <= 0) speech.cancel();
-            if (awaitingAnswer && clock - submittedAt > 3_000_000_000L) { awaitingAnswer = false; status = "No server response. Release the key and try again."; }
+            if (challenge != null && remaining() <= 0) cancelSpeech();
+            if (awaitingAnswer && clock - submittedAt > 3_000_000_000L) { awaitingAnswer = false; cancelSpeech(); status = "No server response. Release the key and try again."; }
             while (key.consumeClick()) { /* Hold state drives recording; consume clicks to avoid a queue. */ }
         });
     }
@@ -184,7 +205,7 @@ public final class SayItemClient implements ClientModInitializer {
         public void execute(Runnable task) { client.execute(task); }
         public void busy(boolean loading) {
             if (!loading) return;
-            speech.cancel(); readinessSent = false;
+            cancelSpeech(); readinessSent = false;
             if (joined && client.player != null && ClientPlayNetworking.canSend(Packets.LanguageLoading.TYPE))
                 ClientPlayNetworking.send(new Packets.LanguageLoading());
         }
@@ -195,7 +216,7 @@ public final class SayItemClient implements ClientModInitializer {
         }
     }
     private static void prepareSpeech() {
-        if (speech != null) speech.cancel();
+        if (speech != null) cancelSpeech();
         if (engine != null) engine.close();
         activeSpeechProfile = settings.speechProfile;
         engine = new LocalWhisper(FabricLoader.getInstance().getGameDir().resolve(".sayitem/speech"), SpeechProfile.parse(activeSpeechProfile));

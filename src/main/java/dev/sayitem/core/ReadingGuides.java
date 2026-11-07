@@ -18,6 +18,9 @@ public final class ReadingGuides {
         "o", "p", "r", "s", "t", "u", "f", "kh", "ts", "ch", "sh", "shch", "'", "y", "'", "e", "yu", "ya", "i"
     };
     private static final String GERMAN_VOWELS = "aeiouäöü";
+    private static final java.util.regex.Pattern MARKS = java.util.regex.Pattern.compile("\\p{M}+");
+    private static final java.util.regex.Pattern RE_PREFIX = java.util.regex.Pattern.compile(
+        "(?iu)\\bre(?=(?:index|indiz|import|integra|integri|install|initial|inkarn|invest|implan|inszen|interpret))");
 
     public static String forText(String text, String language) {
         return forText(text, language, true);
@@ -28,6 +31,11 @@ public final class ReadingGuides {
         // supply contextual romaji for kanji instead of guessing a Chinese reading.
         if (language.equals("ja") && text.codePoints().anyMatch(c -> Character.UnicodeScript.of(c) == Character.UnicodeScript.HAN)) return "";
         String source = text;
+        if (language.equals("de")) {
+            // These re- families have hiatus, as in re-importieren. Do not apply
+            // this to native rein-/reinig- words, where ei is the /ai/ diphthong.
+            source = RE_PREFIX.matcher(source).replaceAll("re-");
+        }
         int[] lowerCodePoints = source.toLowerCase(Locale.ROOT).codePoints().toArray();
         if (language.equals("ru") || language.equals("bg")) {
             var latin = new StringBuilder();
@@ -48,39 +56,43 @@ public final class ReadingGuides {
                 int codePoint = lowerCodePoints[i];
                 boolean hasNext = i + 1 < lowerCodePoints.length;
 
-                if (codePoint == 'ä') pronunciation.append("e");
-		else if (codePoint == 'ü') pronunciation.append("u(e)");
-		else if (codePoint == 'ö') pronunciation.append("o(e)");
-		else if (codePoint == 'z') pronunciation.append("ts");
-		else if (codePoint == 'e') {
-                    if (hasNext && lowerCodePoints[i + 1] == 'i') {
-                        pronunciation.append("a");
-		    } else if (i > 0 && lowerCodePoints[i - 1] == 'i') {
-                        pronunciation.append("i");
-                    } else {
-                        pronunciation.append("e");
-		    }
-		}
-		else if (codePoint == 'j') {
+                if (matches(lowerCodePoints, i, "sch")) { pronunciation.append("sh"); i += 2; }
+                else if (matches(lowerCodePoints, i, "ei") || matches(lowerCodePoints, i, "ai")) { pronunciation.append("ai"); i++; }
+                else if (matches(lowerCodePoints, i, "ie")) { pronunciation.append("ee"); i++; }
+                else if (matches(lowerCodePoints, i, "eu") || matches(lowerCodePoints, i, "äu")) { pronunciation.append("oy"); i++; }
+                else if (matches(lowerCodePoints, i, "ss")) { pronunciation.append("ss"); i++; }
+                else if (matches(lowerCodePoints, i, "tz")) { pronunciation.append("ts"); i++; }
+                else if (matches(lowerCodePoints, i, "ck")) { pronunciation.append("k"); i++; }
+                else if (codePoint == 's' && hasNext && (lowerCodePoints[i+1] == 'p' || lowerCodePoints[i+1] == 't')
+                    && germanOnset(lowerCodePoints, i)) {
+                    pronunciation.append("sh").appendCodePoint(lowerCodePoints[++i]);
+                }
+                else if (codePoint == 'ä') pronunciation.append("e");
+                else if (codePoint == 'ü') pronunciation.append("u(e)");
+                else if (codePoint == 'ö') pronunciation.append("o(e)");
+                else if (codePoint == 'z') pronunciation.append("ts");
+                else if (codePoint == 'w') pronunciation.append("v");
+                else if (codePoint == 'x') pronunciation.append("ks");
+                else if (codePoint == 'j') {
                     if (hasNext && GERMAN_VOWELS.indexOf(lowerCodePoints[i + 1]) >= 0) {
                         pronunciation.append("y");
                     } else {
                         pronunciation.append("j");
-		    }
-		}
-		else if (codePoint == 's') {
+                    }
+                }
+                else if (codePoint == 's') {
                     if (hasNext && GERMAN_VOWELS.indexOf(lowerCodePoints[i + 1]) >= 0) {
                         pronunciation.append("z");
                     } else {
                         pronunciation.append("s");
-		    }
-		} else pronunciation.appendCodePoint(codePoint);
+                    }
+                } else pronunciation.appendCodePoint(codePoint);
             }
             source = pronunciation.toString();
         }
 
-        String reading = java.text.Normalizer.normalize(source, java.text.Normalizer.Form.NFD)
-            .replaceAll("\\p{M}+", "").replace("ł", "l").replace("Ł", "L")
+        String reading = MARKS.matcher(java.text.Normalizer.normalize(source, java.text.Normalizer.Form.NFD))
+            .replaceAll("").replace("ł", "l").replace("Ł", "L")
             .replace("ß", "ss").replace("œ", "oe").replace("Œ", "Oe")
             .replace("æ", "ae").replace("Æ", "Ae").strip();
 
@@ -94,6 +106,19 @@ public final class ReadingGuides {
         if (reading.isBlank() || reading.equals(text) || reading.length() > 128
             || reading.codePoints().anyMatch(c -> Character.isLetter(c) && c > 127)) return "";
         return reading;
+    }
+    private static boolean matches(int[] text, int offset, String value) {
+        if (offset + value.length() > text.length) return false;
+        for (int i = 0; i < value.length(); i++) if (text[offset+i] != value.charAt(i)) return false;
+        return true;
+    }
+    private static boolean germanOnset(int[] text, int offset) {
+        if (offset == 0 || !Character.isLetter(text[offset-1])) return true;
+        // Common Minecraft compound components, without turning medial st in
+        // words such as Ast or Rüstung into an initial /sht/.
+        for (String stem : java.util.List.of("stein", "stufe", "stiel", "staub", "stahl", "spitzhacke", "sporen"))
+            if (matches(text, offset, stem)) return true;
+        return false;
     }
 
     static LanguagePack fillMissing(LanguagePack pack) {

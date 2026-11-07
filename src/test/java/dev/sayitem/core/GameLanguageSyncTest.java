@@ -6,6 +6,16 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class GameLanguageSyncTest {
+    @Test void localeRecoveryAcceptsSinglePartCodesButRejectsPaths() {
+        assertTrue(GameLanguageSync.validLocale("tok"));
+        assertTrue(GameLanguageSync.validLocale("en_us"));
+        assertFalse(GameLanguageSync.validLocale("../en_us"));
+        assertFalse(GameLanguageSync.validLocale(null));
+        var host = new Host(); host.current = "de_de"; host.previous = "tok";
+        var available = new HashSet<>(host.available); available.add("tok"); host.available = available;
+        var sync = new GameLanguageSync(host); sync.restore(); host.finish();
+        assertEquals("tok", host.current); assertEquals("", host.previous);
+    }
     static final class Host implements GameLanguageSync.Host {
         String current = "en_us", previous = "";
         Set<String> available = Set.of("en_us", "de_de", "it_it", "pt_br", "pt_pt");

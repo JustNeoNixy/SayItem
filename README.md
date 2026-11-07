@@ -22,6 +22,8 @@ The required text match defaults to 90%. The world owner or server operators
 can choose 60 to 100% and a 10 to 30 second timer in K settings. Timer changes apply
 to newly collected locked types; active deadlines stay fixed. Server settings are saved.
 The score compares recognized text with the item name. Short words can be harder to recognize.
+Release V before the timer ends. Recognition pauses the timer for up to 15 seconds;
+an incorrect answer resumes the time left. Each recording can be up to 12 seconds.
 
 Owners/operators can turn Sharing on to give every player the same unlocks,
 including existing progress. Turning it off keeps unlocks already received.
@@ -30,9 +32,10 @@ reconnecting and restarting preserve unlocks. Include this file in world backups
 
 ## Speech
 
-CPU Base is the default. On Windows x64, K settings also offer GPU Base
-and the larger GPU Small model through Vulkan (AMD/NVIDIA/Intel, compatible
-driver required). Choose a profile and rejoin the world to apply it. The GPU
+CPU Base is the default. On Windows x64, K settings also offer GPU Base,
+GPU Small (190 MB), and GPU Turbo (574 MB) through Vulkan (AMD/NVIDIA/Intel,
+compatible driver required). Turbo improves recognition but takes longer on older GPUs.
+Choose a profile and rejoin the world to apply it. The GPU
 warms up before challenges start; unavailable GPUs fall back to CPU Base.
 Audio stays inside Minecraft and is never uploaded. Models/libraries download once
 and work offline afterward; the small mod jar contains no other mods or model weights.
@@ -44,7 +47,15 @@ Hungarian, Romanian, Japanese, Korean, Chinese, Indonesian, and Vietnamese.
 Readings in K settings shows approximate Latin-letter guides below item names.
 Japanese includes romaji. Custom packs can set `reading`; blank readings are converted
 automatically where supported. Recognition varies by language and item name.
+German guides use ai as in “eye,” ee as in “see,” and oy as in “boy.” Known
+re- prefix boundaries stay separate. u(e)/o(e) indicate single rounded vowels.
+Guides are approximate; packs can override them. German support was contributed in
+[PR #1 by RewardedIvan](https://github.com/JustNeoNixy/SayItem/pull/1).
+Greek spelling variants and traditional Chinese answers are accepted.
 CPU speech uses CTranslate2 INT8; GPU speech uses whisper.cpp. All models are multilingual.
+Human-recording results and coverage limits are in [the speech report](tools/speech-accuracy.json).
+On an RX 570, Small accepted 67/120 item recordings at 90% match (0.68 s median);
+Turbo accepted 74/120 (1.98 s). This small sample covers 25 languages, not every item or speaker.
 
 Open K > Language to choose a language or Random per item. Random mode chooses once
 per item challenge and keeps that choice for retries. Match Minecraft language also
@@ -68,4 +79,8 @@ Build with Java 25: `./gradlew build verifySingleJar`; use
 once; only your operating system's runtime is cached. Runtime sources/checksums are
 in `native/` and the jar's manifests. Licenses ship with the jar/runtime;
 test-audio attribution is in `src/test/resources/audio/*-fixtures.json`.
+For human speech checks, run `tools/collect_human_speech.py --download` and
+`tools/fetch_finnish_speech.py` with Python, PyAV and NumPy, then run the Gradle
+`evaluateHumanSpeech` task with `-Pspeech_profiles=gpu_base,gpu_small,gpu_turbo` on Windows.
+Source links and audio licenses are in `tools/*human-speech-sources.json`; audio stays in `build/`.
 SayItem is independent of Mojang and the video creators.

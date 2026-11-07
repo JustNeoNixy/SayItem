@@ -26,7 +26,7 @@ public final class GpuRuntime {
         return RuntimeBundles.install(cache, "windows-x64-vulkan", index().getAsJsonObject("runtime"), "sayitem.gpu.bundle", progress);
     }
     public static Path model(Path cache, SpeechProfile profile, Consumer<String> progress) throws IOException, InterruptedException {
-        String key = profile == SpeechProfile.GPU_SMALL ? "small" : "base";
+        String key = switch (profile) { case GPU_TURBO -> "turbo"; case GPU_SMALL -> "small"; default -> "base"; };
         var spec = index().getAsJsonObject("models").getAsJsonObject(key);
         String filename = spec.get("filename").getAsString();
         Path target = cache.resolve("gpu-models").resolve(spec.get("sha256").getAsString().substring(0, 12) + "-" + filename);

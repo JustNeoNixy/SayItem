@@ -61,8 +61,8 @@ public final class CTranslateEngine implements SpeechEngine {
 
     public CompletableFuture<String> transcribe(float[] samples, String language) {
         if (closed) return CompletableFuture.failedFuture(new IllegalStateException("Speech engine is closed"));
-        if (samples.length < 3200 || samples.length > 96000)
-            return CompletableFuture.failedFuture(new IllegalArgumentException("Record 0.2 to 6 seconds of speech."));
+        if (samples.length < 3200 || samples.length > AudioSamples.MAX_SAMPLES)
+            return CompletableFuture.failedFuture(new IllegalArgumentException("Record 0.2 to 12 seconds of speech."));
         if (language == null || !language.matches("[a-z]{2,3}"))
             return CompletableFuture.failedFuture(new IllegalArgumentException("Invalid speech language"));
         float[] normalized = AudioSamples.normalize(samples);

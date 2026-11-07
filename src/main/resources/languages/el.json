@@ -107,7 +107,9 @@
     "minecraft:allay_spawn_egg": {
       "text": "Αβγό Γέννησης Κατευναστή",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Κατευναστή"
+      ]
     },
     "minecraft:allium": {
       "text": "Άλλιο",
@@ -182,7 +184,9 @@
     "minecraft:armadillo_spawn_egg": {
       "text": "Αβγό Γέννησης Αρμαντίλλο",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Αρμαντίλλο"
+      ]
     },
     "minecraft:armor_stand": {
       "text": "Πάγκος Πανοπλίας",
@@ -207,7 +211,9 @@
     "minecraft:axolotl_spawn_egg": {
       "text": "Αβγό Γέννησης Αξολότλ",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Αξολότλ"
+      ]
     },
     "minecraft:azalea": {
       "text": "Αζαλέα",
@@ -342,7 +348,9 @@
     "minecraft:bat_spawn_egg": {
       "text": "Αβγό Γέννησης Νυχτερίδας",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Νυχτερίδας"
+      ]
     },
     "minecraft:beacon": {
       "text": "Φάρος",
@@ -362,7 +370,9 @@
     "minecraft:bee_spawn_egg": {
       "text": "Αβγό Γέννησης Μέλισσας",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Μέλισσας"
+      ]
     },
     "minecraft:beef": {
       "text": "Ωμό Βοδινό",
@@ -632,7 +642,9 @@
     "minecraft:blaze_spawn_egg": {
       "text": "Αβγό Γέννησης Πυροστρόβιλου",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Πυροστρόβιλου"
+      ]
     },
     "minecraft:blue_banner": {
       "text": "Μπλε Λάβαρο",
@@ -692,7 +704,9 @@
     "minecraft:blue_egg": {
       "text": "Μπλε Αβγό",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Μπλε Αυγό"
+      ]
     },
     "minecraft:blue_glazed_terracotta": {
       "text": "Μπλε Γυαλισμένη Τερακότα",
@@ -752,7 +766,9 @@
     "minecraft:bogged_spawn_egg": {
       "text": "Αβγό Γέννησης Βαλτωμένου",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Βαλτωμένου"
+      ]
     },
     "minecraft:bolt_armor_trim_smithing_template": {
       "text": "Πρότυπο Μεταλλουργίας",
@@ -827,7 +843,9 @@
     "minecraft:breeze_spawn_egg": {
       "text": "Αβγό Γέννησης Ανεμοστρόβιλου",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Ανεμοστρόβιλου"
+      ]
     },
     "minecraft:brewer_pottery_sherd": {
       "text": "Θραύσμα Αγγειοπλαστικής Παρασκευαστή",
@@ -922,7 +940,9 @@
     "minecraft:brown_egg": {
       "text": "Καφέ Αβγό",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Καφέ Αυγό"
+      ]
     },
     "minecraft:brown_glazed_terracotta": {
       "text": "Καφέ Γυαλισμένη Τερακότα",
@@ -1072,12 +1092,16 @@
     "minecraft:camel_husk_spawn_egg": {
       "text": "Αβγό Γέννησης Μούμιας Καμήλας",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Μούμιας Καμήλας"
+      ]
     },
     "minecraft:camel_spawn_egg": {
       "text": "Αβγό Γέννησης Καμήλας",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Καμήλας"
+      ]
     },
     "minecraft:campfire": {
       "text": "Φωτιά Κατασκήνωσης",
@@ -1112,7 +1136,9 @@
     "minecraft:cat_spawn_egg": {
       "text": "Αβγό Γέννησης Γάτας",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Γάτας"
+      ]
     },
     "minecraft:cauldron": {
       "text": "Καζάνι",
@@ -1122,7 +1148,9 @@
     "minecraft:cave_spider_spawn_egg": {
       "text": "Αβγό Γέννησης Αράχνης Σπηλιάς",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Αράχνης Σπηλιάς"
+      ]
     },
     "minecraft:chain_command_block": {
       "text": "Κύβος Εντολής Αλυσίδας",
@@ -1262,7 +1290,9 @@
     "minecraft:chicken_spawn_egg": {
       "text": "Αβγό Γέννησης Κότας",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Κότας"
+      ]
     },
     "minecraft:chipped_anvil": {
       "text": "Φθαρμένο Αμόνι",
@@ -1502,7 +1532,9 @@
     "minecraft:cod_spawn_egg": {
       "text": "Αβγό Γέννησης Μπακαλιάρου",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Μπακαλιάρου"
+      ]
     },
     "minecraft:command_block": {
       "text": "Κύβος Εντολής",
@@ -1622,7 +1654,9 @@
     "minecraft:copper_golem_spawn_egg": {
       "text": "Αβγό Γέννησης Γκόλεμ Χαλκού",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Γκόλεμ Χαλκού"
+      ]
     },
     "minecraft:copper_golem_statue": {
       "text": "Άγαλμα Γκόλεμ Χαλκού",
@@ -1717,7 +1751,9 @@
     "minecraft:cow_spawn_egg": {
       "text": "Αβγό Γέννησης Αγελάδας",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Αγελάδας"
+      ]
     },
     "minecraft:cracked_deepslate_bricks": {
       "text": "Ραγισμένα Τούβλα Βαθόλιθου",
@@ -1762,7 +1798,9 @@
     "minecraft:creaking_spawn_egg": {
       "text": "Αβγό Γέννησης Τριξιτή",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Τριξιτή"
+      ]
     },
     "minecraft:creeper_banner_pattern": {
       "text": "Σχέδιο Λάβαρου",
@@ -1777,7 +1815,9 @@
     "minecraft:creeper_spawn_egg": {
       "text": "Αβγό Γέννησης Κρίπερ",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Κρίπερ"
+      ]
     },
     "minecraft:crimson_button": {
       "text": "Ερυθρό Κουμπί",
@@ -2442,12 +2482,16 @@
     "minecraft:dolphin_spawn_egg": {
       "text": "Αβγό Γέννησης Δελφινιού",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Δελφινιού"
+      ]
     },
     "minecraft:donkey_spawn_egg": {
       "text": "Αβγό Γέννησης Γαϊδάρου",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Γαϊδάρου"
+      ]
     },
     "minecraft:dragon_breath": {
       "text": "Αναπνοή Δράκου",
@@ -2457,7 +2501,9 @@
     "minecraft:dragon_egg": {
       "text": "Αβγό Δράκου",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Δράκου"
+      ]
     },
     "minecraft:dragon_head": {
       "text": "Κεφάλι Δράκου",
@@ -2492,7 +2538,9 @@
     "minecraft:drowned_spawn_egg": {
       "text": "Αβγό Γέννησης Πνιγμένου",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Πνιγμένου"
+      ]
     },
     "minecraft:dune_armor_trim_smithing_template": {
       "text": "Πρότυπο Μεταλλουργίας",
@@ -2507,12 +2555,16 @@
     "minecraft:egg": {
       "text": "Αβγό",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό"
+      ]
     },
     "minecraft:elder_guardian_spawn_egg": {
       "text": "Αβγό Γέννησης Πρεσβύτερου Προστάτη",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Πρεσβύτερου Προστάτη"
+      ]
     },
     "minecraft:elytra": {
       "text": "Έλυτρα",
@@ -2597,7 +2649,9 @@
     "minecraft:ender_dragon_spawn_egg": {
       "text": "Αβγό Γέννησης Δράκου Έντερ",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Δράκου Έντερ"
+      ]
     },
     "minecraft:ender_eye": {
       "text": "Μάτι του Έντερ",
@@ -2612,17 +2666,23 @@
     "minecraft:enderman_spawn_egg": {
       "text": "Αβγό Γέννησης Έντερμαν",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Έντερμαν"
+      ]
     },
     "minecraft:endermite_spawn_egg": {
       "text": "Αβγό Γέννησης Εντερμίτη",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Εντερμίτη"
+      ]
     },
     "minecraft:evoker_spawn_egg": {
       "text": "Αβγό Γέννησης Επικαλεστή",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Επικαλεστή"
+      ]
     },
     "minecraft:experience_bottle": {
       "text": "Μπουκάλι Μαγέματος",
@@ -2837,7 +2897,9 @@
     "minecraft:fox_spawn_egg": {
       "text": "Αβγό Γέννησης Αλεπούς",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Αλεπούς"
+      ]
     },
     "minecraft:friend_pottery_sherd": {
       "text": "Θραύσμα Αγγειοπλαστικής Φίλου",
@@ -2847,12 +2909,16 @@
     "minecraft:frog_spawn_egg": {
       "text": "Αβγό Γέννησης Βατράχου",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Βατράχου"
+      ]
     },
     "minecraft:frogspawn": {
       "text": "Αβγά Βατράχου",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγά Βατράχου"
+      ]
     },
     "minecraft:furnace": {
       "text": "Φούρνος",
@@ -2867,7 +2933,9 @@
     "minecraft:ghast_spawn_egg": {
       "text": "Αβγό Γέννησης Γκαστ",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Γκαστ"
+      ]
     },
     "minecraft:ghast_tear": {
       "text": "Δάκρυ Γκαστ",
@@ -2927,7 +2995,9 @@
     "minecraft:glow_squid_spawn_egg": {
       "text": "Αβγό Γέννησης Λαμπερού Καλαμαριού",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Λαμπερού Καλαμαριού"
+      ]
     },
     "minecraft:glowstone": {
       "text": "Λαμψόπετρα",
@@ -2947,7 +3017,9 @@
     "minecraft:goat_spawn_egg": {
       "text": "Αβγό Γέννησης Κατσίκας",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Κατσίκας"
+      ]
     },
     "minecraft:gold_block": {
       "text": "Κύβος Χρυσού",
@@ -3282,7 +3354,9 @@
     "minecraft:guardian_spawn_egg": {
       "text": "Αβγό Γέννησης Προστάτη",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Προστάτη"
+      ]
     },
     "minecraft:gunpowder": {
       "text": "Πυρίτιδα",
@@ -3307,7 +3381,9 @@
     "minecraft:happy_ghast_spawn_egg": {
       "text": "Αβγό Γέννησης Ευτυχισμένου Γκαστ",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Ευτυχισμένου Γκαστ"
+      ]
     },
     "minecraft:hay_block": {
       "text": "Δεμάτι Σανού",
@@ -3342,7 +3418,9 @@
     "minecraft:hoglin_spawn_egg": {
       "text": "Αβγό Γέννησης Χόγκλιν",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Χόγκλιν"
+      ]
     },
     "minecraft:honey_block": {
       "text": "Κύβος Μελιού",
@@ -3392,7 +3470,9 @@
     "minecraft:horse_spawn_egg": {
       "text": "Αβγό Γέννησης Αλόγου",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Αλόγου"
+      ]
     },
     "minecraft:host_armor_trim_smithing_template": {
       "text": "Πρότυπο Μεταλλουργίας",
@@ -3407,7 +3487,9 @@
     "minecraft:husk_spawn_egg": {
       "text": "Αβγό Γέννησης Μούμιας",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Μούμιας"
+      ]
     },
     "minecraft:ice": {
       "text": "Πάγος",
@@ -3492,7 +3574,9 @@
     "minecraft:iron_golem_spawn_egg": {
       "text": "Αβγό Γέννησης Γκόλεμ Σιδήρου",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Γκόλεμ Σιδήρου"
+      ]
     },
     "minecraft:iron_helmet": {
       "text": "Σιδερένιο Κράνος",
@@ -4112,7 +4196,9 @@
     "minecraft:llama_spawn_egg": {
       "text": "Αβγό Γέννησης Λάμα",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Λάμα"
+      ]
     },
     "minecraft:lodestone": {
       "text": "Μαγνητίτης",
@@ -4242,7 +4328,9 @@
     "minecraft:magma_cube_spawn_egg": {
       "text": "Αβγό Γέννησης Γλίτσας Μάγματος",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Γλίτσας Μάγματος"
+      ]
     },
     "minecraft:mangrove_boat": {
       "text": "Βάρκα Μαγκροβίου",
@@ -4387,7 +4475,9 @@
     "minecraft:mooshroom_spawn_egg": {
       "text": "Αβγό Γέννησης Μούσρουμ",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Μούσρουμ"
+      ]
     },
     "minecraft:moss_block": {
       "text": "Κύβος Βρύων",
@@ -4477,7 +4567,9 @@
     "minecraft:mule_spawn_egg": {
       "text": "Αβγό Γέννησης Μουλαριού",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Μουλαριού"
+      ]
     },
     "minecraft:mushroom_stem": {
       "text": "Βλαστός Μανιταριού",
@@ -4622,7 +4714,9 @@
     "minecraft:nautilus_spawn_egg": {
       "text": "Αβγό Γέννησης Ναυτίλου",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Ναυτίλου"
+      ]
     },
     "minecraft:nether_brick": {
       "text": "Τούβλο Νέδερ",
@@ -4882,7 +4976,9 @@
     "minecraft:ocelot_spawn_egg": {
       "text": "Αβγό Γέννησης Οσελότου",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Οσελότου"
+      ]
     },
     "minecraft:ochre_froglight": {
       "text": "Ωχρό Βατραχόφως",
@@ -5217,7 +5313,9 @@
     "minecraft:panda_spawn_egg": {
       "text": "Αβγό Γέννησης Πάντα",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Πάντα"
+      ]
     },
     "minecraft:paper": {
       "text": "Χαρτί",
@@ -5227,12 +5325,16 @@
     "minecraft:parched_spawn_egg": {
       "text": "Αβγό Γέννησης Αφυδατωμένου",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Αφυδατωμένου"
+      ]
     },
     "minecraft:parrot_spawn_egg": {
       "text": "Αβγό Γέννησης Παπαγάλου",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Παπαγάλου"
+      ]
     },
     "minecraft:pearlescent_froglight": {
       "text": "Μαργαρώδες Βατραχόφως",
@@ -5257,12 +5359,16 @@
     "minecraft:phantom_spawn_egg": {
       "text": "Αβγό Γέννησης Φαντάσματος",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Φαντάσματος"
+      ]
     },
     "minecraft:pig_spawn_egg": {
       "text": "Αβγό Γέννησης Γουρουνιού",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Γουρουνιού"
+      ]
     },
     "minecraft:piglin_banner_pattern": {
       "text": "Σχέδιο Λάβαρου",
@@ -5272,7 +5378,9 @@
     "minecraft:piglin_brute_spawn_egg": {
       "text": "Αβγό Γέννησης Κτήνους Πίγκλιν",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Κτήνους Πίγκλιν"
+      ]
     },
     "minecraft:piglin_head": {
       "text": "Κεφάλι Πίγκλιν",
@@ -5282,12 +5390,16 @@
     "minecraft:piglin_spawn_egg": {
       "text": "Αβγό Γέννησης Πίγκλιν",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Πίγκλιν"
+      ]
     },
     "minecraft:pillager_spawn_egg": {
       "text": "Αβγό Γέννησης Λεηλάτη",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Λεηλάτη"
+      ]
     },
     "minecraft:pink_banner": {
       "text": "Ροζ Λάβαρο",
@@ -5447,7 +5559,9 @@
     "minecraft:polar_bear_spawn_egg": {
       "text": "Αβγό Γέννησης Πολικής Αρκούδας",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Πολικής Αρκούδας"
+      ]
     },
     "minecraft:polished_andesite": {
       "text": "Γυαλισμένος Ανδεσίτης",
@@ -5817,7 +5931,9 @@
     "minecraft:pufferfish_spawn_egg": {
       "text": "Αβγό Γέννησης Ψαριού Φούσκας",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Ψαριού Φούσκας"
+      ]
     },
     "minecraft:pumpkin": {
       "text": "Κολοκύθα",
@@ -6002,7 +6118,9 @@
     "minecraft:rabbit_spawn_egg": {
       "text": "Αβγό Γέννησης Κουνελιού",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Κουνελιού"
+      ]
     },
     "minecraft:rabbit_stew": {
       "text": "Κουνέλι Στιφάδο",
@@ -6022,7 +6140,9 @@
     "minecraft:ravager_spawn_egg": {
       "text": "Αβγό Γέννησης Αφανιστή",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Αφανιστή"
+      ]
     },
     "minecraft:raw_copper": {
       "text": "Ακατέργαστος Χαλκός",
@@ -6347,7 +6467,9 @@
     "minecraft:salmon_spawn_egg": {
       "text": "Αβγό Γέννησης Σολομού",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Σολομού"
+      ]
     },
     "minecraft:sand": {
       "text": "Άμμος",
@@ -6452,7 +6574,9 @@
     "minecraft:sheep_spawn_egg": {
       "text": "Αβγό Γέννησης Προβάτου",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Προβάτου"
+      ]
     },
     "minecraft:shelf_mushroom": {
       "text": "Πολύπορος",
@@ -6497,7 +6621,9 @@
     "minecraft:shulker_spawn_egg": {
       "text": "Αβγό Γέννησης Σάλκερ",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Σάλκερ"
+      ]
     },
     "minecraft:silence_armor_trim_smithing_template": {
       "text": "Πρότυπο Μεταλλουργίας",
@@ -6507,12 +6633,16 @@
     "minecraft:silverfish_spawn_egg": {
       "text": "Αβγό Γέννησης Ασημόψαρου",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Ασημόψαρου"
+      ]
     },
     "minecraft:skeleton_horse_spawn_egg": {
       "text": "Αβγό Γέννησης Αλόγου Σκελετού",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Αλόγου Σκελετού"
+      ]
     },
     "minecraft:skeleton_skull": {
       "text": "Κρανίο Σκελετού",
@@ -6522,7 +6652,9 @@
     "minecraft:skeleton_spawn_egg": {
       "text": "Αβγό Γέννησης Σκελετού",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Σκελετού"
+      ]
     },
     "minecraft:skull_banner_pattern": {
       "text": "Σχέδιο Λάβαρου",
@@ -6547,7 +6679,9 @@
     "minecraft:slime_spawn_egg": {
       "text": "Αβγό Γέννησης Γλίτσας",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Γλίτσας"
+      ]
     },
     "minecraft:small_amethyst_bud": {
       "text": "Μικρό Μπουμπούκι Αμέθυστου",
@@ -6632,12 +6766,16 @@
     "minecraft:sniffer_egg": {
       "text": "Αβγό Οσφρητή",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Οσφρητή"
+      ]
     },
     "minecraft:sniffer_spawn_egg": {
       "text": "Αβγό Γέννησης Οσφρητή",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Οσφρητή"
+      ]
     },
     "minecraft:snort_pottery_sherd": {
       "text": "Θραύσμα Αγγειοπλαστικής Όσφρησης",
@@ -6662,7 +6800,9 @@
     "minecraft:snow_golem_spawn_egg": {
       "text": "Αβγό Γέννησης Γκόλεμ Χιονιού",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Γκόλεμ Χιονιού"
+      ]
     },
     "minecraft:snowball": {
       "text": "Χιονόμπαλα",
@@ -6717,7 +6857,9 @@
     "minecraft:spider_spawn_egg": {
       "text": "Αβγό Γέννησης Αράχνης",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Αράχνης"
+      ]
     },
     "minecraft:spire_armor_trim_smithing_template": {
       "text": "Πρότυπο Μεταλλουργίας",
@@ -6837,7 +6979,9 @@
     "minecraft:squid_spawn_egg": {
       "text": "Αβγό Γέννησης Καλαμαριού",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Καλαμαριού"
+      ]
     },
     "minecraft:stick": {
       "text": "Ξυλάκι",
@@ -6937,12 +7081,16 @@
     "minecraft:stray_spawn_egg": {
       "text": "Αβγό Γέννησης Περιπλανώμενου",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Περιπλανώμενου"
+      ]
     },
     "minecraft:strider_spawn_egg": {
       "text": "Αβγό Γέννησης Δρασκελιστή",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Δρασκελιστή"
+      ]
     },
     "minecraft:string": {
       "text": "Νήμα",
@@ -7127,7 +7275,9 @@
     "minecraft:sulfur_cube_spawn_egg": {
       "text": "Αβγό Γέννησης Γλίτσας Θείου",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Γλίτσας Θείου"
+      ]
     },
     "minecraft:sulfur_slab": {
       "text": "Πλάκα Θείου",
@@ -7187,7 +7337,9 @@
     "minecraft:tadpole_spawn_egg": {
       "text": "Αβγό Γέννησης Γυρίνου",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Γυρίνου"
+      ]
     },
     "minecraft:taiga_village_map": {
       "text": "Χάρτης Χωριού Τάιγκας",
@@ -7272,7 +7424,9 @@
     "minecraft:trader_llama_spawn_egg": {
       "text": "Αβγό Γέννησης Λάμα Εμπόρου",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Λάμα Εμπόρου"
+      ]
     },
     "minecraft:trapped_chest": {
       "text": "Σεντούκι Παγίδα",
@@ -7312,7 +7466,9 @@
     "minecraft:tropical_fish_spawn_egg": {
       "text": "Αβγό Γέννησης Τροπικού Ψαριού",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Τροπικού Ψαριού"
+      ]
     },
     "minecraft:tube_coral": {
       "text": "Μπλε Κοράλλι",
@@ -7372,7 +7528,9 @@
     "minecraft:turtle_egg": {
       "text": "Αβγό Χελώνας",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Χελώνας"
+      ]
     },
     "minecraft:turtle_helmet": {
       "text": "Κέλυφος Χελώνας",
@@ -7387,7 +7545,9 @@
     "minecraft:turtle_spawn_egg": {
       "text": "Αβγό Γέννησης Χελώνας",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Χελώνας"
+      ]
     },
     "minecraft:twisting_vines": {
       "text": "Στριφογυριστές Κληματσίδες",
@@ -7412,17 +7572,23 @@
     "minecraft:vex_spawn_egg": {
       "text": "Αβγό Γέννησης Διαταράκτη",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Διαταράκτη"
+      ]
     },
     "minecraft:villager_spawn_egg": {
       "text": "Αβγό Γέννησης Χωρικού",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Χωρικού"
+      ]
     },
     "minecraft:vindicator_spawn_egg": {
       "text": "Αβγό Γέννησης Εξιλεωτή",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Εξιλεωτή"
+      ]
     },
     "minecraft:vine": {
       "text": "Κληματσίδες",
@@ -7432,7 +7598,9 @@
     "minecraft:wandering_trader_spawn_egg": {
       "text": "Αβγό Γέννησης Περιπλανώμενου Εμπόρου",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Περιπλανώμενου Εμπόρου"
+      ]
     },
     "minecraft:ward_armor_trim_smithing_template": {
       "text": "Πρότυπο Μεταλλουργίας",
@@ -7442,7 +7610,9 @@
     "minecraft:warden_spawn_egg": {
       "text": "Αβγό Γέννησης Φύλακα",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Φύλακα"
+      ]
     },
     "minecraft:warm_ocean_ruins_map": {
       "text": "Χάρτης Ερειπίων Ζεστού Ωκεανού",
@@ -8072,7 +8242,9 @@
     "minecraft:witch_spawn_egg": {
       "text": "Αβγό Γέννησης Μάγισσας",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Μάγισσας"
+      ]
     },
     "minecraft:wither_rose": {
       "text": "Τριαντάφυλλο Ουίδερ",
@@ -8087,12 +8259,16 @@
     "minecraft:wither_skeleton_spawn_egg": {
       "text": "Αβγό Γέννησης Σκελετού Ουίδερ",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Σκελετού Ουίδερ"
+      ]
     },
     "minecraft:wither_spawn_egg": {
       "text": "Αβγό Γέννησης Ουίδερ",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Ουίδερ"
+      ]
     },
     "minecraft:wolf_armor": {
       "text": "Πανοπλία Λύκου",
@@ -8102,7 +8278,9 @@
     "minecraft:wolf_spawn_egg": {
       "text": "Αβγό Γέννησης Λύκου",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Λύκου"
+      ]
     },
     "minecraft:wooden_axe": {
       "text": "Ξύλινο Τσεκούρι",
@@ -8257,7 +8435,9 @@
     "minecraft:zoglin_spawn_egg": {
       "text": "Αβγό Γέννησης Ζόγκλιν",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Ζόγκλιν"
+      ]
     },
     "minecraft:zombie_head": {
       "text": "Κεφάλι Ζόμπι",
@@ -8267,27 +8447,37 @@
     "minecraft:zombie_horse_spawn_egg": {
       "text": "Αβγό Γέννησης Αλόγου Ζόμπι",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Αλόγου Ζόμπι"
+      ]
     },
     "minecraft:zombie_nautilus_spawn_egg": {
       "text": "Αβγό Γέννησης Ναυτίλου Ζόμπι",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Ναυτίλου Ζόμπι"
+      ]
     },
     "minecraft:zombie_spawn_egg": {
       "text": "Αβγό Γέννησης Ζόμπι",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Ζόμπι"
+      ]
     },
     "minecraft:zombie_villager_spawn_egg": {
       "text": "Αβγό Γέννησης Χωρικού Ζόμπι",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Χωρικού Ζόμπι"
+      ]
     },
     "minecraft:zombified_piglin_spawn_egg": {
       "text": "Αβγό Γέννησης Πίγκλιν Ζόμπι",
       "reading": "",
-      "aliases": []
+      "aliases": [
+        "Αυγό Γέννησης Πίγκλιν Ζόμπι"
+      ]
     }
   }
 }

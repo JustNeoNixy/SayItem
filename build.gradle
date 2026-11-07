@@ -52,6 +52,23 @@ tasks.register('benchmarkSpeech', JavaExec) {
         layout.buildDirectory.file('speech-benchmark.json').get().asFile.absolutePath,
         layout.buildDirectory.dir('speech-benchmark-cache').get().asFile.absolutePath
 }
+tasks.register('evaluateHumanSpeech', JavaExec) {
+    dependsOn testClasses
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'dev.sayitem.speech.HumanSpeechEvaluation'
+    jvmArgs '--enable-native-access=ALL-UNNAMED'
+    systemProperties speechProperties
+    args providers.gradleProperty('speech_profiles').orElse('gpu_base,gpu_small').get(),
+        layout.projectDirectory.file('tools/human-speech-sources.json').asFile.absolutePath,
+        layout.buildDirectory.dir('human-speech/wav').get().asFile.absolutePath,
+        layout.buildDirectory.dir('human-engine-cache').get().asFile.absolutePath,
+        providers.gradleProperty('speech_eval_output').orElse(layout.buildDirectory.file('human-baseline.json').get().asFile.absolutePath).get()
+}
+tasks.register('generateOrthographicAliases', JavaExec) {
+    dependsOn testClasses
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'dev.sayitem.core.GenerateOrthographicAliases'
+}
 tasks.register('exportItemCatalog', JavaExec) {
     dependsOn testClasses
     classpath = sourceSets.test.runtimeClasspath

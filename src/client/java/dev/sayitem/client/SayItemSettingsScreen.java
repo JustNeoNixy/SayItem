@@ -34,13 +34,13 @@ final class SayItemSettingsScreen extends Screen {
             catch (IOException error) { SayItemClient.status = "Could not save reading settings."; }
             button.setMessage(readingsLabel());
         }).bounds(left + rowWidth - 88, top, 88, 20).tooltip(Tooltip.create(Component.literal(
-            "Show a Latin-letter reading under the item name. Automatic readings are approximate; language packs can provide their own."))).build());
+            "Show approximate Latin readings. German: ai = eye, ee = see, oy = boy. u(e)/o(e) are single rounded vowels. Packs can provide their own guides."))).build());
         List<String> microphones;
         try { microphones = SpeechCapture.microphones(); }
         catch (RuntimeException e) { microphones = List.of(""); }
         List<String> options = microphones;
         addRenderableWidget(Button.builder(microphoneLabel(), button -> {
-            SayItemClient.speech.cancel();
+            SayItemClient.cancelSpeech();
             int next = (options.indexOf(SayItemClient.settings.microphoneName) + 1) % options.size();
             SayItemClient.settings.microphoneName = options.get(next);
             try { SayItemClient.settings.save(); } catch (IOException ignored) { SayItemClient.status = "Could not save microphone settings."; }
@@ -59,7 +59,7 @@ final class SayItemSettingsScreen extends Screen {
         }).bounds(left, top + 72, half, 20).build());
         backend.active = GpuRuntime.supportedPlatform();
         backend.setTooltip(Tooltip.create(Component.literal(backend.active
-            ? "CPU Base, faster GPU Base, or larger GPU Small. Speech changes apply when you rejoin a world."
+            ? "CPU Base, GPU Base, GPU Small, or GPU Turbo. Turbo uses a larger model for accuracy and takes longer. Rejoin to apply speech changes."
             : "GPU speech currently requires Windows x64 and a Vulkan-capable graphics driver.")));
         sharingButton = addRenderableWidget(Button.builder(sharingLabel(), button -> {
             sharingChoice = !sharingChoice; sharingChanged = true; button.setMessage(sharingLabel());

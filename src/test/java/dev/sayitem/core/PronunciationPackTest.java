@@ -8,6 +8,14 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class PronunciationPackTest {
     @TempDir Path directory;
+    @Test void scriptAndEstablishedSpellingVariantsKeepCorrectSpeechFromBeingRejected() throws Exception {
+        var packs = new PackRepository(directory);
+        assertTrue(packs.get("zh").items().get("minecraft:apple").accepts("蘋果"));
+        assertTrue(packs.get("zh").items().get("minecraft:diamond").accepts("鑽石"));
+        assertTrue(packs.get("el").items().get("minecraft:egg").accepts("αυγό"));
+        assertFalse(packs.get("el").items().get("minecraft:egg").accepts("φυγό"));
+        assertFalse(packs.get("zh").items().get("minecraft:apple").accepts("石頭"));
+    }
     @Test void japaneseSwordReadingsAcceptKenAndTsurugiWhileUnrelatedItemsStayLocked() throws Exception {
         var pack = new PackRepository(directory).get("ja");
         var names = Map.of("wooden", "き", "stone", "いし", "iron", "てつ", "golden", "きん",

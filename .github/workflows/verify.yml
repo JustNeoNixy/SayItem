@@ -8,6 +8,7 @@ jobs:
   mod:
     runs-on: ubuntu-22.04
     strategy:
+      fail-fast: false
       matrix:
         minecraft: ['26.1.2', '26.2', '26.3']
     steps:
@@ -36,6 +37,7 @@ jobs:
           path: build/libs/*.jar
   native-speech:
     strategy:
+      fail-fast: false
       matrix:
         os: [windows-latest, ubuntu-22.04, ubuntu-22.04-arm, macos-15-intel, macos-latest]
     runs-on: ${{ matrix.os }}

@@ -14,8 +14,8 @@ import static org.junit.jupiter.api.Assertions.*;
 @EnabledIfSystemProperty(named="sayitem.gpu.tests", matches="true")
 class VulkanRecognitionTest {
     @TempDir Path cache;
-    @Test void bothGpuProfilesRunLocallyAndRecoverAfterCancellation() throws Exception {
-        for (var profile : List.of(SpeechProfile.GPU_BASE, SpeechProfile.GPU_SMALL)) {
+    @Test void allGpuProfilesRunLocallyAndRecoverAfterCancellation() throws Exception {
+        for (var profile : List.of(SpeechProfile.GPU_BASE, SpeechProfile.GPU_SMALL, SpeechProfile.GPU_TURBO)) {
             try (var engine = new LocalWhisper(cache, profile)) {
                 engine.initialize().get(120, TimeUnit.SECONDS);
                 assertTrue(engine.status().contains("Vulkan"), engine.status());
@@ -26,6 +26,10 @@ class VulkanRecognitionTest {
                 String unrelated = engine.transcribe(samples("pl-unrelated"), "pl").get(30, TimeUnit.SECONDS);
                 assertFalse(AnswerMatcher.matches(unrelated, "Diamentowy miecz", List.of()));
                 assertEquals("", engine.transcribe(new float[16000], "pl").get(5, TimeUnit.SECONDS));
+                // A late utterance in a full-length recording must reach the recognizer.
+                float[] tail = samples("diamond-sword"), full = new float[AudioSamples.MAX_SAMPLES];
+                System.arraycopy(tail, 0, full, full.length-tail.length, tail.length);
+                assertTrue(AnswerMatcher.matches(engine.transcribe(full, "en").get(30, TimeUnit.SECONDS), "Diamond sword", List.of()));
                 float[] original = samples("diamond-sword"), longer = new float[Math.min(96000, original.length*3)];
                 for (int i=0;i<longer.length;i++) longer[i] = original[i%original.length];
                 var cancelled = engine.transcribe(longer, "en"); Thread.sleep(100); cancelled.cancel(false);

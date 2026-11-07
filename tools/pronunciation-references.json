@@ -1,0 +1,11 @@
+{
+  "german": {
+    "diphthongs": "https://grammis.ids-mannheim.de/rechtschreibung/6145",
+    "consonants": "https://grammis.ids-mannheim.de/rechtschreibung/6150",
+    "spStOnsets": "https://grammis.ids-mannheim.de/progr%40mm/6720",
+    "prefixExamples": ["https://www.duden.de/rechtschreibung/reimportieren", "https://www.duden.de/rechtschreibung/reintegrieren"],
+    "scope": "Approximate display guide. A bounded set of re- stems prevents the reported e+i boundary error; it is not a complete German morphological parser. Loanwords, stress, vowel length and some compound boundaries need author-provided readings."
+  },
+  "greekEggVariants": "https://el.wiktionary.org/wiki/%CE%B1%CE%B2%CE%B3%CF%8C",
+  "chineseScriptConversion": "https://unicode-org.github.io/icu/userguide/transforms/general/"
+}

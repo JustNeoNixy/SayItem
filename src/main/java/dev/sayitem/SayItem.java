@@ -42,12 +42,23 @@ public final class SayItem implements ModInitializer {
         catch (IOException e) { throw new IllegalStateException("Cannot load SayItem packs", e); }
         PayloadTypeRegistry.serverboundPlay().register(Packets.Request.TYPE, Packets.Request.CODEC);
         PayloadTypeRegistry.serverboundPlay().register(Packets.Attempt.TYPE, Packets.Attempt.CODEC);
+        PayloadTypeRegistry.serverboundPlay().register(Packets.RecognitionStarted.TYPE, Packets.RecognitionStarted.CODEC);
+        PayloadTypeRegistry.serverboundPlay().register(Packets.RecognitionCancelled.TYPE, Packets.RecognitionCancelled.CODEC);
+        ServerPlayNetworking.registerGlobalReceiver(Packets.RecognitionStarted.TYPE, (packet, context) -> {
+            var player = context.player(); long time = now();
+            if (speechReady.contains(player.getUUID()) && run.player(player.getUUID()).beginRecognition(packet.nonce(), time))
+                sendCurrent(player, time, true);
+        });
+        ServerPlayNetworking.registerGlobalReceiver(Packets.RecognitionCancelled.TYPE, (packet, context) -> {
+            var player = context.player(); long time = now();
+            if (run.player(player.getUUID()).finishRecognition(packet.nonce(), time)) sendCurrent(player, time, true);
+        });
         PayloadTypeRegistry.serverboundPlay().register(Packets.SelectLanguage.TYPE, Packets.SelectLanguage.CODEC);
         PayloadTypeRegistry.serverboundPlay().register(Packets.SpeechReady.TYPE, Packets.SpeechReady.CODEC);
         PayloadTypeRegistry.serverboundPlay().register(Packets.LanguageLoading.TYPE, Packets.LanguageLoading.CODEC);
         ServerPlayNetworking.registerGlobalReceiver(Packets.LanguageLoading.TYPE, (packet, context) -> {
             var id = context.player().getUUID();
-            speechReady.remove(id); run.player(id).pause(now());
+            speechReady.remove(id); run.player(id).cancelRecognition(); run.player(id).pause(now());
         });
         PayloadTypeRegistry.serverboundPlay().register(Packets.SetAccuracy.TYPE, Packets.SetAccuracy.CODEC);
         PayloadTypeRegistry.serverboundPlay().register(Packets.SetTimer.TYPE, Packets.SetTimer.CODEC);
@@ -112,7 +123,7 @@ public final class SayItem implements ModInitializer {
         ServerPlayConnectionEvents.DISCONNECT.register((handler, server) -> {
             lastSent.remove(handler.player.getUUID()); requests.remove(handler.player.getUUID());
             speechReady.remove(handler.player.getUUID());
-            run.player(handler.player.getUUID()).pause(now());
+            run.player(handler.player.getUUID()).cancelRecognition(); run.player(handler.player.getUUID()).pause(now());
         });
         ServerTickEvents.END_SERVER_TICK.register(server -> {
             long time = now();
@@ -144,7 +155,9 @@ public final class SayItem implements ModInitializer {
         if (!BuiltInLanguages.RANDOM.equals(language) && packs.get(language) == null) {
             result(p, "", false, false, -1, "This server has no “" + language + "” pack. Import it and restart the world/server."); return false;
         }
-        run.player(p.getUUID()).selectLanguage(language); sendPacks(p); sendCurrent(p, now(), true); return true;
+        var state = run.player(p.getUUID()); long time = now();
+        if (!state.language.equals(language) && state.current() != null) state.finishRecognition(state.current().nonce(), time);
+        state.selectLanguage(language); sendPacks(p); sendCurrent(p, time, true); return true;
     }
     private static void sendPacks(ServerPlayer p) {
         var names = new java.util.TreeMap<String, String>();
@@ -192,6 +205,8 @@ public final class SayItem implements ModInitializer {
         if (bypass(p) || !speechReady.contains(p.getUUID())) return;
         var state = run.player(p.getUUID());
         skipUnlocked(p, time);
+        var timedOut = state.expireRecognition(time);
+        if (timedOut != null) result(p, timedOut.nonce(), false, false, -1, "Recognition took too long. Try again.");
         var expired = state.expireCurrent(time);
         if (expired != null) {
             removeItem(p, expired.item());
@@ -228,19 +243,20 @@ public final class SayItem implements ModInitializer {
     private static void sendCurrent(ServerPlayer p, long time, boolean force) {
         if (!speechReady.contains(p.getUUID())) return;
         var state = run.player(p.getUUID()); var current = state.current();
-        if (current == null || current.expired(time) || !ServerPlayNetworking.canSend(p, Packets.Challenge.TYPE)) return;
-        String signature = current.nonce() + state.language + current.remaining(time) / 1000 + ":" + state.pendingCount();
+        if (current == null || state.remaining(time) <= 0 || !ServerPlayNetworking.canSend(p, Packets.Challenge.TYPE)) return;
+        String signature = current.nonce() + state.language + state.remaining(time) / 1000 + ":" + state.pendingCount();
         if (!force && signature.equals(lastSent.get(p.getUUID()))) return;
         lastSent.put(p.getUUID(), signature);
         var phrase = phrase(p, current.item());
         ServerPlayNetworking.send(p, new Packets.Challenge(current.nonce(), current.item(), phrase.language(),
-            phrase.languageName(), phrase.whisperLanguage(), phrase.entry().text(), phrase.entry().reading(), current.remaining(time), state.pendingCount()));
+            phrase.languageName(), phrase.whisperLanguage(), phrase.entry().text(), phrase.entry().reading(), state.remaining(time), state.pendingCount()));
     }
     private static void attempt(ServerPlayer p, Packets.Attempt attempt) {
         if (!speechReady.contains(p.getUUID())) return;
         long time = now(); var state = run.player(p.getUUID());
         var round = state.current(attempt.nonce());
         if (round == null) return;
+        state.finishRecognition(round.nonce(), time); round = state.current(attempt.nonce());
         if (round.expired(time)) { scan(p, time); return; }
         var entry = phrase(p, round.item()).entry();
         double score = AnswerMatcher.score(attempt.transcript(), entry.text(), entry.aliases());

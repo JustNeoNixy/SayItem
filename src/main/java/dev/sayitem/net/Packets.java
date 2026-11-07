@@ -44,6 +44,18 @@ public final class Packets {
         }, b -> new Attempt(b.readUtf(36), b.readUtf(256)));
         @Override public Type<Attempt> type() { return TYPE; }
     }
+    public record RecognitionStarted(String nonce) implements CustomPacketPayload {
+        public static final Type<RecognitionStarted> TYPE = Packets.type("recognition_started");
+        public static final StreamCodec<FriendlyByteBuf, RecognitionStarted> CODEC = StreamCodec.of(
+            (b, p) -> b.writeUtf(p.nonce, 36), b -> new RecognitionStarted(b.readUtf(36)));
+        @Override public Type<RecognitionStarted> type() { return TYPE; }
+    }
+    public record RecognitionCancelled(String nonce) implements CustomPacketPayload {
+        public static final Type<RecognitionCancelled> TYPE = Packets.type("recognition_cancelled");
+        public static final StreamCodec<FriendlyByteBuf, RecognitionCancelled> CODEC = StreamCodec.of(
+            (b, p) -> b.writeUtf(p.nonce, 36), b -> new RecognitionCancelled(b.readUtf(36)));
+        @Override public Type<RecognitionCancelled> type() { return TYPE; }
+    }
     public record SelectLanguage(String language) implements CustomPacketPayload {
         public static final Type<SelectLanguage> TYPE = Packets.type("language");
         public static final StreamCodec<FriendlyByteBuf, SelectLanguage> CODEC = StreamCodec.of(

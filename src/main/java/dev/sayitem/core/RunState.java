@@ -4,6 +4,7 @@ import java.util.*;
 
 /** In-memory challenge queues backed by world-owned unlock progress. */
 public final class RunState {
+    public static final long RECOGNITION_GRACE_MILLIS = 15_000;
     public record Round(String nonce, String item, long durationMillis, long deadline, boolean active) {
         public long remaining(long now) { return active ? Math.max(0, deadline - now) : durationMillis; }
         public boolean expired(long now) { return active && now >= deadline; }
@@ -18,6 +19,8 @@ public final class RunState {
         private final UnlockProgress progress;
         private Long pausedAt;
         private String randomNonce = "", randomLanguage = "";
+        private String recognitionNonce = "";
+        private long recognitionUntil;
         private final Map<String, Round> rounds = new LinkedHashMap<>();
         private PlayerRun(UUID player, UnlockProgress progress) {
             this.player = player; this.progress = progress; unlocked = progress.unlocked(player);
@@ -41,6 +44,25 @@ public final class RunState {
             return round != null && round.nonce().equals(nonce) ? round : null;
         }
         public int pendingCount() { return Math.max(0, rounds.size() - 1); }
+        public long remaining(long now) {
+            var round = current(); return round == null ? 0 : round.remaining(pausedAt == null ? now : pausedAt);
+        }
+        public boolean beginRecognition(String nonce, long now) {
+            var round = current(nonce);
+            if (pausedAt != null || round == null || round.expired(now) || !recognitionNonce.isEmpty()) return false;
+            recognitionNonce = nonce; recognitionUntil = now + RECOGNITION_GRACE_MILLIS; pause(now); return true;
+        }
+        public boolean finishRecognition(String nonce, long now) {
+            if (recognitionNonce.isEmpty() || !recognitionNonce.equals(nonce)) return false;
+            long resumeAt = Math.min(now, recognitionUntil);
+            cancelRecognition(); resume(resumeAt); return true;
+        }
+        public void cancelRecognition() { recognitionNonce = ""; recognitionUntil = 0; }
+        public Round expireRecognition(long now) {
+            if (recognitionNonce.isEmpty() || now < recognitionUntil) return null;
+            var round = current(recognitionNonce); long resumeAt = recognitionUntil;
+            cancelRecognition(); resume(resumeAt); return round;
+        }
         public String challengeLanguage(List<String> available, java.util.function.IntUnaryOperator choose) {
             if (!language.equals(BuiltInLanguages.RANDOM)) return language;
             var round = current();
@@ -60,8 +82,11 @@ public final class RunState {
         }
         public Round skipUnlocked(long now) {
             var previous = current();
+            if (previous != null && unlocked.contains(previous.item())) finishRecognition(previous.nonce(), now);
             rounds.values().removeIf(round -> unlocked.contains(round.item()));
-            if (previous != null && unlocked.contains(previous.item())) { startNext(now); return previous; }
+            if (previous != null && unlocked.contains(previous.item())) {
+                startNext(now); return previous;
+            }
             return null;
         }
         public Round expireCurrent(long now) {
@@ -77,7 +102,7 @@ public final class RunState {
         }
         public void pause(long now) { if (pausedAt == null) pausedAt = now; }
         public void resume(long now) {
-            if (pausedAt == null) return;
+            if (pausedAt == null || !recognitionNonce.isEmpty()) return;
             var round = current();
             if (round != null && round.active()) rounds.put(round.item(), new Round(round.nonce(), round.item(),
                 round.durationMillis(), round.deadline() + Math.max(0, now-pausedAt), true));
