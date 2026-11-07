@@ -59,3 +59,8 @@ jobs:
           key: speech-runtime-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('src/main/resources/sayitem-speech/runtime-index.json') }}
       - run: python tools/fetch_speech_models.py
       - run: bash gradlew test --tests 'dev.sayitem.speech.*' '-Pspeech_model_dir=${{ github.workspace }}/build/model-source' --console=plain
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: speech-test-failure-${{ matrix.os }}
+          path: build/test-results/test/*.xml

@@ -19,7 +19,7 @@ class CyrillicRecognitionTest {
             for (var language : words.entrySet()) {
                 String heard = engine.transcribe(samples(language.getKey() + "-iron-pickaxe"), language.getKey()).get(60, TimeUnit.SECONDS);
                 System.out.println(language.getKey() + ": " + heard);
-                assertTrue(AnswerMatcher.matches(heard, language.getValue(), List.of()), heard);
+                assertTrue(AnswerMatcher.matches(heard, language.getValue(), List.of()), language.getKey() + ": " + heard);
                 String unrelated = engine.transcribe(samples(language.getKey() + "-unrelated"), language.getKey()).get(60, TimeUnit.SECONDS);
                 assertFalse(AnswerMatcher.matches(unrelated, language.getValue(), List.of()), unrelated);
             }
