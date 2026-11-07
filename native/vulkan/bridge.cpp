@@ -10,7 +10,7 @@
 #define API extern "C" __attribute__((visibility("default")))
 #endif
 using Check = int (*)(void *);
-struct Session { whisper_context *context; int threads; int audio_context = 0; std::string prompt; };
+struct Session { whisper_context *context; int threads; };
 struct Cancellation { Check check; void *data; };
 static void error_text(char *out, int cap, const char *message) {
     if (out && cap > 0) { std::strncpy(out, message, cap-1); out[cap-1] = 0; }
@@ -19,7 +19,7 @@ static bool cancelled(void *data) {
     auto &value = *static_cast<Cancellation *>(data);
     return value.check && value.check(value.data) != 0;
 }
-API const char *sayitem_vk_version() { return "whisper.cpp-v1.9.5-d1be6fde-bridge2"; }
+API const char *sayitem_vk_version() { return "whisper.cpp-v1.9.5-d1be6fde-bridge3"; }
 API const char *sayitem_vk_device() {
     try {
     ggml_backend_load_all();
@@ -47,23 +47,10 @@ API void sayitem_vk_free(void *pointer) {
     auto session = static_cast<Session *>(pointer);
     if (session) { whisper_free(session->context); delete session; }
 }
-// Configure only between jobs on the owning worker. No challenge answer is required.
-API int sayitem_vk_options(void *pointer, int audio_context, const char *prompt, char *error, int capacity) {
-    try {
-        if (!pointer) throw std::runtime_error("Whisper session is closed");
-        if (audio_context != 0 && (audio_context < 160 || audio_context > 1500))
-            throw std::runtime_error("Invalid encoder audio context");
-        if (prompt && std::strlen(prompt) > 2048) throw std::runtime_error("Domain prompt is too long");
-        auto session = static_cast<Session *>(pointer);
-        session->audio_context = audio_context;
-        session->prompt = prompt ? prompt : "";
-        return 0;
-    } catch (const std::exception &e) { error_text(error, capacity, e.what()); return -1; }
-}
 API int sayitem_vk_transcribe(void *pointer, float *audio, int samples, const char *language, int beam,
         char *text, int capacity, Check check, void *data, char *error, int error_capacity) {
     try {
-        if (samples < 3200 || samples > 96000) throw std::runtime_error("Record 0.2 to 6 seconds of speech");
+        if (samples < 3200 || samples > 192000) throw std::runtime_error("Record 0.2 to 12 seconds of speech");
         Cancellation abort{check, data};
         if (cancelled(&abort)) return -2;
         auto session = static_cast<Session *>(pointer);
@@ -74,13 +61,11 @@ API int sayitem_vk_transcribe(void *pointer, float *audio, int samples, const ch
         parameters.no_context = true;
         parameters.no_timestamps = true;
         parameters.single_segment = true;
-        parameters.audio_ctx = session->audio_context;
-        parameters.initial_prompt = session->prompt.empty() ? nullptr : session->prompt.c_str();
         parameters.print_realtime = false;
         parameters.print_progress = false;
         parameters.print_timestamps = false;
         parameters.print_special = false;
-        parameters.max_tokens = 64;
+        parameters.max_tokens = 128;
         parameters.beam_search.beam_size = beam;
         parameters.temperature = 0;
         parameters.temperature_inc = 0;
