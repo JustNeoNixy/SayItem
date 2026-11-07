@@ -60,6 +60,13 @@ public final class ReadingGuides {
                         pronunciation.append("e");
 		    }
 		}
+		else if (codePoint == 'j') {
+                    if (isNext && GERMAN_VOWELS.indexOf(lowerCodePoints[i + 1]) >= 0) {
+                        pronunciation.append("y");
+                    } else {
+                        pronunciation.append("j");
+		    }
+		}
 		else if (codePoint == 's') {
                     if (isNext && GERMAN_VOWELS.indexOf(lowerCodePoints[i + 1]) >= 0) {
                         pronunciation.append("z");
