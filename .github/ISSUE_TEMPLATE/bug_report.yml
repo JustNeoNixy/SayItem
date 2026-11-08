@@ -1,0 +1,42 @@
+name: Bug report
+description: Report a crash or incorrect mod behavior.
+title: "[Bug] "
+body:
+  - type: input
+    id: versions
+    attributes:
+      label: Versions
+      description: Include SayItem, Minecraft, Fabric Loader, and Fabric API versions.
+      placeholder: SayItem 0.9.0, Minecraft 26.1.2, Fabric Loader ..., Fabric API ...
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: System and game mode
+      description: Operating system, singleplayer or multiplayer, and any relevant other mods.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: Include relevant SayItem settings and whether it happens consistently.
+      placeholder: |
+        1. Join a world with ...
+        2. Collect ...
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Expected and actual behavior
+      description: What should happen, and what happens instead?
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Logs, crash report, or screenshots
+      description: Paste relevant logs or attach files. Remove private information before posting.

@@ -1,0 +1,23 @@
+name: Feature request
+description: Suggest a change or new feature.
+title: "[Feature] "
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What would this help with?
+      description: Describe the situation or limitation you encountered.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+      description: Explain how you would use it. Include an example if useful.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives or extra context
+      description: Optional workarounds, screenshots, or related issues.

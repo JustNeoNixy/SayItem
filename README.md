@@ -84,3 +84,5 @@ For human speech checks, run `tools/collect_human_speech.py --download` and
 `evaluateHumanSpeech` task with `-Pspeech_profiles=gpu_base,gpu_small,gpu_turbo` on Windows.
 Source links and audio licenses are in `tools/*human-speech-sources.json`; audio stays in `build/`.
 SayItem is independent of Mojang and the video creators.
+
+Want to help? See [contribution.md](contribution.md) for setup, checks, and pull requests.

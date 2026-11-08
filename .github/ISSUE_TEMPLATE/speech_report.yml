@@ -1,0 +1,53 @@
+name: Speech or pronunciation problem
+description: Report an incorrect reading, translation, or speech recognition result.
+title: "[Speech] "
+body:
+  - type: input
+    id: versions
+    attributes:
+      label: SayItem and Minecraft versions
+    validations:
+      required: true
+  - type: input
+    id: language-item
+    attributes:
+      label: Language and item
+      placeholder: Polish, minecraft:apple
+    validations:
+      required: true
+  - type: textarea
+    id: wording
+    attributes:
+      label: Displayed text and the problem
+      description: Copy the item name and reading. Explain what seems wrong or what you said.
+    validations:
+      required: true
+  - type: dropdown
+    id: profile
+    attributes:
+      label: Speech profile selected in K settings
+      options:
+        - CPU Base
+        - GPU Base
+        - GPU Small
+        - GPU Turbo
+        - Unknown or not a recognition problem
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: What Whisper heard and how long it took
+      description: Copy the transcript, match percentage, required percentage, and approximate delay. For reading-only reports, write not applicable.
+    validations:
+      required: true
+  - type: textarea
+    id: system
+    attributes:
+      label: System and microphone
+      description: For recognition or speed problems, include your OS, CPU/GPU, microphone, and the speech status shown in-game. Mention a CPU fallback if shown.
+  - type: textarea
+    id: source
+    attributes:
+      label: Pronunciation source or recording
+      description: An optional dictionary link or short recording helps. Share only audio you have permission to publish and include its source or license.
