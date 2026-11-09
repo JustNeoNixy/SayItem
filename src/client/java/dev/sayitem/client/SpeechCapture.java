@@ -1,86 +1,31 @@
 package dev.sayitem.client;
 
-import dev.sayitem.speech.AudioSamples;
-import dev.sayitem.speech.SpeechEngine;
-import javax.sound.sampled.*;
-import java.io.*;
-import java.util.*;
-import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.atomic.AtomicBoolean;
+import dev.speechlib.MicrophoneCapture;
+import dev.speechlib.SpeechEngine;
+import java.util.List;
 import java.util.function.Consumer;
 
-/** Microphone audio goes directly into the in-process model and is never saved or uploaded. */
+/** Connects SayItem's settings and HUD messages to SpeechLib's recorder. */
 public final class SpeechCapture {
-    private static final AudioFormat FORMAT = new AudioFormat(16_000, 16, 1, true, false);
     private final ClientSettings settings;
-    private final SpeechEngine engine;
-    private volatile boolean recording;
-    private volatile boolean cancelled;
-    private volatile TargetDataLine line;
-    private volatile CompletableFuture<String> request;
-    private final AtomicBoolean busy = new AtomicBoolean();
-
-    public SpeechCapture(ClientSettings settings, SpeechEngine engine) { this.settings = settings; this.engine = engine; }
-    public boolean isRecording() { return recording; }
-    public boolean isBusy() { return busy.get(); }
-    public static List<String> microphones() {
-        var names = new ArrayList<String>(); names.add("");
-        var info = new DataLine.Info(TargetDataLine.class, FORMAT);
-        for (var mixer : AudioSystem.getMixerInfo()) if (AudioSystem.getMixer(mixer).isLineSupported(info)) names.add(mixer.getName());
-        return List.copyOf(names);
-    }
-    public void start(String language, Consumer<String> status, Consumer<String> transcript, Consumer<String> error) {
-        start(language, () -> {}, status, transcript, error);
-    }
-    public void start(String language, Runnable processing, Consumer<String> status, Consumer<String> transcript, Consumer<String> error) {
-        if (!engine.isReady()) { error.accept(engine.status()); return; }
-        if (!busy.compareAndSet(false, true)) return;
-        recording = true; cancelled = false;
-        Thread.ofVirtual().name("sayitem-microphone").start(() -> {
-            try {
-                var info = new DataLine.Info(TargetDataLine.class, FORMAT);
-                TargetDataLine active;
-                if (settings.microphoneName.isBlank()) active = (TargetDataLine) AudioSystem.getLine(info);
-                else {
-                    var mixer = Arrays.stream(AudioSystem.getMixerInfo()).filter(m -> m.getName().equals(settings.microphoneName))
-                        .findFirst().orElseThrow(() -> new IOException("Selected microphone not found. Choose another in SayItem settings (K)."));
-                    active = (TargetDataLine) AudioSystem.getMixer(mixer).getLine(info);
-                }
-                byte[] pcm;
-                try (active) {
-                    line = active;
-                    if (cancelled) return;
-                    active.open(FORMAT); active.start();
-                    status.accept("Listening… release your speak key when finished.");
-                    var audio = new ByteArrayOutputStream(); byte[] buffer = new byte[1024];
-                    while (recording && !cancelled && audio.size() < AudioSamples.MAX_SAMPLES * 2) {
-                        int count = active.read(buffer, 0, Math.min(buffer.length, AudioSamples.MAX_SAMPLES * 2 - audio.size()));
-                        if (count > 0) audio.write(buffer, 0, count);
-                    }
-                    pcm = audio.toByteArray();
-                } finally { line = null; recording = false; }
-                if (cancelled) return;
-                if (pcm.length < 6400) throw new IOException("Recording too short. Hold your speak key while talking.");
-                processing.run();
-                status.accept("Recognizing locally…");
-                request = engine.transcribe(AudioSamples.fromPcm16(pcm), language);
-                if (cancelled) { request.cancel(false); return; }
-                String answer = request.join();
-                if (!cancelled) transcript.accept(answer);
-            } catch (Exception e) {
-                if (!cancelled) {
-                    Throwable cause = e;
-                    while (cause.getCause() != null) cause = cause.getCause();
-                    error.accept("Speech unavailable: " + (cause.getMessage() == null ? cause.getClass().getSimpleName() : cause.getMessage())
-                        + ". Open SayItem settings (K) to check speech and microphone settings.");
-                }
-            } finally { recording = false; busy.set(false); }
+    private final MicrophoneCapture microphone;
+    public SpeechCapture(ClientSettings settings,SpeechEngine engine){this.settings=settings;microphone=new MicrophoneCapture(engine);}
+    public boolean isRecording(){return microphone.isRecording();}
+    public boolean isBusy(){return microphone.isBusy();}
+    public static List<String> microphones(){return MicrophoneCapture.microphones();}
+    public void start(String language,Runnable processing,Consumer<String> status,Consumer<String> transcript,Consumer<String> error){
+        microphone.start(language,settings.microphoneName,processing,message->status.accept(message.equals("Listening")
+            ?"Listening… release your speak key when finished.":"Recognizing locally…")).whenComplete((text,failure)->{
+            if(failure==null){
+                if(text.length()>256)error.accept("Say only the displayed item name, then try again.");
+                else transcript.accept(text);
+            }else if(!(failure instanceof java.util.concurrent.CancellationException)){
+                Throwable cause=failure;while(cause.getCause()!=null)cause=cause.getCause();
+                error.accept("Speech unavailable: "+(cause.getMessage()==null?cause.getClass().getSimpleName():cause.getMessage())
+                    +". Open SayItem settings (K) to check speech and microphone settings.");
+            }
         });
     }
-    public void finish() { recording = false; }
-    public void cancel() {
-        cancelled = true; recording = false;
-        var active = line; if (active != null) active.close();
-        var pending = request; if (pending != null) pending.cancel(false);
-    }
+    public void finish(){microphone.finish();}
+    public void cancel(){microphone.cancel();}
 }

@@ -7,9 +7,10 @@ Say an item's name in another language to unlock it. Inspired by custom mods in
 ## Play
 
 1. Install Fabric Loader and Fabric API for Minecraft 26.1.2, 26.2, or 26.3.
-2. Add the matching SayItem jar to `mods/`.
+2. Add the matching SayItem jar and [SpeechLib](https://github.com/JustNeoNixy/SpeechLib/releases) jar to `mods/`.
 3. Joining your first world downloads and checks the local speech runtime and model
-   into `.sayitem/speech/`. Later launches work offline. No Python or companion app.
+   into `.speechlib/`. Verified models from `.sayitem/speech/` are reused. Later launches work offline.
+   No Python or companion app.
 4. Collect an item, **hold V**, say the HUD text, then release. **K** opens settings.
 
 Locked item types enter a queue when collected. Only the first item's timer runs;
@@ -32,9 +33,10 @@ reconnecting and restarting preserve unlocks. Include this file in world backups
 
 ## Speech
 
-CPU Base is the default. On Windows x64, K settings also offer GPU Base,
-GPU Small (190 MB), and GPU Turbo (574 MB) through Vulkan (AMD/NVIDIA/Intel,
-compatible driver required). Turbo improves recognition but takes longer on older GPUs.
+CPU Base is the default. K settings also offer GPU Base, GPU Small (190 MB), and
+GPU Turbo (574 MB) through SpeechLib. GPU profiles use Vulkan on Windows/Linux
+and Metal on macOS; compatible drivers are required. Linux GPU builds target
+Ubuntu 24.04 or compatible systems. Turbo takes longer on older GPUs.
 Choose a profile and rejoin the world to apply it. The GPU
 warms up before challenges start; unavailable GPUs fall back to CPU Base.
 Audio stays inside Minecraft and is never uploaded. Models/libraries download once
@@ -52,7 +54,8 @@ re- prefix boundaries stay separate. u(e)/o(e) indicate single rounded vowels.
 Guides are approximate; packs can override them. German support was contributed in
 [PR #1 by RewardedIvan](https://github.com/JustNeoNixy/SayItem/pull/1).
 Greek spelling variants and traditional Chinese answers are accepted.
-CPU speech uses CTranslate2 INT8; GPU speech uses whisper.cpp. All models are multilingual.
+SpeechLib handles speech: CTranslate2 INT8 on CPU and whisper.cpp on GPU.
+All models are multilingual. SayItem keeps the HUD, language packs, matching, and game rules.
 Human-recording results and coverage limits are in [the speech report](tools/speech-accuracy.json).
 On an RX 570, Small accepted 67/120 item recordings at 90% match (0.68 s median);
 Turbo accepted 74/120 (1.98 s). This small sample covers 25 languages, not every item or speaker.
@@ -70,14 +73,14 @@ Add UTF-8 JSON to `config/sayitem/languages/` and restart the world/server. Exam
 {"schemaVersion":1,"id":"it","name":"Italiano","whisperLanguage":"it","items":{"minecraft:apple":{"text":"mela","reading":"","aliases":["una mela"]}}}
 ```
 
-Missing names use a marked English fallback. Install SayItem, Fabric API, and the
+Missing names use a marked English fallback. Install SayItem, SpeechLib, Fabric API, and the
 packs on multiplayer servers too; update clients and server together. Only clients
 load speech. SayItem relies on players reporting speech results honestly.
 
 Build with Java 25: `./gradlew build verifySingleJar`; use
 `-Pminecraft_version=26.2` or `26.3` for another target. Speech data is downloaded
 once; only your operating system's runtime is cached. Runtime sources/checksums are
-in `native/` and the jar's manifests. Licenses ship with the jar/runtime;
+in [SpeechLib](https://github.com/JustNeoNixy/SpeechLib) and its jar's manifests. Licenses ship with the jar/runtime;
 test-audio attribution is in `src/test/resources/audio/*-fixtures.json`.
 For human speech checks, run `tools/collect_human_speech.py --download` and
 `tools/fetch_finnish_speech.py` with Python, PyAV and NumPy, then run the Gradle

@@ -6,8 +6,8 @@ import net.minecraft.client.gui.components.AbstractSliderButton;
 import net.minecraft.client.gui.components.Tooltip;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import dev.sayitem.net.Packets;
-import dev.sayitem.speech.GpuRuntime;
-import dev.sayitem.speech.SpeechProfile;
+import dev.speechlib.SpeechLib;
+import dev.speechlib.SpeechProfile;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
 import java.io.IOException;
@@ -57,10 +57,10 @@ final class SayItemSettingsScreen extends Screen {
             catch (IOException error) { SayItemClient.status = "Could not save speech settings."; }
             button.setMessage(backendLabel());
         }).bounds(left, top + 72, half, 20).build());
-        backend.active = GpuRuntime.supportedPlatform();
+        backend.active = SpeechLib.supportsGpuPlatform();
         backend.setTooltip(Tooltip.create(Component.literal(backend.active
             ? "CPU Base, GPU Base, GPU Small, or GPU Turbo. Turbo uses a larger model for accuracy and takes longer. Rejoin to apply speech changes."
-            : "GPU speech currently requires Windows x64 and a Vulkan-capable graphics driver.")));
+            : "GPU speech requires a supported Windows, Linux, or macOS platform and compatible graphics driver.")));
         sharingButton = addRenderableWidget(Button.builder(sharingLabel(), button -> {
             sharingChoice = !sharingChoice; sharingChanged = true; button.setMessage(sharingLabel());
         }).bounds(left + half + 4, top + 72, rowWidth - half - 4, 20).build());

@@ -1,5 +1,7 @@
 package dev.sayitem.speech;
 
+import dev.speechlib.*;
+
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
 import java.nio.file.Path;
@@ -10,7 +12,7 @@ import javax.sound.sampled.AudioSystem;
 class LocalWhisperTest {
     @TempDir Path cache;
     @Test void initializesActualBundledNativeEngineAndRejectsSilence() throws Exception {
-        try (var engine = new LocalWhisper(cache)) {
+        try (var engine = SpeechLib.builder().cacheDirectory(cache).build()) {
             engine.initialize().get(60, TimeUnit.SECONDS);
             assertTrue(engine.isReady(), engine.status());
             assertEquals("", engine.transcribe(new float[16000], "ja").get(30, TimeUnit.SECONDS));
@@ -33,7 +35,7 @@ class LocalWhisperTest {
                 long cancelledAt = System.nanoTime();
                 assertTrue(obsolete.cancel(false));
                 engine.whenIdle().get(8, TimeUnit.SECONDS);
-                assertTrue(engine.nativeAborts() > 0, "Cancellation must reach the native computation");
+                assertTrue(engine.cancelledJobs() > 0, "Cancellation must reach the native computation");
                 System.out.println("Cancelled native speech job drained in " + TimeUnit.NANOSECONDS.toMillis(System.nanoTime() - cancelledAt) + "ms");
                 String next = engine.transcribe(samples, "en").get(60, TimeUnit.SECONDS);
                 assertTrue(dev.sayitem.core.AnswerMatcher.matches(next, "Diamond sword", java.util.List.of()), next);

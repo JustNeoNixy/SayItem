@@ -5,7 +5,10 @@ group = project.maven_group
 def knownFabricApis = ['26.1.2':'0.155.3+26.1.2', '26.2':'0.161.0+26.2', '26.3':'0.165.0+26.3']
 def fabricApiVersion = providers.gradleProperty('fabric_api_version').orElse(knownFabricApis.get(project.minecraft_version) ?: '').get()
 if (fabricApiVersion.isBlank()) throw new GradleException('Set -Pfabric_api_version=<matching version> for this Minecraft target.')
-repositories { mavenCentral() }
+repositories {
+    mavenCentral()
+    maven { url = 'https://justneonixy.github.io/SpeechLib/maven'; content { includeGroup 'dev.speechlib' } }
+}
 loom {
     splitEnvironmentSourceSets()
     mods { sayitem { sourceSet sourceSets.main; sourceSet sourceSets.client } }
@@ -16,8 +19,9 @@ dependencies {
     minecraft "com.mojang:minecraft:${minecraft_version}"
     implementation "net.fabricmc:fabric-loader:${loader_version}"
     implementation "net.fabricmc.fabric-api:fabric-api:${fabricApiVersion}"
-    // Compile against ONNX, but download its ordinary library with the selected native runtime.
-    implementation 'com.microsoft.onnxruntime:onnxruntime:1.23.2'
+    def localSpeechLib = providers.gradleProperty('speechlib_jar')
+    if (localSpeechLib.isPresent()) implementation files(localSpeechLib.get())
+    else implementation "dev.speechlib:speechlib:${speechlib_version}"
     testImplementation platform('org.junit:junit-bom:5.12.2')
     testImplementation 'org.junit.jupiter:junit-jupiter'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
@@ -25,20 +29,22 @@ dependencies {
 processResources {
     def resourceVersion = project.version.toString()
     def minecraftVersion = project.minecraft_version.toString()
+    def speechLibVersion = project.speechlib_version.toString()
     inputs.property 'version', resourceVersion
     inputs.property 'minecraft_version', minecraftVersion
-    filesMatching('fabric.mod.json') { expand version: resourceVersion, minecraft_version: minecraftVersion }
+    inputs.property 'speechlib_version', speechLibVersion
+    filesMatching('fabric.mod.json') { expand version: resourceVersion, minecraft_version: minecraftVersion, speechlib_version: speechLibVersion }
 }
 tasks.withType(JavaCompile).configureEach { options.release = 25; options.encoding = 'UTF-8' }
 java { sourceCompatibility = JavaVersion.VERSION_25; targetCompatibility = JavaVersion.VERSION_25; withSourcesJar() }
 tasks.named('sourcesJar') { exclude 'sayitem-speech/native/**', '**/*.bin', '**/*.onnx', '**/*.part' }
 def speechProperties = [
-    'sayitem.runtime.bundle': providers.gradleProperty('speech_runtime_bundle').orElse('').get(),
-    'sayitem.runtime.cache': layout.buildDirectory.dir('test-runtime-cache').get().asFile.absolutePath,
-    'sayitem.model.directory': providers.gradleProperty('speech_model_dir').orElse('').get(),
-    'sayitem.gpu.bundle': providers.gradleProperty('gpu_runtime_bundle').orElse('').get(),
-    'sayitem.gpu.model.directory': providers.gradleProperty('gpu_model_dir').orElse('').get(),
-    'sayitem.gpu.tests': providers.gradleProperty('gpu_tests').orElse('false').get()
+    'speechlib.runtime.bundle': providers.gradleProperty('speech_runtime_bundle').orElse('').get(),
+    'speechlib.runtime.cache': layout.buildDirectory.dir('test-runtime-cache').get().asFile.absolutePath,
+    'speechlib.model.directory': providers.gradleProperty('speech_model_dir').orElse('').get(),
+    'speechlib.gpu.bundle': providers.gradleProperty('gpu_runtime_bundle').orElse('').get(),
+    'speechlib.gpu.model.directory': providers.gradleProperty('gpu_model_dir').orElse('').get(),
+    'speechlib.gpu.tests': providers.gradleProperty('gpu_tests').orElse('false').get()
 ]
 test { useJUnitPlatform(); jvmArgs '--enable-native-access=ALL-UNNAMED'; systemProperties speechProperties }
 
@@ -84,7 +90,8 @@ tasks.register('verifySingleJar', JavaExec) {
     args tasks.named('jar', Jar).get().archiveFile.get().asFile.absolutePath, layout.buildDirectory.dir('packaged-speech-check').get().asFile.absolutePath
 }
 jar {
+    includeEmptyDirs = false
     from('LICENSE') { rename { "${it}_sayitem" } }
     // No other mods, native engines, model weights or dependency jars are embedded.
-    exclude 'sayitem-speech/native/**', '**/*.bin', '**/*.onnx', '**/*.part'
+    exclude 'sayitem-speech/**', '**/*.bin', '**/*.onnx', '**/*.part'
 }

@@ -1,5 +1,7 @@
 package dev.sayitem.speech;
 
+import dev.speechlib.*;
+
 import dev.sayitem.core.AnswerMatcher;
 import java.io.BufferedInputStream;
 import java.nio.file.Path;
@@ -18,7 +20,7 @@ class CyrillicRecognitionTest {
         // than relaxing matching or treating it as a native integration failure.
         var words = Map.of("bg", Map.entry("iron-pickaxe", "Желязна кирка"),
                            "ru", Map.entry("diamond-sword", "Алмазный меч"));
-        try (var engine = new LocalWhisper(cache)) {
+        try (var engine = SpeechLib.builder().cacheDirectory(cache).build()) {
             engine.initialize().get(60, TimeUnit.SECONDS);
             for (var language : words.entrySet()) {
                 String heard = engine.transcribe(samples(language.getKey() + "-" + language.getValue().getKey()), language.getKey()).get(60, TimeUnit.SECONDS);

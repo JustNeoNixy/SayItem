@@ -5,7 +5,7 @@ body:
   - type: input
     id: versions
     attributes:
-      label: SayItem and Minecraft versions
+      label: SayItem, SpeechLib, and Minecraft versions
     validations:
       required: true
   - type: input

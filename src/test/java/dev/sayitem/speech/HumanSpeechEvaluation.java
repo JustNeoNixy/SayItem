@@ -1,5 +1,7 @@
 package dev.sayitem.speech;
 
+import dev.speechlib.*;
+
 import com.google.gson.*;
 import dev.sayitem.core.*;
 import java.io.BufferedInputStream;
@@ -23,9 +25,9 @@ public final class HumanSpeechEvaluation {
         var rows = new ArrayList<Map<String, Object>>();
         for (String id : args[0].split(",")) {
             var profile = SpeechProfile.parse(id);
-            try (var engine = new LocalWhisper(cache, profile)) {
+            try (var engine = SpeechLib.builder().cacheDirectory(cache).profile(profile).build()) {
                 engine.initialize().get(300, TimeUnit.SECONDS);
-                if (profile.gpu() && !engine.status().contains("Vulkan")) throw new IllegalStateException("GPU test fell back: " + engine.status());
+                if (profile.gpu() && engine.backend() == dev.speechlib.SpeechBackend.CPU) throw new IllegalStateException("GPU test fell back: " + engine.status());
                 System.out.println(engine.status());
                 try (var input = HumanSpeechEvaluation.class.getResourceAsStream("/audio/diamond-sword.wav");
                      var audio = AudioSystem.getAudioInputStream(new BufferedInputStream(Objects.requireNonNull(input)))) {

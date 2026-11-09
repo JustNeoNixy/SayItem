@@ -22,8 +22,8 @@ public final class ClientSettings {
             if (settings.microphoneName == null) settings.microphoneName = "";
             if (!dev.sayitem.core.BuiltInLanguages.validChoice(settings.language)) settings.language = "ja";
             if (!dev.sayitem.core.GameLanguageSync.validLocale(settings.previousMinecraftLanguage)) settings.previousMinecraftLanguage = "";
-            settings.speechProfile = dev.sayitem.speech.SpeechProfile.parse(settings.speechProfile).id();
-            if (!dev.sayitem.speech.GpuRuntime.supportedPlatform()) settings.speechProfile = dev.sayitem.speech.SpeechProfile.CPU.id();
+            settings.speechProfile = dev.speechlib.SpeechProfile.parse(settings.speechProfile).id();
+            if (!dev.speechlib.SpeechLib.supportsGpuPlatform()) settings.speechProfile = dev.speechlib.SpeechProfile.CPU.id();
             return settings;
         }
     }

@@ -1,5 +1,7 @@
 package dev.sayitem.speech;
 
+import dev.speechlib.*;
+
 import dev.sayitem.core.AnswerMatcher;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
@@ -19,7 +21,7 @@ class PolishRecognitionTest {
         phrases.put("diamond-sword", "Diamentowy miecz"); phrases.put("oak-planks", "Dębowe deski");
         phrases.put("iron-pickaxe", "Żelazny kilof"); phrases.put("apple", "Jabłko");
         List<String> failures = new ArrayList<>();
-        try (var engine = new LocalWhisper(cache)) {
+        try (var engine = SpeechLib.builder().cacheDirectory(cache).build()) {
             engine.initialize().get(60, TimeUnit.SECONDS);
             System.out.println(engine.status());
             for (var phrase : phrases.entrySet()) {

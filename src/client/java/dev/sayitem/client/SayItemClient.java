@@ -2,9 +2,9 @@ package dev.sayitem.client;
 
 import dev.sayitem.core.JsonFiles;
 import dev.sayitem.net.Packets;
-import dev.sayitem.speech.LocalWhisper;
-import dev.sayitem.speech.SpeechEngine;
-import dev.sayitem.speech.SpeechProfile;
+import dev.speechlib.SpeechLib;
+import dev.speechlib.SpeechEngine;
+import dev.speechlib.SpeechProfile;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientLifecycleEvents;
@@ -16,7 +16,6 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.resources.Identifier;
 import com.mojang.blaze3d.platform.InputConstants;
 import com.google.gson.JsonObject;
-import net.fabricmc.loader.api.FabricLoader;
 import java.io.IOException;
 
 public final class SayItemClient implements ClientModInitializer {
@@ -219,7 +218,7 @@ public final class SayItemClient implements ClientModInitializer {
         if (speech != null) cancelSpeech();
         if (engine != null) engine.close();
         activeSpeechProfile = settings.speechProfile;
-        engine = new LocalWhisper(FabricLoader.getInstance().getGameDir().resolve(".sayitem/speech"), SpeechProfile.parse(activeSpeechProfile));
+        engine = SpeechLib.create(SpeechProfile.parse(activeSpeechProfile));
         speech = new SpeechCapture(settings, engine);
     }
 }

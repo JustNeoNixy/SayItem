@@ -1,5 +1,7 @@
 package dev.sayitem.speech;
 
+import dev.speechlib.*;
+
 import dev.sayitem.core.AnswerMatcher;
 import java.io.BufferedInputStream;
 import java.nio.file.Path;
@@ -11,14 +13,14 @@ import org.junit.jupiter.api.condition.EnabledIfSystemProperty;
 import org.junit.jupiter.api.io.TempDir;
 import static org.junit.jupiter.api.Assertions.*;
 
-@EnabledIfSystemProperty(named="sayitem.gpu.tests", matches="true")
+@EnabledIfSystemProperty(named="speechlib.gpu.tests", matches="true")
 class VulkanRecognitionTest {
     @TempDir Path cache;
     @Test void allGpuProfilesRunLocallyAndRecoverAfterCancellation() throws Exception {
         for (var profile : List.of(SpeechProfile.GPU_BASE, SpeechProfile.GPU_SMALL, SpeechProfile.GPU_TURBO)) {
-            try (var engine = new LocalWhisper(cache, profile)) {
+            try (var engine = SpeechLib.builder().cacheDirectory(cache).profile(profile).build()) {
                 engine.initialize().get(120, TimeUnit.SECONDS);
-                assertTrue(engine.status().contains("Vulkan"), engine.status());
+                assertTrue(engine.backend() != dev.speechlib.SpeechBackend.CPU, engine.status());
                 assertFalse(engine.status().contains("using CPU"), engine.status());
                 assertTrue(AnswerMatcher.matches(engine.transcribe(samples("diamond-sword"), "en").get(30, TimeUnit.SECONDS), "Diamond sword", List.of()));
                 if (profile == SpeechProfile.GPU_SMALL)

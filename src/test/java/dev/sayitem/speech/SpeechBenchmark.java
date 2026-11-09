@@ -1,5 +1,7 @@
 package dev.sayitem.speech;
 
+import dev.speechlib.*;
+
 import dev.sayitem.core.*;
 import java.io.BufferedInputStream;
 import java.nio.file.*;
@@ -18,9 +20,9 @@ public final class SpeechBenchmark {
         var rows = new ArrayList<Map<String, Object>>();
         for (String id : args[0].split(",")) {
             var profile = SpeechProfile.parse(id);
-            try (var engine = new LocalWhisper(cache, profile)) {
+            try (var engine = SpeechLib.builder().cacheDirectory(cache).profile(profile).build()) {
                 engine.initialize().get(120, TimeUnit.SECONDS);
-                if (profile.gpu() && !engine.status().contains("Vulkan")) throw new IllegalStateException(engine.status());
+                if (profile.gpu() && engine.backend() == dev.speechlib.SpeechBackend.CPU) throw new IllegalStateException(engine.status());
                 System.out.println(engine.status());
                 engine.transcribe(samples("diamond-sword"), "en").get(30, TimeUnit.SECONDS);
                 for (var entry : cases.entrySet()) for (int repeat=0;repeat<2;repeat++) {

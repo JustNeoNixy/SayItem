@@ -6,8 +6,8 @@ body:
     id: versions
     attributes:
       label: Versions
-      description: Include SayItem, Minecraft, Fabric Loader, and Fabric API versions.
-      placeholder: SayItem 0.9.0, Minecraft 26.1.2, Fabric Loader ..., Fabric API ...
+      description: Include SayItem, SpeechLib, Minecraft, Fabric Loader, and Fabric API versions.
+      placeholder: SayItem 0.10.0, SpeechLib 1.0.0, Minecraft 26.1.2, Fabric Loader ..., Fabric API ...
     validations:
       required: true
   - type: input

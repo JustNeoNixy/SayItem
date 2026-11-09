@@ -15,6 +15,7 @@
     "fabricloader": ">=0.20.1",
     "minecraft": "${minecraft_version}",
     "java": ">=25",
-    "fabric-api": "*"
+    "fabric-api": "*",
+    "speechlib": ">=${speechlib_version}"
   }
 }

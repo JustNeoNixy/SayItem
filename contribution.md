@@ -47,7 +47,8 @@ Link related issues and add screenshots for visible changes when possible.
 
 Keep model weights, personal recordings, logs, local configuration, and generated
 build files out of commits. Preserve contributor credits and third-party licenses.
-Fabric API stays an external dependency; the mod jar must not bundle other mods.
+Fabric API and SpeechLib stay external dependencies; the mod jar must not bundle other mods.
+Engine, microphone, or native-runtime changes belong in [SpeechLib](https://github.com/JustNeoNixy/SpeechLib).
 
 Use the [issue forms](https://github.com/JustNeoNixy/SayItem/issues/new/choose)
 to report bugs, speech problems, or feature requests.
